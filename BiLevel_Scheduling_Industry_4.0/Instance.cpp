@@ -19,26 +19,6 @@
 
 #include "Instance.h"
 
-void Instance::generateInstance(unsigned int nbJobs, unsigned int nbOfHighSpeedMachines,
-    unsigned int nbOfLowSpeedMachines, float highSpeed, float lowSpeed) {
-
-    // set attributes
-    setNbJobs(nbJobs);
-    setNbOfHighSpeedMachines(nbOfHighSpeedMachines);
-    setNbOfLowSpeedMachines(nbOfLowSpeedMachines);
-    setHighSpeed(highSpeed);
-    setLowSpeed(lowSpeed);
-
-    // generate Jobs
-    listJobs.reserve(nbJobs);
-    for (unsigned int i = 0; i < nbJobs; i++) {
-        Job newJob = Job();
-        newJob.generate();
-        listJobs.push_back(newJob);
-    }
-
-}
-
 
 
 

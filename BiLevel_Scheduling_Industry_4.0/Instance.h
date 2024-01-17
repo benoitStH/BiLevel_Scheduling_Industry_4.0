@@ -65,23 +65,13 @@ public:
      */
     Instance(std::string& newInstancePath) : listJobs(std::vector<Job>()) {
         std::filesystem::path newPath = std::filesystem::path(newInstancePath);
-        std::filesystem::exists(newPath) ? instancePath = newPath : throw std::invalid_argument("The path of the file is empty");
+        instancePath = newPath;
         instanceName = instancePath.stem().string();
     }
 
     /********************/
     /*      METHODS     */
     /********************/
-
-    /**
-     * Method that generate a instance from the given parameters
-     * @param nbJobs the number of jobs to generate
-     * @param nbOfHighSpeedMachines the number of high speed machines to create
-     * @param nbOfHighLowMachines the number of low speed machines to create
-     * @param highSpeed the high speed for machine
-     * @param lowSpeed the low speed for machine
-     */
-    void generateInstance(unsigned int nbJobs, unsigned int nbOfHighSpeedMachines, unsigned int nbOfLowSpeedMachines, float highSpeed, float lowSpeed);
 
     /**
      * Method that add a new job to the list of jobs of this instance

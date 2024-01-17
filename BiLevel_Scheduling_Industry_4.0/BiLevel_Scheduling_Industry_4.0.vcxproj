@@ -141,12 +141,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BiLevel_Scheduling_Industry_4.0.cpp" />
+    <ClCompile Include="Generateur.cpp" />
     <ClCompile Include="Instance.cpp" />
     <ClCompile Include="Job.cpp" />
     <ClCompile Include="Machine.cpp" />
     <ClCompile Include="Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Generateur.h" />
     <ClInclude Include="Instance.h" />
     <ClInclude Include="Job.h" />
     <ClInclude Include="Machine.h" />

@@ -48,32 +48,7 @@ public:
     /*      METHODS     */
     /********************/
 
-    /**
-     * Method that generates an instance with random values for pi, di, and wi.
-     * These values come from a uniform distribution where the
-     * lower bound and upper bound are defined by infPi and supPi for pi,
-     * infDi and supDi for di, and infWi and supWi for wi.
-     * @param infPi lower bound of the uniform distribution to generate pi
-     * @param supPi upper bound of the uniform distribution to generate pi
-     * @param infDi lower bound of the uniform distribution to generate di
-     * @param supDi upper bound of the uniform distribution to generate di
-     * @param infWi lower bound of the uniform distribution to generate wi
-     * @param supWi upper bound of the uniform distribution to generate wi
-     */
-    void generate(unsigned int infPi = 1, unsigned int supPi = 10, unsigned int infDi = 1, unsigned int supDi = 10, unsigned int infWi = 1, unsigned int supWi = 20) {
-
-        // the seed use for generate instance  // DEPLACER CETTE METHODE DANS LA CLASSE GENERATOR
-        unsigned int const static seed = 0;
-        static std::mt19937 numGenerator(seed);
-
-
-        std::uniform_int_distribution<> piDistribution(infPi, supPi);
-        std::uniform_int_distribution<> diDistribution(infDi, supDi);
-        std::uniform_int_distribution<> wiDistribution(infWi, supWi);
-        pi = piDistribution(numGenerator);
-        di = diDistribution(numGenerator);
-        wi = wiDistribution(numGenerator);
-    }
+    
 
 
     /************************/

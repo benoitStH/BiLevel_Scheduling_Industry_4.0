@@ -2,16 +2,27 @@
 //
 
 #include "Instance.h"
+#include "Parser.h"
+#include "Generateur.h" // pour la génération aléatoire d'instance
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    Instance instance = Instance();
-    instance.generateInstance(20, 2, 3, 10, 5);
+    Generateur randomInstancer = Generateur();
+    Parser parser = Parser();
+
+    std::string path = "chemin";
+    Instance instance = randomInstancer.generateInstance(path, 10, 3, 2, 10, 5);
 
     cout << instance;
     
+    cout << "sauvegarde\n";
+    parser.serializeInstance(instance);
+    cout << "chargement\n";
+    Instance loadedInstance = parser.readFromFile(path);
+
+    cout << loadedInstance;
 
     std::cout << "Hello World!\n";
 }
