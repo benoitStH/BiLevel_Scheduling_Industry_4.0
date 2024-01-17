@@ -1,10 +1,18 @@
 // BiLevel_Scheduling_Industry_4.0.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
 
+#include "Instance.h"
 #include <iostream>
+using namespace std;
 
 int main()
 {
+    Instance instance = Instance();
+    instance.generateInstance(20, 2, 3, 10, 5);
+
+    cout << instance;
+    
+
     std::cout << "Hello World!\n";
 }
 

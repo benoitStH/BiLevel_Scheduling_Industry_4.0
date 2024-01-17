@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,6 +141,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BiLevel_Scheduling_Industry_4.0.cpp" />
+    <ClCompile Include="Instance.cpp" />
+    <ClCompile Include="Job.cpp" />
+    <ClCompile Include="Machine.cpp" />
+    <ClCompile Include="Parser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Instance.h" />
+    <ClInclude Include="Job.h" />
+    <ClInclude Include="Machine.h" />
+    <ClInclude Include="Parser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
