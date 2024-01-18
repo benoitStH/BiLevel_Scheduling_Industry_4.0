@@ -146,6 +146,7 @@
     <ClCompile Include="Job.cpp" />
     <ClCompile Include="Machine.cpp" />
     <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Generateur.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="Job.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Parser.h" />
+    <ClInclude Include="Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,7 +17,7 @@ public:
 
     Generateur(unsigned int seed);
 
-    Job generateJob(unsigned int infPi = 1, unsigned int supPi = 10, unsigned int infDi = 1, unsigned int supDi = 10, unsigned int infWi = 1, unsigned int supWi = 20);
+    Job generateJob(unsigned int num, unsigned int infPi = 1, unsigned int supPi = 10, unsigned int infDi = 1, unsigned int supDi = 10, unsigned int infWi = 1, unsigned int supWi = 20);
 
     /**
      * Method that generate a instance from the given parameters

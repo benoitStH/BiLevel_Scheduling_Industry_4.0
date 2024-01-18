@@ -33,17 +33,21 @@ Instance Parser::readFromFile(std::string& filePath) const {
     Instance newInstance = Instance(filePath);
     std::fstream fileStream(newInstance.getInstancePath().lexically_normal(), std::fstream::in);
     std::string line; // new line
+    unsigned int num_job = 0; // number of job generated
     // open and read the file
     if (fileStream.is_open()) {
         while (std::getline(fileStream, line)) {
             auto pos = line.find(":");
             // if we don't find the ':' then we read jobs
             if (pos == std::string::npos) {
-                // create the job, the value should be separate with \t
+                // read the job's data, the value should be separate with \t
                 std::istringstream stream(line);
                 unsigned int pi, di, wi;
                 stream >> pi; stream >> di; stream >> wi;
-                Job newJob = Job(pi, di, wi);
+
+                // create the job
+                num_job++;
+                Job newJob = Job(pi, di, wi, num_job);
                 newInstance.add_job(newJob);
             }
             else {

@@ -25,7 +25,7 @@ Generateur::Generateur(unsigned int seed)
      * @param infWi lower bound of the uniform distribution to generate wi
      * @param supWi upper bound of the uniform distribution to generate wi
      */
-Job Generateur::generateJob(unsigned int infPi, unsigned int supPi, unsigned int infDi, unsigned int supDi, unsigned int infWi, unsigned int supWi) {
+Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int supPi, unsigned int infDi, unsigned int supDi, unsigned int infWi, unsigned int supWi) {
 
     std::uniform_int_distribution<> piDistribution(infPi, supPi);
     std::uniform_int_distribution<> diDistribution(infDi, supDi);
@@ -34,7 +34,7 @@ Job Generateur::generateJob(unsigned int infPi, unsigned int supPi, unsigned int
     unsigned int di = diDistribution(numGenerator);
     unsigned int wi = wiDistribution(numGenerator);
 
-    return Job(pi, di, wi);
+    return Job(pi, di, wi, num);
 }
 
 Instance Generateur::generateInstance(std::string newInstancePath, unsigned int nbJobs, unsigned int nbOfHighSpeedMachines,
@@ -51,10 +51,10 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
 
     std::vector<Job> listJobs;
 
-    // generate Jobs
+    // generate Jobs from 1 to <nbJobs>
     listJobs.reserve(nbJobs);
-    for (unsigned int i = 0; i < nbJobs; i++) {
-        Job newJob = generateJob();
+    for (unsigned int i = 1; i <= nbJobs; i++) {
+        Job newJob = generateJob(i);
         listJobs.push_back(newJob);
     }
 

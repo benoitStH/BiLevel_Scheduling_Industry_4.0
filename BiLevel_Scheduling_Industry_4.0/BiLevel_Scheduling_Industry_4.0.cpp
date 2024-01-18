@@ -3,7 +3,7 @@
 
 #include "Instance.h"
 #include "Parser.h"
-#include "Generateur.h" // pour la génération aléatoire d'instance
+#include "Generateur.h" // for random instance generation
 #include <iostream>
 using namespace std;
 
@@ -12,7 +12,7 @@ int main()
     Generateur randomInstancer = Generateur();
     Parser parser = Parser();
 
-    std::string path = "chemin";
+    std::string path = "C:/Users/benhi/Desktop/instance1.txt";
     Instance instance = randomInstancer.generateInstance(path, 10, 3, 2, 10, 5);
 
     cout << instance;

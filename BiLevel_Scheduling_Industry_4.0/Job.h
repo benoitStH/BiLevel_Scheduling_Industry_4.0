@@ -28,11 +28,12 @@ private:
     unsigned int pi;
     unsigned int di;
     unsigned int wi;
+    unsigned int num;
 
 public:
 
-    Job() : pi(0), di(0), wi(0) {};
-    Job(unsigned int pi, unsigned int di, unsigned int wi) : pi(pi), di(di), wi(wi) {}
+    Job() : pi(0), di(0), wi(0), num(0) {};
+    Job(unsigned int pi, unsigned int di, unsigned int wi, unsigned int num) : pi(pi), di(di), wi(wi), num(num) {}
 
     /********************/
     /*      GETTER      */
@@ -43,6 +44,8 @@ public:
     unsigned int getDi() const { return di; }
 
     unsigned int getWi() const { return wi; }
+
+    unsigned int getNum() const { return num; }
 
     /********************/
     /*      METHODS     */
@@ -71,7 +74,7 @@ public:
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Job& job) {
-    os << "| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << " |";
+    os << job.getNum() <<"| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << " |";
     return os;
 }
 
