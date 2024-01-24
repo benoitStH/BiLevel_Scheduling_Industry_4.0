@@ -28,6 +28,7 @@
 #include <vector>
 #include <ostream>
 #include <stdexcept>
+#include <algorithm>
 
 class Instance {
 
@@ -36,10 +37,11 @@ private:
     std::string instanceName;
     std::filesystem::path instancePath; // the path to the instance
     unsigned int nbJobs; // the nb of job
+    unsigned int nbToSelectJob; // the number of jobs to select
     unsigned int nbOfHighSpeedMachines; // the nb of high speed machine
     unsigned int nbOfLowSpeedMachines; // the nb of high low machine
-    float highSpeed;
-    float lowSpeed;
+    unsigned int highSpeed;
+    unsigned int lowSpeed;
     std::vector<Job> listJobs; // the list of jobs
 
 public:
@@ -51,21 +53,20 @@ public:
     /**
      * Default Constructor
      */
-    Instance() : listJobs(std::vector<Job>()) {
-        nbJobs = nbOfHighSpeedMachines = nbOfLowSpeedMachines = 0;
-        highSpeed = lowSpeed = 0;
-        instanceName = "";
-        instancePath = "";
-    }
+    Instance() : listJobs(std::vector<Job>()) {}
 
     /**
      * Constructor by instance's path. It construct an instance with setting the attribute path. Moreover,
      * the method check if the path have a corresponding file, otherwise an exception is throw
      * @param newInstancePath the path to set
      */
-    Instance(std::string& newInstancePath) : listJobs(std::vector<Job>()) {
+    Instance(std::string &newInstancePath) : listJobs(std::vector<Job>()) {
         std::filesystem::path newPath = std::filesystem::path(newInstancePath);
-        instancePath = newPath;
+        if (std::filesystem::exists(newPath)) instancePath = newPath ;
+        else {
+            // create the file
+            std::filesystem::resize_file(newPath,1);
+        }
         instanceName = instancePath.stem().string();
     }
 
@@ -77,28 +78,40 @@ public:
      * Method that add a new job to the list of jobs of this instance
      * @param newJob the job to add
      */
-    void add_job(const Job& newJob) { listJobs.push_back(newJob); }
+    void add_job(const Job& newJob){listJobs.push_back(newJob);}
+
+    /**
+     * Sort job according the Longest Processing Time rule. If processing times are equals then sort according due date increasing.
+     */
+    void sort_by_LPT(){std::sort(listJobs.begin(),listJobs.end(),std::greater<Job>());}
+
+    /**
+     * Sort job according the Longest Processing Time rule. If processing times are equals then sort according due date decreasing.
+     */
+    void sort_by_LPT_inv_EDD(){std::sort(listJobs.begin(),listJobs.end(),Job::LPT_inv_EDD);}
 
     /********************/
     /*      GETTER      */
     /********************/
 
 
-    const std::filesystem::path& getInstancePath() const { return instancePath; }
+    const std::filesystem::path &getInstancePath() const {return instancePath;}
 
-    const std::string& getInstanceName() const { return instanceName; }
+    const std::string &getInstanceName() const {return instanceName;}
 
-    unsigned int getNbJobs() const { return nbJobs; }
+    unsigned int getNbJobs() const {return nbJobs;}
 
-    unsigned int getNbOfHighSpeedMachines() const { return nbOfHighSpeedMachines; }
+    unsigned int getNbToSelectJob() const {return nbToSelectJob;}
 
-    unsigned int getNbOfLowSpeedMachines() const { return nbOfLowSpeedMachines; }
+    unsigned int getNbOfHighSpeedMachines() const {return nbOfHighSpeedMachines;}
 
-    float getHighSpeed() const { return highSpeed; }
+    unsigned int getNbOfLowSpeedMachines() const {return nbOfLowSpeedMachines;}
 
-    float getLowSpeed() const { return lowSpeed; }
+    float getHighSpeed() const {return highSpeed;}
 
-    const std::vector<Job>& getListJobs() const { return listJobs; }
+    float getLowSpeed() const {return lowSpeed;}
+
+    const std::vector<Job> &getListJobs() const {return listJobs;}
 
 
     /********************/
@@ -106,21 +119,24 @@ public:
     /********************/
 
 
-    void setInstanceName(const std::string& instanceName) { Instance::instanceName = instanceName; }
+    void setInstanceName(const std::string &instanceName){Instance::instanceName = instanceName;}
 
-    void setInstancePath(const std::filesystem::path& newInstancePath) { instancePath = newInstancePath; }
+    void setInstancePath(const std::filesystem::path &newInstancePath) {instancePath = newInstancePath;}
 
-    void setNbJobs(unsigned int nbJobs) { Instance::nbJobs = nbJobs; }
+    void setNbJobs(unsigned int nbJobs) {Instance::nbJobs = nbJobs;}
 
-    void setNbOfHighSpeedMachines(unsigned int nbOfHighSpeedMachines) { Instance::nbOfHighSpeedMachines = nbOfHighSpeedMachines; }
+    void setNbToSelectJob(unsigned int nbToSelectJob) {Instance::nbToSelectJob = nbToSelectJob;}
 
-    void setNbOfLowSpeedMachines(unsigned int nbOfHighLowMachines) { Instance::nbOfLowSpeedMachines = nbOfHighLowMachines; }
+    void setNbOfHighSpeedMachines(unsigned int nbOfHighSpeedMachines) {Instance::nbOfHighSpeedMachines = nbOfHighSpeedMachines;}
 
-    void setHighSpeed(float highSpeed) { Instance::highSpeed = highSpeed; }
+    void setNbOfLowSpeedMachines(unsigned int nbOfHighLowMachines) {Instance::nbOfLowSpeedMachines = nbOfHighLowMachines;}
 
-    void setLowSpeed(float lowSpeed) { Instance::lowSpeed = lowSpeed; }
+    void setHighSpeed(unsigned int highSpeed) {Instance::highSpeed = highSpeed;}
 
-    void setListJobs(const std::vector<Job>& listJobs) { Instance::listJobs = listJobs; }
+    void setLowSpeed(unsigned int lowSpeed) {Instance::lowSpeed = lowSpeed;}
+
+    void setListJobs(const std::vector<Job> &listJobs) {Instance::listJobs = listJobs;}
+
 
 };
 
@@ -128,10 +144,10 @@ public:
 /*      OPERATORS       */
 /************************/
 
-inline std::ostream& operator<<(std::ostream& os, const Instance& instance) {
+inline std::ostream &operator<<(std::ostream &os, const Instance &instance) {
 
-    os << "Instance Path : " << instance.getInstancePath() << std::endl
-        << "Instance name : " << instance.getInstanceName() << std::endl
+    os  << "Instance Path : " << instance.getInstancePath() << std::endl
+        << "Instance name : "<< instance.getInstanceName() << std::endl
         << "Number of jobs : " << instance.getNbJobs() << std::endl
         << "Number of high speed machines : " << instance.getNbOfHighSpeedMachines() << " with the speed of : " << instance.getHighSpeed() << std::endl
         << "Number of low speed machines : " << instance.getNbOfLowSpeedMachines() << " with the speed of : " << instance.getLowSpeed() << std::endl

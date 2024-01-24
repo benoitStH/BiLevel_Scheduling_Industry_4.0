@@ -13,20 +13,10 @@ Generateur::Generateur(unsigned int seed)
 	numGenerator = std::mt19937(this->seed);
 }
 
-/**
-     * Method that generates an instance with random values for pi, di, and wi.
-     * These values come from a uniform distribution where the
-     * lower bound and upper bound are defined by infPi and supPi for pi,
-     * infDi and supDi for di, and infWi and supWi for wi.
-     * @param infPi lower bound of the uniform distribution to generate pi
-     * @param supPi upper bound of the uniform distribution to generate pi
-     * @param infDi lower bound of the uniform distribution to generate di
-     * @param supDi upper bound of the uniform distribution to generate di
-     * @param infWi lower bound of the uniform distribution to generate wi
-     * @param supWi upper bound of the uniform distribution to generate wi
-     */
+
 Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int supPi, unsigned int infDi, unsigned int supDi, unsigned int infWi, unsigned int supWi) {
 
+    // Generate random values using an uniform distribution
     std::uniform_int_distribution<> piDistribution(infPi, supPi);
     std::uniform_int_distribution<> diDistribution(infDi, supDi);
     std::uniform_int_distribution<> wiDistribution(infWi, supWi);
@@ -38,7 +28,7 @@ Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int s
 }
 
 Instance Generateur::generateInstance(std::string newInstancePath, unsigned int nbJobs, unsigned int nbOfHighSpeedMachines,
-    unsigned int nbOfLowSpeedMachines, float highSpeed, float lowSpeed) {
+    unsigned int nbOfLowSpeedMachines, unsigned int highSpeed, unsigned int lowSpeed) {
 
     Instance instance = Instance(newInstancePath);
 
@@ -61,5 +51,48 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
     instance.setListJobs(listJobs);
 
     return instance;
+
+}
+
+Solution Generateur::generateInitialSolution(Instance& instance)
+{
+    // Initialize the solution (with empty machines)
+    Solution solution_initiale = Solution(&instance);
+
+    // getting the sorted list of jobs
+    instance.sort_by_LPT();
+    std::vector<Job> listLPT_jobs = instance.getListJobs();
+
+    // total number of machines
+    unsigned int nbMachines = instance.getNbOfHighSpeedMachines() + instance.getNbOfLowSpeedMachines();
+
+    // affectation weights of each machine which are each equal to (number of affected jobs + 1)/speed
+    std::vector<float> affectationWeights = std::vector<float>(nbMachines, float(1));
+
+    for (int i = 0; i < nbMachines; i++)
+    {
+        affectationWeights[i] = affectationWeights[i] / solution_initiale[i].getSpeed();
+    }
+
+    // machine whose affectation weight is the smallest (only the first occurence)
+    unsigned int min_index;
+
+    // for each job
+    for (Job& job : listLPT_jobs)
+    {
+        // find the machine with smallest affectation weight
+        min_index = std::distance(affectationWeights.begin(), std::min_element(affectationWeights.begin(), affectationWeights.end()));
+
+        // inserting the job at the start of the machine's sequence
+        solution_initiale[min_index].add_job(0, job);
+
+        // updating the machine's affectation weight
+        affectationWeights[min_index] = (solution_initiale[min_index].getAffectedJob().size() + 1) / solution_initiale[min_index].getSpeed();
+    }
+
+    // evaluate solution before returning it
+    solution_initiale.evaluate();
+    return solution_initiale;
+
 
 }

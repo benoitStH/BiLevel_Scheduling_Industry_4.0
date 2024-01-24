@@ -5,10 +5,26 @@
 #include "Parser.h"
 #include "Generateur.h" // for random instance generation
 #include <iostream>
+#include "Machine.h"
 using namespace std;
 
 int main()
 {
+    Parser parser = Parser();
+    std::string path = "./instance1.txt";
+    Instance instance = parser.readFromFile(path);
+
+    Generateur generateur;
+
+    Solution solution_init = generateur.generateInitialSolution(instance);
+
+    //cout << solution_init;
+    solution_init.print();
+    solution_init.compactPrint();
+
+    //Machine machine = Machine(10);
+
+    /*
     Generateur randomInstancer = Generateur();
     Parser parser = Parser();
 
@@ -25,6 +41,7 @@ int main()
     cout << loadedInstance;
 
     std::cout << "Hello World!\n";
+    */
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

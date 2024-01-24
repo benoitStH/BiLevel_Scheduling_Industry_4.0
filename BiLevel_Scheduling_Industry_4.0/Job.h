@@ -25,20 +25,24 @@
 class Job {
 
 private:
-    unsigned int pi;
-    unsigned int di;
-    unsigned int wi;
-    unsigned int num;
+    unsigned int pi;  // job's processing time for a machine whose speed equals 1
+    unsigned int di;  // job's deadline
+    unsigned int wi;  // job's weight
+    unsigned int num; // job number
+    bool late;  // is the job late ? (always initialized to false)
 
 public:
 
-    Job() : pi(0), di(0), wi(0), num(0) {};
-    Job(unsigned int pi, unsigned int di, unsigned int wi, unsigned int num) : pi(pi), di(di), wi(wi), num(num) {}
+    Job() : pi(0), di(0), wi(0), num(0), late(false) {};
+    Job(unsigned int pi, unsigned int di, unsigned int wi, unsigned int num) : pi(pi), di(di), wi(wi), num(num), late(false) {}
 
     /********************/
     /*      GETTER      */
     /********************/
 
+    /**
+    * Processing time with a machine whose speed is 1
+    */
     unsigned int getPi() const { return pi; }
 
     unsigned int getDi() const { return di; }
@@ -47,16 +51,19 @@ public:
 
     unsigned int getNum() const { return num; }
 
+    bool isLate() const { return late; }
+
     /********************/
-    /*      METHODS     */
+    /*      SETTER      */
     /********************/
 
-    
-
+    void setLate(bool isLate) { late = isLate; }
 
     /************************/
     /*      OPERATORS       */
     /************************/
+
+    static bool LPT_inv_EDD(const Job& lhs, const Job& rhs) { return (lhs.pi == rhs.pi) ? (lhs.di < rhs.di) : (lhs.pi > rhs.pi); }
 
     bool operator==(const Job& J) const { return pi == J.pi && di == J.di && wi == J.wi; }
 
@@ -74,7 +81,7 @@ public:
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Job& job) {
-    os << job.getNum() <<"| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << " |";
+    os << "| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << " |";
     return os;
 }
 

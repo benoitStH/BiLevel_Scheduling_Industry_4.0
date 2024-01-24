@@ -23,6 +23,7 @@
 #include <vector>
 #include <ostream>
 #include "Job.h"
+
 class Machine {
 
 private:
@@ -39,13 +40,19 @@ public:
 
     Machine() : listAffectedJobs(std::vector<Job>()), speed(0.0), sum_wj_Uj(0.0), sum_Cj(0.0) {}
 
-
+    /**
+     * Constructor a machine with the speed.
+     * @param speed the speed of the current machine
+     */
     Machine(float speed) : listAffectedJobs(std::vector<Job>()), speed(speed), sum_wj_Uj(0.0), sum_Cj(0.0) {}
 
     /********************/
     /*      METHODS     */
     /********************/
 
+    /**
+     * Method that reset the machine
+     */
     void reset() { listAffectedJobs.clear(); sum_wj_Uj = 0.0; sum_Cj = 0.0; }
 
     /**
@@ -58,7 +65,10 @@ public:
             // compute cumulative completion times, a job at position i count (nbJobs-i) times
             cumulativeCompletionTimes += (nbJobs - i) * listAffectedJobs[i].getPi() / speed;
             completionTimes += listAffectedJobs[i].getPi() / speed;
-            cumulativeWeightedTardyJob += listAffectedJobs[i].getDi() < completionTimes ? listAffectedJobs[i].getWi() : 0.0;
+
+            // the job is late if the completion time is past its due date
+            listAffectedJobs[i].setLate((listAffectedJobs[i].getDi() < completionTimes));
+            cumulativeWeightedTardyJob += listAffectedJobs[i].isLate() ? listAffectedJobs[i].getWi() : 0.0;
         }
         sum_Cj = cumulativeCompletionTimes;
         sum_wj_Uj = cumulativeWeightedTardyJob;
@@ -99,15 +109,18 @@ public:
 
     void setSpeed(float speed) { Machine::speed = speed; }
 
-    void setSumWjUj(float sumWjUj) { sum_wj_Uj = sumWjUj; }
+    void setSumWjUj(float sum_wjUj) { sum_wj_Uj = sum_wjUj; }
 
     void setSumCj(float sumCj) { sum_Cj = sumCj; }
 
+    /************************/
+    /*      OPERATORS       */
+    /************************/
+
+    Job& operator[](size_t pos) { return listAffectedJobs[pos]; }
+
 };
 
-/************************/
-/*      OPERATORS       */
-/************************/
 
 inline std::ostream& operator<<(std::ostream& os, const Machine& machine) {
     os << "[";
