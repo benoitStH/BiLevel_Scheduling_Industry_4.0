@@ -46,7 +46,7 @@ public:
      * @param nbJobs the number of jobs to generate
      * @return an initial solution which minimize the sum of completion times
      */
-    Solution generateInitialSolution(Instance& instance);
+    Solution generateInitialSolution(const Instance& instance);
 
 };
 

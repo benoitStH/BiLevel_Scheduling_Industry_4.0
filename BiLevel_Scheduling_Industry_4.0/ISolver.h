@@ -2,6 +2,7 @@
 #define BILEVEL_SCHEDULING_ISOLVER_H
 
 #include "Solution.h"
+#include "Generateur.h"
 
 class ISolver
 {
@@ -9,6 +10,8 @@ protected:
 	Solution* solution;
 	const Instance* instance;
 	bool verbose;
+
+    Generateur generateur;
 
 public:
 
@@ -60,7 +63,14 @@ public:
     /*      SETTER      */
     /********************/
 
-    void setSolution(Solution* solution) { ISolver::solution = solution; }
+    void setSolution(Solution* solution) 
+    { 
+        if (this->solution != nullptr)
+        {
+            delete this->solution;
+        }
+        this->solution = solution; 
+    }
 
     void setInstance(const Instance* instance) { ISolver::instance = instance; }
 

@@ -54,7 +54,7 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
 
 }
 
-Solution Generateur::generateInitialSolution(Instance& instance)
+Solution Generateur::generateInitialSolution(const Instance& instance)
 {
     // Initialize the solution (with empty machines)
     Solution solution_initiale = Solution(&instance);
