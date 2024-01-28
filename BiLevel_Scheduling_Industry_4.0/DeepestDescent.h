@@ -3,7 +3,7 @@
 
 #include "ISolver.h"
 
-class DeepestDescent : ISolver
+class DeepestDescent : public ISolver
 {
 
 public:
