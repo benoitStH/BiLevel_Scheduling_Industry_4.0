@@ -5,15 +5,27 @@
 #include "Parser.h"
 #include "Generateur.h" // for random instance generation
 #include <iostream>
-#include "Machine.h"
+#include "DeepestDescent.h"
 using namespace std;
 
 int main()
 {
     Parser parser = Parser();
-    std::string path = "./instance1.txt";
+    std::string path = "C:/Users/benhi/Desktop/instance1.txt";
     Instance instance = parser.readFromFile(path);
 
+    // Première heuristique : DeepestDescent
+    ISolver* solver = new DeepestDescent();
+
+    solver->setInstance(&instance);
+    solver->solve();
+
+    Solution s = Solution(*(solver->getSolution()));
+    s.print();
+
+    delete solver;
+
+    /* // Création d'une solution initiale 
     Generateur generateur;
 
     Solution solution_init = generateur.generateInitialSolution(instance);
@@ -21,10 +33,11 @@ int main()
     //cout << solution_init;
     solution_init.print();
     solution_init.compactPrint();
+    */
 
     //Machine machine = Machine(10);
 
-    /*
+    /* // Sauvegarde et Chargement d'instance 
     Generateur randomInstancer = Generateur();
     Parser parser = Parser();
 
