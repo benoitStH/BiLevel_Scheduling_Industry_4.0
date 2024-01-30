@@ -25,6 +25,9 @@ void DeepestDescent::solve()
 	Solution solution_init = generateur.generateInitialSolution(chosenJobs, *instance);
 	Solution best_solution = Solution(solution_init);
 
+	std::cout << best_solution;
+	follower_solutions.push_back(best_solution);
+
 	// We save the best solution found which has the lowest score
 	std::sort(follower_solutions.begin(), follower_solutions.end(), std::less<Solution>());
 	setSolution(new Solution(follower_solutions[0]));
