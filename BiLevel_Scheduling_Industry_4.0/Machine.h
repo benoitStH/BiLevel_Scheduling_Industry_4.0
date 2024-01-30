@@ -56,6 +56,17 @@ public:
     void reset() { listAffectedJobs.clear(); sum_wj_Uj = 0.0; sum_Cj = 0.0; }
 
     /**
+     * Method that return the starting time of a given job
+     * @param j the j-th job in the machine's sequence.
+     * @return float The starting time of the job
+     */
+    float startTimeOfJob(unsigned int j) { 
+        if (j == 0) { return 0; }
+        
+        return startTimeOfJob(j - 1) + listAffectedJobs[j].getPi() / speed;
+    }
+
+    /**
      * Method that evaluate the scheduling on the machine. It compute the sum of completion times and the sum of weighted tardy jobs.
      */
     void evaluate() {
