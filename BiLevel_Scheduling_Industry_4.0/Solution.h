@@ -198,6 +198,44 @@ public:
 
     }
 
+    /**
+     * Method that returns the size of the longest sequence in a high speed machine
+     * @return An unsigned int representing the size of the longest sequence in a high speed machine
+     */
+    unsigned int getMaxNumberOfHighSpeedBlocs()
+    {
+        unsigned int nbBlocs = 0;
+
+        for (Machine machine : listHighSpeedMachines)
+        {
+            if (machine.getAffectedJob().size() > nbBlocs)
+            {
+                nbBlocs = machine.getAffectedJob().size();
+            }
+        }
+
+        return nbBlocs;
+    }
+
+    /**
+     * Method that returns the size of the longest sequence in a low speed machine
+     * @return An unsigned int representing the size of the longest sequence in a low speed machine
+     */
+    unsigned int getMaxNumberOfLowSpeedBlocs()
+    {
+        unsigned int nbBlocs = 0;
+
+        for (Machine machine : listHighSpeedMachines)
+        {
+            if (machine.getAffectedJob().size() > nbBlocs)
+            {
+                nbBlocs = machine.getAffectedJob().size();
+            }
+        }
+
+        return nbBlocs;
+    }
+
 
     /**
      * Method that evaluate the solution
