@@ -54,18 +54,17 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
 
 }
 
-Solution Generateur::generateInitialSolution(const Instance& instance)
+Solution Generateur::generateInitialSolution(const std::vector<Job>& listJobs, const Instance& instance)
 {
     // Initialize the solution (with empty machines)
     Solution solution_initiale = Solution(&instance);
-    Instance instance_copy = Instance(instance);
 
     // getting the sorted list of jobs
-    instance_copy.sort_by_LPT();
-    std::vector<Job> listLPT_jobs = instance_copy.getListJobs();
+    std::vector<Job> listLPT_jobs = listJobs;
+    std::sort(listLPT_jobs.begin(), listLPT_jobs.end(), Job::LPT_inv_EDD);
 
     // total number of machines
-    unsigned int nbMachines = instance_copy.getNbOfHighSpeedMachines() + instance_copy.getNbOfLowSpeedMachines();
+    unsigned int nbMachines = instance.getNbOfHighSpeedMachines() + instance.getNbOfLowSpeedMachines();
 
     // affectation weights of each machine which are each equal to (number of affected jobs + 1)/speed
     std::vector<float> affectationWeights = std::vector<float>(nbMachines, float(1));
