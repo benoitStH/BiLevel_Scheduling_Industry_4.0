@@ -224,6 +224,11 @@ public:
      */
     Machine& operator[](size_t pos) { return pos < listHighSpeedMachines.size() ? listHighSpeedMachines[pos] : listLowSpeedMachines[pos - listHighSpeedMachines.size()]; }
 
+    /*
+    * Operator to compare this object with another Solution object
+    * We first compare the sum of Cj and then the sum of wjUj
+    */
+    bool operator<(const Solution& sol) const { return (sum_Cj == sol.sum_Cj) ? (sum_wj_Uj < sol.sum_wj_Uj) : (sum_Cj < sol.sum_Cj); }
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Solution& solution) {
