@@ -84,6 +84,65 @@ public:
         sum_wj_Uj = 0.0;
         sum_Cj = 0.0;
     }
+
+
+    /**
+     * Method that returns the machines where a swap can happen between their k-th job
+     * @param k the k-th job in the machines' sequence
+     * @return std::vector<Machine&> of size 2. Contains the machines objects. If no swap possible, the vector's size is 0.
+     */
+    std::vector<Machine&> possibleSwapVHighSpeed(unsigned int k) {
+
+        // Two machines from the list
+        std::vector<Machine>::iterator itMachine1 = listHighSpeedMachines.begin();
+        std::vector<Machine>::iterator itMachine2;
+
+        float speed = listHighSpeedMachines[0].getSpeed();
+        std::vector<Machine&> swapableMachines;
+
+        // For each machine of the list
+        while (itMachine1 != listHighSpeedMachines.end())
+        {
+            if ((*itMachine1).getAffectedJob().size() > k)
+            {
+                Job& job1 = (*itMachine1)[k]; // get its k-th job
+
+                itMachine2 = itMachine1;
+                do
+                {
+                    // For each next machine
+                    itMachine2++;
+
+                    if ((*itMachine2).getAffectedJob().size() > k)
+                    {
+                        Job& job2 = (*itMachine2)[k]; // get its k-th job
+
+                        // If job1 and job2 are late and job1 will be early after swapping 
+                        if (job1.isLate())
+                        {
+                            if (job2.isLate() && ((*itMachine2).startTimeOfJob(k) + job1.getPi() / speed) < job1.getDi())
+                            {
+                                // These machines can swap their k-th job
+                                swapableMachines.push_back(*itMachine1);
+                                swapableMachines.push_back(*itMachine2);
+                                return swapableMachines;
+                            }
+                        }
+                    }
+
+                } while (itMachine2 != listHighSpeedMachines.end());
+
+                // If the swap isn't possible check with the next machine
+                itMachine1++;
+            }
+        }
+
+        // return an empty list
+        return swapableMachines;
+        
+    }
+
+
     /**
      * Method that evaluate the solution
      */
