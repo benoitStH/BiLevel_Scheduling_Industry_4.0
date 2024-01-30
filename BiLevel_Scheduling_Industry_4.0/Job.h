@@ -65,6 +65,21 @@ public:
 
     static bool LPT_inv_EDD(const Job& lhs, const Job& rhs) { return (lhs.pi == rhs.pi) ? (lhs.di < rhs.di) : (lhs.pi > rhs.pi); }
 
+    static bool LWPT(const Job& lhs, const Job& rhs) {
+
+        if (lhs.wi == 0)
+        {
+            return false;
+        }
+
+        if (rhs.wi == 0)
+        {
+            return true;
+        }
+
+        return ((lhs.pi / float(lhs.wi)) < (rhs.pi / float(rhs.wi)));
+    }
+
     bool operator==(const Job& J) const { return pi == J.pi && di == J.di && wi == J.wi; }
 
     bool operator!=(const Job& J) const { return !(J == *this); }

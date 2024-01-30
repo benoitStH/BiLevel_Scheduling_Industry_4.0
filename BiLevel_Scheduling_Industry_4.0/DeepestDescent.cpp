@@ -28,6 +28,30 @@ void DeepestDescent::solve()
 	std::cout << best_solution;
 	follower_solutions.push_back(best_solution);
 
+	// Leader selects the n among N jobs with the largest weighted processing time
+	std::vector<Job> listLWPT_jobs = jobs;
+	std::sort(listLWPT_jobs.begin(), listLWPT_jobs.end(), Job::LWPT);
+
+	chosenJobs.clear();
+	i = listLWPT_jobs.begin();
+	while (i != listLWPT_jobs.end())
+	{
+		if (chosenJobs.size() >= 5)
+		{
+			break;
+		}
+
+		chosenJobs.push_back(*i);
+		i++;
+	}
+
+	// Follower's Heuristic
+	solution_init = generateur.generateInitialSolution(chosenJobs, *instance);
+	best_solution = Solution(solution_init);
+
+	std::cout << best_solution;
+	follower_solutions.push_back(best_solution);
+
 	// We save the best solution found which has the lowest score
 	std::sort(follower_solutions.begin(), follower_solutions.end(), std::less<Solution>());
 	setSolution(new Solution(follower_solutions[0]));
