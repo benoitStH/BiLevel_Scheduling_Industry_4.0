@@ -236,6 +236,13 @@ public:
         return nbBlocs;
     }
 
+    void swapV(std::vector<Machine&> swapableMachines, unsigned int k)
+    {
+        Job jobTemp = swapableMachines[0][k];
+
+        swapableMachines[0][k] = swapableMachines[1][k];
+        swapableMachines[1][k] = jobTemp;
+    }
 
     /**
      * Method that evaluate the solution
