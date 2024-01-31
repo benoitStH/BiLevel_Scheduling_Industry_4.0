@@ -86,26 +86,24 @@ public:
     }
 
 
-    /**
-     * Method that returns the machines where a swap can happen between their k-th job
-     * @param k the k-th job in the machines' sequence
-     * @return std::vector<unsigned int> of size 2. Contains the machines number. If no swap possible, the vector's size is 0.
-     */
-    std::vector<unsigned int> possibleSwapVHighSpeed(unsigned int k) {
+    std::vector<unsigned int> possibleSwapV(unsigned int k, bool considerLowSpeedMachines)
+    {
+        // The list of machines we consider
+        std::vector<Machine>& listMachines = considerLowSpeedMachines ? listLowSpeedMachines : listHighSpeedMachines;
 
         // Two machines from the list
         unsigned int indexMachine1 = 0;
         unsigned int indexMachine2;
 
-        float speed = listHighSpeedMachines[0].getSpeed();
+        float speed = listMachines[0].getSpeed();
         std::vector<unsigned int> swapableMachines;
 
         // For each machine of the list
-        while (indexMachine1 < listHighSpeedMachines.size()-1)
+        while (indexMachine1 < listMachines.size() - 1)
         {
-            if (listHighSpeedMachines[indexMachine1].getAffectedJob().size() > k)
+            if (listMachines[indexMachine1].getAffectedJob().size() > k)
             {
-                Job& job1 = listHighSpeedMachines[indexMachine1][k]; // get its k-th job
+                Job& job1 = listMachines[indexMachine1][k]; // get its k-th job
 
                 indexMachine2 = indexMachine1;
                 do
@@ -113,24 +111,24 @@ public:
                     // For each next machine
                     indexMachine2++;
 
-                    if (listHighSpeedMachines[indexMachine2].getAffectedJob().size() > k)
+                    if (listMachines[indexMachine2].getAffectedJob().size() > k)
                     {
-                        Job& job2 = listHighSpeedMachines[indexMachine2][k]; // get its k-th job
+                        Job& job2 = listMachines[indexMachine2][k]; // get its k-th job
 
                         // If job1 and job2 are late and job1 will be early after swapping 
                         if (job1.isLate())
                         {
-                            if (job2.isLate() && (listHighSpeedMachines[indexMachine2].startTimeOfJob(k) + job1.getPi() / speed) < job1.getDi())
+                            if (job2.isLate() && (listMachines[indexMachine2].startTimeOfJob(k) + job1.getPi() / speed) < job1.getDi())
                             {
                                 // These machines can swap their k-th job
-                                swapableMachines.push_back(indexMachine1);
-                                swapableMachines.push_back(indexMachine2);
+                                swapableMachines.push_back(indexMachine1 + (considerLowSpeedMachines ? listHighSpeedMachines.size() : 0));
+                                swapableMachines.push_back(indexMachine2 + (considerLowSpeedMachines ? listHighSpeedMachines.size() : 0));
                                 return swapableMachines;
                             }
                         }
                     }
 
-                } while (indexMachine2 < listHighSpeedMachines.size() - 1);
+                } while (indexMachine2 < listMachines.size() - 1);
 
             }
 
@@ -140,7 +138,15 @@ public:
 
         // return an empty list
         return swapableMachines;
-        
+    }
+
+    /**
+     * Method that returns the machines where a swap can happen between their k-th job
+     * @param k the k-th job in the machines' sequence
+     * @return std::vector<unsigned int> of size 2. Contains the machines number. If no swap possible, the vector's size is 0.
+     */
+    std::vector<unsigned int> possibleSwapVHighSpeed(unsigned int k) {
+        return possibleSwapV(k, false);
     }
     
     /**
@@ -150,52 +156,7 @@ public:
      */
     std::vector<unsigned int> possibleSwapVLowSpeed(unsigned int k) {
 
-        // Two machines from the list
-        unsigned int indexMachine1 = 0;
-        unsigned int indexMachine2;
-
-        float speed = listLowSpeedMachines[0].getSpeed();
-        std::vector<unsigned int> swapableMachines;
-
-        // For each machine of the list
-        while (indexMachine1 < listLowSpeedMachines.size() - 1)
-        {
-            if (listLowSpeedMachines[indexMachine1].getAffectedJob().size() > k)
-            {
-                Job& job1 = listLowSpeedMachines[indexMachine1][k]; // get its k-th job
-
-                indexMachine2 = indexMachine1;
-                do
-                {
-                    // For each next machine
-                    indexMachine2++;
-
-                    if (listLowSpeedMachines[indexMachine2].getAffectedJob().size() > k)
-                    {
-                        Job& job2 = listLowSpeedMachines[indexMachine2][k]; // get its k-th job
-
-                        // If job1 and job2 are late and job1 will be early after swapping 
-                        if (job1.isLate())
-                        {
-                            if (job2.isLate() && (listLowSpeedMachines[indexMachine2].startTimeOfJob(k) + job1.getPi() / speed) < job1.getDi())
-                            {
-                                // These machines can swap their k-th job
-                                swapableMachines.push_back(indexMachine1 + listHighSpeedMachines.size());
-                                swapableMachines.push_back(indexMachine2 + listHighSpeedMachines.size());
-                                return swapableMachines;
-                            }
-                        }
-                    }
-
-                } while (indexMachine2 < listLowSpeedMachines.size() - 1);
-
-            }
-            // If the swap isn't possible check with the next machine
-            indexMachine1++;
-        }
-
-        // return an empty list
-        return swapableMachines;
+        return possibleSwapV(k, true);
     }
 
     /**
