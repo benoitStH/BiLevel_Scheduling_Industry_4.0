@@ -101,7 +101,7 @@ public:
         std::vector<unsigned int> swapableMachines;
 
         // For each machine of the list
-        while (indexMachine1 != listHighSpeedMachines.size())
+        while (indexMachine1 < listHighSpeedMachines.size()-1)
         {
             if (listHighSpeedMachines[indexMachine1].getAffectedJob().size() > k)
             {
@@ -130,11 +130,12 @@ public:
                         }
                     }
 
-                } while (indexMachine2 != listHighSpeedMachines.size());
+                } while (indexMachine2 < listHighSpeedMachines.size() - 1);
 
-                // If the swap isn't possible check with the next machine
-                indexMachine1++;
             }
+
+            // If the swap isn't possible check with the next machine
+            indexMachine1++;
         }
 
         // return an empty list
@@ -157,7 +158,7 @@ public:
         std::vector<unsigned int> swapableMachines;
 
         // For each machine of the list
-        while (indexMachine1 != listLowSpeedMachines.size())
+        while (indexMachine1 < listLowSpeedMachines.size() - 1)
         {
             if (listLowSpeedMachines[indexMachine1].getAffectedJob().size() > k)
             {
@@ -186,11 +187,11 @@ public:
                         }
                     }
 
-                } while (indexMachine2 != listLowSpeedMachines.size());
+                } while (indexMachine2 < listLowSpeedMachines.size() - 1);
 
-                // If the swap isn't possible check with the next machine
-                indexMachine1++;
             }
+            // If the swap isn't possible check with the next machine
+            indexMachine1++;
         }
 
         // return an empty list
