@@ -179,8 +179,8 @@ public:
                             if (job2.isLate() && (listLowSpeedMachines[indexMachine2].startTimeOfJob(k) + job1.getPi() / speed) < job1.getDi())
                             {
                                 // These machines can swap their k-th job
-                                swapableMachines.push_back(indexMachine1);
-                                swapableMachines.push_back(indexMachine2);
+                                swapableMachines.push_back(indexMachine1 + listHighSpeedMachines.size());
+                                swapableMachines.push_back(indexMachine2 + listHighSpeedMachines.size());
                                 return swapableMachines;
                             }
                         }
@@ -201,7 +201,7 @@ public:
      * Method that returns the size of the longest sequence in a high speed machine
      * @return An unsigned int representing the size of the longest sequence in a high speed machine
      */
-    /*unsigned int getMaxNumberOfHighSpeedBlocs()
+    unsigned int getMaxNumberOfHighSpeedBlocs()
     {
         unsigned int nbBlocs = 0;
 
@@ -215,13 +215,13 @@ public:
 
         return nbBlocs;
     }
-    */
+    
 
     /**
      * Method that returns the size of the longest sequence in a low speed machine
      * @return An unsigned int representing the size of the longest sequence in a low speed machine
      */
-    /*unsigned int getMaxNumberOfLowSpeedBlocs()
+    unsigned int getMaxNumberOfLowSpeedBlocs()
     {
         unsigned int nbBlocs = 0;
 
@@ -235,16 +235,18 @@ public:
 
         return nbBlocs;
     }
-    */
+    
 
-    /*void swapV(std::vector<Machine&> swapableMachines, unsigned int k)
+    void swapV(std::vector<unsigned int> swapableMachines, unsigned int k)
     {
-        Job jobTemp = swapableMachines[0][k];
+        Machine& machine1 = operator[](swapableMachines[0]);
+        Machine& machine2 = operator[](swapableMachines[1]);
+        Job jobTemp = machine1[k];
 
-        swapableMachines[0][k] = swapableMachines[1][k];
-        swapableMachines[1][k] = jobTemp;
+        machine1[k] = machine2[k];
+        machine2[k] = jobTemp;
     }
-    */
+    
 
     /**
      * Method that evaluate the solution
