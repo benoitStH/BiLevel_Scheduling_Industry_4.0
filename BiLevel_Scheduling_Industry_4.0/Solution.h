@@ -85,7 +85,12 @@ public:
         sum_Cj = 0.0;
     }
 
-
+    /**
+     * Method that returns the machines where a swap can happen between their k-th job
+     * @param k the k-th job in the machines' sequence
+     * @param considerLowSpeedMachines Are we considering a swap between low speed machines ? otherwise we consider high speed ones
+     * @return std::vector<unsigned int> of size 2. Contains the machines number. If no swap possible, the vector's size is 0.
+     */
     std::vector<unsigned int> possibleSwapV(unsigned int k, bool considerLowSpeedMachines)
     {
         // The list of machines we consider
