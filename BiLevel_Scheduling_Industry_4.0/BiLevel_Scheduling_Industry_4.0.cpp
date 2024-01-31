@@ -11,8 +11,18 @@ using namespace std;
 int main()
 {
     Parser parser = Parser();
-    std::string path = "C:/Users/benhi/Desktop/instance1.txt";
-    Instance instance = parser.readFromFile(path);
+    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instance1.txt";
+    Instance instance;
+
+    try
+    {
+        instance = parser.readFromFile(path);
+    }
+    catch (std::invalid_argument inv_arg)
+    {
+        std::cout << inv_arg.what() << std::endl;
+        return 1;
+    }
 
     // Première heuristique : DeepestDescent
     ISolver* solver = new DeepestDescent();
