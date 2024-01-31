@@ -153,11 +153,15 @@
   <ItemGroup>
     <ClInclude Include="DeepestDescent.h" />
     <ClInclude Include="Generateur.h" />
+    <ClInclude Include="IFollowerSwapRule.h" />
+    <ClInclude Include="ILeaderSelectRule.h" />
     <ClInclude Include="Instance.h" />
     <ClInclude Include="ISolver.h" />
+    <ClInclude Include="ISubSolver.h" />
     <ClInclude Include="Job.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Parser.h" />
+    <ClInclude Include="Rule.h" />
     <ClInclude Include="Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
