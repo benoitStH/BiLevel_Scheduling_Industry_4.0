@@ -2,6 +2,8 @@
 #define BILEVEL_SCHEDULING_ISOLVER_H
 
 #include "Solution.h"
+#include "ILeaderSelectRule.h"
+#include "ISubSolver.h"
 #include "Generateur.h"
 
 class ISolver
@@ -10,6 +12,8 @@ protected:
 	Solution* solution;
 	const Instance* instance;
 	bool verbose;
+    std::vector<ILeaderSelectRule> listRules;
+    ISubSolver* subSolver;
 
     Generateur generateur;
 
@@ -20,13 +24,13 @@ public:
     /************************/
 
 
-	ISolver() : solution(new Solution()), instance(nullptr), verbose(false) {}
+	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule>()), subSolver(nullptr) {}
 
     /**
      * Constructor of a solver from a instance.
      * @param instance the instance to solve
      */
-    ISolver(const Instance* instance) : solution(new Solution(instance)), instance(instance), verbose(false) {}
+    ISolver(const Instance* instance) : solution(new Solution(instance)), instance(instance), verbose(false), subSolver(nullptr) {}
 
 
     /***********************/
@@ -62,6 +66,18 @@ public:
     /********************/
     /*      SETTER      */
     /********************/
+
+    void setRules(std::vector<ILeaderSelectRule> listRule) {listRules = listRule;}
+
+    void setSubSolver(ISubSolver* subSolver)
+    {
+        if (this->subSolver != nullptr)
+        {
+            delete this->subSolver;
+        }
+        this->subSolver = subSolver;
+
+    }
 
     void setSolution(Solution* solution) 
     { 
