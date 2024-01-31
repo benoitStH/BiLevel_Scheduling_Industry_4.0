@@ -22,8 +22,8 @@
 //
 
 #include "Parser.h"
-#include <fstream>
 #include <sstream>
+#include <fstream>
 #include <stdexcept>
 #include <string>
 
@@ -33,21 +33,19 @@ Instance Parser::readFromFile(std::string& filePath) const {
     Instance newInstance = Instance(filePath);
     std::fstream fileStream(newInstance.getInstancePath().lexically_normal(), std::fstream::in);
     std::string line; // new line
-    unsigned int num_job = 0; // number of job generated
+    unsigned int num = 1;
     // open and read the file
     if (fileStream.is_open()) {
         while (std::getline(fileStream, line)) {
             auto pos = line.find(":");
             // if we don't find the ':' then we read jobs
             if (pos == std::string::npos) {
-                // read the job's data, the value should be separate with \t
+                // create the job, the value should be separate with \t
                 std::istringstream stream(line);
                 unsigned int pi, di, wi;
                 stream >> pi; stream >> di; stream >> wi;
-
-                // create the job
-                num_job++;
-                Job newJob = Job(pi, di, wi, num_job);
+                Job newJob = Job(pi, di, wi, num);
+                num++;
                 newInstance.add_job(newJob);
             }
             else {
@@ -55,15 +53,21 @@ Instance Parser::readFromFile(std::string& filePath) const {
                 std::string attribute = line.substr(0, pos);
                 if (attribute == "name") newInstance.setInstanceName(line.substr(pos + 1));
                 else if (attribute == "N") newInstance.setNbJobs(std::stoul(line.substr(pos + 1)));
+                else if (attribute == "n") newInstance.setNbToSelectJob(std::stoul(line.substr(pos + 1)));
                 else if (attribute == "M_max") newInstance.setNbOfHighSpeedMachines(std::stoul(line.substr(pos + 1)));
                 else if (attribute == "M_0") newInstance.setNbOfLowSpeedMachines(std::stoul(line.substr(pos + 1)));
-                else if (attribute == "V_max") newInstance.setHighSpeed(std::stof(line.substr(pos + 1)));
-                else if (attribute == "V_0") newInstance.setLowSpeed(std::stof(line.substr(pos + 1)));
+                else if (attribute == "V_max") newInstance.setHighSpeed(std::stoul(line.substr(pos + 1)));
+                else if (attribute == "V_0") newInstance.setLowSpeed(std::stoul(line.substr(pos + 1)));
+                else if (attribute != "Jobs") std::cout << "The file " + newInstance.getInstancePath().lexically_normal().string() + " format is incorrect\n";
             }
         };
     }
     else throw std::invalid_argument("Can't open the file " + newInstance.getInstancePath().lexically_normal().string());
     fileStream.close();
+
+    // check if we have the right number of created job
+    if (newInstance.getNbJobs() != newInstance.getListJobs().size()) throw std::invalid_argument("The number of jobs is not equals to N");
+    if (newInstance.getNbToSelectJob() == 0) throw std::invalid_argument("The number of jobs to select is not defined");
     return newInstance;
 }
 
@@ -73,6 +77,7 @@ void Parser::serializeInstance(Instance& instance) {
     if (fileStream.is_open()) {
         fileStream << "name:" << instance.getInstanceName() << std::endl
             << "N:" << instance.getNbJobs() << std::endl
+            << "n:" << instance.getNbJobs() << std::endl
             << "M_max:" << instance.getNbOfHighSpeedMachines() << std::endl
             << "M_0:" << instance.getNbOfLowSpeedMachines() << std::endl
             << "V_max:" << instance.getHighSpeed() << std::endl

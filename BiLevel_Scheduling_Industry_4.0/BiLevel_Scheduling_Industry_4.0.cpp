@@ -21,7 +21,8 @@ int main()
     solver->solve();
 
     Solution s = Solution(*(solver->getSolution()));
-    s.print();
+    cout << "Solver's Solution\n";
+    s.compactPrint();
 
     delete solver;
 

@@ -3,6 +3,7 @@
 void DeepestDescent::solve()
 {
 	std::vector<Job> jobs = instance->getListJobs();  // All available jobs
+	unsigned int nbJobsToSelect = instance->getNbToSelectJob();
 	std::vector<Job> chosenJobs; // Jobs selected by the Leader
 	std::vector<Solution> follower_solutions;  // list of solutions provided by the follower for each set of jobs given by the Leader
 
@@ -12,7 +13,7 @@ void DeepestDescent::solve()
 
 	while (i != jobs.end())
 	{
-		if(chosenJobs.size() >= 5)
+		if(chosenJobs.size() >= nbJobsToSelect)
 		{
 			break;
 		}
@@ -25,7 +26,8 @@ void DeepestDescent::solve()
 	Solution solution_init = generateur.generateInitialSolution(chosenJobs, *instance);
 	Solution best_solution = Solution(solution_init);
 
-	std::cout << best_solution;
+	std::cout << "LPT Rule :\n";
+	best_solution.print();
 	follower_solutions.push_back(best_solution);
 
 	// Leader selects the n among N jobs with the largest weighted processing time
@@ -36,7 +38,7 @@ void DeepestDescent::solve()
 	i = listLWPT_jobs.begin();
 	while (i != listLWPT_jobs.end())
 	{
-		if (chosenJobs.size() >= 5)
+		if (chosenJobs.size() >= nbJobsToSelect)
 		{
 			break;
 		}
