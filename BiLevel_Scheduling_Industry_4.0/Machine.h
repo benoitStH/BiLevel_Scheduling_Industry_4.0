@@ -63,7 +63,7 @@ public:
     float startTimeOfJob(unsigned int j) const { 
         if (j == 0) { return 0; }
         
-        return startTimeOfJob(j - 1) + listAffectedJobs[j].getPi() / speed;
+        return startTimeOfJob(j - 1) + listAffectedJobs[j-1].getPi() / speed;
     }
 
     /**
