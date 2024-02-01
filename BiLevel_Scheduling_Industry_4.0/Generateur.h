@@ -41,13 +41,6 @@ public:
      */
     Instance generateInstance(std::string newInstancePath, unsigned int nbJobs, unsigned int nbOfHighSpeedMachines, unsigned int nbOfLowSpeedMachines, unsigned int highSpeed, unsigned int lowSpeed);
 
-    /**
-     * Method that generate an initial solution from a given list of jobs
-     * @param listJobs a list of jobs to schedule
-     * @return an initial solution which minimize the sum of completion times
-     */
-    Solution generateInitialSolution(const std::vector<Job>& listJobs, const Instance& instance);
-
 };
 
 #endif //BILEVEL_SCHEDULING_GENERATEUR_H

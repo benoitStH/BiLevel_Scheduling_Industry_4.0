@@ -4,7 +4,6 @@
 #include "Solution.h"
 #include "ILeaderSelectRule.h"
 #include "ISubSolver.h"
-#include "Generateur.h"
 
 class ISolver
 {
@@ -12,10 +11,8 @@ protected:
 	Solution* solution;
 	const Instance* instance;
 	bool verbose;
-    std::vector<ILeaderSelectRule> listRules;
+    std::vector<ILeaderSelectRule*> listRules;
     ISubSolver* subSolver;
-
-    Generateur generateur;
 
 public:
 
@@ -24,7 +21,7 @@ public:
     /************************/
 
 
-	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule>()), subSolver(nullptr) {}
+	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule*>()), subSolver(nullptr) {}
 
     /**
      * Constructor of a solver from a instance.
@@ -37,7 +34,13 @@ public:
     /*      DESTRUCTOR     */
     /***********************/
 
-    virtual ~ISolver() { delete solution; }
+    virtual ~ISolver() {
+
+        if (solution != nullptr)
+        {
+            delete solution;
+        }
+    }
 
 
     /********************/
@@ -67,7 +70,7 @@ public:
     /*      SETTER      */
     /********************/
 
-    void setRules(std::vector<ILeaderSelectRule> listRule) {listRules = listRule;}
+    void setRules(std::vector<ILeaderSelectRule*> listRule) {listRules = listRule;}
 
     void setSubSolver(ISubSolver* subSolver)
     {
