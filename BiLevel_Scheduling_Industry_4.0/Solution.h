@@ -219,6 +219,10 @@ public:
      * Method that evaluate the solution
      */
     void evaluate() {
+
+        sum_Cj = 0;
+        sum_wj_Uj = 0;
+
         // compute the objective function for the high speed machines
         for (auto& machine : listHighSpeedMachines) {
             machine.evaluate();
