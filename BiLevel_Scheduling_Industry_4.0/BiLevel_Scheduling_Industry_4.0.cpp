@@ -5,7 +5,10 @@
 #include "Parser.h"
 #include "Generateur.h" // for random instance generation
 #include <iostream>
-#include "DeepestDescent.h"
+#include "LSolver.h"
+#include "FSolver.h"
+#include "LLPTRule.h"
+#include "FLateToEarly.h"
 using namespace std;
 
 int main()
@@ -24,17 +27,50 @@ int main()
         return 1;
     }
 
-    // Première heuristique : DeepestDescent
-    ISolver* solver = new DeepestDescent();
+    // LSolver : Generalisation d'un solveur
+    std::vector<ILeaderSelectRule*> listLRules;
+    std::vector<IFollowerSwapRule*> listFRules;
 
-    solver->setInstance(&instance);
-    solver->solve();
+    // Allocatiing rules
+    listLRules.push_back(new LLPTRule());
+    listFRules.push_back(new FLateToEarly());
 
-    Solution s = Solution(*(solver->getSolution()));
-    cout << "Solver's Solution\n";
-    s.compactPrint();
+    // Creating the Solver for the Follower and Leader
+    FSolver subsolver(listFRules);
+    LSolver solver;
+    solver.setInstance(&instance);
+    solver.setRules(listLRules);
+    solver.setSubSolver(&subsolver);
 
-    delete solver;
+    // Solving the instance
+    solver.solve();
+
+    // Show solution
+    Solution solution = Solution(*(solver.getSolution()));
+    solution.print();
+
+    // Deallocating Rules
+    for (ILeaderSelectRule* selectRule : listLRules)
+    {
+        delete selectRule;
+    }
+
+    for (IFollowerSwapRule* swapRule : listFRules)
+    {
+        delete swapRule;
+    }
+
+    //// Première heuristique : DeepestDescent
+    //ISolver* solver = new DeepestDescent();
+
+    //solver->setInstance(&instance);
+    //solver->solve();
+
+    //Solution s = Solution(*(solver->getSolution()));
+    //cout << "Solver's Solution\n";
+    //s.compactPrint();
+
+    //delete solver;
 
     /* // Création d'une solution initiale 
     Generateur generateur;

@@ -60,7 +60,7 @@ public:
      * @param j the j-th job in the machine's sequence.
      * @return float The starting time of the job
      */
-    float startTimeOfJob(unsigned int j) { 
+    float startTimeOfJob(unsigned int j) const { 
         if (j == 0) { return 0; }
         
         return startTimeOfJob(j - 1) + listAffectedJobs[j].getPi() / speed;

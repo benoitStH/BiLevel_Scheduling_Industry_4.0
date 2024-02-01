@@ -142,16 +142,20 @@
   <ItemGroup>
     <ClCompile Include="BiLevel_Scheduling_Industry_4.0.cpp" />
     <ClCompile Include="DeepestDescent.cpp" />
+    <ClCompile Include="FSolver.cpp" />
     <ClCompile Include="Generateur.cpp" />
     <ClCompile Include="Instance.cpp" />
     <ClCompile Include="ISolver.cpp" />
     <ClCompile Include="Job.cpp" />
+    <ClCompile Include="LSolver.cpp" />
     <ClCompile Include="Machine.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeepestDescent.h" />
+    <ClInclude Include="FLateToEarly.h" />
+    <ClInclude Include="FSolver.h" />
     <ClInclude Include="Generateur.h" />
     <ClInclude Include="IFollowerSwapRule.h" />
     <ClInclude Include="ILeaderSelectRule.h" />
@@ -160,6 +164,7 @@
     <ClInclude Include="ISubSolver.h" />
     <ClInclude Include="Job.h" />
     <ClInclude Include="LLPTRule.h" />
+    <ClInclude Include="LSolver.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Rule.h" />

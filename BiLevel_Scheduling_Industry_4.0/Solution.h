@@ -331,6 +331,14 @@ public:
 
     float getSumCj() const { return sum_Cj; }
 
+    /**
+     * Returns a reference to the element at specified location pos.
+     * If pos is greater than the number of high speed machine then the reference is from the list of low speed machine
+     * Else the reference is from the list of high speed machine. No bounds checking is performed.
+     */
+    Machine getMachine(unsigned int pos) const { return pos < listHighSpeedMachines.size() ? listHighSpeedMachines[pos] : listLowSpeedMachines[pos - listHighSpeedMachines.size()]; }
+
+
     /********************/
     /*      SETTER      */
     /********************/
