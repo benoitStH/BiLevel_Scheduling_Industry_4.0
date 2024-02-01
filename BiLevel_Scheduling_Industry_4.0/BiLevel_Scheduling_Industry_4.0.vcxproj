@@ -159,6 +159,7 @@
     <ClInclude Include="ISolver.h" />
     <ClInclude Include="ISubSolver.h" />
     <ClInclude Include="Job.h" />
+    <ClInclude Include="LLPTRule.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Rule.h" />

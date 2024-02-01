@@ -3,7 +3,7 @@
 
 #include "Rule.h"
 #include <vector>
-#include "Job.h"
+#include "Instance.h"
 
 class ILeaderSelectRule : public Rule
 {
@@ -23,7 +23,13 @@ public:
 	/********************/
 	/*      METHODS     */
 	/********************/
-	virtual std::vector<Job> selectJobsFrom(std::vector<Job> listJobs) = 0;
+
+	/* 
+	 * Overridable Method which will select a subset of n jobs among the list of Jobs given
+	 * @param instance An instance with the list of jobs and the number of jobs to select
+	 * @return a list of selected jobs
+	 */
+	virtual std::vector<Job> selectJobsFrom(const Instance& instance) = 0;
 
 
 
