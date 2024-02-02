@@ -31,7 +31,7 @@ public:
 		const Job& job1 = m1.getAffectedJob()[k];
 		const Job& job2 = m2.getAffectedJob()[k];
 
-		bool swapIsPossible = (job1.isLate() && job2.isLate() && (m2.startTimeOfJob(k) + job1.getPi() / speed) < job1.getDi());
+		bool swapIsPossible = (job1.isLate() && job2.isLate() && (m2.startTimeOfJob(k) + (job1.getPi() / speed)) < job1.getDi());
 
 		return swapIsPossible;
 	}
