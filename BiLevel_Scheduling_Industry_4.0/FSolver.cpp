@@ -7,6 +7,7 @@ void FSolver::heuristic()
 		std::cout << "Error FSolver.heuristic() : Solution not initialized !\n";
 		return;
 	}
+	solution->print(); std::cout << std::endl;
 
 	Solution solution_init = Solution(*solution);
 	std::vector<std::vector<unsigned int>> possibleSwaps;
@@ -17,6 +18,7 @@ void FSolver::heuristic()
 	unsigned int nbHighSpeedBlocs = solution_init.getMaxNumberOfHighSpeedBlocs();
 	unsigned int nbMachines = solution_init.getListHighSpeedMachines().size();
 
+	std::cout << "HighSpeedMachines Swap\n";
 	bool end;
 	do
 	{
@@ -25,6 +27,7 @@ void FSolver::heuristic()
 		// For each bloc k
 		for (unsigned int k = 0; k < nbHighSpeedBlocs; k++)
 		{
+			possibleSwaps.clear();
 			// We compare between the machine l1
 			for (unsigned int l1 = 0; l1 < nbMachines-1; l1++)
 			{
@@ -50,10 +53,13 @@ void FSolver::heuristic()
 			if (swap.size() > 0)
 			{
 				solution_init.swapV(swap, k);
+				solution_init.evaluate();
 				std::cout << "swap (" << swap[0] << ", " << swap[1] << ") at bloc " << k << std::endl;
 				end = false;
 			}
 		}
+
+		// solution_init.print(); std::cout << std::endl;
 
 		// if the new solution is better, save it
 		if (solution_init < *solution)
@@ -63,11 +69,14 @@ void FSolver::heuristic()
 
 	} while (end == false);
 
+	solution->print(); std::cout << std::endl;
+
 	// LOW SPEED MACHINES //
 
 	unsigned int nbLowSpeedBlocs = solution_init.getMaxNumberOfLowSpeedBlocs();
 	unsigned int nbTotalMachines = solution_init.getListLowSpeedMachines().size() + nbMachines;
 
+	std::cout << "LowSpeedMachines Swap\n";
 	do
 	{
 		end = true; // No swap has been performed
@@ -75,6 +84,7 @@ void FSolver::heuristic()
 		// For each bloc k
 		for (unsigned int k = 0; k < nbLowSpeedBlocs; k++)
 		{
+			possibleSwaps.clear();
 			// We compare between the machine l1
 			for (unsigned int l1 = nbMachines; l1 < nbTotalMachines-1; l1++)
 			{
@@ -104,6 +114,8 @@ void FSolver::heuristic()
 			}
 		}
 
+		// solution_init.print(); std::cout << std::endl;
+
 		// if the new solution is better, save it
 		if (solution_init < *solution)
 		{
@@ -112,5 +124,6 @@ void FSolver::heuristic()
 
 	} while (end == false);
 
+	solution->print(); std::cout << std::endl;
 
 }
