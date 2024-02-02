@@ -8,6 +8,7 @@ void LSolver::solve()
 	// The Leader applies each selection rule as its decision
 	for (ILeaderSelectRule* selectRule : listRules)
 	{
+		std::cout << "Applying " << selectRule->getRuleName() << " as Leader's decision criterion\n\n";
 		// The subset of jobs chosen by the Leader's selection rule
 		std::vector<Job> chosenJobs = selectRule->selectJobsFrom(*instance);
 

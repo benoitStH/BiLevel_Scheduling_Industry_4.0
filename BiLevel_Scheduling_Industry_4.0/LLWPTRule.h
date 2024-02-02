@@ -5,6 +5,8 @@
 
 class LLWPTRule : public ILeaderSelectRule
 {
+
+public:
 	LLWPTRule() : ILeaderSelectRule("LWPTRule", 2) {};
 
 	/*

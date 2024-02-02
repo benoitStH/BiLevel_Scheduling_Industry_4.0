@@ -8,6 +8,7 @@
 #include "LSolver.h"
 #include "FSolver.h"
 #include "LLPTRule.h"
+#include "LLWPTRule.h"
 #include "FLateToEarly.h"
 using namespace std;
 
@@ -33,6 +34,8 @@ int main()
 
     // Allocatiing rules
     listLRules.push_back(new LLPTRule());
+    listLRules.push_back(new LLWPTRule());
+
     listFRules.push_back(new FLateToEarly());
 
     // Creating the Solver for the Follower and Leader
@@ -47,6 +50,7 @@ int main()
 
     // Show solution
     Solution solution = Solution(*(solver.getSolution()));
+    std::cout << "Final Solution\n\n";
     solution.print();
 
     // Deallocating Rules
