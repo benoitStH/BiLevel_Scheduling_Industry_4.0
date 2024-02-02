@@ -369,9 +369,9 @@ public:
 
     /*
     * Operator to compare this object with another Solution object
-    * We first compare the sum of Cj and then the sum of wjUj
+    * We only compare the sum wj Uj and assume the sum Cj are equal
     */
-    bool operator<(const Solution& sol) const { return (sum_Cj == sol.sum_Cj) ? (sum_wj_Uj < sol.sum_wj_Uj) : (sum_Cj < sol.sum_Cj); }
+    bool operator<(const Solution& sol) const { return (sum_wj_Uj < sol.sum_wj_Uj); }
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Solution& solution) {
