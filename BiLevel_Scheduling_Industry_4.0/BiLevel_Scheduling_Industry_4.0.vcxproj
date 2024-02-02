@@ -164,6 +164,7 @@
     <ClInclude Include="ISubSolver.h" />
     <ClInclude Include="Job.h" />
     <ClInclude Include="LLPTRule.h" />
+    <ClInclude Include="LLWPTRule.h" />
     <ClInclude Include="LSolver.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Parser.h" />
