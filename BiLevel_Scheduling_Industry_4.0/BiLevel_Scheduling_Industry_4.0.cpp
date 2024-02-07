@@ -7,8 +7,7 @@
 #include <iostream>
 #include "LSolver.h"
 #include "FSolver.h"
-#include "LLPTRule.h"
-#include "LLWPTRule.h"
+#include "LSortRule.h"
 #include "FLateToEarly.h"
 using namespace std;
 
@@ -33,8 +32,8 @@ int main()
     std::vector<IFollowerSwapRule*> listFRules;
 
     // Allocatiing rules
-    listLRules.push_back(new LLPTRule());
-    listLRules.push_back(new LLWPTRule());
+    listLRules.push_back(new LSortRule(sortRule::LPTRULE));
+    listLRules.push_back(new LSortRule(sortRule::LWPTRULE));
 
     listFRules.push_back(new FLateToEarly());
 
