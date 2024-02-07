@@ -5,8 +5,10 @@
 
 namespace sortRule {
 
+	const unsigned int RandomRule = 0;
 	const unsigned int LPTRULE = 1;
 	const unsigned int LWPTRULE = 2;
+	const unsigned int InvEDDRule = 3;
 }
 
 class LSortRule : public ILeaderSelectRule
@@ -18,12 +20,21 @@ public:
 		this->ruleNumber = ruleNumber;
 		switch (ruleNumber)
 		{
+
+		case sortRule::RandomRule:
+			ruleName = "RandomRule";
+			break;
+
 		case sortRule::LPTRULE:
 			ruleName = "LPTRule";
 			break;
 
 		case sortRule::LWPTRULE:
 			ruleName = "LWPTRule";
+			break;
+
+		case sortRule::InvEDDRule:
+			ruleName = "invEDDRule";
 			break;
 
 		default:
@@ -43,12 +54,20 @@ public:
 	{
 		switch (ruleNumber)
 		{
+
+		case sortRule::RandomRule:
+			return RandomRule(instance);
+			break;
 		case sortRule::LPTRULE:
 			return LPTRule(instance);
 			break;
 
 		case sortRule::LWPTRULE:
 			return LWPTRule(instance);
+			break;
+
+		case sortRule::InvEDDRule:
+			return std::vector<Job>();
 			break;
 
 		default:
@@ -58,6 +77,35 @@ public:
 	}
 
 private:
+
+	/*
+	 * Method which will select a random subset of n jobs among the list of Jobs given
+	 * No Selection criterion is used
+	 * @param instance An instance with the list of jobs and the number of jobs to select
+	 * @return a list of selected jobs
+	 */
+	std::vector<Job> RandomRule(const Instance& instance)
+	{
+		std::vector<Job> jobs = instance.getListJobs();  // List of jobs
+		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
+
+		// Shuffling the list of jobs
+		std::shuffle(jobs.begin(), jobs.end(), std::default_random_engine());
+
+		std::vector<Job>::iterator i = jobs.begin();
+		while (i != jobs.end())
+		{
+			if (chosenJobs.size() >= instance.getNbToSelectJob())
+			{
+				break;
+			}
+
+			chosenJobs.push_back(*i);
+			i++;
+		}
+
+		return chosenJobs;
+	}
 
 	/*
 	 * Method which will select a subset of n jobs among the list of Jobs given

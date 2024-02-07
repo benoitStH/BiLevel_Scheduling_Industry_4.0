@@ -13,6 +13,10 @@ using namespace std;
 
 int main()
 {
+    // TODO: Tester avec de grosse instance, générer plusieurs grosses instances
+    // Check : taux d'amélioration entre solution initial et final
+    // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
+    // TOTRY : Diviser par speed à la fin des calculs de dates de fin
     Parser parser = Parser();
     std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instance1.txt";
     Instance instance;
