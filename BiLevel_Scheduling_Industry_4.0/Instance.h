@@ -62,11 +62,7 @@ public:
      */
     Instance(std::string &newInstancePath) : listJobs(std::vector<Job>()) {
         std::filesystem::path newPath = std::filesystem::path(newInstancePath);
-        if (std::filesystem::exists(newPath)) instancePath = newPath ;
-        else {
-            // create the file
-            std::filesystem::resize_file(newPath,1);
-        }
+        instancePath = newPath ;
         instanceName = instancePath.stem().string();
     }
 
