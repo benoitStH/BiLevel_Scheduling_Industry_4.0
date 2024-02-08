@@ -18,54 +18,53 @@ int main()
     // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
     // TOTRY : Diviser par speed à la fin des calculs de dates de fin
     Parser parser = Parser();
-    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instance1.txt";
+    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instance4.txt";
     Instance instance;
+    bool generating = false;
 
-    try
+    if (generating == false)
     {
         instance = parser.readFromFile(path);
+
+        // LSolver : Generalisation d'un solveur
+        std::vector<ILeaderSelectRule*> listLRules;
+        std::vector<IFollowerSwapRule*> listFRules;
+
+        // Allocatiing rules
+        listLRules.push_back(new LSortRule(sortRule::LPTRULE));
+        listLRules.push_back(new LSortRule(sortRule::LWPTRULE));
+
+        listFRules.push_back(new FLateToEarly());
+
+        // Creating the Solver for the Follower and Leader
+        FSolver subsolver(listFRules);
+        LSolver solver;
+        solver.setInstance(&instance);
+        solver.setRules(listLRules);
+        solver.setSubSolver(&subsolver);
+
+        // Solving the instance
+        solver.solve();
+
+        // Show solution
+        Solution solution = Solution(*(solver.getSolution()));
+        std::cout << "Final Solution\n\n";
+        solution.compactPrint();
+
+        // Deallocating Rules
+        for (ILeaderSelectRule* selectRule : listLRules)
+        {
+            delete selectRule;
+        }
+
+        for (IFollowerSwapRule* swapRule : listFRules)
+        {
+            delete swapRule;
+        }
     }
-    catch (std::invalid_argument inv_arg)
-    {
-        std::cout << inv_arg.what() << std::endl;
-        return 1;
-    }
+        
 
-    // LSolver : Generalisation d'un solveur
-    std::vector<ILeaderSelectRule*> listLRules;
-    std::vector<IFollowerSwapRule*> listFRules;
-
-    // Allocatiing rules
-    listLRules.push_back(new LSortRule(sortRule::LPTRULE));
-    listLRules.push_back(new LSortRule(sortRule::LWPTRULE));
-
-    listFRules.push_back(new FLateToEarly());
-
-    // Creating the Solver for the Follower and Leader
-    FSolver subsolver(listFRules);
-    LSolver solver;
-    solver.setInstance(&instance);
-    solver.setRules(listLRules);
-    solver.setSubSolver(&subsolver);
-
-    // Solving the instance
-    solver.solve();
-
-    // Show solution
-    Solution solution = Solution(*(solver.getSolution()));
-    std::cout << "Final Solution\n\n";
-    solution.print();
-
-    // Deallocating Rules
-    for (ILeaderSelectRule* selectRule : listLRules)
-    {
-        delete selectRule;
-    }
-
-    for (IFollowerSwapRule* swapRule : listFRules)
-    {
-        delete swapRule;
-    }
+    
 
     //// Première heuristique : DeepestDescent
     //ISolver* solver = new DeepestDescent();
@@ -91,24 +90,27 @@ int main()
 
     //Machine machine = Machine(10);
 
-    /* // Sauvegarde et Chargement d'instance 
-    Generateur randomInstancer = Generateur();
-    Parser parser = Parser();
+    if (generating)
+    {
+        // Sauvegarde et Chargement d'instance 
+        Generateur randomInstancer = Generateur();
+        Parser parser = Parser();
 
-    std::string path = "C:/Users/benhi/Desktop/instance1.txt";
-    Instance instance = randomInstancer.generateInstance(path, 10, 3, 2, 10, 5);
+        Instance instance = randomInstancer.generateInstance(path, 30, 3, 2, 10, 5);
 
-    cout << instance;
+        cout << instance;
+
+        cout << "sauvegarde\n";
+        parser.serializeInstance(instance);
+        cout << "chargement\n";
+        Instance loadedInstance = parser.readFromFile(path);
+
+        cout << loadedInstance;
+
+        std::cout << "Hello World!\n";
+    }
     
-    cout << "sauvegarde\n";
-    parser.serializeInstance(instance);
-    cout << "chargement\n";
-    Instance loadedInstance = parser.readFromFile(path);
-
-    cout << loadedInstance;
-
-    std::cout << "Hello World!\n";
-    */
+    
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
