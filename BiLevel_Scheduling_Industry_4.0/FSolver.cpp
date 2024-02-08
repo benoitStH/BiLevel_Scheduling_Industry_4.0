@@ -69,7 +69,7 @@ void FSolver::heuristic()
 
 	} while (end == false);
 
-	solution->print(); std::cout << std::endl;
+	solution->compactPrint(); std::cout << std::endl;
 
 	// LOW SPEED MACHINES //
 
@@ -124,6 +124,6 @@ void FSolver::heuristic()
 
 	} while (end == false);
 
-	solution->print(); std::cout << std::endl;
+	solution->compactPrint(); std::cout << std::endl;
 
 }
