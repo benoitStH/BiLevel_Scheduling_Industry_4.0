@@ -31,7 +31,35 @@ public:
 		const Job& job1 = m1.getAffectedJob()[k];
 		const Job& job2 = m2.getAffectedJob()[k];
 
-		bool swapIsPossible = (job1.isLate() && job2.isLate() && (m2.startTimeOfJob(k) + (job1.getPi() / speed)) < job1.getDi());
+		bool swapIsPossible; // Is a swap possible ?
+		
+		// Are the jobs both late and swapping will make job1 early ?
+		swapIsPossible = (job1.isLate() && job2.isLate() && (m2.startTimeOfJob(k) + (job1.getPi() / speed)) < job1.getDi());
+
+		// Otherwise, Is job1 the only one late ?
+		if (job1.isLate() && !job2.isLate() && swapIsPossible == false)
+		{
+			// Swapping will make job1 early and job2 will still be early
+			swapIsPossible = ((m2.startTimeOfJob(k) + (job1.getPi() / speed) < job1.getDi()) &&
+				m1.startTimeOfJob(k) + (job2.getPi() / speed) < job2.getDi());
+
+			// Or Swapping will make job1 early and job2 will be late, Swap is possible if w1 > w2
+			swapIsPossible = (swapIsPossible || (job1.getWi() > job2.getWi() && (m2.startTimeOfJob(k) + (job1.getPi() / speed) < job1.getDi())));
+
+		}
+		else if (job2.isLate() && !job1.isLate())  // Is job2 the only one late ?
+		{
+			// Swapping will make job2 early and job1 will still be early
+			swapIsPossible = ((m2.startTimeOfJob(k) + (job1.getPi() / speed) < job1.getDi()) &&
+				m1.startTimeOfJob(k) + (job2.getPi() / speed) < job2.getDi());
+
+			// Or Swapping will make job2 early and job1 will be late, Swap is possible if w2 > w1
+			swapIsPossible = (swapIsPossible || (job2.getWi() > job1.getWi() && (m1.startTimeOfJob(k) + (job2.getPi() / speed) < job2.getDi())));
+		}
+
+		std::cout << job1 << " " << m1.startTimeOfJob(k) << std::endl;
+		std::cout << job2 << " " << m2.startTimeOfJob(k) << std::endl;
+		std::cout << swapIsPossible << std::endl;
 
 		return swapIsPossible;
 	}
