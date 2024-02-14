@@ -24,7 +24,7 @@ Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int s
     unsigned int di = diDistribution(numGenerator);
     unsigned int wi = wiDistribution(numGenerator);
 
-    return Job(pi, di, wi, num);
+    return Job(pi+di*4, di, wi, num);
 }
 
 Instance Generateur::generateInstance(std::string newInstancePath, unsigned int nbJobs, unsigned int nbOfHighSpeedMachines,
