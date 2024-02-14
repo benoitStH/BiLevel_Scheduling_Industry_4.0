@@ -5,6 +5,7 @@
 
 namespace swapRule {
 	const unsigned int LATE2EARLY = 1;
+	const unsigned int DUMB_METHOD = 2;
 }
 
 class FLateToEarly : public IFollowerSwapRule
@@ -20,6 +21,10 @@ public:
 		{
 		case swapRule::LATE2EARLY:
 			ruleName = "LateToEarly";
+			break;
+			
+		case swapRule::DUMB_METHOD:
+			ruleName = "Dumb";
 			break;
 
 		default:
@@ -53,6 +58,10 @@ public:
 		switch (ruleNumber)
 		{
 		case swapRule::LATE2EARLY:
+			swapLateToEarly(swapOp, m1, m2, k, speed); //
+			break;
+			
+		case swapRule::DUMB_METHOD:
 			swapLateToEarly(swapOp, m1, m2, k, speed); //
 			break;
 
@@ -121,6 +130,27 @@ public:
 			}
 		}
 	}
+
+	/**
+	 * Perform the swap and check the difference of sum wjUj
+	 * Update the swap operator's gain
+	 * @param swapOp A 'SwapOperation' object representing the swapping of the k-th job between machine m1 and m2
+	 * @param s A 'Solution' object containing the schedule
+	 * @param speed the machine's speed. We assume m1's speed equals m2's speed.
+	 */
+	void swapDumbly(SwapOperation& swapOp, const Solution& s)
+	{
+		Solution test = Solution(s);
+		std::vector<unsigned int> machines;
+		machines.push_back(swapOp.machine1);
+		machines.push_back(swapOp.machine2);
+
+		test.swapV(machines, swapOp.bloc);
+
+		swapOp.gain = s.getSumWjUj() - test.getSumWjUj();
+
+	}
+
 
 	/** 
 	 * Method which return the swap with the highest gain as the best swap
