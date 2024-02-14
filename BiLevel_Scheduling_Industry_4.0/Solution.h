@@ -204,7 +204,7 @@ public:
     }
     
 
-    void swapV(std::vector<unsigned int> swapableMachines, unsigned int k)
+    void swapV(std::vector<unsigned int> swapableMachines, unsigned int k, bool verbose=true)
     {
         Machine& machine1 = operator[](swapableMachines[0]);
         Machine& machine2 = operator[](swapableMachines[1]);
@@ -213,8 +213,11 @@ public:
         machine1[k] = machine2[k];
         machine2[k] = jobTemp;
 
-        std::cout << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
-            " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << std::endl;
+        if (verbose)
+        {
+            std::cout << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
+                " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << std::endl;
+        }
     }
     
 
