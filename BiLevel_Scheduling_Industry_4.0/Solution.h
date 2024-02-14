@@ -260,7 +260,7 @@ public:
             for (const Job& job : machine.getAffectedJob())
             {
                 std::cout << (job.isLate() ? "*" : "");
-                std::cout << job.getNum() << "| pi: " << job.getPi() / HighSpeed << " di: " << job.getDi() << " wi: " << job.getWi() << " |";
+                std::cout << job.getNum() << "|p " << job.getPi() / HighSpeed << " d " << job.getDi() << " w " << job.getWi() << "| ";
             }
             std::cout << "]\n";
         }
@@ -275,7 +275,7 @@ public:
             for (const Job& job : machine.getAffectedJob())
             {
                 std::cout << (job.isLate() ? "*" : "");
-                std::cout << job.getNum() << "| pi: " << job.getPi() / LowSpeed << " di: " << job.getDi() << " wi: " << job.getWi() << " |";
+                std::cout << job.getNum() << "|p " << job.getPi() / LowSpeed << " d " << job.getDi() << " w " << job.getWi() << "| ";
             }
             std::cout << "]\n";
         }

@@ -96,7 +96,7 @@ public:
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Job& job) {
-    os << "| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << (job.isLate() ? "*" : "") << " |";
+    os << "| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << (job.isLate() ? "*" : "") << "|";
     return os;
 }
 
