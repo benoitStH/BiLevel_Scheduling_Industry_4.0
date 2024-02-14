@@ -149,7 +149,7 @@ public:
 		if (s.getMachine(swapOp.machine1).getAffectedJob().size() <= swapOp.bloc) { return; }
 		if (s.getMachine(swapOp.machine2).getAffectedJob().size() <= swapOp.bloc) { return; }
 
-		test.swapV(machines, swapOp.bloc);
+		test.swapV(machines, swapOp.bloc, false);
 
 		swapOp.gain = s.getSumWjUj() - test.getSumWjUj();
 
