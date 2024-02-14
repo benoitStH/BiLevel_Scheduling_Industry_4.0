@@ -8,6 +8,7 @@ void FSolver::heuristic()
 		return;
 	}
 	solution->print(); std::cout << std::endl;
+	solution->compactPrint(); std::cout << std::endl;
 
 	Solution solution_init = Solution(*solution);
 	std::vector<SwapOperation> possibleSwaps;
@@ -53,7 +54,7 @@ void FSolver::heuristic()
 
 				solution_init.swapV(machines, k);
 				solution_init.evaluate();
-				std::cout << "swap (" << swapOp.machine1 << ", " << swapOp.machine2 << ") at bloc " << k << std::endl;
+				//std::cout << "swap (" << swapOp.machine1 << ", " << swapOp.machine2 << ") at bloc " << k << std::endl;
 				end = false;
 			}
 		}
@@ -109,7 +110,7 @@ void FSolver::heuristic()
 
 				solution_init.swapV(machines, k);
 				solution_init.evaluate();
-				std::cout << "swap (" << swapOp.machine1 << ", " << swapOp.machine2 << ") at bloc " << k << std::endl;
+				//std::cout << "swap (" << swapOp.machine1 << ", " << swapOp.machine2 << ") at bloc " << k << std::endl;
 				end = false;
 			}
 		}

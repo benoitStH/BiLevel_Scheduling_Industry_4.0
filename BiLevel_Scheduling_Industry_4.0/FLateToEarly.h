@@ -167,7 +167,8 @@ public:
 
 		for (SwapOperation swapOp : possibleSwaps)
 		{
-			printOperator(swapOp);
+			if (swapOp.gain > 0) { printOperator(swapOp); }
+
 			if (swapOp.gain > best.gain)
 			{
 				best = swapOp;

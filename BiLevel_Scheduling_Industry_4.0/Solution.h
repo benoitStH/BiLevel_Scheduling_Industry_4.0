@@ -212,6 +212,9 @@ public:
 
         machine1[k] = machine2[k];
         machine2[k] = jobTemp;
+
+        std::cout << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
+            " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << std::endl;
     }
     
 
