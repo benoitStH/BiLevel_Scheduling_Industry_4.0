@@ -62,7 +62,7 @@ public:
 			break;
 			
 		case swapRule::DUMB_METHOD:
-			swapLateToEarly(swapOp, m1, m2, k, speed); //
+			swapDumbly(swapOp, s); //
 			break;
 
 			default:
