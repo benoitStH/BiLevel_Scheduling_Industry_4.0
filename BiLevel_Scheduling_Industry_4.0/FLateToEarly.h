@@ -145,6 +145,10 @@ public:
 		machines.push_back(swapOp.machine1);
 		machines.push_back(swapOp.machine2);
 
+		// If one of the machine doesn't have a k-th job, return false
+		if (s.getMachine(swapOp.machine1).getAffectedJob().size() <= swapOp.bloc) { return; }
+		if (s.getMachine(swapOp.machine2).getAffectedJob().size() <= swapOp.bloc) { return; }
+
 		test.swapV(machines, swapOp.bloc);
 
 		swapOp.gain = s.getSumWjUj() - test.getSumWjUj();
