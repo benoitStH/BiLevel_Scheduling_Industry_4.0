@@ -7,6 +7,7 @@ namespace swapRule {
 	const unsigned int LATE2EARLY = 1;
 	const unsigned int DUMB_METHOD = 2;
 	const unsigned int LATENESS = 3;
+	const unsigned int LATENESS_CAREFUL = 4;
 }
 
 class FLateToEarly : public IFollowerSwapRule
@@ -30,6 +31,10 @@ public:
 			
 		case swapRule::LATENESS:
 			ruleName = "Lateness";
+			break;
+			
+		case swapRule::LATENESS_CAREFUL:
+			ruleName = "LatenessCareful";
 			break;
 
 		default:
@@ -76,6 +81,10 @@ public:
 			break;
 			
 		case swapRule::LATENESS:
+			swapLateness(swapOp, s); //
+			break;
+			
+		case swapRule::LATENESS_CAREFUL:
 			swapLateness(swapOp, s); //
 			break;
 
@@ -208,6 +217,59 @@ public:
 		
 
 	}
+
+	/**
+	 * Check if a swap will improve the solution by checking the lateness of the following jobs and the swaaped jobs
+	 * Update the swap operator's gain
+	 * @param swapOp A 'SwapOperation' object representing the swapping of the k-th job between machine m1 and m2
+	 * @param s A 'Solution' object containing the schedule
+	 */
+	void swapLatenessCareful(SwapOperation& swapOp, const Solution& s)
+	{
+		unsigned int k = swapOp.bloc;
+		const Machine& m1 = s.getMachine(swapOp.machine1);
+		const Machine& m2 = s.getMachine(swapOp.machine2);
+
+		const Job& job1 = m1.getAffectedJob()[k];
+		const Job& job2 = m2.getAffectedJob()[k];
+		float speed = m1.getSpeed();
+
+		// S'il s'agit du dernier bloc, applique une méthode naïve
+		if (swapOp.bloc == m1.getAffectedJob().size() - 1)
+		{
+			swapDumbly(swapOp, s);
+			return;
+		}
+
+		swapOp.gain = 0;
+
+		// Si job1 est en retard et sera en avance après swap
+		if (job1.isLate() && m2.startTimeOfJob(k) + (job1.getPi() / speed) <= job1.getDi())
+		{
+			swapOp.gain += job1.getWi();
+		}
+
+		// Si job1 est en avance et sera en retard après swap
+		if (job1.isLate() == false && m2.startTimeOfJob(k) + (job1.getPi() / speed) > job1.getDi())
+		{
+			swapOp.gain -= job1.getWi();
+		}
+		
+		// Si job2 est en retard et sera en avance après swap
+		if (job2.isLate() && m2.startTimeOfJob(k) + (job2.getPi() / speed) <= job2.getDi())
+		{
+			swapOp.gain += job2.getWi();
+		}
+
+		// Si job2 est en avance et sera en retard après swap
+		if (job2.isLate() == false && m2.startTimeOfJob(k) + (job2.getPi() / speed) > job2.getDi())
+		{
+			swapOp.gain -= job2.getWi();
+		}
+
+		swapLateness(swapOp, s);
+	}
+
 
 	/** 
 	 * Method which return the swap with the highest gain as the best swap
