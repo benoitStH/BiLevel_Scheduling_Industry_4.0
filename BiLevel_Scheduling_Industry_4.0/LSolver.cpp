@@ -14,7 +14,10 @@ void LSolver::solve()
 
 		// Follower's heuristic
 		subSolver->generateInitialSolution(chosenJobs, *instance);
+		float init_score = subSolver->getSolution()->getSumWjUj();
 		subSolver->heuristic();
+		float final_score = subSolver->getSolution()->getSumWjUj();
+		std::cout << "Taux d'amelio : " << (init_score == 0 ? 1 : (init_score - final_score) / init_score) << std::endl;
 
 		// We save the solution found by the follower
 		Solution best_solution = *(subSolver->getSolution());
