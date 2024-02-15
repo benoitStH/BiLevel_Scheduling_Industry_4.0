@@ -285,7 +285,7 @@ public:
         std::cout << "- - -\n";
 
         // the solution's score
-        std::cout << "Sum Cj :" << getSumCj() << std::endl;
+        std::cout << "Sum Cj : " << getSumCj() << std::endl;
         std::cout << "Sum wjUj : " << getSumWjUj() << std::endl;
     }
 
@@ -325,7 +325,7 @@ public:
         }
         std::cout << "- - -\n";
 
-        std::cout << "Sum Cj :" << getSumCj() << std::endl;
+        std::cout << "Sum Cj : " << getSumCj() << std::endl;
         std::cout << "Sum wjUj : " << getSumWjUj() << std::endl;
     }
 
