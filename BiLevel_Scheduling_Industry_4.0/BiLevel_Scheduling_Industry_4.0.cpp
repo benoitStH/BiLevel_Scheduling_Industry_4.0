@@ -18,7 +18,7 @@ int main()
     // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
     // TOTRY : Diviser par speed à la fin des calculs de dates de fin
     Parser parser = Parser();
-    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instance9.txt";
+    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instancePerso1.txt";
     Instance instance;
     bool generating = false;
 
@@ -35,7 +35,7 @@ int main()
         listLRules.push_back(new LSortRule(sortRule::LWPTRULE));
 
         //listFRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
-        listFRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
+        listFRules.push_back(new FLateToEarly(swapRule::LATENESS));
 
         // Creating the Solver for the Follower and Leader
         FSolver subsolver(listFRules);
@@ -97,7 +97,7 @@ int main()
         Generateur randomInstancer = Generateur();
         Parser parser = Parser();
 
-        Instance instance = randomInstancer.generateInstance(path, 30, 3, 2, 10, 5);
+        Instance instance = randomInstancer.generateInstance(path, 32, 3, 2, 10, 5);
 
         cout << instance;
 
