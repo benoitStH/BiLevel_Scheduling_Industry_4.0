@@ -18,7 +18,7 @@ int main()
     // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
     // TOTRY : Diviser par speed à la fin des calculs de dates de fin
     Parser parser = Parser();
-    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instancePerso1.txt";
+    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instanceTest.txt";
     Instance instance;
     bool generating = false;
 
@@ -39,6 +39,7 @@ int main()
 
         // Creating the Solver for the Follower and Leader
         FSolver subsolver(listFRules);
+
         LSolver solver;
         solver.setInstance(&instance);
         solver.setRules(listLRules);
