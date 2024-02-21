@@ -1,6 +1,6 @@
 name:instancePerso1
 N:32
-n:32
+n:16
 M_max:3
 M_0:2
 V_max:10

@@ -85,7 +85,7 @@ public:
 			break;
 
 		case sortRule::SPT_EDD_VAR_LATENESS:
-			return std::vector<Job>();
+			return SptEddVariableLateness(instance);
 			break;
 
 		default:
@@ -210,6 +210,7 @@ private:
 			cumulatedEndTime += job.getPi();
 
 			lateness.push_back(cumulatedEndTime - job.getDi());
+			std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1] << std::endl;
 		}
 
 		unsigned int i = 0;
@@ -225,6 +226,7 @@ private:
 
 			if (lateness[i] <= 0)
 			{
+				std::cout << "selected job " << jobs[i].getNum() << std::endl;
 				chosenJobs.push_back(jobs[i]);
 			}
 			i++;
@@ -254,6 +256,7 @@ private:
 			{
 				// Setting its lateness to zero to ensure it won't be selected again
 				lateness[min_i] = 0;
+				std::cout << "selected job " << jobs[min_i].getNum() << std::endl;
 				chosenJobs.push_back(jobs[min_i]);
 			}
 		}
@@ -262,6 +265,178 @@ private:
 
 
 	}
+
+
+	/*
+	 * Method which will select a subset of n jobs among the list of Jobs given
+	 * The Selection criterion is the Lateness of jobs ordered by increasing processing time.
+	 * This criterion is recalculated when m jobs has been selected (m is the total number of machines)
+	 * @param instance An instance with the list of jobs and the number of jobs to select
+	 * @return a list of selected jobs
+	 */
+	std::vector<Job> SptEddVariableLateness(const Instance& instance)
+	{
+		std::vector<Job> jobs = instance.getListJobs();  // List of jobs
+		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
+
+		std::vector<float> lateness; // lateness of each job
+		std::vector<unsigned int> endTimes; // end time of each job
+		float cumulatedEndTime = 0;  // sum of all jobs' processing time
+
+		// Sorting jobs by increasing processing time and earliest due date
+		std::sort(jobs.begin(), jobs.end(), std::less<Job>());
+
+		// Calculating each job's lateness and end time
+		for (const Job& job : jobs)
+		{
+			cumulatedEndTime += job.getPi();
+
+			lateness.push_back(cumulatedEndTime - job.getDi());
+			endTimes.push_back(cumulatedEndTime);
+			std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1]
+				<< " e " << cumulatedEndTime << std::endl;
+		}
+
+		// Number of total machines : represent the size m of a bloc
+		unsigned int nbTotalMachines = instance.getNbOfLowSpeedMachines() + instance.getNbOfHighSpeedMachines();
+
+		unsigned int nbToSelectJobs = instance.getNbToSelectJob();
+		unsigned int lastNbBlocs = 0;
+		unsigned int nbFails = 0;
+
+
+		// While the number of selected jobs is less than n
+		while (chosenJobs.size() < nbToSelectJobs)
+		{
+			chosenJobs.clear();  // (Re)Starting Selection of jobs
+			std::cout << "(re)starting..." << std::endl;
+
+			std::vector<float> PiPredecesseur;  // Processing time of the last bloc's jobs
+			float min_PiPredecesseur = 0;  // The sum of minimal processing time per bloc
+
+			for (unsigned int i = 0; i < jobs.size(); i++)
+			{
+				std::cout << i + 1 << " lateness " << lateness[i] << std::endl;
+			}
+
+			// Check each job until the number of selected jobs is met
+			for (unsigned int i = 0; i < jobs.size(); i++)
+			{
+				if (chosenJobs.size() >= nbToSelectJobs)
+				{ break; }
+
+				// If a job is early, we select it and save its processing time
+				if (lateness[i] <= 0)
+				{
+					chosenJobs.push_back(jobs[i]);
+					PiPredecesseur.push_back(jobs[i].getPi());
+					std::cout << "selected job " << jobs[i].getNum() << std::endl;
+
+					// If the number of saved values can make a bloc, we save the lowest value and clear our list
+					if (PiPredecesseur.size() == nbTotalMachines)
+					{
+						min_PiPredecesseur += *std::min(PiPredecesseur.begin(), PiPredecesseur.end());
+						PiPredecesseur.clear();
+						std::cout << "minPiPredecesseur " << min_PiPredecesseur << std::endl;
+					}
+				}
+				else // If the job is late, we remove the sum of minimal processing time per bloc
+				{
+					lateness[i] = endTimes[i] - jobs[i].getDi() - min_PiPredecesseur;
+				}
+			}
+
+			// If no new bloc has been made
+			if (lastNbBlocs == unsigned int(chosenJobs.size() / nbTotalMachines))
+			{
+				// While their is still room in the last bloc
+				//	// Check each job whose lateness is positive and save the one with lowest value
+				// 
+				// 
+				nbFails++;
+
+				std::vector<unsigned int> selected_i;
+				unsigned int maxSelected_i = jobs.size();
+				float latenessThresold = 0;
+
+				// While their is still room in the last bloc
+				while (unsigned int(chosenJobs.size() / nbTotalMachines) < lastNbBlocs+nbFails)
+				{
+					// We assume the first job has the smallest positive lateness
+					unsigned int min_i = 0;
+					float min_lateness = lateness[min_i];
+
+					// We compare with the other jobs
+					for (unsigned int i = 1; i < jobs.size(); i++)
+					{
+						// If one of the other job has a smaller positive lateness, we save its index number and its lateness
+						// We also save the job if min_lateness is currently non positive
+						if ((lateness[i] < min_lateness || min_lateness <= 0) && lateness[i] > latenessThresold)
+						{
+							min_i = i;
+							min_lateness = lateness[min_i];
+						}
+					}
+
+					// After that, if we found a job with the smallest positive lateness, We select it
+					if (min_lateness > latenessThresold)
+					{
+						latenessThresold = min_lateness;
+						std::cout << "forcely selected job " << jobs[min_i].getNum() << std::endl;
+						chosenJobs.push_back(jobs[min_i]);
+						PiPredecesseur.push_back(jobs[min_i].getPi());
+						selected_i.push_back(min_i);
+
+						// Memorizing the job with highest number
+						if (min_i > maxSelected_i || maxSelected_i == jobs.size())
+						{
+							maxSelected_i = min_i;
+						}
+
+						// If the number of saved values can make a bloc, we save the lowest value and clear our list
+						if (PiPredecesseur.size() == nbTotalMachines)
+						{
+							min_PiPredecesseur += *std::min(PiPredecesseur.begin(), PiPredecesseur.end());
+							PiPredecesseur.clear();
+							std::cout << "minPiPredecesseur " << min_PiPredecesseur << std::endl;
+							//break;
+						}
+					}
+					else
+					{
+						std::cout << "No more selectable\n";
+						break;
+					}
+				}
+
+				if (selected_i.size() == 0) { break; }
+				// For each job afterward
+					// subtract minPiPredecesseur from initial lateness
+
+
+				for (unsigned int i = maxSelected_i+1; i < jobs.size(); i++)
+				{
+					lateness[i] = endTimes[i] - jobs[i].getDi() - min_PiPredecesseur;
+				}
+
+
+				
+				//////
+			}
+		}
+		
+		/////////
+		std::cout << "Selection Done !\n";
+		while (chosenJobs.size() > nbToSelectJobs)
+		{
+			chosenJobs.pop_back();
+			std::cout << "Removing excess\n";
+		}
+
+		return chosenJobs;
+
+	}
+	
 };
 
 #endif // BILEVEL_SCHEDULING_LLPTRULE_H
