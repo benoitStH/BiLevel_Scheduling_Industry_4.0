@@ -62,6 +62,12 @@ public:
 	 */
 	virtual std::vector<Job> selectJobsFrom(const Instance& instance)
 	{
+		// If we need to select all jobs, no need to apply a selection rule
+		if (instance.getNbToSelectJob() == instance.getNbJobs())
+		{
+			return instance.getListJobs();
+		}
+
 		switch (ruleNumber)
 		{
 
@@ -280,7 +286,7 @@ private:
 		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
 
 		std::vector<float> lateness; // lateness of each job
-		std::vector<unsigned int> endTimes; // end time of each job
+		std::vector<float> endTimes; // end time of each job
 		float cumulatedEndTime = 0;  // sum of all jobs' processing time
 
 		// Sorting jobs by increasing processing time and earliest due date
@@ -303,6 +309,7 @@ private:
 		unsigned int nbToSelectJobs = instance.getNbToSelectJob();
 		unsigned int lastNbBlocs = 0;
 		unsigned int nbFails = 0;
+		unsigned int maxFails = nbToSelectJobs;
 
 
 		// While the number of selected jobs is less than n
@@ -316,7 +323,7 @@ private:
 
 			for (unsigned int i = 0; i < jobs.size(); i++)
 			{
-				std::cout << i + 1 << " lateness " << lateness[i] << std::endl;
+				std::cout << jobs[i].getNum() << " lateness " << lateness[i] << std::endl;
 			}
 
 			// Check each job until the number of selected jobs is met
@@ -326,7 +333,7 @@ private:
 				{ break; }
 
 				// If a job is early, we select it and save its processing time
-				if (lateness[i] <= 0)
+				if (endTimes[i] - jobs[i].getDi() - min_PiPredecesseur <= 0)
 				{
 					chosenJobs.push_back(jobs[i]);
 					PiPredecesseur.push_back(jobs[i].getPi());
@@ -335,7 +342,14 @@ private:
 					// If the number of saved values can make a bloc, we save the lowest value and clear our list
 					if (PiPredecesseur.size() == nbTotalMachines)
 					{
-						min_PiPredecesseur += *std::min(PiPredecesseur.begin(), PiPredecesseur.end());
+						float maxPi = *std::max_element(PiPredecesseur.begin(), PiPredecesseur.end());
+						float total_minusMax = 0;// -maxPi;
+						for (std::vector<float>::iterator pi = PiPredecesseur.begin(); pi != PiPredecesseur.end(); pi++)
+						{
+							total_minusMax += *pi;
+						}
+
+						min_PiPredecesseur += total_minusMax;
 						PiPredecesseur.clear();
 						std::cout << "minPiPredecesseur " << min_PiPredecesseur << std::endl;
 					}
@@ -354,6 +368,7 @@ private:
 				// 
 				// 
 				nbFails++;
+				if (nbFails == maxFails) { break; }
 
 				std::vector<unsigned int> selected_i;
 				unsigned int maxSelected_i = jobs.size();
@@ -396,7 +411,14 @@ private:
 						// If the number of saved values can make a bloc, we save the lowest value and clear our list
 						if (PiPredecesseur.size() == nbTotalMachines)
 						{
-							min_PiPredecesseur += *std::min(PiPredecesseur.begin(), PiPredecesseur.end());
+							float maxPi = *std::max_element(PiPredecesseur.begin(), PiPredecesseur.end());
+							float total_minusMax = 0;// -maxPi;
+							for (std::vector<float>::iterator pi = PiPredecesseur.begin(); pi != PiPredecesseur.end(); pi++)
+							{
+								total_minusMax += *pi;
+							}
+
+							min_PiPredecesseur += total_minusMax;
 							PiPredecesseur.clear();
 							std::cout << "minPiPredecesseur " << min_PiPredecesseur << std::endl;
 							//break;
@@ -423,6 +445,9 @@ private:
 				
 				//////
 			}
+
+			lastNbBlocs = unsigned int(chosenJobs.size() / nbTotalMachines);
+			std::cout << lastNbBlocs << " blocs created\n";
 		}
 		
 		/////////
