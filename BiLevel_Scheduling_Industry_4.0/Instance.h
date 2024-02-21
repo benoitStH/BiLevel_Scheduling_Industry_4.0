@@ -144,7 +144,7 @@ inline std::ostream &operator<<(std::ostream &os, const Instance &instance) {
 
     os  << "Instance Path : " << instance.getInstancePath() << std::endl
         << "Instance name : "<< instance.getInstanceName() << std::endl
-        << "Number of jobs : " << instance.getNbJobs() << std::endl
+        << "Number of jobs to select / Total number of jobs : " << instance.getNbToSelectJob() << "/" << instance.getNbJobs() << std::endl
         << "Number of high speed machines : " << instance.getNbOfHighSpeedMachines() << " with the speed of : " << instance.getHighSpeed() << std::endl
         << "Number of low speed machines : " << instance.getNbOfLowSpeedMachines() << " with the speed of : " << instance.getLowSpeed() << std::endl
         << "List of jobs : [" << std::endl;
