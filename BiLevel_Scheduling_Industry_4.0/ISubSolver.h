@@ -103,6 +103,23 @@ public:
 			affectationWeights[min_index] = ((*solution)[min_index].getAffectedJob().size() + 1) / (*solution)[min_index].getSpeed();
 		}
 
+		unsigned int nbJobsOnHighSpeedMachines = solution->getMaxNumberOfHighSpeedBlocs();
+		unsigned int nbHighMachines = instance.getNbOfHighSpeedMachines();
+
+		unsigned int nbJobsOnLowSpeedMachines = solution->getMaxNumberOfLowSpeedBlocs();
+		unsigned int nbLowSpeedMachines = instance.getNbOfLowSpeedMachines();
+
+		// Adding ghost jobs (whose number, processing time, due date and weight are 0)
+		for (unsigned int m = 0; m < nbMachines; m++)
+		{
+			while ((*solution)[m].getAffectedJob().size() < ( m < nbHighMachines ? nbJobsOnHighSpeedMachines : nbJobsOnLowSpeedMachines))
+			{
+				// inserting a ghost job at the start of the machine's sequence
+				(*solution)[m].add_job(0, Job());
+				std::cout << "added ghost job at machine " << m << std::endl;
+			}
+		}
+
 		// evaluate solution
 		solution->evaluate();
 	}

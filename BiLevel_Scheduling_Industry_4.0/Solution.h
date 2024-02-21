@@ -192,7 +192,7 @@ public:
     {
         unsigned int nbBlocs = 0;
 
-        for (Machine machine : listHighSpeedMachines)
+        for (Machine machine : listLowSpeedMachines)
         {
             if (machine.getAffectedJob().size() > nbBlocs)
             {
