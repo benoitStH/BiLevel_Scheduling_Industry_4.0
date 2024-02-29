@@ -80,6 +80,10 @@ public:
         return ((lhs.pi / float(lhs.wi)) < (rhs.pi / float(rhs.wi)));
     }
 
+    static bool inv_EDD(const Job& lhs, const Job& rhs) { return (lhs.di == rhs.di ? (lhs.pi < rhs.pi) : (lhs.di < rhs.di)); }
+
+    static bool SmallestWeight(const Job& lhs, const Job& rhs) { return (lhs.wi < rhs.wi); }
+
     bool operator==(const Job& J) const { return pi == J.pi && di == J.di && wi == J.wi; }
 
     bool operator!=(const Job& J) const { return !(J == *this); }

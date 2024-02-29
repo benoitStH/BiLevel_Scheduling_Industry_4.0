@@ -18,7 +18,7 @@ int main()
     // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
     // TOTRY : Diviser par speed à la fin des calculs de dates de fin
     Parser parser = Parser();
-    std::string path = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0\\instances\\performances\\n_7_N_30_tf_0.4_rdd_0.6_mMax_2_m0_2\\instance1.txt";
+    std::string path = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/performances/n_15_N_30_tf_1.0_rdd_1.0_mMax_3_m0_1/instance0.txt";
     Instance instance;
     bool generating = false;
 
@@ -33,8 +33,9 @@ int main()
 
         // Allocatiing rules
         //listLRules.push_back(new LSortRule(sortRule::LPTRULE));
-        listLRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
+        //listLRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
         listLRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
+        //listLRules.push_back(new LSortRule(sortRule::InvEDDRULE));
 
         //listFRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
         listFRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
