@@ -45,7 +45,7 @@ public:
 
 	void printOperator(const SwapOperation& swapOp)
 	{
-		std::cout << "(" << swapOp.machine1 << ", " << swapOp.machine2 << ", " << swapOp.bloc << ") : " << swapOp.gain << std::endl;
+		//std::cout << "(" << swapOp.machine1 << ", " << swapOp.machine2 << ", " << swapOp.bloc << ") : " << swapOp.gain << std::endl;
 	}
 
 };

@@ -215,8 +215,8 @@ public:
 
         if (verbose)
         {
-            std::cout << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
-                " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << std::endl;
+            //std::cout << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
+            //    " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << std::endl;
         }
     }
     
@@ -296,6 +296,7 @@ public:
      */
     void compactPrint()
     {
+        unsigned int nbSelectedJobs = 0;
         std::cout << "Solution :\n";
 
         // Jobs assigned to high speed machines
@@ -307,6 +308,7 @@ public:
             {
                 std::cout << (job.isLate() ? "*" : "");
                 std::cout << job.getNum() << " ";
+                if (job.getNum() != 0) nbSelectedJobs++;
             }
             std::cout << "|\n";
         }
@@ -320,6 +322,7 @@ public:
             {
                 std::cout << (job.isLate() ? "*" : "");
                 std::cout << job.getNum() << " ";
+                if (job.getNum() != 0) nbSelectedJobs++;
             }
             std::cout << "|\n";
         }
@@ -327,6 +330,7 @@ public:
 
         std::cout << "Sum Cj : " << getSumCj() << std::endl;
         std::cout << "Sum wjUj : " << getSumWjUj() << std::endl;
+        std::cout << "n : " << nbSelectedJobs << std::endl;
     }
 
     /********************/
