@@ -8,7 +8,7 @@ namespace sortRule {
 	const unsigned int RandomRule = 0;
 	const unsigned int LPTRULE = 1;
 	const unsigned int LWPTRULE = 2;
-	const unsigned int InvEDDRULE = 3;
+	const unsigned int InvEDDRULE = 3; // UNUSED
 	const unsigned int SPT_EDD_CONST_LATENESS = 4;
 	const unsigned int SPT_EDD_VAR_LATENESS = 5;
 }
@@ -205,6 +205,7 @@ private:
 	{
 		std::vector<Job> jobs = instance.getListJobs();  // List of jobs
 		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
+		std::vector<Job> permanentlyLateJobs;  // Jobs which are permanently late (will be chosen as a last resort)
 
 		std::sort(jobs.begin(), jobs.end(), Job::inv_EDD);
 
@@ -214,22 +215,24 @@ private:
 		{
 
 			Job& job = *i;
-			std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " w " << job.getWi();
+			//std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " w " << job.getWi();
 
 			// if the due date is greater than the processing time on high speed machine, we keep the job
 			if (job.getDi() * instance.getHighSpeed() >= job.getPi()) 
 			{
-				chosenJobs.push_back(*i); std::remove(jobs.begin(), jobs.end(), *i); end--; std::cout << " <-|";
+				chosenJobs.push_back(*i); //std::cout << " <-|";
 			}
 			else {
-				i++;
+				permanentlyLateJobs.push_back(*i);
 			}
-			std::cout << std::endl;
+			i++;
+			//std::cout << std::endl;
 		}
 
-		std::sort(jobs.begin(), jobs.end(), Job::SmallestWeight);
+		std::sort(permanentlyLateJobs.begin(), permanentlyLateJobs.end(), Job::SmallestWeight);
 
-		i = jobs.begin();
+		i = permanentlyLateJobs.begin();
+		end = permanentlyLateJobs.end();
 		while (chosenJobs.size() < instance.getNbToSelectJob() && i != end)
 		{
 			chosenJobs.push_back(*i);
@@ -264,7 +267,7 @@ private:
 			cumulatedEndTime += job.getPi();
 
 			lateness.push_back(cumulatedEndTime - job.getDi());
-			std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1] << std::endl;
+			//std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1] << std::endl;
 		}
 
 		unsigned int i = 0;
@@ -280,7 +283,7 @@ private:
 
 			if (lateness[i] <= 0)
 			{
-				std::cout << "selected job " << jobs[i].getNum() << std::endl;
+				//std::cout << "selected job " << jobs[i].getNum() << std::endl;
 				chosenJobs.push_back(jobs[i]);
 			}
 			i++;
@@ -310,7 +313,7 @@ private:
 			{
 				// Setting its lateness to zero to ensure it won't be selected again
 				lateness[min_i] = 0;
-				std::cout << "selected job " << jobs[min_i].getNum() << std::endl;
+				//std::cout << "selected job " << jobs[min_i].getNum() << std::endl;
 				chosenJobs.push_back(jobs[min_i]);
 			}
 		}
@@ -360,11 +363,11 @@ private:
 				endTimes.pop_back(); endTimes.push_back(0 + 1000 - job.getPi()*instance.getHighSpeed());
 				lateness.pop_back(); lateness.push_back(0 + 1000 - job.getPi()* instance.getHighSpeed() - job.getDi());
 				cumulatedEndTime -= job.getPi();
-				std::cout << "--";
+				//std::cout << "--";
 			}
 			else { nbClean++; }
-			std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1]
-				<< " e " << cumulatedEndTime << std::endl;
+			//std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1]
+			//	<< " e " << cumulatedEndTime << std::endl;
 		}
 
 
@@ -379,7 +382,7 @@ private:
 		while (chosenJobs.size() < nbToSelectJobs)
 		{
 			chosenJobs.clear();  // (Re)Starting Selection of jobs
-			std::cout << "(re)starting..." << std::endl;
+			//std::cout << "(re)starting..." << std::endl;
 
 			std::vector<float> PiPredecesseur;  // Processing time of the last bloc's jobs
 			float sum_PiPredecesseur = 0;  // The sum of processing time per bloc
@@ -390,7 +393,7 @@ private:
 				if (chosenJobs.size() >= nbToSelectJobs)
 				{ break; }
 
-				std::cout << jobs[i].getNum() << " lateness " << lateness[i] - sum_PiPredecesseur << (lateness[i] - sum_PiPredecesseur <= 0 ? " <-| " : "") << std::endl;
+				//std::cout << jobs[i].getNum() << " lateness " << lateness[i] - sum_PiPredecesseur << (lateness[i] - sum_PiPredecesseur <= 0 ? " <-| " : "") << std::endl;
 
 				// If a job is early, we select it and save its processing time
 				if (lateness[i] <= sum_PiPredecesseur)
@@ -412,7 +415,7 @@ private:
 
 						sum_PiPredecesseur += total_minusMax;
 						PiPredecesseur.clear();
-						std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
+						//std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
 					}
 				}
 			}
@@ -441,7 +444,7 @@ private:
 					{
 						// If one of the other job has a smaller positive lateness, we save its index number and its lateness
 						// We also save the job if min_lateness is currently non positive   
-						std::cout << jobs[i].getNum() << " score " << lateness[i] * jobs[i].getWi() << std::endl;
+						//std::cout << jobs[i].getNum() << " score " << lateness[i] * jobs[i].getWi() << std::endl;
 						if ((lateness[i]*jobs[i].getWi() < min_lateness || min_lateness <= 0) && lateness[i]*jobs[i].getWi() > latenessThresold)
 						{
 							min_i = i;
@@ -453,7 +456,7 @@ private:
 					if (min_lateness > latenessThresold)
 					{
 						latenessThresold = min_lateness;
-						std::cout << "forcely selected job " << jobs[min_i].getNum() << std::endl;
+						//std::cout << "forcely selected job " << jobs[min_i].getNum() << std::endl;
 						chosenJobs.push_back(jobs[min_i]);
 						PiPredecesseur.push_back(jobs[min_i].getPi());
 						selected_i.push_back(min_i);
@@ -471,13 +474,13 @@ private:
 
 							sum_PiPredecesseur += total_minusMax;
 							PiPredecesseur.clear();
-							std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
+							//std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
 							//break;
 						}
 					}
 					else
 					{
-						std::cout << "No more selectable\n";
+						//std::cout << "No more selectable\n";
 						break;
 					}
 				}
@@ -504,15 +507,15 @@ private:
 
 
 			lastNbSelectedJobs = chosenJobs.size();
-			std::cout << lastNbSelectedJobs << " jobs selected\n";
+			//std::cout << lastNbSelectedJobs << " jobs selected\n";
 		}
 		
 		/////////
-		std::cout << "Selection Done !\n";
+		//std::cout << "Selection Done !\n";
 		while (chosenJobs.size() > nbToSelectJobs)
 		{
 			chosenJobs.pop_back();
-			std::cout << "Removing excess\n";
+			//std::cout << "Removing excess\n";
 		}
 
 		return chosenJobs;
