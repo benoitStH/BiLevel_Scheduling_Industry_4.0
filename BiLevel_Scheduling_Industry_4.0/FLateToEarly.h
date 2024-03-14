@@ -85,7 +85,7 @@ public:
 			break;
 			
 		case swapRule::LATENESS_CAREFUL:
-			swapLateness(swapOp, s); //
+			swapLatenessCareful(swapOp, s); //
 			break;
 
 			default:
@@ -219,7 +219,7 @@ public:
 	}
 
 	/**
-	 * Check if a swap will improve the solution by checking the lateness of the following jobs and the swaaped jobs
+	 * Check if a swap will improve the solution by checking the lateness of the following jobs and the swaped jobs
 	 * Update the swap operator's gain
 	 * @param swapOp A 'SwapOperation' object representing the swapping of the k-th job between machine m1 and m2
 	 * @param s A 'Solution' object containing the schedule
