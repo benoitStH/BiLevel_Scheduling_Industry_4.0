@@ -7,8 +7,8 @@ void FSolver::heuristic()
 		std::cout << "Error FSolver.heuristic() : Solution not initialized !\n";
 		return;
 	}
-	solution->print(); std::cout << std::endl;
-	solution->compactPrint(); std::cout << std::endl;
+	//solution->print(); std::cout << std::endl;
+	//solution->compactPrint(); std::cout << std::endl;
 
 	Solution solution_init = Solution(*solution);
 	std::vector<SwapOperation> possibleSwaps;
@@ -19,7 +19,7 @@ void FSolver::heuristic()
 	unsigned int nbHighSpeedBlocs = solution_init.getMaxNumberOfHighSpeedBlocs();
 	unsigned int nbMachines = solution_init.getListHighSpeedMachines().size();
 
-	std::cout << "HighSpeedMachines Swap\n";
+	//std::cout << "HighSpeedMachines Swap\n";
 	bool end;
 	do
 	{
@@ -44,6 +44,10 @@ void FSolver::heuristic()
 				}
 			}
 
+			//unsigned int bloc = swapOp.bloc;
+			//std::cin >> swapOp.bloc;
+			//swapOp.bloc = bloc;
+
 			// We extract the best possible swap according to a rule, and perform it if it exists
 			swapOp = listRules[0]->bestSwapV(possibleSwaps, solution_init);
 			if (swapOp.gain > 0)
@@ -59,7 +63,7 @@ void FSolver::heuristic()
 			}
 		}
 
-		// solution_init.print(); std::cout << std::endl;
+		//solution_init.print(); std::cout << std::endl;
 
 		// if the new solution is better, save it
 		if (solution_init < *solution)
@@ -69,14 +73,14 @@ void FSolver::heuristic()
 
 	} while (end == false);
 
-	solution->compactPrint(); std::cout << std::endl;
+	//solution->compactPrint(); std::cout << std::endl;
 
 	// LOW SPEED MACHINES //
 
 	unsigned int nbLowSpeedBlocs = solution_init.getMaxNumberOfLowSpeedBlocs();
 	unsigned int nbTotalMachines = solution_init.getListLowSpeedMachines().size() + nbMachines;
 
-	std::cout << "LowSpeedMachines Swap\n";
+	//std::cout << "LowSpeedMachines Swap\n";
 	do
 	{
 		end = true; // No swap has been performed
@@ -115,7 +119,7 @@ void FSolver::heuristic()
 			}
 		}
 
-		// solution_init.print(); std::cout << std::endl;
+		//solution_init.print(); std::cout << std::endl;
 
 		// if the new solution is better, save it
 		if (solution_init < *solution)
@@ -125,6 +129,24 @@ void FSolver::heuristic()
 
 	} while (end == false);
 
-	solution->compactPrint(); std::cout << std::endl;
+	//solution->compactPrint(); std::cout << std::endl;
 
+}
+
+std::string FSolver::getHeuristicName() const
+{
+	return "FSolver - Best 1-Swap Heuristic";
+}
+
+std::string FSolver::getHeuristicDescription() const
+{
+	std::string description = "Checking 1-swap possibility with : ";
+
+	for (IFollowerSwapRule* swapRule : listRules)
+	{
+		description += swapRule->getRuleName() + " ";
+	}
+	description += "\n and choosing the 1-swap with highest improvement";
+
+	return description;
 }

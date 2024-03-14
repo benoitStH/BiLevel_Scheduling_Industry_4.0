@@ -19,6 +19,10 @@ public:
 	 * @param None
 	 */
 	virtual void heuristic();
+
+	virtual std::string getHeuristicName() const;
+
+	virtual std::string getHeuristicDescription() const;
 };
 
 #endif //BILEVEL_SCHEDULING_FSOLVER_H

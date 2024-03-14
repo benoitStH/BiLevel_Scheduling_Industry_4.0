@@ -36,6 +36,10 @@ public:
 
 	bool isVerbose() const { return verbose; }
 
+	virtual std::string getHeuristicName() const = 0;
+
+	virtual std::string getHeuristicDescription() const = 0;
+
 	/********************/
 	/*      SETTERS     */
 	/********************/
@@ -116,13 +120,15 @@ public:
 			{
 				// inserting a ghost job at the start of the machine's sequence
 				(*solution)[m].add_job(0, Job());
-				std::cout << "added ghost job at machine " << m << std::endl;
+				//std::cout << "added ghost job at machine " << m << std::endl;
 			}
 		}
 
 		// evaluate solution
 		solution->evaluate();
 	}
+
+	void addRule(IFollowerSwapRule* swapRule) { listRules.push_back(swapRule); }
 
 };
 
