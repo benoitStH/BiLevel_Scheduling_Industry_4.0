@@ -21,6 +21,7 @@
 #define BILEVEL_SCHEDULING_PARSER_H
 
 #include "Instance.h"
+#include "ISolver.h"
 #include <string>
 
 class Parser {
@@ -50,6 +51,8 @@ public:
      * @param instance
      */
     void serializeInstance(Instance& instance);
+
+    void saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective);
 };
 
 

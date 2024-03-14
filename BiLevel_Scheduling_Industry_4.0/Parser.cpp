@@ -92,4 +92,82 @@ void Parser::serializeInstance(Instance& instance) {
     fileStream.close();
 }
 
+void Parser::saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective)
+{
+    const std::string& instanceFile = instance.getInstancePath().lexically_normal().string();
+    const Solution& solution = *(solver->getSolution());
+
+    std::fstream fileStream(filepath, std::fstream::in | std::fstream::out | std::fstream::app);
+    if (fileStream.is_open()) {
+
+        // InstanceName, instanceFile, sum Cj, fonction objective (sum wjUj), precision avec optimale, description du solveur (regles, etc)
+        // N, n, HighSpeedScheduling, LowSpeedScheduling
+        fileStream << instance.getInstanceName() << ";"
+            << instanceFile << ";"
+            << solution.getSumCj() << ";"
+            << solution.getSumWjUj() << ";"
+            << optimal_objective << ";"
+            << instance.getListJobs().size() << ";"
+            << instance.getNbToSelectJob() << ";";
+
+        fileStream << "\"";
+        for (unsigned int l = 0; l < instance.getNbOfHighSpeedMachines(); l++)
+        {
+            unsigned int j;
+            unsigned int nbJobs = solution.getMachine(l).getAffectedJob().size();
+            fileStream << "M" << l << " : ";
+            for (j = 0; j < nbJobs; j++)
+            {
+                fileStream << solution.getMachine(l)[j].getNum() << (j < nbJobs - 1 ? ", " : "");
+            }
+            fileStream << " | ";
+        }
+        fileStream << "\";";
+
+        fileStream << "\"";
+        for (unsigned int l = 0; l < instance.getNbOfLowSpeedMachines(); l++)
+        {
+            unsigned int pos = l + instance.getNbOfHighSpeedMachines();
+            unsigned int j;
+            unsigned int nbJobs = solution.getMachine(pos).getAffectedJob().size();
+            fileStream << "M" << l << " : ";
+            for (j = 0; j < solution.getMachine(pos).getAffectedJob().size(); j++)
+            {
+                fileStream << solution.getMachine(pos)[j].getNum() << (j < nbJobs - 1 ? ", " : "");
+            }
+            fileStream << " | ";
+        }
+        fileStream << "\";";
+
+        // Nom heuristique
+        fileStream << solver->getHeuristicName() << ";";
+
+        // Description et parametres (regles utilisées)
+        fileStream << solver->getHeuristicDescription() << ";";
+
+        // Temps resolution en microsecondes
+        fileStream << solver->getTimeResol()/1000000.0 <<";";
+
+        // Precision avec l'optimale_objective
+        if (optimal_objective == 0) { (solution.getSumWjUj() != 0 ? fileStream << "0;" : fileStream << "1;"); }
+        else
+        {
+            float precision;
+
+            if (solution.getSumWjUj() == 0) { fileStream << "1;"; }
+            else 
+            {
+
+                precision = 1 - (solution.getSumWjUj() - optimal_objective) / float(solution.getSumWjUj());
+
+                fileStream << precision << ";";
+            }
+        }
+        fileStream << "\n";
+
+    }
+    else throw std::invalid_argument("Can't open the file " + filepath);
+    fileStream.close();
+}
+
 
