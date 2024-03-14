@@ -12,6 +12,7 @@ protected:
 	const Instance* instance;
 	bool verbose;
     std::vector<ILeaderSelectRule*> listRules;
+    long timeResol;
     ISubSolver* subSolver;
 
 public:
@@ -21,13 +22,13 @@ public:
     /************************/
 
 
-	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule*>()), subSolver(nullptr) {}
+	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule*>()), subSolver(nullptr), timeResol(0) {}
 
     /**
      * Constructor of a solver from a instance.
      * @param instance the instance to solve
      */
-    ISolver(const Instance* instance) : solution(new Solution(instance)), instance(instance), verbose(false), subSolver(nullptr) {}
+    ISolver(const Instance* instance) : solution(new Solution(instance)), instance(instance), verbose(false), subSolver(nullptr), timeResol(0) {}
 
 
     /***********************/
@@ -52,6 +53,8 @@ public:
      */
     virtual void solve() = 0;
 
+    void addRule(ILeaderSelectRule* selectRule) { listRules.push_back(selectRule); }
+
     /**
     * Method to display a message during verbose if its value is true
     */
@@ -65,7 +68,13 @@ public:
 
     const Instance* getInstance() const { return instance; }
 
+    const long getTimeResol() const { return timeResol; }
+
     bool isVerbose() const { return verbose; }
+
+    virtual std::string getHeuristicName() const = 0;
+
+    virtual std::string getHeuristicDescription() const = 0;
     /********************/
     /*      SETTER      */
     /********************/

@@ -9,6 +9,9 @@ class LSolver : public ISolver
 public:
 
 	virtual void solve();
+
+	virtual std::string getHeuristicName() const;
+	virtual std::string getHeuristicDescription() const;
 };
 
 
