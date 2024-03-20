@@ -26,14 +26,14 @@ int main()
 
 
     std::vector<ILeaderSelectRule*> sortRules;
-    sortRules.push_back(new LSortRule(sortRule::LPTRULE));
-    sortRules.push_back(new LSortRule(sortRule::LWPTRULE));
-    sortRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
+    //sortRules.push_back(new LSortRule(sortRule::LPTRULE));
+    //sortRules.push_back(new LSortRule(sortRule::LWPTRULE));
+    //sortRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
     sortRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
 
     std::vector<IFollowerSwapRule*> swapRules;
     swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
-    swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
+    //swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
 
 
     //// Testing single instance //
@@ -79,12 +79,12 @@ int main()
         std::filesystem::path testFile("C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/UNCHECKED instance + resultat MIP/resultMIP.csv");
         std::fstream filePerf(testFile, std::fstream::in);
 
-        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/resultHeuristics.csv";
+        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/resultSPT_VL_DUMB.csv";
         std::fstream fileStreamSaveFile(saveFile, std::fstream::out);
         if (fileStreamSaveFile.is_open())
         {
-            fileStreamSaveFile << "InstanceName;InstancePath;sumCj; fonction objective (sum wjUj); fonction objective MIP;";
-            fileStreamSaveFile << "N; n; HighSpeed Scheduling; LowSpeed Scheduling; Heuristic name; Heuristic description; time; precision\n";
+            fileStreamSaveFile << "InstanceName;InstancePath;sumCj;fonction objective (sum wjUj);fonction objective MIP;";
+            fileStreamSaveFile << "N;n;m;HighSpeed Scheduling;LowSpeed Scheduling;Heuristic name;Heuristic description;time;deviation;precision\n";
         }
         else {
             cout << "erreur ouverture savefile\n";
@@ -127,8 +127,9 @@ int main()
                 stream >> optimal_objective;
 
                 *instance = parser.readFromFile(path);
-                cout << instance->getInstancePath() << std::endl;
-                cout << counter << std::endl;
+                //cout << instance->getInstancePath() << std::endl;
+                if((counter+1) % 100 == 0)
+                    cout << counter+1 << "\r";
 
                 if (instance->getInstancePath() == "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_10_N_20_tf_0.8_rdd_0.2_mMax_1_m0_1/instance2.txt")
                 {
