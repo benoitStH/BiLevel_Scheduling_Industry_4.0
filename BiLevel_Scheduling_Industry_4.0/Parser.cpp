@@ -94,22 +94,26 @@ void Parser::serializeInstance(Instance& instance) {
 
 void Parser::saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective)
 {
+    // Getting the instance's file path and the solver's best solution
     const std::string& instanceFile = instance.getInstancePath().lexically_normal().string();
     const Solution& solution = *(solver->getSolution());
 
+    // Opening the file to append data
     std::fstream fileStream(filepath, std::fstream::in | std::fstream::out | std::fstream::app);
     if (fileStream.is_open()) {
 
-        // InstanceName, instanceFile, sum Cj, fonction objective (sum wjUj), precision avec optimale, description du solveur (regles, etc)
-        // N, n, HighSpeedScheduling, LowSpeedScheduling
+        // InstanceName, instanceFile, sum Cj, fonction objective (sum wjUj), objective fonction value to compare with
+        // N, n, number of machines
         fileStream << instance.getInstanceName() << ";"
             << instanceFile << ";"
             << solution.getSumCj() << ";"
             << solution.getSumWjUj() << ";"
             << optimal_objective << ";"
             << instance.getListJobs().size() << ";"
-            << instance.getNbToSelectJob() << ";";
+            << instance.getNbToSelectJob() << ";"
+            << instance.getNbOfHighSpeedMachines() + instance.getNbOfLowSpeedMachines() <<";";
 
+        // HighSpeed Scheduling
         fileStream << "\"";
         for (unsigned int l = 0; l < instance.getNbOfHighSpeedMachines(); l++)
         {
@@ -124,6 +128,7 @@ void Parser::saveInFile(std::string& filepath, const Instance& instance, const I
         }
         fileStream << "\";";
 
+        // LowSpeed Scheduling
         fileStream << "\"";
         for (unsigned int l = 0; l < instance.getNbOfLowSpeedMachines(); l++)
         {
@@ -139,16 +144,25 @@ void Parser::saveInFile(std::string& filepath, const Instance& instance, const I
         }
         fileStream << "\";";
 
-        // Nom heuristique
+        // Heuristic's name
         fileStream << solver->getHeuristicName() << ";";
 
-        // Description et parametres (regles utilisées)
+        // Description and paramters (rules used)
         fileStream << solver->getHeuristicDescription() << ";";
 
-        // Temps resolution en microsecondes
+        // Time in microseconds to solve the instance
         fileStream << solver->getTimeResol()/1000000.0 <<";";
 
-        // Precision avec l'optimale_objective
+        // Deviation from the optimale_objective
+        if (optimal_objective == 0) { fileStream << "-1;"; }
+        else
+        {
+            float deviation = (solution.getSumWjUj() - optimal_objective) / (float)optimal_objective;
+
+            fileStream << deviation * 100 << ";";
+        }
+
+        // Accuracy toward the optimale_objective
         if (optimal_objective == 0) { (solution.getSumWjUj() != 0 ? fileStream << "0;" : fileStream << "1;"); }
         else
         {
@@ -158,9 +172,9 @@ void Parser::saveInFile(std::string& filepath, const Instance& instance, const I
             else 
             {
 
-                precision = 1 - (solution.getSumWjUj() - optimal_objective) / float(solution.getSumWjUj());
+                precision = optimal_objective / float(solution.getSumWjUj());
 
-                fileStream << precision << ";";
+                fileStream << precision << "";
             }
         }
         fileStream << "\n";

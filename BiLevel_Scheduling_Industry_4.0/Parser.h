@@ -52,6 +52,16 @@ public:
      */
     void serializeInstance(Instance& instance);
 
+    /**
+     * Method which save the given instance's best solution found by the given solver
+     * The result is appended into the given file with the following format
+     * InstanceName;instanceFile;sum Cj; objective function (sum wjUj); deviation with the non zero optimal objective;
+     * solverName; solverDescription
+     * N; n; total number of machines; HighSpeedScheduling; LowSpeedScheduling
+     * 
+     * It is assumed that the solver already solved the instance and has a solution (optimal or not)
+     * It is assumed that the file, whose path was given, already exist and contains the header's
+     */
     void saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective);
 };
 
