@@ -40,8 +40,8 @@ private:
     unsigned int nbToSelectJob; // the number of jobs to select
     unsigned int nbOfHighSpeedMachines; // the nb of high speed machine
     unsigned int nbOfLowSpeedMachines; // the nb of high low machine
-    unsigned int highSpeed;
-    unsigned int lowSpeed;
+    unsigned int highSpeed;  // speed of high speed machines
+    unsigned int lowSpeed;   // speed of low speed machines
     std::vector<Job> listJobs; // the list of jobs
 
 public:
@@ -56,8 +56,8 @@ public:
     Instance() : listJobs(std::vector<Job>()) {}
 
     /**
-     * Constructor by instance's path. It construct an instance with setting the attribute path. Moreover,
-     * the method check if the path have a corresponding file, otherwise an exception is throw
+     * Constructor by instance's path. It construct an instance with setting the attribute path.
+     * The instance name is extracted from the path and set to the instanceName attribute.
      * @param newInstancePath the path to set
      */
     Instance(std::string &newInstancePath) : listJobs(std::vector<Job>()) {
@@ -77,12 +77,12 @@ public:
     void add_job(const Job& newJob){listJobs.push_back(newJob);}
 
     /**
-     * Sort job according the Longest Processing Time rule. If processing times are equals then sort according due date increasing.
+     * Sort job according to the Longest Processing Time rule. If processing times are equals then sort according to increasing due date.
      */
     void sort_by_LPT(){std::sort(listJobs.begin(),listJobs.end(),std::greater<Job>());}
 
     /**
-     * Sort job according the Longest Processing Time rule. If processing times are equals then sort according due date decreasing.
+     * Sort job according to the Longest Processing Time rule. If processing times are equals then sort according to decreasing due date.
      */
     void sort_by_LPT_inv_EDD(){std::sort(listJobs.begin(),listJobs.end(),Job::LPT_inv_EDD);}
 

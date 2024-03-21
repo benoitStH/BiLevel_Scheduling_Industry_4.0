@@ -4,6 +4,12 @@
 #include "Rule.h"
 #include "Solution.h"
 
+/*
+Represent a swap operation to apply between two machines on a specific bloc
+machine<i> is the index of the machine i
+bloc is the job's position on each machine
+gain is the improvement we can obtain if we apply this swap operation (The higher, the better)
+*/
 struct SwapOperation
 {
 	unsigned int machine1;

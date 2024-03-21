@@ -8,7 +8,7 @@
 class ISubSolver
 {
 protected:
-	Solution* solution;
+	Solution* solution;  // Dynamicaly allocated
 	bool verbose;
 	std::vector<IFollowerSwapRule*> listRules;
 

@@ -18,6 +18,8 @@ public:
 
 	FLateToEarly(unsigned int ruleNumber)
 	{
+
+		// Setting the name according to the ruleNumber
 		this->ruleNumber = ruleNumber;
 		switch (ruleNumber)
 		{
@@ -44,7 +46,7 @@ public:
 	}
 
 	/**
-	 * Check between the k-th job of equal speed machine l1 and l2
+	 * Check if a swap is possible between the k-th job of equal speed machine l1 and l2
 	 * Returns a swap operator containing the gain we would obtain if this swap was to be performed
 	 * @param s A 'Solution' object containing the current scheduling
 	 * @param k the position of the k-th job
@@ -53,7 +55,7 @@ public:
 	 */
 	virtual SwapOperation swapVPossibleFor(const Solution& s, unsigned int k, unsigned int l1, unsigned int l2)
 	{
-		// Our answer
+		// Our default answer
 		SwapOperation swapOp;
 		swapOp.machine1 = l1;
 		swapOp.machine2 = l2;
@@ -65,7 +67,7 @@ public:
 		const float speed = s.getMachine(l1).getSpeed();  // We assume l1's speed and l2's speed are the same
 
 
-		// If one of the machine doesn't have a k-th job, return false
+		// If one of the machine doesn't have a k-th job, return default answer
 		if (m1.getAffectedJob().size() <= swapOp.bloc) { return swapOp; }
 		if (m2.getAffectedJob().size() <= swapOp.bloc) { return swapOp; }
 
@@ -108,44 +110,51 @@ public:
 		const Job& job1 = m1.getAffectedJob()[k];
 		const Job& job2 = m2.getAffectedJob()[k];
 
+		float p1 = job1.getPi() / speed;
+		float p2 = job2.getPi() / speed;
+		float w1 = job1.getWi();
+		float w2 = job2.getWi();
+		float d1 = job1.getDi();
+		float d2 = job2.getDi();
+
 		bool swapIsPossible; // Is a swap possible ?
 
 		// Are the jobs both late and swapping will make job1 early ?
-		swapIsPossible = (job1.isLate() && job2.isLate() && (m2.startTimeOfJob(k) + (job1.getPi() / speed)) < job1.getDi());
+		swapIsPossible = (job1.isLate() && job2.isLate() && (m2.startTimeOfJob(k) + p1) < d1);
 
 		// Otherwise, Is job1 the only one late ?
 		if (job1.isLate() && !job2.isLate() && swapIsPossible == false)
 		{
 			// Swapping will make job1 early and job2 will still be early
-			swapIsPossible = ((m2.startTimeOfJob(k) + (job1.getPi() / speed) < job1.getDi()) &&
-				m1.startTimeOfJob(k) + (job2.getPi() / speed) < job2.getDi());
+			swapIsPossible = ((m2.startTimeOfJob(k) + p1 < d1) &&
+				m1.startTimeOfJob(k) + p2 < d2);
 			if (swapIsPossible) {
-				swapOp.gain = job1.getWi();
+				swapOp.gain = w1;
 			}
 
 			// Or Swapping will make job1 early and job2 will be late, Swap is possible if w1 > w2
-			swapIsPossible = (m2.startTimeOfJob(k) + (job1.getPi() / speed) < job1.getDi());
-			if (swapIsPossible && job1.getWi() > job2.getWi())
+			swapIsPossible = (m2.startTimeOfJob(k) + p1 < d1);
+			if (swapIsPossible && w1 > w2)
 			{
-				swapOp.gain = job1.getWi() - job2.getWi();
+				swapOp.gain = w1 - w2;
 			}
 
 		}
 		else if (job2.isLate() && !job1.isLate())  // Is job2 the only one late ?
 		{
 			// Swapping will make job2 early and job1 will still be early
-			swapIsPossible = ((m2.startTimeOfJob(k) + (job1.getPi() / speed) < job1.getDi()) &&
-				m1.startTimeOfJob(k) + (job2.getPi() / speed) < job2.getDi());
+			swapIsPossible = ((m2.startTimeOfJob(k) + p1 < d1) &&
+				m1.startTimeOfJob(k) + p2 < d2);
 			if (swapIsPossible)
 			{
-				swapOp.gain = job2.getWi();
+				swapOp.gain = w2;
 			}
 
 			// Or Swapping will make job2 early and job1 will be late, Swap is possible if w2 > w1
-			swapIsPossible = (m1.startTimeOfJob(k) + (job2.getPi() / speed) < job2.getDi());
-			if (swapIsPossible && job2.getWi() > job1.getWi())
+			swapIsPossible = (m1.startTimeOfJob(k) + p2 < d2);
+			if (swapIsPossible && w2 > w1)
 			{
-				swapOp.gain = job2.getWi() - job1.getWi();
+				swapOp.gain = w2 - w1;
 			}
 		}
 	}
@@ -188,7 +197,7 @@ public:
 
 		float pi_diff = (job1.getPi() - job2.getPi()) / speed;
 
-		// S'il s'agit du dernier bloc, applique une méthode naïve
+		// If it is the last bloc, use the dumb method
 		if (swapOp.bloc == m1.getAffectedJob().size() - 1)
 		{
 			swapDumbly(swapOp, s);
@@ -196,23 +205,23 @@ public:
 		}
 
 
-		float lateness1; // retard du job placé après le job1
+		float lateness1; // lateness of job1's following job
 		do
 		{
-			const Job& nextJob1 = m1.getAffectedJob()[k + 1];  // Récupération du job suivant
-			lateness1 = m1.startTimeOfJob(swapOp.bloc + 2) - float(nextJob1.getDi());  // Calcul du retard de ce job
+			const Job& nextJob1 = m1.getAffectedJob()[k + 1];  // job1's following job
+			lateness1 = m1.startTimeOfJob(swapOp.bloc + 2) - float(nextJob1.getDi());  // computing its lateness
 
-			// S'il y a un retard et il est plus petit que l'écart de durée de traitement du job1 et job2
-			if (lateness1 <= pi_diff && lateness1 > 0)
+			// If it is late and the lateness is smaller than the difference of job1's and job2's processing time
+			if (0 < lateness1 && lateness1 <= pi_diff)
 			{
-				// Initialise le gain du swap à 0 si ce n'est pas déjà fait
+				// Initialize the swap's gain at 0 if that is not the case already
 				if (swapOp.gain < 0) { swapOp.gain = 0; }
 
-				// Appliquer le swap rendra ce job en avance, on améliore le score d'une valeur égale à son Wi
+				// If we choose this swap, this following job will become early, we add its weight to our swap's gain
 				swapOp.gain += nextJob1.getWi();
 			}
 
-			k++; // Passez au job suivant jusqu'à l'avant-dernier job
+			k++; // We check the next following job until we reach the one before last one
 		} while (k < m1.getAffectedJob().size() - 1);
 		
 
@@ -234,7 +243,7 @@ public:
 		const Job& job2 = m2.getAffectedJob()[k];
 		float speed = m1.getSpeed();
 
-		// S'il s'agit du dernier bloc, applique une méthode naïve
+		// If it is the last bloc, use the dumb method
 		if (swapOp.bloc == m1.getAffectedJob().size() - 1)
 		{
 			swapDumbly(swapOp, s);
@@ -243,36 +252,41 @@ public:
 
 		swapOp.gain = 0;
 
-		// Si job1 est en retard et sera en avance après swap
+		// If job1 is late and will be early after swapping
 		if (job1.isLate() && m2.startTimeOfJob(k) + (job1.getPi() / speed) <= job1.getDi())
 		{
 			swapOp.gain += job1.getWi();
 		}
 
-		// Si job1 est en avance et sera en retard après swap
+		// If job1 is early and will be late after swapping
 		if (job1.isLate() == false && m2.startTimeOfJob(k) + (job1.getPi() / speed) > job1.getDi())
 		{
 			swapOp.gain -= job1.getWi();
 		}
 		
-		// Si job2 est en retard et sera en avance après swap
+		// If job2 is late and will be early after swapping
 		if (job2.isLate() && m2.startTimeOfJob(k) + (job2.getPi() / speed) <= job2.getDi())
 		{
 			swapOp.gain += job2.getWi();
 		}
 
-		// Si job2 est en avance et sera en retard après swap
+		// If job2 is early and will be late after swapping
 		if (job2.isLate() == false && m2.startTimeOfJob(k) + (job2.getPi() / speed) > job2.getDi())
 		{
 			swapOp.gain -= job2.getWi();
 		}
 
+		// Check job1's following jobs
 		swapLateness(swapOp, s);
 	}
 
 
 	/** 
 	 * Method which return the swap with the highest gain as the best swap
+	 * @param possibleSwaps is a vector of SwapOperation to compare
+	 * @param s the current solution (unused in this implementation)
+	 * @return the best swap operation
+	 * If possibleSwaps is empty, a swap operation with all atributes equal to 0 is returned
 	*/
 	virtual SwapOperation bestSwapV(const std::vector<SwapOperation>& possibleSwaps, const Solution& s)
 	{

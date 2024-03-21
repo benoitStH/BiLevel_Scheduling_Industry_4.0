@@ -28,11 +28,12 @@ private:
     unsigned int pi;  // job's processing time for a machine whose speed equals 1
     unsigned int di;  // job's deadline
     unsigned int wi;  // job's weight
-    unsigned int num; // job number
+    unsigned int num; // job number (0 means its a ghost job)
     bool late;  // is the job late ? (always initialized to false)
 
 public:
 
+    /* Generate a 'ghost' job with all attributes equal to 0*/
     Job() : pi(0), di(0), wi(0), num(0), late(false) {};
     Job(unsigned int pi, unsigned int di, unsigned int wi, unsigned int num) : pi(pi), di(di), wi(wi), num(num), late(false) {}
 
@@ -63,7 +64,7 @@ public:
     /*      OPERATORS       */
     /************************/
 
-    static bool LPT_inv_EDD(const Job& lhs, const Job& rhs) { return (lhs.pi == rhs.pi) ? (lhs.di < rhs.di) : (lhs.pi > rhs.pi); }
+    static bool LPT_inv_EDD(const Job& lhs, const Job& rhs) { return (lhs.pi == rhs.pi) ? (lhs.di > rhs.di) : (lhs.pi > rhs.pi); }
 
     static bool LWPT(const Job& lhs, const Job& rhs) {
 
@@ -80,7 +81,7 @@ public:
         return ((lhs.pi / float(lhs.wi)) < (rhs.pi / float(rhs.wi)));
     }
 
-    static bool inv_EDD(const Job& lhs, const Job& rhs) { return (lhs.di == rhs.di ? (lhs.pi < rhs.pi) : (lhs.di < rhs.di)); }
+    static bool EDD(const Job& lhs, const Job& rhs) { return (lhs.di == rhs.di ? (lhs.pi < rhs.pi) : (lhs.di < rhs.di)); }
 
     static bool SmallestWeight(const Job& lhs, const Job& rhs) { return (lhs.wi < rhs.wi); }
 

@@ -5,12 +5,12 @@
 
 namespace sortRule {
 
-	const unsigned int RandomRule = 0;
-	const unsigned int LPTRULE = 1;
-	const unsigned int LWPTRULE = 2;
-	const unsigned int InvEDDRULE = 3; // UNUSED
-	const unsigned int SPT_EDD_CONST_LATENESS = 4;
-	const unsigned int SPT_EDD_VAR_LATENESS = 5;
+	const unsigned int RandomRule = 1;
+	const unsigned int LPTRULE = 2;
+	const unsigned int LWPTRULE = 3;
+	const unsigned int InvEDDRULE = 4; // UNUSED
+	const unsigned int SPT_EDD_CONST_LATENESS = 5;
+	const unsigned int SPT_EDD_VAR_LATENESS = 6;
 }
 
 class LSortRule : public ILeaderSelectRule
@@ -18,7 +18,11 @@ class LSortRule : public ILeaderSelectRule
 
 public:
 	LSortRule() : ILeaderSelectRule() {};
+
+
 	LSortRule(unsigned int ruleNumber) {
+
+		// Setting the rule name according to the rule number
 		this->ruleNumber = ruleNumber;
 		switch (ruleNumber)
 		{
@@ -58,16 +62,17 @@ public:
 	 * This method will call a sorting rule according to its ruleNumber
 	 * If the ruleNumber doesn't match, it return an empty list.
 	 * @param instance An instance with the list of jobs and the number of jobs to select
-	 * @return a list of selected jobs
+	 * @return a list of selected jobs or an empty list by default
 	 */
 	virtual std::vector<Job> selectJobsFrom(const Instance& instance)
 	{
-		// If we need to select all jobs, no need to apply a selection rule
+		// If we need to select every jobs, no need to apply a selection rule
 		if (instance.getNbToSelectJob() == instance.getNbJobs())
 		{
 			return instance.getListJobs();
 		}
 
+		// Calling the selection method according to the ruleNumber
 		switch (ruleNumber)
 		{
 
@@ -103,7 +108,7 @@ public:
 private:
 
 	/*
-	 * Method which will select a random subset of n jobs among the list of Jobs given
+	 * Private Method which will select a random subset of n jobs among the list of Jobs given
 	 * No Selection criterion is used
 	 * @param instance An instance with the list of jobs and the number of jobs to select
 	 * @return a list of selected jobs
@@ -116,14 +121,10 @@ private:
 		// Shuffling the list of jobs
 		std::shuffle(jobs.begin(), jobs.end(), std::default_random_engine());
 
+		// Selecting jobs until we reach n jobs or all jobs are selected  
 		std::vector<Job>::iterator i = jobs.begin();
-		while (i != jobs.end())
+		while (i != jobs.end() && chosenJobs.size() < instance.getNbToSelectJob())
 		{
-			if (chosenJobs.size() >= instance.getNbToSelectJob())
-			{
-				break;
-			}
-
 			chosenJobs.push_back(*i);
 			i++;
 		}
@@ -132,7 +133,7 @@ private:
 	}
 
 	/*
-	 * Method which will select a subset of n jobs among the list of Jobs given
+	 * Private Method which will select a subset of n jobs among the list of Jobs given
 	 * The Selection criterion is the Largest Processing Time.
 	 * @param instance An instance with the list of jobs and the number of jobs to select
 	 * @return a list of selected jobs
@@ -148,13 +149,8 @@ private:
 
 		// We select from largest to smallest job 
 		// until we reach the number of jobs to select or all jobs are selected
-		while (i != jobs.end())
+		while (i != jobs.end() && chosenJobs.size() < instance.getNbToSelectJob())
 		{
-			if (chosenJobs.size() >= instance.getNbToSelectJob())
-			{
-				break;
-			}
-
 			chosenJobs.push_back(*i);
 			i++;
 		}
@@ -163,7 +159,7 @@ private:
 	}
 
 	/*
-	 * Method which will select a subset of n jobs among the list of Jobs given
+	 * Private Method which will select a subset of n jobs among the list of Jobs given
 	 * The Selection criterion is the Largest Weighted Processing Time.
 	 * @param instance An instance with the list of jobs and the number of jobs to select
 	 * @return a list of selected jobs
@@ -179,13 +175,8 @@ private:
 
 		// We select from largest to smallest job 
 		// until we reach the number of jobs to select or all jobs are selected
-		while (i != jobs.end())
+		while (i != jobs.end() && chosenJobs.size() < instance.getNbToSelectJob())
 		{
-			if (chosenJobs.size() >= instance.getNbToSelectJob())
-			{
-				break;
-			}
-
 			chosenJobs.push_back(*i);
 			i++;
 		}
@@ -207,11 +198,11 @@ private:
 		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
 		std::vector<Job> permanentlyLateJobs;  // Jobs which are permanently late (will be chosen as a last resort)
 
-		std::sort(jobs.begin(), jobs.end(), Job::inv_EDD);
+		// Sorting by increasing due date
+		std::sort(jobs.begin(), jobs.end(), Job::EDD);
 
 		std::vector<Job>::iterator i = jobs.begin();
-		std::vector<Job>::iterator end = jobs.end();
-		while (i != end)
+		while (i != jobs.end())
 		{
 
 			Job& job = *i;
@@ -229,11 +220,12 @@ private:
 			//std::cout << std::endl;
 		}
 
+		// Sorting permanently late jobs according to increasing weight
 		std::sort(permanentlyLateJobs.begin(), permanentlyLateJobs.end(), Job::SmallestWeight);
 
+		// Selecting jobs until the number of jobs to select is reached or all is selected
 		i = permanentlyLateJobs.begin();
-		end = permanentlyLateJobs.end();
-		while (chosenJobs.size() < instance.getNbToSelectJob() && i != end)
+		while (chosenJobs.size() < instance.getNbToSelectJob() && i != permanentlyLateJobs.end())
 		{
 			chosenJobs.push_back(*i);
 			i++;
@@ -270,17 +262,11 @@ private:
 			//std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1] << std::endl;
 		}
 
-		unsigned int i = 0;
-
 		// We select jobs with a non positive lateness
 		// until we reach the number of jobs to select or either all jobs are selected or none can be selected
-		while (i != jobs.size())
+		unsigned int i = 0;
+		while (i != jobs.size() && chosenJobs.size() < instance.getNbToSelectJob())
 		{
-			if (chosenJobs.size() >= instance.getNbToSelectJob())
-			{
-				break;
-			}
-
 			if (lateness[i] <= 0)
 			{
 				//std::cout << "selected job " << jobs[i].getNum() << std::endl;
@@ -292,16 +278,15 @@ private:
 		// While there is still an amount of jobs to select
 		while (chosenJobs.size() < instance.getNbToSelectJob())
 		{
-			// We assume the first job has the smallest positive lateness
-			unsigned int min_i = 0;
-			float min_lateness = lateness[min_i];
+			unsigned int min_i = -1;  // job's index with the minimal positive lateness
+			float min_lateness = -1;  // minimal positive lateness
 
-			// We compare with the other jobs
-			for (i = 1; i < jobs.size(); i++)
+			// We compare the jobs
+			for (i = 0; i < jobs.size(); i++)
 			{
-				// If one of the other job has a smaller positive lateness, we save its index number and its lateness
-				// We also save the job if min_lateness is currently non positive
-				if ((lateness[i] < min_lateness && lateness[i] > 0) || min_lateness <= 0)
+				// If one of the job has a smaller positive lateness, we save its index number and its lateness
+				// We also save it if min_lateness is currently non positive
+				if ((0 < lateness[i] && lateness[i] < min_lateness) || min_lateness <= 0)
 				{
 					min_i = i;
 					min_lateness = lateness[min_i];
@@ -325,7 +310,7 @@ private:
 
 
 	/*
-	 * Method which will select a subset of n jobs among the list of Jobs given
+	 * Private Method which will select a subset of n jobs among the list of Jobs given
 	 * The Selection criterion is the Lateness of jobs ordered by increasing processing time.
 	 * This criterion is recalculated when m jobs has been selected (m is the total number of machines)
 	 * @param instance An instance with the list of jobs and the number of jobs to select
@@ -333,13 +318,14 @@ private:
 	 */
 	std::vector<Job> SptEddVariableLateness(const Instance& instance)
 	{
-		std::vector<Job> jobs = filterOutPermanentLateJobs(instance);  // List of jobs
+		std::vector<Job> jobs = filterOutPermanentLateJobs(instance);  // List of jobs with least amount of permanently late jobs
 		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
 
 		std::vector<float> lateness; // lateness of each job
 		std::vector<float> endTimes; // end time of each job
 		float cumulatedEndTime = 0;  // sum of all jobs' processing time
 
+		// If the filtered list size is equal to n, return it
 		if (jobs.size() == instance.getNbToSelectJob()) { return jobs; }
 
 
@@ -349,7 +335,7 @@ private:
 		// Sorting jobs by increasing processing time and earliest due date
 		std::sort(jobs.begin(), jobs.end(), std::less<Job>());
 
-		// Calculating each job's lateness and end time
+		// Calculating and storing each job's lateness and end time if they were to be scheduled on one high speed Machine 
 		unsigned int nbClean = 1;
 		for (const Job& job : jobs)
 		{
@@ -357,25 +343,34 @@ private:
 
 			lateness.push_back(cumulatedEndTime - job.getDi());
 			endTimes.push_back(cumulatedEndTime);
-			//if (cumulatedEndTime >= job.getDi() * instance.getHighSpeed()) // Revoir la condition (ecart entre d et p ?) (retard au dessus d'un seuil ?)
+			
+
+			// If the job's end time on the high speed machine is higher than a threshold, it is penalized
+			// The thresold is the due date times the square root of the number of preceding jobs without penalization
+			
 			if(cumulatedEndTime/(std::sqrt(nbClean) * instance.getHighSpeed()) - job.getDi() > 0)
 			{
-				endTimes.pop_back(); endTimes.push_back(0 + 1000 - job.getPi()*instance.getHighSpeed());
-				lateness.pop_back(); lateness.push_back(0 + 1000 - job.getPi()* instance.getHighSpeed() - job.getDi());
+				// The penalization is to set its end time and lateness to a high value so it won't be selected first
+				endTimes.pop_back(); endTimes.push_back(1000 - job.getPi()*instance.getHighSpeed());
+				lateness.pop_back(); lateness.push_back(1000 - job.getPi()* instance.getHighSpeed() - job.getDi());
+
+				// Since it won't be selected first, we don't take into account its processing time
 				cumulatedEndTime -= job.getPi();
 				//std::cout << "--";
 			}
-			else { nbClean++; }
+			else { nbClean++; }  // Otherwise, it is a job without penalization
+
+
 			//std::cout << job.getNum() << " p " << job.getPi() << " d " << job.getDi() << " lateness " << lateness[lateness.size() - 1]
 			//	<< " e " << cumulatedEndTime << std::endl;
 		}
 
 
-		unsigned int nbToSelectJobs = instance.getNbToSelectJob();
-		unsigned int lastNbSelectedJobs = 0;
-		unsigned int nbFails = 0;
-		unsigned int maxFails = nbToSelectJobs;
-		std::vector<unsigned int> selected_i;
+		unsigned int nbToSelectJobs = instance.getNbToSelectJob();  // number n of jobs to select
+		unsigned int lastNbSelectedJobs = 0;  // Last number of selected jobs
+		unsigned int nbFails = 0;			  // Number of times where we didn't selected more jobs than last time
+		unsigned int maxFails = nbToSelectJobs; // Max number of fails before stopping the selection rule
+		std::vector<unsigned int> selected_i;   // List of forcely selected jobs' index
 
 
 		// While the number of selected jobs is less than n
@@ -385,7 +380,7 @@ private:
 			//std::cout << "(re)starting..." << std::endl;
 
 			std::vector<float> PiPredecesseur;  // Processing time of the last bloc's jobs
-			float sum_PiPredecesseur = 0;  // The sum of processing time per bloc
+			float sum_PiPredecesseur = 0;  // The sum of each selected job's processing time
 
 			// Check each job until the number of selected jobs is met
 			for (unsigned int i = 0; i < jobs.size(); i++)
@@ -395,25 +390,24 @@ private:
 
 				//std::cout << jobs[i].getNum() << " lateness " << lateness[i] - sum_PiPredecesseur << (lateness[i] - sum_PiPredecesseur <= 0 ? " <-| " : "") << std::endl;
 
-				// If a job is early, we select it and save its processing time
+				// If a job is early, we select it, save its processing time and set its lateness to negative value
 				if (lateness[i] <= sum_PiPredecesseur)
 				{
 					chosenJobs.push_back(jobs[i]);
 					PiPredecesseur.push_back(jobs[i].getPi());
-					lateness[i] = -1;
+					lateness[i] = -1;  // The job isn't late
 					// std::cout << "selected job " << jobs[i].getNum() << std::endl;
 
-					// If the number of saved values can make a bloc, we save the lowest value and clear our list
+					// If the number of saved values can make a bloc, we add their processing time to sum_PiPredecesseur
 					if (PiPredecesseur.size() == nbTotalMachines)
 					{
-						float maxPi = *std::max_element(PiPredecesseur.begin(), PiPredecesseur.end());
-						float total_minusMax = 0;// -maxPi;
+						float sum_PiPredecesseurBloc = 0;
 						for (std::vector<float>::iterator pi = PiPredecesseur.begin(); pi != PiPredecesseur.end(); pi++)
 						{
-							total_minusMax += *pi;
+							sum_PiPredecesseurBloc += *pi;
 						}
 
-						sum_PiPredecesseur += total_minusMax;
+						sum_PiPredecesseur += sum_PiPredecesseurBloc;
 						PiPredecesseur.clear();
 						//std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
 					}
@@ -422,96 +416,95 @@ private:
 
 
 			// If no new bloc has been made
-			if (lastNbSelectedJobs >= chosenJobs.size() && chosenJobs.size() < nbToSelectJobs)
+			if (chosenJobs.size() <= lastNbSelectedJobs && chosenJobs.size() < nbToSelectJobs)
 			{
-				// While their is still room in the last bloc
-				//	// Check each job whose lateness is positive and save the one with lowest value
-				// 
-				// 
+
 				nbFails++;
 				if (nbFails == maxFails) { break; }
-				float latenessThresold = 0;
+				float latenessWjThresold = 0;  // jobs whose score is higher will be selected
 
 				// While their is still jobs to be forcely added
 				while (chosenJobs.size()-lastNbSelectedJobs < nbTotalMachines * nbFails && chosenJobs.size() <= nbToSelectJobs)
 				{
-					////// We assume the first job has the smallest positive lateness
-					unsigned int min_i = -1;
-					float min_lateness = -1; //lateness[min_i];
+					unsigned int min_i = -1; // index of the job with the minimal positive lateness
+					float min_latenessWj = -1; // minimal positive lateness multiplied by its job's weight
+					float latenessWj;
 
-					// We compare with the other jobs
+					// We compare each job
 					for (unsigned int i = 0; i < jobs.size(); i++)
 					{
-						// If one of the other job has a smaller positive lateness, we save its index number and its lateness
-						// We also save the job if min_lateness is currently non positive   
-						//std::cout << jobs[i].getNum() << " score " << lateness[i] * jobs[i].getWi() << std::endl;
-						if ((lateness[i]*jobs[i].getWi() < min_lateness || min_lateness <= 0) && lateness[i]*jobs[i].getWi() > latenessThresold)
+						latenessWj = lateness[i] * jobs[i].getWi();  // the job's score
+
+						// If one of the job has a smaller score and above our Thresold, we save its index number and its score
+						// We also save it if min_latenessWj is currently non positive   
+						//std::cout << jobs[i].getNum() << " score " << latenessWj << std::endl;
+						if ((latenessWj < min_latenessWj || min_latenessWj <= 0) && latenessWj > latenessWjThresold)
 						{
 							min_i = i;
-							min_lateness = lateness[min_i]*jobs[min_i].getWi();
+							min_latenessWj = latenessWj;
 						}
 					}
 
-					// After that, if we found a job with the smallest positive lateness, We select it
-					if (min_lateness > latenessThresold)
+					// After that, if we found a job with the smallest score above our Thresold, We forcely select it
+					if (min_latenessWj > latenessWjThresold)
 					{
-						latenessThresold = min_lateness;
+						latenessWjThresold = min_latenessWj;  // update the Threshold
 						//std::cout << "forcely selected job " << jobs[min_i].getNum() << std::endl;
+
+						// Forcely selecting the job, saving its processing time and saving the job's index
 						chosenJobs.push_back(jobs[min_i]);
 						PiPredecesseur.push_back(jobs[min_i].getPi());
 						selected_i.push_back(min_i);
 
 
-						// If the number of saved values can make a bloc, we save the lowest value and clear our list
+						// If a bloc has been completed, we add its jobs' processing time into sum_PiPredecesseur
 						if (PiPredecesseur.size() == nbTotalMachines)
 						{
-							float maxPi = *std::max_element(PiPredecesseur.begin(), PiPredecesseur.end());
-							float total_minusMax = 0;// -maxPi;
+							float sum_PiPredecesseurBloc = 0;
 							for (std::vector<float>::iterator pi = PiPredecesseur.begin(); pi != PiPredecesseur.end(); pi++)
 							{
-								total_minusMax += *pi;
+								sum_PiPredecesseurBloc += *pi;
 							}
 
-							sum_PiPredecesseur += total_minusMax;
+							sum_PiPredecesseur += sum_PiPredecesseurBloc;
 							PiPredecesseur.clear();
 							//std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
 							//break;
 						}
 					}
-					else
+					else  // No job can be selected
 					{
 						//std::cout << "No more selectable\n";
 						break;
 					}
 				}
 
+				// If no jobs were forcely selected, stop
 				if (selected_i.size() == 0) { break; }
-				// For each job afterward
-					// subtract sumPiPredecesseur from initial lateness
 
-
-				
-				//////
 			}
 
+			// We reset the lateness of each job
 			for (unsigned int i = 0; i < jobs.size(); i++)
 			{
 				lateness[i] = endTimes[i] - jobs[i].getDi();
 			}
 
+			// Each forcely selected jobs will be considered early for the next iteration
 			for (std::vector<unsigned int>::iterator selected_it = selected_i.begin(); selected_it != selected_i.end(); selected_it++)
 			{
 				lateness[*selected_it] = -1;
 			}
 
 
-
+			// We take note of the number of selected jobs
 			lastNbSelectedJobs = chosenJobs.size();
 			//std::cout << lastNbSelectedJobs << " jobs selected\n";
 		}
 		
 		/////////
 		//std::cout << "Selection Done !\n";
+
 		while (chosenJobs.size() > nbToSelectJobs)
 		{
 			chosenJobs.pop_back();

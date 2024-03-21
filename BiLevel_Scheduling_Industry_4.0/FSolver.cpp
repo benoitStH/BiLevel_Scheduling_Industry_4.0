@@ -10,20 +10,20 @@ void FSolver::heuristic()
 	//solution->print(); std::cout << std::endl;
 	//solution->compactPrint(); std::cout << std::endl;
 
-	Solution solution_init = Solution(*solution);
-	std::vector<SwapOperation> possibleSwaps;
+	Solution current_solution = Solution(*solution);
+	std::vector<SwapOperation> possibleSwaps;  // List of possible swaps on a bloc
 	SwapOperation swapOp;
 
 	// HIGH SPEED MACHINES //
 
-	unsigned int nbHighSpeedBlocs = solution_init.getMaxNumberOfHighSpeedBlocs();
-	unsigned int nbMachines = solution_init.getListHighSpeedMachines().size();
+	unsigned int nbHighSpeedBlocs = current_solution.getMaxNumberOfHighSpeedBlocs();
+	unsigned int nbMachines = current_solution.getListHighSpeedMachines().size();
 
 	//std::cout << "HighSpeedMachines Swap\n";
-	bool end;
+	bool NoSwapWasApplied;
 	do
 	{
-		end = true; // No swap has been performed
+		NoSwapWasApplied = true;
 
 		// For each bloc k
 		for (unsigned int k = 0; k < nbHighSpeedBlocs; k++)
@@ -32,13 +32,13 @@ void FSolver::heuristic()
 			// We compare between the machine l1
 			for (unsigned int l1 = 0; l1 < nbMachines-1; l1++)
 			{
-				// And a following machine l2
+				// And an other machine l2
 				for (unsigned int l2 = l1 + 1; l2 < nbMachines; l2++)
 				{
 					// Using each rule to check if a swap is possible or not
 					for (IFollowerSwapRule* swapRule : listRules)
 					{
-						swapOp = swapRule->swapVPossibleFor(solution_init, k, l1, l2);
+						swapOp = swapRule->swapVPossibleFor(current_solution, k, l1, l2);
 						possibleSwaps.push_back(swapOp);
 					}
 				}
@@ -48,42 +48,42 @@ void FSolver::heuristic()
 			//std::cin >> swapOp.bloc;
 			//swapOp.bloc = bloc;
 
-			// We extract the best possible swap according to a rule, and perform it if it exists
-			swapOp = listRules[0]->bestSwapV(possibleSwaps, solution_init);
+			// We extract the best possible swap, and perform it if it exists
+			swapOp = listRules[0]->bestSwapV(possibleSwaps, current_solution);
 			if (swapOp.gain > 0)
 			{
 				std::vector<unsigned int> machines;
 				machines.push_back(swapOp.machine1);
 				machines.push_back(swapOp.machine2);
 
-				solution_init.swapV(machines, k);
-				solution_init.evaluate();
+				current_solution.swapV(machines, k);
+				current_solution.evaluate();
 				//std::cout << "swap (" << swapOp.machine1 << ", " << swapOp.machine2 << ") at bloc " << k << std::endl;
-				end = false;
+				NoSwapWasApplied = false;
 			}
 		}
 
 		//solution_init.print(); std::cout << std::endl;
 
 		// if the new solution is better, save it
-		if (solution_init < *solution)
+		if (current_solution < *solution)
 		{
-			setSolution(new Solution(solution_init));
+			setSolution(new Solution(current_solution));
 		}
 
-	} while (end == false);
+	} while (NoSwapWasApplied == false);
 
 	//solution->compactPrint(); std::cout << std::endl;
 
 	// LOW SPEED MACHINES //
 
-	unsigned int nbLowSpeedBlocs = solution_init.getMaxNumberOfLowSpeedBlocs();
-	unsigned int nbTotalMachines = solution_init.getListLowSpeedMachines().size() + nbMachines;
+	unsigned int nbLowSpeedBlocs = current_solution.getMaxNumberOfLowSpeedBlocs();
+	unsigned int nbTotalMachines = current_solution.getListLowSpeedMachines().size() + nbMachines;
 
 	//std::cout << "LowSpeedMachines Swap\n";
 	do
 	{
-		end = true; // No swap has been performed
+		NoSwapWasApplied = true; // No swap has been performed
 
 		// For each bloc k
 		for (unsigned int k = 0; k < nbLowSpeedBlocs; k++)
@@ -92,42 +92,42 @@ void FSolver::heuristic()
 			// We compare between the machine l1
 			for (unsigned int l1 = nbMachines; l1 < nbTotalMachines-1; l1++)
 			{
-				// And a following machine l2
+				// And an other machine l2
 				for (unsigned int l2 = l1 + 1; l2 < nbTotalMachines; l2++)
 				{
 					// Using each rule to check if a swap is possible or not
 					for (IFollowerSwapRule* swapRule : listRules)
 					{
-						swapOp = swapRule->swapVPossibleFor(solution_init, k, l1, l2);
+						swapOp = swapRule->swapVPossibleFor(current_solution, k, l1, l2);
 						possibleSwaps.push_back(swapOp);
 					}
 				}
 			}
 
-			// We extract the best possible swap according to a rule, and perform it if it exists
-			swapOp = listRules[0]->bestSwapV(possibleSwaps, solution_init);
+			// We extract the best possible swap, and perform it if it exists
+			swapOp = listRules[0]->bestSwapV(possibleSwaps, current_solution);
 			if (swapOp.gain > 0)
 			{
 				std::vector<unsigned int> machines;
 				machines.push_back(swapOp.machine1);
 				machines.push_back(swapOp.machine2);
 
-				solution_init.swapV(machines, k);
-				solution_init.evaluate();
+				current_solution.swapV(machines, k);
+				current_solution.evaluate();
 				//std::cout << "swap (" << swapOp.machine1 << ", " << swapOp.machine2 << ") at bloc " << k << std::endl;
-				end = false;
+				NoSwapWasApplied = false;
 			}
 		}
 
 		//solution_init.print(); std::cout << std::endl;
 
 		// if the new solution is better, save it
-		if (solution_init < *solution)
+		if (current_solution < *solution)
 		{
-			setSolution(new Solution(solution_init));
+			setSolution(new Solution(current_solution));
 		}
 
-	} while (end == false);
+	} while (NoSwapWasApplied == false);
 
 	//solution->compactPrint(); std::cout << std::endl;
 

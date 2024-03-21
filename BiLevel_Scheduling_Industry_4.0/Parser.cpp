@@ -29,6 +29,13 @@
 
 Parser::Parser() {}
 
+
+/**
+ * This Method parse a file to generate an instance. It's an Instance constructor
+ * The file must respect the intended format (cf ReadMe.md)
+ * @param filePath the path of the file to parse
+ * @return the new instance
+*/
 Instance Parser::readFromFile(std::string& filePath) const {
     Instance newInstance = Instance(filePath);
     std::fstream fileStream(newInstance.getInstancePath().lexically_normal(), std::fstream::in);
@@ -71,6 +78,11 @@ Instance Parser::readFromFile(std::string& filePath) const {
     return newInstance;
 }
 
+/**
+* Method that serialize an instance into the corresponding file given by the attributeInstance::instancePath.
+* The file contains the instance's data in a specific format (cf ReadMe.md)
+* @param instance to serialize
+*/
 void Parser::serializeInstance(Instance& instance) {
 
     std::fstream fileStream(instance.getInstancePath().lexically_normal().string(), std::fstream::out);
@@ -92,6 +104,18 @@ void Parser::serializeInstance(Instance& instance) {
     fileStream.close();
 }
 
+/*
+* Method which save the given instance's best solution found by the given solver
+* The result is appended into the given file with a specific format (cf ReadMe.md)
+* 
+* It is assumed that the solver already solved the instance and has a solution (optimal or not)
+* It is assumed that the file, whose path was given, already exist and contains the header's
+* 
+* @param filePath The file where data will be append
+* @param instance The instance solved by the solver
+* @param solver The solver which solved the instance, contains the solution and its resolution time
+* @param optimal_objective The sum wjUj found by an exact method. Used to compute derivation.
+*/
 void Parser::saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective)
 {
     // Getting the instance's file path and the solver's best solution
@@ -150,7 +174,7 @@ void Parser::saveInFile(std::string& filepath, const Instance& instance, const I
         // Description and paramters (rules used)
         fileStream << solver->getHeuristicDescription() << ";";
 
-        // Time in microseconds to solve the instance
+        // Time in microseconds to solve the instance saved as time in seconds
         fileStream << solver->getTimeResol()/1000000.0 <<";";
 
         // Deviation from the optimale_objective

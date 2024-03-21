@@ -11,6 +11,10 @@ public:
 
 	FSolver(std::vector<IFollowerSwapRule*> listRule) : ISubSolver(listRule) {};
 
+	/*********************/
+	/*      METHODS      */
+	/*********************/
+
 	/**
 	 * Method which solves the lexicographic problem of the Follower
 	 * Lex(sum Cj, Sum wjUj)
@@ -19,6 +23,10 @@ public:
 	 * @param None
 	 */
 	virtual void heuristic();
+
+	/********************/
+	/*      GETTER      */
+	/********************/
 
 	virtual std::string getHeuristicName() const;
 

@@ -85,7 +85,7 @@ public:
         sum_Cj = 0.0;
     }
 
-    /**
+    /** DEPRECATED
      * Method that returns the machines where a swap can happen between their k-th job
      * @param k the k-th job in the machines' sequence
      * @param considerLowSpeedMachines Are we considering a swap between low speed machines ? otherwise we consider high speed ones
@@ -145,7 +145,7 @@ public:
         return swapableMachines;
     }
 
-    /**
+    /** DEPRECATED
      * Method that returns the machines where a swap can happen between their k-th job
      * @param k the k-th job in the machines' sequence
      * @return std::vector<unsigned int> of size 2. Contains the machines number. If no swap possible, the vector's size is 0.
@@ -154,7 +154,7 @@ public:
         return possibleSwapV(k, false);
     }
     
-    /**
+    /** DEPRECATED
      * Method that returns the machines where a swap can happen between their k-th job
      * @param k the k-th job in the machines' sequence
      * @return std::vector<unsigned int> of size 2. Contains the machines number. If no swap possible, the vector's size is 0.
@@ -203,7 +203,12 @@ public:
         return nbBlocs;
     }
     
-
+    /**
+     * Method which will swap the k-th job of two given machines
+     * @param swapableMachines an unsigned int vector of size 2 with the machine's index in the solution
+     * @param k the position of the k-th jobs
+     * @param verbose (default=True)
+     */
     void swapV(std::vector<unsigned int> swapableMachines, unsigned int k, bool verbose=true)
     {
         Machine& machine1 = operator[](swapableMachines[0]);
@@ -222,7 +227,8 @@ public:
     
 
     /**
-     * Method that evaluate the solution
+     * Method that evaluate the solution by computing the sum Cj and the sum wjUj
+     * The sumCj and sumWjUj will be updated
      */
     void evaluate() {
 
@@ -248,7 +254,8 @@ public:
      * Method that output the data of the solution in a custom form
      * The job number is displayed
      * The processing time are divided by the machine's speed
-     * Late jobs are marked with a "*"
+     * Late jobs are marked with a "*" before their number
+     * The sum Cj and sum WjUj are displayed
      */
     void print()
     {
@@ -293,6 +300,8 @@ public:
      * Method that output the data of the solution in a compact form
      * Only the job's number are displayed
      * Late jobs are marked with a "*"
+     * The sum Cj and sum WjUj are displayed
+     * The number of selected jobs in the solution (ignoring '0' ones) is displayed
      */
     void compactPrint()
     {
@@ -328,6 +337,7 @@ public:
         }
         std::cout << "- - -\n";
 
+        // Solution's score and number of selected jobs
         std::cout << "Sum Cj : " << getSumCj() << std::endl;
         std::cout << "Sum wjUj : " << getSumWjUj() << std::endl;
         std::cout << "n : " << nbSelectedJobs << std::endl;
@@ -379,10 +389,17 @@ public:
 
     /*
     * Operator to compare this object with another Solution object
-    * We only compare the sum wj Uj and assume the sum Cj are equal
+    * We first compare the sum Cj and if both have the same value, compare the sum wjUj
     */
-    bool operator<(const Solution& sol) const { return (sum_wj_Uj < sol.sum_wj_Uj); }
+    bool operator<(const Solution& sol) const { return ((sum_Cj == sol.sum_Cj) ? (sum_wj_Uj < sol.sum_wj_Uj) : (sum_Cj < sol.sum_Cj)); }
+
+    /*
+    * Static method which only compare the sum wj Uj
+    */
+    static bool smaller_wjUj(const Solution& lsol, const Solution& rsol) { return (lsol.sum_wj_Uj < rsol.sum_wj_Uj); }
 };
+
+
 
 inline std::ostream& operator<<(std::ostream& os, const Solution& solution) {
     os << "Solution : " << std::endl

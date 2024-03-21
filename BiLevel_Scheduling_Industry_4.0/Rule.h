@@ -6,8 +6,8 @@
 class Rule
 {
 protected:
-	std::string ruleName;
-	unsigned int ruleNumber;
+	std::string ruleName;  // rule's name
+	unsigned int ruleNumber;  // rule's number id
 
 public:
 

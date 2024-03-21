@@ -8,7 +8,7 @@
 class ISolver
 {
 protected:
-	Solution* solution;
+	Solution* solution;  // Dynamically allocated
 	const Instance* instance;
 	bool verbose;
     std::vector<ILeaderSelectRule*> listRules;
@@ -21,7 +21,7 @@ public:
     /*      CONSTRUCTOR     */
     /************************/
 
-
+    // Generate the solver with an empty solution
 	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule*>()), subSolver(nullptr), timeResol(0) {}
 
     /**
@@ -49,7 +49,7 @@ public:
     /********************/
 
     /**
-     * Pure Virtual Method that implement a algorithm to solve the current instance.
+     * Pure Virtual Method that implement an algorithm to solve the current instance.
      */
     virtual void solve() = 0;
 
@@ -81,6 +81,7 @@ public:
 
     void setRules(std::vector<ILeaderSelectRule*> listRule) {listRules = listRule;}
 
+    // Free the old pointer if not nullptr
     void setSubSolver(ISubSolver* subSolver)
     {
         if (this->subSolver != nullptr)
@@ -91,6 +92,7 @@ public:
 
     }
 
+    // Free the old pointer if not nullptr
     void setSolution(Solution* solution) 
     { 
         if (this->solution != nullptr)

@@ -40,28 +40,32 @@ public:
 
 
     /**
-     * This Method parse a file to generate an instance. It's a Instance constructor
+     * This Method parse a file to generate an instance. It's an Instance constructor
+     * The file must respect the intended format (cf ReadMe.md)
      * @param filePath the path of the file to parse
      * @return the new instance
-     */
+    */
     Instance readFromFile(std::string& filePath) const;
 
     /**
-     * Method that serialize an instance into the corresponding file given by the attributeInstance::instancePath.
-     * @param instance
-     */
+    * Method that serialize an instance into the corresponding file given by the attributeInstance::instancePath.
+    * The file contains the instance's data in a specific format (cf ReadMe.md)
+    * @param instance to serialize
+    */
     void serializeInstance(Instance& instance);
 
-    /**
-     * Method which save the given instance's best solution found by the given solver
-     * The result is appended into the given file with the following format
-     * InstanceName;instanceFile;sum Cj; objective function (sum wjUj); deviation with the non zero optimal objective;
-     * solverName; solverDescription
-     * N; n; total number of machines; HighSpeedScheduling; LowSpeedScheduling
-     * 
-     * It is assumed that the solver already solved the instance and has a solution (optimal or not)
-     * It is assumed that the file, whose path was given, already exist and contains the header's
-     */
+    /*
+    * Method which save the given instance's best solution found by the given solver
+    * The result is appended into the given file with a specific format (cf ReadMe.md)
+    *
+    * It is assumed that the solver already solved the instance and has a solution (optimal or not)
+    * It is assumed that the file, whose path was given, already exist and contains the header's
+    *
+    * @param filePath The file where data will be append
+    * @param instance The instance solved by the solver
+    * @param solver The solver which solved the instance, contains the solution and its resolution time
+    * @param optimal_objective The sum wjUj found by an exact method. Used to compute derivation.
+    */
     void saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective);
 };
 

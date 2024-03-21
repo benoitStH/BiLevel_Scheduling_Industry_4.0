@@ -57,7 +57,7 @@ public:
 
     /**
      * Method that return the starting time of a given job
-     * @param j the j-th job in the machine's sequence.
+     * @param j the job's position in the machine's sequence. 0 is the first job
      * @return float The starting time of the job
      */
     float startTimeOfJob(unsigned int j) const { 
@@ -68,6 +68,7 @@ public:
 
     /**
      * Method that evaluate the scheduling on the machine. It compute the sum of completion times and the sum of weighted tardy jobs.
+     * sum_Cj and sum_wj_Uj will be updated.
      */
     void evaluate() {
         float cumulativeWeightedTardyJob = 0.0; float cumulativeCompletionTimes = 0.0; float completionTimes = 0.0;
@@ -87,13 +88,13 @@ public:
 
     /**
      * Method that add a job to be scheduled on machine. This job is added at the given position.
-     * @param pos iterator before which the content will be inserted
-     * @param affectedJob job to insert
+     * @param pos : position before which the content will be inserted
+     * @param affectedJob : job to insert
      */
     void add_job(unsigned int position, const Job& affectedJob) { listAffectedJobs.insert(listAffectedJobs.begin() + position, affectedJob); }
 
     /**
-     * Method that add a job to be scheduled on machine. This job is added at the end of the machine.
+     * Method that add a job to be scheduled on machine. This job is added at the end of the machine's sequence.
      * @param affectedJob job to insert
      */
     void add_job(const Job& affectedJob) { listAffectedJobs.push_back(affectedJob); }
@@ -128,6 +129,7 @@ public:
     /*      OPERATORS       */
     /************************/
 
+    /* Return the pos-th job in the machine. No out-of-bounds checks.*/
     Job& operator[](size_t pos) { return listAffectedJobs[pos]; }
 
 };
