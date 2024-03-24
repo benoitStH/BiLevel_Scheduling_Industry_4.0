@@ -13,12 +13,22 @@
 #include <sstream>
 using namespace std;
 
+// Method called after main has returned and before program terminates.
+// We use a breakpoint here to take a snapshot of the memory in VS 2019 and check any memory leaks between the two snapshots
+// No memory leaks should be here, but strangely some memory are still allocated by fstream library
+struct AtExit
+{
+    ~AtExit() { float x = 0; }
+} doAtExit;
+
 int main()
 {
     // TODO: Tester avec de grosse instance, générer plusieurs grosses instances
     // Check : taux d'amélioration entre solution initial et final
     // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
     // TOTRY : Diviser par speed à la fin des calculs de dates de fin
+
+    // Start of the program, we take a snapshot at the brekpoint
     Parser parser = Parser();
     std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_3_N_15_tf_0.2_rdd_0.2_mMax_2_m0_2/instance0.txt";
     //Instance instance;
@@ -75,9 +85,11 @@ int main()
     // Tests avec plusieurs solveurs ayant chacun une règle
     if (generating == false)
     {
-        Instance* instance = new Instance();
+        std::vector<std::string> instancePath_list;
+        std::vector<std::string> exactMethodTimeScore_list;
+        std::vector<unsigned int> exactMethodObjectiveScore_list;
+
         std::filesystem::path testFile("C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/UNCHECKED instance + resultat MIP/resultMIP.csv");
-        std::fstream filePerf(testFile, std::fstream::in);
 
         std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/resultSPT_VL_DUMB.csv";
         std::fstream fileStreamSaveFile(saveFile, std::fstream::out);
@@ -85,12 +97,12 @@ int main()
         {
             fileStreamSaveFile << "InstanceName;InstancePath;sumCj;fonction objective (sum wjUj);fonction objective MIP;";
             fileStreamSaveFile << "N;n;m;HighSpeed Scheduling;LowSpeed Scheduling;Heuristic name;Heuristic description;time;deviation;precision\n";
+            fileStreamSaveFile.close();
         }
         else {
             cout << "erreur ouverture savefile\n";
             return 1;
         }
-        fileStreamSaveFile.close();
 
 
         unsigned int optimal_objective;
@@ -102,6 +114,7 @@ int main()
 
         unsigned int counter = 1;
 
+        std::fstream filePerf(testFile, std::fstream::in);
         if (filePerf.is_open())
         {
 
@@ -115,64 +128,74 @@ int main()
                 std::getline(stream, element, '\t');
                 // instance path
                 std::getline(stream, element, '\t');
-                path = element;
+                instancePath_list.push_back(element);
 
                 // Time
                 std::getline(stream, element, '\t');
+                exactMethodTimeScore_list.push_back(element);
 
                 // LimitTime
                 std::getline(stream, element, '\t');
 
                 // Objective
                 stream >> optimal_objective;
-
-                *instance = parser.readFromFile(path);
-                //cout << instance->getInstancePath() << std::endl;
-                if((counter+1) % 100 == 0)
-                    cout << counter+1 << "\r";
-
-                if (instance->getInstancePath() == "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_10_N_20_tf_0.8_rdd_0.2_mMax_1_m0_1/instance2.txt")
-                {
-                    instance->getHighSpeed();
-                }
-
-                for (ILeaderSelectRule* selectRule : sortRules)
-                {
-                    for (IFollowerSwapRule* swapRule : swapRules)
-                    {
-                        if (subSolver != nullptr) { delete subSolver; }
-                        subSolver = new FSolver();
-                        subSolver->addRule(swapRule);
-
-                        if (solver != nullptr) { delete solver; }
-                        solver = new LSolver();
-                        solver->setInstance(instance);
-                        solver->setSubSolver(subSolver);
-                        solver->addRule(selectRule);
-
-                        // Le solveur résout l'instance
-                        solver->solve();
-
-                        // Affichage du résultat
-                        //cout << "Time : " << solver.getTimeResol() << " microseconde(s)\n";
-                        Solution solution = Solution(*(solver->getSolution()));
-                        /*std::cout << "Final Solution\n\n";
-                        solution.compactPrint();
-
-                        cout << solver.getHeuristicName() << std::endl;
-                        cout << solver.getHeuristicDescription();*/
-
-                        // Enregistrement du résultat
-                        parser.saveInFile(saveFile, *instance, solver, optimal_objective);
-
-                        //std::cout << "\n\n";
-                    }
-                }
-                counter++;
+                exactMethodObjectiveScore_list.push_back(optimal_objective);
             };
+            filePerf.close();
         }
-        filePerf.close();
 
+
+        for (unsigned int i = 0; i < instancePath_list.size(); i++)
+        {
+            Instance instance = parser.readFromFile(instancePath_list[i]);
+            optimal_objective = exactMethodObjectiveScore_list[i];
+
+            //cout << instance->getInstancePath() << std::endl;
+            if ((counter + 1) % 100 == 0)
+                cout << counter + 1 << "\r";
+
+            /* if (instance->getInstancePath() == "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_10_N_20_tf_0.8_rdd_0.2_mMax_1_m0_1/instance2.txt")
+             {
+                 instance->getHighSpeed();
+             }*/
+
+            for (ILeaderSelectRule* selectRule : sortRules)
+            {
+                for (IFollowerSwapRule* swapRule : swapRules)
+                {
+                    if (subSolver != nullptr) { delete subSolver; }
+                    subSolver = new FSolver();
+                    subSolver->addRule(swapRule);
+
+                    if (solver != nullptr) { delete solver; }
+                    solver = new LSolver();
+                    solver->setInstance(&instance);
+                    solver->setSubSolver(subSolver);
+                    solver->addRule(selectRule);
+
+                    // Le solveur résout l'instance
+                    solver->solve();
+
+                    // Affichage du résultat
+                    //cout << "Time : " << solver.getTimeResol() << " microseconde(s)\n";
+                    Solution solution = Solution(*(solver->getSolution()));
+                    /*std::cout << "Final Solution\n\n";
+                    solution.compactPrint();
+
+                    cout << solver.getHeuristicName() << std::endl;
+                    cout << solver.getHeuristicDescription();*/
+
+                    // Enregistrement du résultat
+                    parser.saveInFile(saveFile, instance, solver, optimal_objective);
+
+                    //std::cout << "\n\n";
+                }
+            }
+            counter++;
+        }
+
+        if (solver != nullptr) { delete solver; }
+        if (subSolver != nullptr) { delete subSolver; }
         
     }
 
