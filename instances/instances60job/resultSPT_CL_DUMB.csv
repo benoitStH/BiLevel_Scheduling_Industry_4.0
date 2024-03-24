@@ -1,0 +1,1001 @@
+InstanceName;InstancePath;sumCj;fonction objective (sum wjUj);fonction objective MIP;N;n;m;HighSpeed Scheduling;LowSpeed Scheduling;Heuristic name;Heuristic description;time;deviation;precision
+instance0_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3254;113;1;60;30;2;"M0 : 59, 58, 56, 55, 53, 52, 50, 49, 47, 46, 44, 43, 41, 40, 38, 37, 35, 34, 32, 31 | ";"M0 : 60, 57, 54, 51, 48, 45, 42, 39, 36, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";4e-05;11200;0.00884956
+instance1_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2819.5;84;1;60;30;2;"M0 : 59, 58, 56, 55, 53, 52, 50, 49, 47, 46, 44, 43, 41, 40, 38, 37, 35, 34, 32, 31 | ";"M0 : 60, 57, 54, 51, 48, 45, 42, 39, 36, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3e-05;8300;0.0119048
+instance2_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2795;111;1;60;30;2;"M0 : 59, 58, 56, 55, 53, 52, 50, 48, 47, 46, 44, 43, 41, 40, 38, 37, 35, 34, 32, 30 | ";"M0 : 60, 57, 54, 51, 49, 45, 42, 39, 36, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;11000;0.00900901
+instance3_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2322;110;1;60;30;2;"M0 : 55, 46, 51, 42, 34, 59, 25, 15, 11, 60, 41, 31, 14, 37, 16, 28, 22, 40, 36, 6 | ";"M0 : 27, 29, 23, 48, 35, 54, 45, 47, 20, 49 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;10900;0.00909091
+instance4_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2897.5;122;1;60;30;2;"M0 : 42, 21, 4, 29, 6, 19, 43, 1, 37, 57, 47, 24, 46, 25, 56, 52, 35, 22, 31, 15 | ";"M0 : 39, 32, 30, 11, 27, 49, 12, 26, 51, 54 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;12100;0.00819672
+instance5_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2065.5;101;1;60;30;2;"M0 : 18, 36, 39, 21, 53, 58, 41, 8, 28, 54, 45, 57, 33, 31, 1, 12, 37, 55, 9, 24 | ";"M0 : 56, 49, 26, 3, 48, 11, 2, 50, 40, 51 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.1e-05;10000;0.00990099
+instance6_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2725.5;99;1;60;30;2;"M0 : 38, 40, 43, 60, 22, 15, 25, 41, 31, 45, 42, 37, 7, 51, 30, 47, 10, 53, 29, 9 | ";"M0 : 1, 33, 11, 28, 34, 20, 44, 50, 23, 32 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;9800;0.010101
+instance7_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1675.5;62;1;60;30;2;"M0 : 28, 22, 1, 53, 49, 38, 14, 51, 5, 19, 2, 52, 57, 4, 45, 24, 23, 18, 35, 43 | ";"M0 : 42, 8, 60, 16, 37, 33, 11, 12, 50, 32 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.5e-05;6100;0.016129
+instance8_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3534;103;1;60;30;2;"M0 : 46, 26, 47, 13, 41, 2, 35, 53, 42, 21, 20, 59, 9, 25, 22, 48, 38, 39, 40, 58 | ";"M0 : 54, 12, 10, 14, 45, 27, 7, 32, 29, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.9e-05;10200;0.00970874
+instance9_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.2_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3345;121;1;60;30;2;"M0 : 19, 18, 15, 8, 53, 48, 44, 50, 10, 46, 43, 14, 1, 54, 21, 9, 45, 2, 55, 56 | ";"M0 : 29, 4, 33, 5, 39, 60, 51, 6, 26, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;12000;0.00826446
+instance0_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2862;130;1;60;30;2;"M0 : 3, 16, 46, 52, 7, 5, 37, 51, 38, 41, 12, 53, 48, 22, 50, 10, 60, 43, 45, 15 | ";"M0 : 19, 29, 23, 44, 4, 25, 31, 58, 32, 2 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;12900;0.00769231
+instance1_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1848.5;99;1;60;30;2;"M0 : 1, 37, 54, 34, 2, 51, 12, 27, 33, 56, 13, 48, 4, 21, 26, 19, 43, 30, 35, 45 | ";"M0 : 49, 17, 18, 15, 46, 38, 14, 20, 28, 41 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9800;0.010101
+instance2_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2560;101;1;60;30;2;"M0 : 19, 54, 53, 57, 41, 33, 36, 23, 44, 35, 30, 21, 49, 38, 50, 26, 48, 60, 40, 59 | ";"M0 : 5, 58, 10, 55, 16, 22, 46, 45, 14, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;10000;0.00990099
+instance3_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3566;89;1;60;30;2;"M0 : 54, 47, 7, 20, 41, 50, 38, 60, 8, 19, 1, 21, 22, 43, 17, 5, 31, 36, 46, 55 | ";"M0 : 28, 30, 2, 12, 42, 24, 14, 11, 48, 25 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;8800;0.011236
+instance4_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3216;116;1;60;30;2;"M0 : 34, 35, 56, 27, 38, 18, 14, 53, 32, 1, 17, 21, 22, 43, 59, 23, 29, 54, 52, 55 | ";"M0 : 60, 42, 12, 44, 6, 10, 19, 20, 51, 50 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;11500;0.00862069
+instance5_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2510;65;1;60;30;2;"M0 : 36, 28, 5, 46, 55, 8, 49, 40, 41, 45, 51, 60, 1, 42, 27, 32, 35, 52, 23, 24 | ";"M0 : 39, 50, 6, 43, 17, 48, 9, 29, 34, 22 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;6400;0.0153846
+instance6_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4291;91;1;60;30;2;"M0 : 21, 29, 39, 40, 19, 36, 4, 53, 24, 49, 41, 52, 26, 1, 43, 56, 10, 59, 8, 22 | ";"M0 : 50, 44, 42, 14, 33, 51, 30, 32, 25, 28 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.1e-05;9000;0.010989
+instance7_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1931;118;1;60;30;2;"M0 : 39, 32, 46, 59, 58, 3, 10, 17, 20, 47, 14, 60, 51, 30, 49, 7, 36, 13, 48, 34 | ";"M0 : 38, 31, 25, 1, 9, 42, 43, 11, 29, 19 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.9e-05;11700;0.00847458
+instance8_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3121;107;1;60;30;2;"M0 : 9, 10, 19, 30, 52, 42, 1, 39, 59, 21, 57, 44, 28, 12, 31, 53, 38, 47, 6, 54 | ";"M0 : 43, 40, 33, 45, 4, 26, 50, 15, 11, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.1e-05;10600;0.00934579
+instance9_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.2_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2612;109;1;60;30;2;"M0 : 10, 30, 28, 37, 9, 20, 13, 11, 12, 40, 38, 51, 44, 1, 16, 15, 42, 4, 32, 34 | ";"M0 : 22, 36, 25, 14, 33, 5, 27, 31, 17, 45 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3e-05;10800;0.00917431
+instance0_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3904.5;100;1;60;30;2;"M0 : 44, 60, 30, 29, 33, 3, 22, 14, 21, 35, 50, 15, 49, 42, 45, 2, 20, 5, 47, 51 | ";"M0 : 58, 56, 27, 16, 18, 55, 26, 43, 24, 40 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;9900;0.01
+instance1_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2971;74;1;60;30;2;"M0 : 39, 2, 10, 21, 25, 38, 44, 47, 40, 58, 48, 36, 56, 51, 24, 42, 30, 15, 46, 26 | ";"M0 : 23, 57, 55, 20, 12, 17, 29, 27, 4, 9 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;7300;0.0135135
+instance2_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2634;81;1;60;30;2;"M0 : 40, 9, 2, 10, 32, 52, 28, 12, 26, 18, 30, 48, 31, 54, 55, 5, 58, 34, 25, 15 | ";"M0 : 51, 23, 47, 59, 19, 20, 29, 16, 22, 21 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.2e-05;8000;0.0123457
+instance3_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3098;91;1;60;30;2;"M0 : 6, 49, 41, 8, 12, 4, 33, 15, 21, 18, 50, 17, 47, 10, 24, 54, 1, 44, 42, 31 | ";"M0 : 57, 36, 3, 16, 29, 19, 59, 27, 35, 26 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.7e-05;9000;0.010989
+instance4_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3302.5;115;1;60;30;2;"M0 : 45, 35, 27, 19, 6, 51, 36, 48, 39, 57, 49, 29, 9, 31, 16, 34, 56, 25, 20, 40 | ";"M0 : 15, 18, 53, 14, 38, 1, 44, 22, 5, 60 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.2e-05;11400;0.00869565
+instance5_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3193;119;1;60;30;2;"M0 : 48, 3, 59, 46, 37, 14, 5, 55, 30, 17, 13, 26, 29, 34, 16, 6, 39, 51, 50, 12 | ";"M0 : 56, 43, 52, 8, 47, 54, 22, 7, 44, 19 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.4e-05;11800;0.00840336
+instance6_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2040.5;90;1;60;30;2;"M0 : 7, 42, 45, 51, 47, 1, 12, 29, 5, 57, 22, 38, 33, 34, 11, 21, 18, 39, 10, 4 | ";"M0 : 26, 48, 54, 52, 8, 53, 19, 58, 31, 13 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;8900;0.0111111
+instance7_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4502.5;111;1;60;30;2;"M0 : 58, 18, 34, 38, 19, 51, 5, 30, 46, 12, 43, 15, 21, 37, 2, 35, 17, 26, 54, 31 | ";"M0 : 25, 56, 53, 60, 22, 40, 33, 59, 32, 13 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11000;0.00900901
+instance8_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3471.5;92;1;60;30;2;"M0 : 27, 7, 24, 49, 39, 34, 29, 54, 18, 1, 50, 17, 47, 42, 51, 40, 8, 44, 15, 14 | ";"M0 : 30, 31, 57, 4, 33, 45, 21, 41, 32, 19 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9100;0.0108696
+instance9_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.2_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2737.5;103;1;60;30;2;"M0 : 8, 26, 52, 29, 60, 5, 10, 38, 31, 27, 2, 56, 16, 36, 39, 23, 37, 7, 18, 41 | ";"M0 : 57, 15, 24, 19, 54, 49, 3, 14, 50, 4 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10200;0.00970874
+instance0_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2249.5;100;1;60;30;2;"M0 : 23, 39, 52, 26, 9, 40, 35, 38, 5, 41, 31, 33, 58, 51, 47, 13, 11, 18, 25, 24 | ";"M0 : 50, 10, 53, 20, 30, 1, 43, 32, 45, 49 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;9900;0.01
+instance1_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2983;72;1;60;30;2;"M0 : 9, 5, 26, 59, 54, 43, 12, 37, 4, 41, 33, 48, 13, 19, 40, 28, 30, 60, 23, 50 | ";"M0 : 58, 2, 36, 3, 39, 49, 57, 7, 22, 34 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;7100;0.0138889
+instance2_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3454;111;1;60;30;2;"M0 : 23, 58, 20, 2, 7, 43, 41, 32, 52, 22, 30, 19, 15, 16, 36, 44, 46, 28, 1, 34 | ";"M0 : 54, 57, 21, 33, 31, 45, 18, 49, 56, 12 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;11000;0.00900901
+instance3_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2691;116;1;60;30;2;"M0 : 10, 26, 39, 22, 8, 34, 53, 48, 45, 43, 3, 54, 29, 30, 14, 1, 55, 9, 44, 5 | ";"M0 : 2, 31, 32, 18, 28, 60, 17, 19, 35, 21 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11500;0.00862069
+instance4_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3061.5;86;1;60;30;2;"M0 : 28, 60, 54, 56, 47, 8, 24, 58, 15, 29, 45, 22, 30, 37, 38, 11, 7, 13, 26, 40 | ";"M0 : 6, 27, 1, 42, 4, 3, 17, 18, 50, 16 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;8500;0.0116279
+instance5_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2647;78;1;60;30;2;"M0 : 27, 52, 48, 47, 10, 25, 9, 36, 46, 20, 37, 40, 24, 35, 55, 13, 5, 38, 41, 17 | ";"M0 : 22, 57, 12, 21, 42, 34, 15, 19, 16, 43 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;7700;0.0128205
+instance6_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2081;80;1;60;30;2;"M0 : 7, 12, 19, 50, 46, 20, 21, 28, 51, 2, 54, 6, 52, 16, 30, 59, 29, 11, 34, 57 | ";"M0 : 35, 53, 1, 14, 17, 40, 8, 41, 38, 31 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;7900;0.0125
+instance7_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2552.5;70;1;60;30;2;"M0 : 22, 53, 57, 8, 54, 29, 30, 15, 6, 45, 31, 48, 9, 13, 40, 46, 42, 39, 50, 37 | ";"M0 : 16, 60, 7, 17, 58, 19, 38, 12, 20, 49 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;6900;0.0142857
+instance8_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2877;142;1;60;30;2;"M0 : 12, 23, 58, 18, 20, 37, 59, 19, 14, 16, 29, 17, 8, 45, 10, 53, 30, 11, 33, 55 | ";"M0 : 25, 36, 44, 47, 35, 27, 13, 26, 7, 40 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14100;0.00704225
+instance9_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.2_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3006;96;1;60;30;2;"M0 : 53, 17, 15, 56, 33, 55, 22, 26, 27, 32, 10, 35, 44, 47, 5, 13, 14, 11, 60, 21 | ";"M0 : 3, 49, 19, 8, 6, 43, 57, 46, 42, 37 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;9500;0.0104167
+instance0_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2763;112;1;60;30;2;"M0 : 32, 20, 48, 58, 55, 30, 16, 45, 42, 10, 8, 6, 43, 54, 9, 49, 39, 40, 12, 53 | ";"M0 : 21, 19, 57, 23, 11, 1, 28, 29, 56, 25 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;11100;0.00892857
+instance1_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2951;96;1;60;30;2;"M0 : 19, 14, 21, 42, 5, 26, 12, 37, 23, 2, 59, 52, 9, 33, 44, 16, 46, 17, 57, 30 | ";"M0 : 60, 24, 39, 29, 53, 1, 45, 49, 35, 20 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;9500;0.0104167
+instance2_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3296;76;1;60;30;2;"M0 : 52, 34, 6, 12, 20, 28, 56, 7, 19, 57, 44, 32, 41, 31, 24, 55, 13, 37, 35, 29 | ";"M0 : 50, 51, 3, 4, 9, 46, 27, 53, 48, 49 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;7500;0.0131579
+instance3_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2995.5;105;1;60;30;2;"M0 : 13, 45, 16, 27, 46, 59, 19, 3, 5, 48, 14, 24, 47, 10, 23, 50, 15, 4, 39, 34 | ";"M0 : 37, 20, 53, 42, 49, 31, 44, 41, 7, 43 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10400;0.00952381
+instance4_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2592;98;1;60;30;2;"M0 : 28, 17, 19, 18, 13, 29, 4, 52, 16, 35, 60, 42, 32, 49, 48, 15, 34, 21, 40, 25 | ";"M0 : 14, 53, 2, 57, 55, 36, 6, 27, 31, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9700;0.0102041
+instance5_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2780.5;80;1;60;30;2;"M0 : 19, 20, 51, 32, 49, 53, 27, 26, 55, 34, 10, 44, 57, 42, 38, 31, 33, 23, 35, 47 | ";"M0 : 58, 15, 29, 6, 22, 8, 56, 28, 14, 11 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;7900;0.0125
+instance6_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3332;78;1;60;30;2;"M0 : 30, 46, 12, 31, 10, 2, 17, 34, 8, 14, 13, 22, 54, 19, 18, 42, 53, 4, 6, 15 | ";"M0 : 58, 50, 47, 57, 9, 23, 38, 21, 56, 36 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;7700;0.0128205
+instance7_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3379.5;131;1;60;30;2;"M0 : 13, 52, 6, 47, 12, 11, 54, 14, 34, 53, 46, 25, 35, 2, 8, 48, 39, 3, 29, 45 | ";"M0 : 49, 60, 37, 18, 58, 59, 40, 43, 19, 15 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;13000;0.00763359
+instance8_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2224.5;100;1;60;30;2;"M0 : 53, 46, 44, 57, 21, 55, 37, 54, 45, 28, 38, 9, 22, 35, 47, 13, 60, 33, 27, 39 | ";"M0 : 43, 42, 25, 11, 4, 24, 3, 48, 58, 51 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9900;0.01
+instance9_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.2_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3021;95;1;60;30;2;"M0 : 35, 50, 42, 7, 36, 24, 3, 23, 44, 20, 34, 32, 17, 22, 11, 37, 4, 13, 6, 51 | ";"M0 : 5, 14, 26, 48, 45, 25, 52, 28, 54, 60 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.4e-05;9400;0.0105263
+instance0_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2617;128;1;60;30;2;"M0 : 41, 9, 23, 28, 55, 37, 24, 22, 44, 21, 49, 20, 18, 56, 16, 39, 32, 5, 58, 11 | ";"M0 : 30, 48, 10, 54, 7, 8, 12, 46, 1, 35 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.1e-05;12700;0.0078125
+instance1_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2646.5;115;1;60;30;2;"M0 : 24, 36, 13, 8, 18, 41, 57, 47, 39, 45, 23, 43, 28, 11, 59, 9, 7, 44, 33, 53 | ";"M0 : 5, 54, 4, 2, 50, 16, 31, 37, 32, 3 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;11400;0.00869565
+instance2_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2643.5;87;1;60;30;2;"M0 : 6, 34, 12, 41, 59, 53, 15, 38, 18, 5, 54, 36, 8, 40, 24, 58, 30, 16, 33, 3 | ";"M0 : 26, 43, 42, 31, 48, 44, 25, 19, 55, 11 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;8600;0.0114943
+instance3_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1933.5;74;1;60;30;2;"M0 : 8, 43, 29, 7, 5, 35, 44, 48, 26, 32, 14, 10, 28, 54, 6, 25, 47, 22, 24, 45 | ";"M0 : 1, 9, 37, 4, 12, 19, 46, 50, 38, 31 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;7300;0.0135135
+instance4_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2897.5;126;1;60;30;2;"M0 : 57, 10, 27, 22, 44, 23, 41, 14, 40, 36, 24, 29, 46, 59, 9, 38, 37, 8, 32, 33 | ";"M0 : 12, 53, 58, 3, 54, 51, 48, 31, 20, 25 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;12500;0.00793651
+instance5_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3008;116;1;60;30;2;"M0 : 11, 28, 49, 56, 27, 5, 30, 29, 37, 1, 17, 46, 35, 8, 53, 9, 33, 15, 48, 57 | ";"M0 : 13, 44, 39, 31, 36, 32, 43, 34, 60, 20 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11500;0.00862069
+instance6_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3908;136;1;60;30;2;"M0 : 59, 1, 27, 40, 54, 57, 45, 19, 15, 6, 33, 42, 46, 26, 2, 12, 9, 44, 4, 23 | ";"M0 : 53, 3, 56, 60, 32, 52, 17, 55, 25, 7 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13500;0.00735294
+instance7_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2325;97;1;60;30;2;"M0 : 47, 9, 23, 19, 31, 1, 59, 17, 55, 22, 50, 53, 35, 21, 54, 42, 11, 8, 60, 43 | ";"M0 : 5, 13, 34, 56, 39, 15, 49, 28, 33, 51 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.8e-05;9600;0.0103093
+instance8_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2674.5;105;1;60;30;2;"M0 : 3, 20, 14, 58, 6, 54, 23, 36, 24, 55, 35, 28, 19, 47, 29, 42, 49, 1, 17, 33 | ";"M0 : 21, 18, 22, 50, 40, 53, 48, 15, 5, 26 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10400;0.00952381
+instance9_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.4_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2217.5;130;1;60;30;2;"M0 : 36, 29, 19, 31, 35, 59, 10, 40, 60, 53, 37, 28, 8, 32, 25, 58, 2, 39, 49, 20 | ";"M0 : 38, 51, 24, 3, 27, 47, 54, 23, 22, 21 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;12900;0.00769231
+instance0_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3169.5;142;1;60;30;2;"M0 : 30, 39, 40, 46, 53, 2, 50, 19, 49, 47, 56, 42, 14, 29, 21, 36, 8, 48, 59, 54 | ";"M0 : 7, 37, 33, 13, 38, 3, 24, 57, 41, 5 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;14100;0.00704225
+instance1_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2387.5;128;1;60;30;2;"M0 : 57, 8, 2, 34, 7, 13, 31, 38, 37, 5, 32, 26, 19, 12, 14, 49, 46, 16, 52, 60 | ";"M0 : 48, 40, 25, 28, 6, 10, 36, 56, 4, 22 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12700;0.0078125
+instance2_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1937;72;1;60;30;2;"M0 : 29, 4, 39, 5, 36, 1, 8, 24, 27, 3, 32, 20, 47, 40, 46, 30, 31, 49, 15, 26 | ";"M0 : 18, 22, 14, 41, 25, 56, 35, 13, 2, 57 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;7100;0.0138889
+instance3_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2231;118;1;60;30;2;"M0 : 15, 39, 9, 24, 59, 38, 57, 22, 30, 27, 52, 50, 1, 21, 17, 20, 2, 29, 48, 5 | ";"M0 : 58, 14, 28, 56, 16, 33, 53, 8, 46, 42 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.5e-05;11700;0.00847458
+instance4_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2560;103;1;60;30;2;"M0 : 11, 60, 41, 24, 50, 5, 42, 27, 44, 25, 58, 55, 31, 45, 20, 36, 39, 47, 10, 17 | ";"M0 : 53, 54, 19, 26, 59, 35, 12, 6, 38, 56 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10200;0.00970874
+instance5_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2541;131;1;60;30;2;"M0 : 57, 48, 52, 18, 3, 20, 21, 11, 41, 25, 24, 55, 49, 26, 9, 14, 56, 22, 47, 34 | ";"M0 : 27, 31, 17, 35, 28, 33, 7, 44, 60, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13000;0.00763359
+instance6_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3151;131;1;60;30;2;"M0 : 45, 20, 48, 11, 24, 21, 23, 4, 33, 57, 2, 35, 5, 44, 42, 7, 37, 26, 13, 6 | ";"M0 : 17, 46, 3, 16, 9, 52, 12, 41, 38, 27 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13000;0.00763359
+instance7_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2334;94;1;60;30;2;"M0 : 41, 52, 30, 44, 13, 32, 35, 22, 16, 45, 53, 47, 54, 42, 23, 27, 60, 34, 31, 18 | ";"M0 : 48, 43, 51, 58, 11, 2, 3, 46, 1, 40 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9300;0.0106383
+instance8_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3173;113;1;60;30;2;"M0 : 54, 53, 58, 9, 36, 15, 14, 39, 17, 44, 48, 5, 22, 40, 1, 27, 4, 43, 52, 7 | ";"M0 : 21, 29, 47, 45, 26, 16, 42, 25, 37, 57 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;11200;0.00884956
+instance9_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.4_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3592.5;115;1;60;30;2;"M0 : 32, 10, 22, 30, 29, 48, 35, 54, 24, 13, 2, 42, 59, 37, 38, 18, 39, 9, 44, 31 | ";"M0 : 16, 53, 15, 55, 4, 56, 28, 20, 8, 34 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11400;0.00869565
+instance0_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3688.5;120;1;60;30;2;"M0 : 60, 18, 44, 13, 52, 38, 54, 58, 20, 27, 10, 39, 6, 29, 36, 45, 50, 32, 12, 49 | ";"M0 : 42, 26, 28, 56, 24, 47, 53, 33, 57, 59 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11900;0.00833333
+instance1_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2954;101;1;60;30;2;"M0 : 3, 22, 55, 17, 44, 12, 58, 54, 50, 24, 40, 25, 29, 11, 8, 46, 53, 34, 42, 56 | ";"M0 : 45, 21, 7, 18, 41, 2, 49, 48, 51, 36 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10000;0.00990099
+instance2_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3105.5;111;1;60;30;2;"M0 : 27, 52, 47, 57, 40, 22, 32, 21, 41, 25, 16, 3, 60, 6, 8, 1, 38, 39, 42, 48 | ";"M0 : 50, 33, 36, 43, 53, 17, 10, 9, 11, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.4e-05;11000;0.00900901
+instance3_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2511.5;93;1;60;30;2;"M0 : 32, 46, 33, 15, 50, 31, 59, 55, 58, 12, 29, 18, 51, 45, 49, 13, 10, 7, 16, 6 | ";"M0 : 53, 47, 26, 36, 30, 25, 3, 22, 23, 41 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9200;0.0107527
+instance4_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2465;89;1;60;30;2;"M0 : 36, 30, 33, 53, 5, 15, 14, 40, 38, 57, 12, 24, 59, 50, 6, 51, 27, 47, 8, 34 | ";"M0 : 44, 32, 42, 26, 54, 55, 35, 10, 17, 41 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;8800;0.011236
+instance5_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3327.5;134;1;60;30;2;"M0 : 26, 34, 53, 17, 3, 40, 55, 42, 27, 49, 4, 22, 57, 13, 45, 50, 9, 47, 41, 12 | ";"M0 : 10, 19, 51, 43, 35, 7, 14, 20, 38, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13300;0.00746269
+instance6_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2782;115;1;60;30;2;"M0 : 40, 26, 23, 50, 8, 21, 9, 53, 60, 7, 45, 13, 55, 43, 56, 24, 57, 11, 17, 3 | ";"M0 : 41, 46, 15, 6, 16, 34, 52, 20, 58, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11400;0.00869565
+instance7_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2582.5;98;1;60;30;2;"M0 : 28, 7, 5, 22, 25, 1, 30, 55, 6, 17, 23, 50, 45, 24, 38, 53, 27, 19, 52, 60 | ";"M0 : 46, 40, 2, 15, 35, 13, 21, 44, 11, 20 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9700;0.0102041
+instance8_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2322;83;1;60;30;2;"M0 : 5, 12, 55, 32, 53, 40, 9, 58, 57, 1, 11, 24, 36, 47, 8, 52, 51, 46, 44, 50 | ";"M0 : 17, 59, 21, 3, 28, 48, 38, 42, 43, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;8200;0.0120482
+instance9_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.4_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2745.5;103;1;60;30;2;"M0 : 37, 21, 33, 53, 1, 46, 32, 39, 8, 34, 49, 7, 29, 26, 9, 30, 24, 11, 42, 12 | ";"M0 : 4, 14, 51, 31, 45, 47, 3, 13, 48, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10200;0.00970874
+instance0_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3488.5;83;1;60;30;2;"M0 : 6, 17, 3, 35, 45, 33, 43, 9, 55, 42, 59, 16, 32, 29, 21, 57, 49, 22, 54, 2 | ";"M0 : 1, 11, 19, 26, 28, 14, 39, 40, 15, 27 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;8200;0.0120482
+instance1_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4746;152;1;60;30;2;"M0 : 60, 2, 32, 38, 42, 15, 18, 34, 11, 26, 53, 35, 6, 10, 37, 7, 4, 50, 30, 39 | ";"M0 : 49, 1, 8, 41, 27, 17, 29, 52, 46, 40 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15100;0.00657895
+instance2_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3128;87;1;60;30;2;"M0 : 14, 17, 40, 6, 55, 20, 4, 59, 1, 52, 15, 53, 34, 35, 46, 47, 29, 30, 16, 51 | ";"M0 : 8, 12, 5, 2, 7, 56, 37, 25, 24, 50 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;8600;0.0114943
+instance3_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2342.5;89;1;60;30;2;"M0 : 46, 17, 58, 31, 5, 50, 10, 45, 35, 7, 49, 6, 32, 9, 55, 24, 12, 53, 33, 48 | ";"M0 : 52, 29, 60, 19, 2, 59, 56, 36, 3, 34 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;8800;0.011236
+instance4_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3415;94;1;60;30;2;"M0 : 54, 21, 57, 19, 13, 58, 2, 32, 22, 50, 44, 27, 37, 56, 25, 46, 39, 45, 31, 35 | ";"M0 : 33, 1, 15, 5, 52, 18, 3, 51, 48, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;9300;0.0106383
+instance5_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2218;69;1;60;30;2;"M0 : 31, 59, 37, 5, 25, 23, 41, 4, 6, 42, 14, 52, 44, 8, 38, 1, 39, 56, 10, 3 | ";"M0 : 40, 57, 15, 43, 53, 32, 46, 36, 54, 13 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;6800;0.0144928
+instance6_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3294;138;1;60;30;2;"M0 : 23, 14, 24, 2, 53, 4, 3, 42, 46, 48, 52, 28, 35, 49, 36, 11, 57, 10, 44, 59 | ";"M0 : 12, 30, 13, 20, 7, 17, 60, 29, 38, 9 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13700;0.00724638
+instance7_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2100;47;1;60;30;2;"M0 : 17, 53, 43, 18, 49, 59, 58, 50, 37, 7, 2, 5, 21, 32, 28, 34, 22, 52, 13, 42 | ";"M0 : 27, 35, 44, 39, 33, 9, 16, 31, 11, 15 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;4600;0.0212766
+instance8_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2502;88;1;60;30;2;"M0 : 58, 1, 11, 34, 42, 3, 29, 59, 24, 33, 41, 12, 13, 56, 44, 35, 36, 45, 50, 27 | ";"M0 : 7, 37, 57, 46, 16, 9, 14, 55, 47, 48 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;8700;0.0113636
+instance9_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.4_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2883.5;108;1;60;30;2;"M0 : 1, 49, 23, 44, 15, 39, 41, 27, 4, 32, 28, 22, 50, 37, 36, 53, 13, 24, 51, 45 | ";"M0 : 21, 11, 48, 20, 35, 33, 57, 55, 59, 7 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10700;0.00925926
+instance0_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3577;111;1;60;30;2;"M0 : 50, 17, 6, 26, 54, 18, 42, 10, 19, 51, 60, 28, 59, 39, 40, 2, 49, 53, 14, 45 | ";"M0 : 48, 4, 38, 15, 16, 57, 41, 52, 5, 9 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;11000;0.00900901
+instance1_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2134.5;61;1;60;30;2;"M0 : 16, 44, 22, 57, 46, 27, 3, 36, 13, 4, 19, 59, 52, 49, 30, 14, 2, 47, 29, 10 | ";"M0 : 5, 34, 39, 20, 55, 45, 31, 53, 35, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;6000;0.0163934
+instance2_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2689;110;1;60;30;2;"M0 : 7, 14, 49, 23, 56, 41, 53, 47, 19, 58, 24, 33, 36, 9, 43, 17, 25, 20, 52, 45 | ";"M0 : 21, 11, 37, 1, 18, 59, 40, 22, 27, 2 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10900;0.00909091
+instance3_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2912;89;1;60;30;2;"M0 : 24, 57, 48, 50, 10, 36, 54, 22, 7, 3, 31, 41, 20, 6, 9, 37, 25, 4, 59, 11 | ";"M0 : 14, 26, 33, 27, 45, 56, 46, 43, 38, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;8800;0.011236
+instance4_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2301.5;73;1;60;30;2;"M0 : 49, 13, 38, 60, 25, 27, 45, 35, 15, 33, 26, 50, 10, 30, 37, 59, 12, 22, 47, 28 | ";"M0 : 7, 4, 55, 6, 8, 16, 39, 41, 36, 19 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;7200;0.0136986
+instance5_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3438;130;1;60;30;2;"M0 : 59, 34, 29, 33, 44, 50, 28, 6, 58, 38, 21, 11, 55, 8, 45, 36, 7, 41, 37, 60 | ";"M0 : 15, 48, 39, 2, 9, 1, 23, 35, 57, 49 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12900;0.00769231
+instance6_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3014;89;1;60;30;2;"M0 : 45, 28, 51, 55, 22, 35, 37, 15, 34, 11, 52, 25, 23, 30, 44, 5, 42, 1, 47, 43 | ";"M0 : 7, 31, 54, 59, 16, 20, 58, 56, 32, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;8800;0.011236
+instance7_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2162;89;1;60;30;2;"M0 : 21, 54, 47, 60, 9, 3, 14, 35, 58, 6, 52, 5, 19, 38, 15, 12, 25, 44, 18, 46 | ";"M0 : 34, 2, 41, 50, 30, 27, 56, 49, 24, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;8800;0.011236
+instance8_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2109.5;69;1;60;30;2;"M0 : 23, 36, 21, 31, 2, 45, 37, 60, 22, 59, 50, 24, 6, 16, 57, 40, 8, 46, 56, 58 | ";"M0 : 54, 11, 9, 51, 29, 18, 26, 39, 7, 34 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;6800;0.0144928
+instance9_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.4_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3255;100;1;60;30;2;"M0 : 24, 59, 8, 47, 51, 27, 19, 50, 46, 31, 25, 32, 55, 2, 26, 52, 29, 20, 35, 14 | ";"M0 : 54, 3, 4, 17, 28, 23, 56, 57, 37, 44 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;9900;0.01
+instance0_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2668;117;1;60;30;2;"M0 : 54, 6, 8, 34, 36, 5, 46, 17, 51, 40, 4, 22, 21, 59, 15, 41, 31, 53, 55, 52 | ";"M0 : 48, 19, 3, 18, 24, 13, 60, 32, 45, 38 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;11600;0.00854701
+instance1_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2007;76;1;60;30;2;"M0 : 14, 4, 19, 52, 15, 60, 56, 21, 30, 17, 47, 50, 18, 2, 46, 39, 5, 7, 8, 27 | ";"M0 : 28, 36, 9, 1, 49, 57, 29, 13, 20, 45 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;7500;0.0131579
+instance2_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1862.5;111;1;60;30;2;"M0 : 35, 40, 13, 31, 45, 26, 55, 16, 38, 19, 43, 1, 15, 27, 11, 10, 6, 47, 42, 58 | ";"M0 : 25, 37, 46, 12, 39, 20, 49, 41, 9, 59 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;11000;0.00900901
+instance3_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3695;134;1;60;30;2;"M0 : 50, 38, 26, 41, 7, 58, 36, 35, 37, 56, 21, 28, 49, 33, 12, 53, 3, 52, 22, 48 | ";"M0 : 60, 44, 19, 20, 14, 34, 16, 11, 27, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;13300;0.00746269
+instance4_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2915.5;126;1;60;30;2;"M0 : 8, 44, 4, 21, 60, 28, 23, 19, 32, 6, 15, 27, 13, 20, 50, 40, 16, 26, 7, 12 | ";"M0 : 42, 37, 1, 55, 51, 33, 25, 59, 52, 34 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12500;0.00793651
+instance5_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4503.5;123;1;60;30;2;"M0 : 11, 5, 29, 18, 30, 38, 33, 58, 2, 12, 57, 47, 39, 21, 44, 41, 3, 45, 17, 26 | ";"M0 : 32, 19, 54, 7, 1, 23, 22, 56, 20, 14 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;12200;0.00813008
+instance6_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3183.5;116;1;60;30;2;"M0 : 5, 4, 42, 12, 13, 47, 57, 10, 15, 16, 11, 6, 20, 48, 39, 22, 43, 27, 36, 25 | ";"M0 : 24, 8, 53, 38, 9, 21, 55, 58, 54, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11500;0.00862069
+instance7_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3725;124;1;60;30;2;"M0 : 28, 3, 52, 51, 55, 16, 54, 24, 20, 38, 59, 5, 19, 42, 56, 21, 8, 44, 41, 31 | ";"M0 : 43, 13, 15, 29, 37, 6, 35, 32, 18, 46 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12300;0.00806452
+instance8_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3883.5;117;1;60;30;2;"M0 : 39, 22, 44, 12, 45, 10, 11, 29, 30, 28, 52, 40, 7, 20, 54, 60, 3, 16, 23, 35 | ";"M0 : 34, 19, 48, 56, 57, 5, 32, 8, 25, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.8e-05;11600;0.00854701
+instance9_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.6_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3551.5;148;1;60;30;2;"M0 : 23, 58, 14, 54, 22, 39, 44, 31, 60, 28, 2, 17, 55, 48, 11, 29, 46, 45, 13, 40 | ";"M0 : 1, 19, 50, 56, 16, 12, 24, 53, 20, 38 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14700;0.00675676
+instance0_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3740;117;1;60;30;2;"M0 : 36, 50, 52, 60, 27, 24, 5, 35, 8, 12, 43, 31, 19, 37, 16, 28, 23, 30, 2, 7 | ";"M0 : 49, 44, 11, 21, 39, 45, 54, 40, 42, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;11600;0.00854701
+instance1_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2439.5;123;1;60;30;2;"M0 : 19, 27, 40, 28, 38, 54, 14, 13, 58, 42, 3, 12, 55, 45, 35, 41, 8, 9, 52, 43 | ";"M0 : 15, 30, 53, 6, 18, 26, 50, 56, 57, 5 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.8e-05;12200;0.00813008
+instance2_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2521.5;124;1;60;30;2;"M0 : 19, 45, 23, 36, 22, 34, 59, 20, 27, 11, 9, 50, 21, 28, 26, 2, 8, 42, 25, 53 | ";"M0 : 44, 14, 13, 32, 49, 4, 35, 10, 3, 47 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;12300;0.00806452
+instance3_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3137;96;1;60;30;2;"M0 : 11, 4, 44, 51, 37, 40, 36, 35, 24, 14, 22, 27, 23, 56, 34, 57, 5, 49, 28, 17 | ";"M0 : 26, 41, 45, 38, 25, 33, 15, 42, 32, 16 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9500;0.0104167
+instance4_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3105.5;120;1;60;30;2;"M0 : 40, 25, 11, 14, 50, 38, 18, 36, 55, 2, 57, 17, 4, 6, 27, 7, 52, 8, 48, 24 | ";"M0 : 10, 3, 33, 31, 41, 54, 21, 19, 13, 22 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11900;0.00833333
+instance5_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3660;126;1;60;30;2;"M0 : 16, 31, 51, 23, 11, 41, 40, 21, 24, 17, 33, 57, 29, 38, 7, 56, 53, 18, 14, 26 | ";"M0 : 13, 58, 3, 32, 30, 59, 25, 4, 43, 48 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;12500;0.00793651
+instance6_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2950.5;93;1;60;30;2;"M0 : 20, 52, 36, 19, 24, 48, 50, 28, 5, 45, 13, 9, 27, 49, 26, 11, 34, 51, 6, 60 | ";"M0 : 53, 43, 39, 22, 44, 18, 7, 31, 12, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;9200;0.0107527
+instance7_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3384.5;141;1;60;30;2;"M0 : 54, 16, 15, 26, 27, 31, 56, 22, 50, 23, 55, 21, 39, 10, 2, 11, 30, 44, 42, 14 | ";"M0 : 7, 19, 1, 25, 47, 24, 8, 9, 32, 52 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;14000;0.0070922
+instance8_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2585;91;1;60;30;2;"M0 : 12, 1, 16, 54, 26, 49, 5, 39, 60, 18, 9, 22, 41, 21, 59, 3, 38, 40, 42, 37 | ";"M0 : 45, 53, 28, 19, 17, 36, 55, 56, 31, 27 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.9e-05;9000;0.010989
+instance9_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.6_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3209.5;117;1;60;30;2;"M0 : 53, 59, 52, 51, 40, 33, 17, 18, 39, 19, 30, 3, 38, 32, 16, 58, 37, 29, 7, 23 | ";"M0 : 45, 10, 25, 6, 12, 9, 55, 48, 50, 28 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11600;0.00854701
+instance0_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2426.5;106;1;60;30;2;"M0 : 2, 30, 55, 35, 20, 31, 4, 32, 13, 9, 26, 53, 21, 50, 49, 16, 54, 52, 11, 23 | ";"M0 : 22, 37, 45, 46, 6, 47, 1, 40, 10, 57 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10500;0.00943396
+instance1_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3028.5;121;1;60;30;2;"M0 : 42, 17, 58, 7, 48, 45, 2, 25, 36, 50, 38, 31, 39, 11, 12, 21, 22, 30, 43, 23 | ";"M0 : 19, 52, 33, 4, 51, 18, 6, 60, 49, 37 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12000;0.00826446
+instance2_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2186.5;94;1;60;30;2;"M0 : 23, 7, 3, 28, 24, 33, 29, 18, 53, 42, 58, 51, 46, 48, 35, 49, 37, 27, 44, 14 | ";"M0 : 31, 40, 10, 50, 11, 59, 30, 15, 52, 55 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9300;0.0106383
+instance3_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3132;144;1;60;30;2;"M0 : 11, 35, 1, 46, 2, 12, 33, 50, 41, 31, 9, 10, 14, 38, 23, 37, 29, 7, 25, 5 | ";"M0 : 20, 6, 59, 48, 55, 22, 47, 34, 28, 15 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.2e-05;14300;0.00694444
+instance4_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4091;127;1;60;30;2;"M0 : 39, 27, 42, 9, 12, 5, 14, 41, 10, 11, 53, 59, 57, 30, 44, 54, 6, 40, 35, 1 | ";"M0 : 25, 58, 50, 47, 45, 28, 15, 23, 4, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;12600;0.00787402
+instance5_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1535.5;71;1;60;30;2;"M0 : 26, 24, 31, 54, 22, 3, 55, 49, 57, 34, 10, 14, 29, 12, 15, 45, 50, 7, 17, 1 | ";"M0 : 19, 18, 59, 58, 60, 32, 8, 56, 36, 42 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;7000;0.0140845
+instance6_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3264;105;1;60;30;2;"M0 : 9, 45, 3, 6, 15, 33, 26, 30, 47, 11, 37, 48, 51, 56, 54, 14, 49, 40, 50, 2 | ";"M0 : 25, 10, 20, 22, 52, 46, 5, 35, 34, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.9e-05;10400;0.00952381
+instance7_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2769;129;1;60;30;2;"M0 : 37, 46, 21, 56, 25, 15, 41, 43, 27, 38, 45, 10, 14, 2, 31, 17, 19, 7, 58, 47 | ";"M0 : 39, 9, 30, 5, 35, 20, 49, 29, 52, 16 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;12800;0.00775194
+instance8_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2693.5;111;1;60;30;2;"M0 : 24, 12, 36, 52, 49, 55, 40, 37, 2, 56, 10, 28, 60, 25, 47, 43, 27, 46, 3, 54 | ";"M0 : 42, 32, 20, 41, 26, 17, 51, 13, 21, 16 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11000;0.00900901
+instance9_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.6_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2872;118;1;60;30;2;"M0 : 34, 25, 22, 8, 33, 30, 12, 18, 7, 47, 2, 16, 44, 35, 27, 20, 38, 48, 52, 57 | ";"M0 : 29, 50, 13, 15, 31, 17, 58, 23, 9, 11 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11700;0.00847458
+instance0_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2369.5;76;1;60;30;2;"M0 : 32, 49, 57, 34, 41, 58, 44, 52, 18, 42, 28, 29, 23, 37, 59, 33, 40, 5, 20, 3 | ";"M0 : 24, 30, 46, 27, 56, 39, 60, 16, 15, 17 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;7500;0.0131579
+instance1_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3589;142;1;60;30;2;"M0 : 35, 2, 36, 16, 25, 42, 14, 45, 31, 46, 47, 57, 23, 19, 3, 32, 22, 15, 49, 59 | ";"M0 : 41, 44, 24, 30, 7, 48, 4, 53, 1, 37 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;14100;0.00704225
+instance2_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3157.5;142;1;60;30;2;"M0 : 41, 29, 53, 4, 34, 33, 48, 50, 57, 35, 21, 13, 27, 19, 39, 15, 58, 10, 11, 5 | ";"M0 : 17, 6, 1, 42, 25, 40, 2, 44, 45, 51 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;14100;0.00704225
+instance3_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3959.5;132;1;60;30;2;"M0 : 14, 47, 55, 16, 52, 50, 8, 4, 45, 39, 30, 53, 3, 33, 44, 5, 1, 15, 46, 18 | ";"M0 : 13, 57, 2, 11, 26, 34, 10, 23, 21, 59 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;13100;0.00757576
+instance4_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2861;129;1;60;30;2;"M0 : 17, 11, 42, 21, 44, 40, 24, 33, 8, 27, 2, 28, 41, 51, 36, 45, 37, 38, 30, 55 | ";"M0 : 19, 23, 57, 49, 3, 59, 5, 56, 6, 14 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;12800;0.00775194
+instance5_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2162.5;90;1;60;30;2;"M0 : 5, 8, 45, 6, 57, 9, 13, 56, 23, 38, 15, 54, 29, 22, 12, 42, 20, 49, 36, 59 | ";"M0 : 60, 55, 46, 33, 21, 18, 25, 19, 26, 53 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.1e-05;8900;0.0111111
+instance6_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3241.5;142;1;60;30;2;"M0 : 5, 2, 35, 42, 32, 14, 23, 18, 43, 8, 21, 17, 28, 52, 54, 7, 50, 25, 47, 10 | ";"M0 : 48, 60, 16, 3, 49, 31, 33, 6, 29, 15 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14100;0.00704225
+instance7_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2514.5;114;1;60;30;2;"M0 : 1, 6, 23, 29, 33, 57, 18, 7, 46, 2, 3, 27, 30, 40, 56, 10, 24, 17, 50, 38 | ";"M0 : 11, 31, 60, 42, 54, 35, 47, 32, 4, 39 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;11300;0.00877193
+instance8_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4382;127;1;60;30;2;"M0 : 40, 4, 16, 49, 59, 14, 2, 29, 5, 31, 32, 26, 1, 48, 20, 35, 8, 6, 43, 51 | ";"M0 : 19, 47, 21, 17, 18, 30, 37, 54, 3, 56 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.4e-05;12600;0.00787402
+instance9_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.6_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2551.5;87;1;60;30;2;"M0 : 59, 25, 33, 11, 29, 45, 58, 24, 60, 41, 19, 21, 43, 55, 47, 35, 36, 15, 20, 10 | ";"M0 : 1, 30, 13, 40, 52, 5, 37, 18, 34, 17 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;8600;0.0114943
+instance0_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3223.5;113;1;60;30;2;"M0 : 31, 37, 22, 59, 55, 44, 17, 7, 41, 24, 40, 4, 51, 47, 9, 52, 42, 36, 20, 34 | ";"M0 : 43, 29, 28, 48, 23, 3, 8, 19, 56, 2 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11200;0.00884956
+instance1_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2284.5;92;1;60;30;2;"M0 : 9, 36, 19, 13, 33, 32, 17, 58, 44, 34, 26, 11, 59, 56, 38, 22, 1, 47, 7, 31 | ";"M0 : 28, 40, 3, 54, 35, 16, 12, 46, 57, 60 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9100;0.0108696
+instance2_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2838;124;1;60;30;2;"M0 : 20, 59, 52, 49, 36, 46, 45, 40, 2, 10, 47, 13, 19, 44, 15, 25, 50, 58, 24, 8 | ";"M0 : 60, 34, 31, 1, 27, 12, 17, 41, 39, 42 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12300;0.00806452
+instance3_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3743;121;1;60;30;2;"M0 : 18, 10, 13, 29, 30, 2, 3, 9, 50, 55, 58, 53, 42, 26, 8, 20, 15, 37, 48, 27 | ";"M0 : 41, 45, 52, 34, 28, 54, 4, 22, 47, 6 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12000;0.00826446
+instance4_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2011.5;67;1;60;30;2;"M0 : 45, 8, 52, 24, 12, 46, 13, 54, 25, 32, 30, 29, 48, 37, 26, 47, 42, 28, 50, 7 | ";"M0 : 19, 40, 33, 53, 20, 3, 41, 31, 58, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;6600;0.0149254
+instance5_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3600.5;121;1;60;30;2;"M0 : 3, 31, 12, 59, 56, 36, 44, 16, 26, 50, 42, 48, 51, 28, 52, 20, 8, 35, 32, 25 | ";"M0 : 53, 38, 39, 30, 22, 7, 4, 29, 37, 43 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12000;0.00826446
+instance6_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3353.5;102;1;60;30;2;"M0 : 20, 48, 51, 24, 16, 45, 1, 19, 17, 26, 39, 46, 37, 3, 50, 27, 28, 57, 53, 58 | ";"M0 : 40, 5, 56, 25, 12, 14, 22, 54, 44, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;10100;0.00980392
+instance7_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3548.5;142;1;60;30;2;"M0 : 39, 7, 11, 30, 25, 28, 20, 43, 42, 8, 34, 17, 2, 45, 24, 40, 37, 48, 9, 32 | ";"M0 : 3, 29, 49, 5, 22, 53, 1, 23, 52, 55 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14100;0.00704225
+instance8_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3334.5;94;1;60;30;2;"M0 : 39, 26, 25, 53, 31, 10, 6, 32, 33, 18, 56, 24, 34, 38, 60, 30, 29, 44, 16, 40 | ";"M0 : 12, 59, 14, 42, 46, 11, 27, 47, 58, 54 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.8e-05;9300;0.0106383
+instance9_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.6_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3740;95;1;60;30;2;"M0 : 9, 7, 53, 20, 3, 41, 6, 31, 47, 28, 38, 14, 56, 4, 36, 17, 29, 37, 52, 42 | ";"M0 : 50, 8, 44, 39, 2, 48, 32, 33, 10, 49 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9400;0.0105263
+instance0_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2850;129;1;60;30;2;"M0 : 15, 12, 25, 16, 27, 29, 46, 26, 59, 37, 39, 3, 50, 21, 54, 2, 52, 6, 47, 51 | ";"M0 : 9, 53, 13, 57, 31, 23, 4, 58, 43, 28 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12800;0.00775194
+instance1_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2370;99;1;60;30;2;"M0 : 51, 49, 44, 40, 55, 32, 50, 48, 10, 31, 53, 20, 29, 28, 35, 13, 45, 12, 47, 7 | ";"M0 : 30, 37, 18, 1, 60, 59, 42, 9, 16, 8 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9800;0.010101
+instance2_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2614.5;121;1;60;30;2;"M0 : 25, 32, 20, 51, 40, 57, 18, 8, 42, 27, 28, 14, 15, 3, 4, 22, 1, 24, 38, 35 | ";"M0 : 59, 21, 17, 36, 10, 50, 7, 43, 13, 26 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;12000;0.00826446
+instance3_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2513;97;1;60;30;2;"M0 : 51, 32, 3, 53, 37, 13, 58, 49, 26, 11, 31, 7, 34, 12, 28, 18, 35, 46, 23, 10 | ";"M0 : 4, 55, 8, 22, 24, 16, 36, 27, 30, 47 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;9600;0.0103093
+instance4_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4829.5;100;1;60;30;2;"M0 : 10, 44, 20, 18, 29, 31, 17, 38, 24, 1, 4, 9, 55, 21, 8, 33, 47, 35, 53, 42 | ";"M0 : 5, 41, 30, 22, 19, 59, 58, 25, 57, 45 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9900;0.01
+instance5_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2970.5;145;1;60;30;2;"M0 : 27, 57, 37, 41, 20, 17, 43, 25, 35, 59, 44, 2, 53, 40, 45, 60, 4, 56, 13, 7 | ";"M0 : 28, 9, 51, 50, 22, 24, 38, 21, 6, 39 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;14400;0.00689655
+instance6_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3661.5;159;1;60;30;2;"M0 : 55, 5, 12, 17, 27, 8, 59, 32, 9, 25, 44, 33, 1, 29, 31, 43, 54, 28, 16, 15 | ";"M0 : 42, 14, 18, 11, 34, 45, 6, 38, 4, 41 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15800;0.00628931
+instance7_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4310;168;1;60;30;2;"M0 : 5, 21, 10, 56, 49, 23, 42, 24, 30, 12, 7, 26, 11, 16, 17, 32, 20, 3, 15, 58 | ";"M0 : 53, 38, 25, 4, 60, 1, 34, 46, 31, 41 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;16700;0.00595238
+instance8_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3718.5;137;1;60;30;2;"M0 : 20, 29, 38, 41, 9, 33, 3, 37, 56, 49, 50, 17, 2, 24, 40, 21, 7, 25, 59, 46 | ";"M0 : 4, 23, 14, 39, 44, 57, 54, 18, 45, 48 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13600;0.00729927
+instance9_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.8_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2461.5;106;1;60;30;2;"M0 : 17, 57, 9, 5, 37, 39, 10, 56, 29, 50, 26, 4, 28, 44, 13, 12, 41, 53, 59, 16 | ";"M0 : 45, 22, 54, 24, 8, 7, 31, 19, 60, 21 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10500;0.00943396
+instance0_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2288;115;1;60;30;2;"M0 : 1, 12, 52, 17, 59, 2, 4, 34, 6, 8, 23, 38, 14, 40, 20, 54, 31, 47, 9, 41 | ";"M0 : 26, 27, 39, 60, 29, 36, 3, 11, 30, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11400;0.00869565
+instance1_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2366.5;140;1;60;30;2;"M0 : 18, 22, 36, 53, 30, 3, 29, 4, 52, 48, 6, 54, 32, 27, 60, 40, 31, 2, 10, 9 | ";"M0 : 55, 13, 20, 8, 43, 46, 39, 5, 11, 12 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13900;0.00714286
+instance2_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2159;129;1;60;30;2;"M0 : 24, 9, 47, 25, 57, 26, 20, 11, 28, 16, 58, 51, 50, 12, 56, 29, 13, 34, 46, 48 | ";"M0 : 43, 3, 40, 1, 41, 23, 2, 10, 22, 44 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12800;0.00775194
+instance3_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3308.5;151;1;60;30;2;"M0 : 16, 5, 8, 60, 34, 7, 54, 49, 6, 47, 21, 45, 57, 2, 10, 35, 1, 51, 39, 9 | ";"M0 : 20, 58, 19, 48, 59, 15, 23, 30, 14, 43 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15000;0.00662252
+instance4_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2791.5;127;1;60;30;2;"M0 : 18, 17, 37, 45, 49, 26, 22, 12, 25, 50, 19, 39, 42, 34, 54, 5, 10, 52, 47, 57 | ";"M0 : 31, 1, 48, 14, 51, 28, 30, 56, 40, 60 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;12600;0.00787402
+instance5_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3060.5;108;1;60;30;2;"M0 : 41, 40, 44, 45, 55, 60, 49, 20, 15, 38, 22, 43, 29, 37, 24, 23, 26, 31, 5, 35 | ";"M0 : 12, 51, 28, 2, 52, 1, 47, 6, 58, 27 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10700;0.00925926
+instance6_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3110.5;134;1;60;30;2;"M0 : 10, 5, 59, 48, 27, 19, 18, 47, 7, 20, 57, 60, 35, 32, 24, 34, 38, 1, 8, 29 | ";"M0 : 30, 17, 54, 6, 51, 50, 56, 41, 11, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13300;0.00746269
+instance7_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4233.5;154;1;60;30;2;"M0 : 27, 6, 58, 7, 59, 42, 3, 53, 35, 46, 52, 15, 9, 40, 10, 20, 24, 26, 32, 28 | ";"M0 : 49, 19, 11, 55, 16, 54, 18, 1, 60, 56 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;15300;0.00649351
+instance8_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3831.5;139;1;60;30;2;"M0 : 59, 23, 40, 16, 49, 24, 35, 55, 29, 18, 8, 11, 56, 22, 10, 37, 60, 25, 12, 5 | ";"M0 : 4, 28, 9, 27, 30, 52, 1, 54, 48, 42 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13800;0.00719424
+instance9_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.8_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3343;170;1;60;30;2;"M0 : 44, 39, 33, 5, 58, 46, 16, 57, 36, 43, 54, 31, 60, 40, 19, 30, 35, 34, 11, 32 | ";"M0 : 7, 1, 42, 51, 59, 37, 52, 27, 21, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;16900;0.00588235
+instance0_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2485;118;1;60;30;2;"M0 : 34, 36, 29, 53, 24, 19, 43, 11, 20, 7, 46, 52, 2, 28, 10, 38, 21, 5, 41, 25 | ";"M0 : 15, 22, 33, 17, 26, 47, 48, 4, 23, 51 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.2e-05;11700;0.00847458
+instance1_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2215.5;133;1;60;30;2;"M0 : 24, 30, 13, 45, 54, 8, 51, 57, 12, 32, 33, 21, 52, 48, 59, 7, 4, 17, 58, 20 | ";"M0 : 42, 35, 40, 19, 1, 56, 36, 53, 5, 22 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;13200;0.0075188
+instance2_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2313.5;113;1;60;30;2;"M0 : 12, 10, 26, 21, 15, 13, 60, 50, 44, 9, 55, 40, 19, 56, 53, 36, 37, 18, 3, 20 | ";"M0 : 42, 24, 33, 5, 49, 30, 54, 47, 7, 16 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11200;0.00884956
+instance3_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2441.5;118;1;60;30;2;"M0 : 44, 28, 30, 47, 57, 39, 27, 5, 54, 19, 51, 16, 24, 42, 15, 33, 53, 50, 17, 2 | ";"M0 : 14, 10, 31, 52, 49, 55, 36, 25, 4, 56 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11700;0.00847458
+instance4_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3282;159;1;60;30;2;"M0 : 10, 29, 36, 43, 28, 49, 58, 41, 44, 53, 24, 11, 37, 46, 50, 2, 7, 30, 35, 27 | ";"M0 : 38, 39, 60, 40, 13, 51, 54, 9, 45, 47 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15800;0.00628931
+instance5_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2075.5;81;1;60;30;2;"M0 : 54, 59, 43, 9, 13, 50, 29, 42, 23, 40, 25, 49, 39, 20, 33, 6, 60, 53, 56, 26 | ";"M0 : 45, 36, 31, 38, 37, 47, 52, 4, 24, 2 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;8000;0.0123457
+instance6_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2590;115;1;60;30;2;"M0 : 6, 58, 43, 25, 32, 18, 55, 42, 29, 5, 17, 51, 7, 48, 15, 53, 41, 44, 47, 59 | ";"M0 : 30, 2, 12, 28, 10, 40, 23, 4, 20, 37 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11400;0.00869565
+instance7_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2974;103;1;60;30;2;"M0 : 24, 25, 17, 32, 57, 49, 45, 29, 2, 46, 54, 30, 47, 51, 6, 40, 59, 1, 14, 33 | ";"M0 : 23, 5, 48, 9, 44, 39, 28, 11, 52, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.3e-05;10200;0.00970874
+instance8_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2426.5;90;1;60;30;2;"M0 : 4, 50, 36, 37, 2, 39, 24, 10, 5, 40, 16, 18, 54, 20, 44, 29, 57, 21, 53, 56 | ";"M0 : 43, 51, 59, 38, 47, 25, 48, 58, 11, 12 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;8900;0.0111111
+instance9_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.8_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2524.5;152;1;60;30;2;"M0 : 12, 46, 53, 18, 59, 14, 8, 56, 45, 6, 49, 2, 10, 11, 50, 20, 17, 48, 43, 35 | ";"M0 : 57, 38, 30, 21, 60, 3, 42, 40, 5, 13 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;15100;0.00657895
+instance0_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2593.5;102;1;60;30;2;"M0 : 13, 23, 35, 22, 41, 21, 40, 47, 9, 1, 2, 44, 20, 32, 28, 29, 50, 33, 51, 59 | ";"M0 : 31, 10, 14, 55, 30, 4, 11, 12, 54, 19 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.9e-05;10100;0.00980392
+instance1_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3237.5;126;1;60;30;2;"M0 : 49, 52, 21, 36, 24, 17, 51, 10, 26, 58, 4, 13, 9, 22, 18, 3, 57, 29, 44, 31 | ";"M0 : 32, 50, 2, 54, 42, 25, 28, 48, 19, 53 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12500;0.00793651
+instance2_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3527.5;116;1;60;30;2;"M0 : 47, 22, 24, 41, 26, 32, 6, 57, 37, 35, 44, 45, 27, 49, 54, 53, 60, 48, 30, 9 | ";"M0 : 20, 56, 36, 7, 28, 3, 42, 1, 58, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11500;0.00862069
+instance3_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2786.5;118;1;60;30;2;"M0 : 48, 18, 24, 1, 7, 45, 34, 11, 42, 36, 21, 35, 14, 39, 23, 12, 44, 6, 47, 37 | ";"M0 : 4, 52, 26, 55, 8, 46, 38, 41, 27, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11700;0.00847458
+instance4_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2732;104;1;60;30;2;"M0 : 40, 19, 35, 39, 54, 32, 43, 17, 16, 15, 22, 26, 44, 34, 55, 57, 4, 37, 5, 27 | ";"M0 : 47, 18, 49, 41, 56, 1, 29, 60, 33, 2 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10300;0.00961538
+instance5_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2739;115;1;60;30;2;"M0 : 57, 4, 22, 26, 53, 39, 24, 38, 48, 7, 37, 50, 25, 34, 17, 6, 2, 15, 41, 49 | ";"M0 : 18, 21, 28, 36, 52, 40, 55, 45, 19, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.9e-05;11400;0.00869565
+instance6_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2472;109;1;60;30;2;"M0 : 31, 46, 13, 53, 41, 36, 17, 58, 55, 26, 48, 6, 32, 40, 1, 8, 44, 12, 22, 2 | ";"M0 : 24, 27, 18, 59, 60, 29, 38, 52, 19, 14 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10800;0.00917431
+instance7_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2382.5;124;1;60;30;2;"M0 : 47, 12, 42, 49, 37, 60, 15, 44, 22, 17, 39, 46, 56, 7, 51, 58, 52, 26, 38, 2 | ";"M0 : 34, 3, 30, 32, 41, 27, 18, 33, 23, 8 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.8e-05;12300;0.00806452
+instance8_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2421.5;122;1;60;30;2;"M0 : 15, 1, 16, 35, 39, 30, 40, 20, 32, 9, 58, 19, 22, 60, 6, 8, 23, 51, 55, 27 | ";"M0 : 45, 31, 18, 50, 36, 13, 25, 37, 29, 7 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12100;0.00819672
+instance9_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.8_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2568.5;129;1;60;30;2;"M0 : 21, 11, 16, 14, 33, 31, 27, 22, 50, 5, 37, 38, 56, 39, 6, 36, 55, 29, 46, 48 | ";"M0 : 23, 26, 58, 24, 25, 51, 42, 45, 8, 43 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12800;0.00775194
+instance0_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3025.5;122;1;60;30;2;"M0 : 16, 4, 57, 28, 13, 50, 11, 46, 19, 3, 20, 54, 34, 27, 39, 59, 40, 8, 41, 2 | ";"M0 : 52, 33, 10, 21, 47, 43, 35, 18, 48, 25 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12100;0.00819672
+instance1_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3028.5;103;1;60;30;2;"M0 : 33, 42, 11, 56, 37, 12, 58, 24, 39, 21, 43, 14, 34, 60, 16, 41, 45, 4, 3, 44 | ";"M0 : 1, 7, 31, 59, 32, 19, 9, 36, 2, 5 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10200;0.00970874
+instance2_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3045;112;1;60;30;2;"M0 : 39, 26, 50, 59, 11, 1, 8, 56, 47, 13, 40, 46, 29, 43, 19, 12, 20, 41, 34, 16 | ";"M0 : 27, 54, 9, 4, 58, 48, 22, 2, 45, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11100;0.00892857
+instance3_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3735;95;1;60;30;2;"M0 : 54, 57, 42, 26, 20, 1, 35, 24, 25, 16, 7, 6, 51, 48, 56, 21, 2, 28, 23, 50 | ";"M0 : 44, 43, 19, 39, 22, 30, 36, 4, 12, 47 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9400;0.0105263
+instance4_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3406.5;124;1;60;30;2;"M0 : 35, 21, 5, 36, 58, 42, 32, 57, 10, 41, 26, 22, 38, 59, 28, 60, 14, 52, 37, 30 | ";"M0 : 45, 20, 15, 46, 2, 8, 34, 44, 16, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12300;0.00806452
+instance5_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2003.5;119;1;60;30;2;"M0 : 23, 17, 52, 44, 18, 57, 46, 15, 11, 7, 13, 43, 27, 59, 28, 42, 29, 14, 49, 36 | ";"M0 : 19, 58, 32, 41, 56, 35, 37, 26, 55, 45 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11800;0.00840336
+instance6_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2855;142;1;60;30;2;"M0 : 37, 9, 55, 20, 5, 13, 6, 54, 31, 27, 51, 53, 19, 56, 2, 12, 50, 43, 38, 33 | ";"M0 : 39, 4, 28, 48, 29, 22, 18, 3, 45, 46 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;14100;0.00704225
+instance7_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3037.5;115;1;60;30;2;"M0 : 28, 20, 10, 41, 56, 16, 47, 30, 49, 6, 18, 54, 60, 24, 17, 38, 11, 25, 42, 32 | ";"M0 : 36, 8, 50, 2, 14, 4, 51, 29, 13, 27 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11400;0.00869565
+instance8_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2600.5;110;1;60;30;2;"M0 : 60, 22, 14, 40, 42, 41, 13, 18, 39, 37, 55, 20, 26, 53, 45, 2, 51, 32, 24, 9 | ";"M0 : 38, 44, 17, 25, 28, 15, 29, 8, 21, 10 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2.6e-05;10900;0.00909091
+instance9_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_0.8_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3469;124;1;60;30;2;"M0 : 16, 20, 7, 19, 25, 10, 58, 23, 12, 55, 4, 18, 26, 46, 51, 38, 34, 42, 9, 54 | ";"M0 : 52, 39, 28, 29, 60, 22, 27, 5, 31, 59 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.8e-05;12300;0.00806452
+instance0_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2799;124;1;60;30;2;"M0 : 25, 15, 55, 5, 2, 16, 44, 18, 60, 7, 9, 3, 24, 31, 20, 6, 52, 11, 51, 43 | ";"M0 : 33, 19, 58, 37, 12, 10, 32, 48, 30, 26 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12300;0.00806452
+instance1_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4571.5;143;1;60;30;2;"M0 : 6, 23, 13, 7, 15, 37, 3, 33, 29, 40, 22, 30, 46, 18, 58, 9, 12, 21, 39, 19 | ";"M0 : 51, 34, 28, 57, 42, 17, 41, 43, 20, 55 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14200;0.00699301
+instance2_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3304.5;182;1;60;30;2;"M0 : 36, 3, 7, 29, 1, 52, 49, 14, 19, 12, 18, 59, 58, 31, 46, 42, 40, 44, 33, 30 | ";"M0 : 10, 28, 21, 16, 38, 26, 53, 48, 60, 6 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.7e-05;18100;0.00549451
+instance3_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2674;164;1;60;30;2;"M0 : 33, 50, 35, 17, 34, 11, 58, 53, 57, 9, 37, 1, 23, 25, 32, 10, 48, 45, 22, 51 | ";"M0 : 7, 60, 28, 19, 30, 49, 39, 20, 36, 26 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;16300;0.00609756
+instance4_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2720.5;171;1;60;30;2;"M0 : 4, 11, 47, 20, 59, 21, 43, 41, 58, 32, 9, 28, 19, 15, 60, 37, 35, 2, 46, 27 | ";"M0 : 29, 24, 39, 23, 53, 17, 48, 8, 55, 54 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;17000;0.00584795
+instance5_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2115;159;1;60;30;2;"M0 : 16, 55, 3, 19, 6, 49, 11, 29, 47, 58, 33, 35, 44, 57, 7, 53, 9, 17, 48, 30 | ";"M0 : 37, 21, 24, 13, 50, 41, 27, 59, 5, 28 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15800;0.00628931
+instance6_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2449;128;1;60;30;2;"M0 : 43, 42, 20, 22, 50, 21, 40, 14, 27, 28, 53, 57, 2, 11, 25, 36, 35, 12, 37, 30 | ";"M0 : 10, 49, 38, 58, 1, 54, 47, 5, 51, 26 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12700;0.0078125
+instance7_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2625.5;143;1;60;30;2;"M0 : 27, 59, 46, 31, 38, 10, 13, 17, 9, 24, 49, 5, 60, 1, 23, 15, 37, 45, 42, 4 | ";"M0 : 34, 43, 8, 16, 18, 53, 12, 51, 41, 33 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14200;0.00699301
+instance8_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2840;154;1;60;30;2;"M0 : 16, 23, 14, 49, 47, 10, 15, 44, 52, 58, 32, 56, 22, 26, 48, 46, 12, 29, 54, 8 | ";"M0 : 57, 19, 38, 33, 13, 60, 51, 34, 42, 17 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15300;0.00649351
+instance9_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_1.0_rdd_0.2_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2868.5;108;1;60;30;2;"M0 : 29, 41, 24, 10, 18, 30, 60, 39, 1, 17, 4, 35, 42, 20, 21, 48, 49, 6, 59, 8 | ";"M0 : 5, 52, 22, 46, 57, 40, 7, 15, 16, 47 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10700;0.00925926
+instance0_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2623;124;1;60;30;2;"M0 : 23, 41, 31, 12, 38, 29, 18, 36, 28, 51, 49, 22, 35, 60, 19, 15, 50, 43, 8, 46 | ";"M0 : 53, 9, 16, 25, 24, 58, 27, 40, 3, 55 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12300;0.00806452
+instance1_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2498;129;1;60;30;2;"M0 : 46, 10, 12, 54, 17, 40, 22, 59, 29, 50, 9, 58, 60, 37, 8, 16, 2, 45, 43, 18 | ";"M0 : 56, 30, 44, 4, 28, 21, 41, 19, 52, 11 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12800;0.00775194
+instance2_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3425.5;146;1;60;30;2;"M0 : 55, 23, 38, 19, 28, 34, 50, 44, 60, 45, 7, 53, 22, 29, 16, 32, 4, 27, 31, 39 | ";"M0 : 12, 59, 6, 3, 35, 24, 49, 18, 57, 20 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14500;0.00684932
+instance3_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2463;140;1;60;30;2;"M0 : 49, 7, 31, 10, 52, 30, 21, 27, 39, 59, 47, 24, 37, 42, 33, 6, 16, 58, 25, 40 | ";"M0 : 3, 56, 4, 14, 9, 55, 20, 28, 22, 45 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13900;0.00714286
+instance4_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2580;125;1;60;30;2;"M0 : 1, 42, 12, 14, 20, 40, 37, 60, 59, 46, 48, 51, 44, 18, 38, 3, 5, 10, 28, 53 | ";"M0 : 19, 26, 23, 32, 35, 17, 22, 8, 36, 50 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12400;0.008
+instance5_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1625;110;1;60;30;2;"M0 : 39, 50, 3, 55, 13, 24, 22, 47, 16, 9, 7, 44, 15, 10, 52, 19, 28, 23, 31, 41 | ";"M0 : 27, 5, 57, 60, 58, 4, 42, 35, 45, 40 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10900;0.00909091
+instance6_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2377.5;142;1;60;30;2;"M0 : 43, 35, 32, 22, 5, 60, 3, 4, 46, 15, 51, 45, 26, 16, 23, 17, 37, 52, 50, 55 | ";"M0 : 19, 36, 20, 28, 18, 7, 48, 13, 57, 2 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;14100;0.00704225
+instance7_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3055.5;130;1;60;30;2;"M0 : 55, 45, 6, 36, 60, 17, 38, 33, 21, 40, 37, 4, 58, 18, 41, 7, 12, 29, 35, 2 | ";"M0 : 16, 19, 56, 31, 24, 25, 1, 28, 30, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12900;0.00769231
+instance8_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2644.5;134;1;60;30;2;"M0 : 47, 21, 40, 20, 7, 28, 8, 32, 51, 13, 1, 52, 10, 19, 23, 55, 24, 39, 36, 30 | ";"M0 : 17, 18, 38, 26, 35, 14, 4, 3, 46, 11 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13300;0.00746269
+instance9_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_1.0_rdd_0.4_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3353;161;1;60;30;2;"M0 : 3, 60, 54, 35, 33, 46, 45, 51, 58, 6, 36, 39, 9, 16, 24, 57, 1, 2, 31, 37 | ";"M0 : 8, 4, 15, 10, 30, 48, 14, 29, 32, 25 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;16000;0.00621118
+instance0_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2826;130;1;60;30;2;"M0 : 59, 22, 41, 37, 6, 24, 21, 12, 3, 38, 31, 43, 45, 4, 11, 19, 58, 16, 60, 27 | ";"M0 : 9, 26, 57, 2, 5, 28, 10, 47, 52, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12900;0.00769231
+instance1_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2597.5;132;1;60;30;2;"M0 : 17, 30, 22, 9, 28, 27, 29, 45, 46, 36, 2, 47, 54, 48, 11, 60, 51, 23, 13, 57 | ";"M0 : 35, 1, 52, 41, 4, 18, 15, 43, 3, 12 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13100;0.00757576
+instance2_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2137.5;117;1;60;30;2;"M0 : 6, 43, 4, 50, 15, 44, 8, 1, 23, 39, 36, 31, 33, 34, 25, 13, 52, 38, 53, 45 | ";"M0 : 47, 55, 30, 5, 37, 12, 41, 57, 60, 28 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";3.5e-05;11600;0.00854701
+instance3_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3441;149;1;60;30;2;"M0 : 40, 7, 27, 19, 30, 17, 49, 47, 14, 35, 28, 59, 60, 5, 18, 36, 23, 45, 56, 57 | ";"M0 : 31, 50, 8, 12, 26, 3, 44, 37, 54, 43 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14800;0.00671141
+instance4_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2235;116;1;60;30;2;"M0 : 8, 54, 22, 2, 41, 46, 6, 49, 1, 20, 10, 39, 60, 29, 26, 3, 59, 47, 28, 15 | ";"M0 : 48, 52, 12, 23, 42, 7, 40, 19, 33, 31 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11500;0.00862069
+instance5_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2289;131;1;60;30;2;"M0 : 49, 6, 23, 22, 60, 33, 48, 27, 53, 4, 56, 57, 43, 25, 28, 36, 11, 39, 18, 42 | ";"M0 : 45, 30, 15, 44, 14, 34, 21, 17, 3, 20 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13000;0.00763359
+instance6_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4210.5;138;1;60;30;2;"M0 : 43, 16, 55, 44, 14, 49, 52, 47, 46, 40, 32, 6, 29, 18, 12, 36, 23, 60, 22, 35 | ";"M0 : 25, 33, 20, 42, 11, 24, 28, 31, 13, 53 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13700;0.00724638
+instance7_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2332;143;1;60;30;2;"M0 : 14, 50, 30, 11, 25, 20, 31, 7, 58, 53, 28, 5, 60, 37, 27, 10, 36, 23, 12, 13 | ";"M0 : 59, 2, 35, 4, 1, 57, 47, 24, 16, 55 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;14200;0.00699301
+instance8_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2128.5;128;1;60;30;2;"M0 : 37, 42, 44, 43, 40, 30, 59, 31, 24, 4, 34, 51, 58, 2, 47, 20, 12, 13, 32, 52 | ";"M0 : 11, 33, 46, 22, 19, 28, 23, 9, 38, 54 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12700;0.0078125
+instance9_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_1.0_rdd_0.6_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2562.5;123;1;60;30;2;"M0 : 3, 49, 16, 59, 47, 54, 51, 41, 30, 20, 39, 8, 38, 31, 60, 15, 14, 21, 18, 2 | ";"M0 : 50, 25, 28, 17, 36, 13, 7, 35, 46, 56 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;12200;0.00813008
+instance0_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3312.5;135;1;60;30;2;"M0 : 23, 9, 5, 6, 53, 47, 43, 12, 46, 32, 39, 21, 2, 7, 59, 1, 29, 48, 22, 36 | ";"M0 : 28, 17, 20, 18, 25, 56, 10, 11, 27, 24 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;13400;0.00740741
+instance1_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2265;125;1;60;30;2;"M0 : 8, 28, 37, 4, 57, 59, 3, 49, 2, 45, 6, 44, 24, 11, 16, 7, 21, 12, 20, 48 | ";"M0 : 56, 43, 13, 22, 25, 36, 42, 40, 9, 1 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12400;0.008
+instance2_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3866.5;162;1;60;30;2;"M0 : 56, 39, 27, 13, 20, 4, 43, 22, 46, 16, 30, 59, 10, 36, 17, 25, 40, 21, 48, 8 | ";"M0 : 58, 35, 1, 31, 3, 37, 38, 54, 49, 12 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;16100;0.00617284
+instance3_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2937;144;1;60;30;2;"M0 : 54, 22, 40, 11, 4, 30, 17, 39, 14, 29, 47, 19, 6, 25, 1, 57, 49, 48, 9, 50 | ";"M0 : 37, 20, 7, 36, 60, 10, 43, 2, 53, 32 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14300;0.00694444
+instance4_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3363.5;148;1;60;30;2;"M0 : 55, 14, 48, 13, 33, 9, 4, 40, 25, 15, 43, 36, 34, 19, 2, 12, 42, 57, 11, 41 | ";"M0 : 38, 47, 58, 21, 28, 51, 60, 27, 50, 3 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.8e-05;14700;0.00675676
+instance5_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2999;117;1;60;30;2;"M0 : 11, 14, 9, 24, 58, 53, 40, 6, 54, 34, 25, 38, 16, 19, 31, 48, 39, 30, 3, 36 | ";"M0 : 7, 51, 52, 49, 28, 41, 15, 8, 18, 17 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;11600;0.00854701
+instance6_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3530;143;1;60;30;2;"M0 : 53, 23, 27, 21, 25, 12, 60, 11, 44, 58, 6, 34, 38, 28, 57, 14, 19, 50, 54, 32 | ";"M0 : 59, 29, 10, 41, 3, 40, 51, 18, 46, 52 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;14200;0.00699301
+instance7_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2476.5;122;1;60;30;2;"M0 : 15, 46, 18, 60, 43, 33, 51, 34, 36, 35, 44, 12, 55, 10, 21, 23, 20, 28, 57, 29 | ";"M0 : 14, 41, 54, 6, 37, 4, 5, 19, 16, 32 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12100;0.00819672
+instance8_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2425;127;1;60;30;2;"M0 : 24, 36, 52, 45, 16, 19, 41, 5, 42, 53, 10, 50, 9, 27, 51, 14, 31, 29, 38, 25 | ";"M0 : 8, 59, 30, 58, 55, 57, 40, 15, 46, 28 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12600;0.00787402
+instance9_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_1.0_rdd_0.8_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3246.5;138;1;60;30;2;"M0 : 57, 35, 27, 42, 51, 53, 12, 37, 26, 44, 28, 56, 34, 13, 7, 23, 60, 21, 22, 36 | ";"M0 : 19, 38, 50, 29, 43, 31, 55, 10, 1, 9 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13700;0.00724638
+instance0_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance0_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;4480.5;132;1;60;30;2;"M0 : 28, 31, 29, 44, 43, 53, 4, 12, 45, 33, 35, 57, 54, 8, 50, 6, 38, 20, 60, 10 | ";"M0 : 17, 32, 21, 34, 9, 56, 7, 49, 27, 36 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13100;0.00757576
+instance1_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance1_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3298.5;124;1;60;30;2;"M0 : 25, 53, 8, 3, 9, 28, 46, 1, 40, 59, 52, 2, 54, 32, 6, 60, 10, 23, 42, 12 | ";"M0 : 14, 36, 47, 41, 13, 57, 33, 51, 55, 7 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;12300;0.00806452
+instance2_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance2_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;1888;94;1;60;30;2;"M0 : 45, 40, 22, 44, 19, 37, 52, 42, 49, 27, 31, 24, 30, 4, 51, 2, 43, 5, 46, 8 | ";"M0 : 6, 35, 25, 57, 41, 9, 54, 50, 32, 23 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;9300;0.0106383
+instance3_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance3_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2540.5;104;1;60;30;2;"M0 : 23, 14, 45, 27, 17, 4, 16, 40, 55, 18, 19, 5, 43, 31, 9, 30, 57, 22, 37, 12 | ";"M0 : 13, 48, 29, 3, 11, 42, 6, 54, 20, 44 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.6e-05;10300;0.00961538
+instance4_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance4_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2860;134;1;60;30;2;"M0 : 54, 35, 5, 28, 45, 24, 18, 10, 31, 15, 58, 50, 29, 11, 7, 42, 33, 53, 55, 47 | ";"M0 : 12, 43, 19, 4, 40, 22, 16, 39, 34, 48 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.4e-05;13300;0.00746269
+instance5_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance5_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3670.5;154;1;60;30;2;"M0 : 24, 19, 42, 54, 1, 59, 26, 45, 22, 57, 43, 39, 11, 38, 31, 5, 50, 21, 10, 58 | ";"M0 : 34, 20, 53, 8, 27, 13, 30, 47, 15, 52 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;15300;0.00649351
+instance6_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance6_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3013.5;140;1;60;30;2;"M0 : 50, 37, 40, 15, 39, 35, 59, 36, 31, 28, 53, 43, 3, 51, 13, 41, 4, 45, 38, 14 | ";"M0 : 10, 47, 18, 11, 58, 52, 2, 27, 44, 54 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;13900;0.00714286
+instance7_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance7_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2848;116;1;60;30;2;"M0 : 60, 31, 41, 44, 4, 22, 43, 36, 53, 21, 57, 6, 48, 47, 55, 16, 42, 13, 18, 58 | ";"M0 : 3, 8, 46, 40, 37, 1, 9, 54, 29, 38 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;11500;0.00862069
+instance8_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance8_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;2563;109;1;60;30;2;"M0 : 38, 46, 25, 3, 29, 54, 14, 4, 1, 10, 53, 11, 2, 24, 37, 55, 59, 40, 21, 51 | ";"M0 : 7, 45, 49, 12, 27, 31, 44, 17, 30, 58 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";1.5e-05;10800;0.00917431
+instance9_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0;C:\Users\benhi\source\repos\BiLevel_Scheduling_Industry_4.0\instances\instances60job\performances\instance9_n_30_N_60_tf_1.0_rdd_1.0_mMax_1_m0_1_Vmax_2.0_V0_1.0.txt;3595.5;158;1;60;30;2;"M0 : 50, 43, 2, 52, 24, 7, 41, 53, 20, 60, 3, 47, 56, 16, 59, 36, 12, 19, 28, 58 | ";"M0 : 25, 9, 10, 37, 39, 22, 34, 30, 4, 18 | ";"LSolver - Best of All Decision && FSolver - Best 1-Swap Heuristic";"Applying the selection rules : L_SPT_EDD_WithConstantLateness 
+ and selecting the best solution from these selection rules
+Checking 1-swap possibility with : F_Dumb 
+ and choosing the 1-swap with highest improvement";2e-05;15700;0.00632911

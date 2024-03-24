@@ -36,14 +36,14 @@ int main()
 
 
     std::vector<ILeaderSelectRule*> sortRules;
-    //sortRules.push_back(new LSortRule(sortRule::LPTRULE));
+    sortRules.push_back(new LSortRule(sortRule::LPTRULE));
     //sortRules.push_back(new LSortRule(sortRule::LWPTRULE));
     //sortRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
-    sortRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
+    //sortRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
 
     std::vector<IFollowerSwapRule*> swapRules;
-    swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
-    //swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
+    //swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
+    swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
 
 
     //// Testing single instance //
@@ -89,9 +89,9 @@ int main()
         std::vector<std::string> exactMethodTimeScore_list;
         std::vector<unsigned int> exactMethodObjectiveScore_list;
 
-        std::filesystem::path testFile("C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/UNCHECKED instance + resultat MIP/resultMIP.csv");
+        std::filesystem::path testFile("C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultsMIP.csv");
 
-        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/resultSPT_VL_DUMB.csv";
+        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultLPT_LATE2EARLY.csv";
         std::fstream fileStreamSaveFile(saveFile, std::fstream::out);
         if (fileStreamSaveFile.is_open())
         {
