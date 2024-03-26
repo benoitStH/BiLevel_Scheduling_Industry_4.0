@@ -22,6 +22,7 @@
 
 #include <random>
 #include <iostream>
+#include "Verbose.h"
 class Job {
 
 private:
@@ -30,6 +31,7 @@ private:
     unsigned int wi;  // job's weight
     unsigned int num; // job number (0 means its a ghost job)
     bool late;  // is the job late ? (always initialized to false)
+    Verbose verbose;
 
 public:
 
@@ -97,12 +99,17 @@ public:
     bool operator<=(const Job& J) const { return (pi == J.pi) ? (di <= J.di) : (pi <= J.pi); }
 
     bool operator>=(const Job& J) const { return (pi == J.pi) ? (di >= J.di) : (pi >= J.pi); }
-
 };
 
 inline std::ostream& operator<<(std::ostream& os, const Job& job) {
     os << "| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << (job.isLate() ? "*" : "") << "|";
     return os;
+}
+
+inline const Verbose& operator<<(const Verbose& verbose, const Job& job)
+{
+    verbose << "| pi: " << job.getPi() << " di: " << job.getDi() << " wi: " << job.getWi() << (job.isLate() ? "*" : "") << "|";
+    return verbose;
 }
 
 #endif //BILEVEL_SCHEDULING_JOB_H

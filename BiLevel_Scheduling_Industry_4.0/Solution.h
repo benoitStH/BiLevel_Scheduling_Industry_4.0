@@ -33,6 +33,7 @@ private:
     std::vector<Machine> listLowSpeedMachines; // list of low speed machines
     float sum_wj_Uj{}; // the sum of the number weighted tardy jobs of the solution
     float sum_Cj{}; // the sum of the completion time of the solution
+    Verbose verbose;
 
 public:
 
@@ -209,7 +210,7 @@ public:
      * @param k the position of the k-th jobs
      * @param verbose (default=True)
      */
-    void swapV(std::vector<unsigned int> swapableMachines, unsigned int k, bool verbose=true)
+    void swapV(std::vector<unsigned int> swapableMachines, unsigned int k)
     {
         Machine& machine1 = operator[](swapableMachines[0]);
         Machine& machine2 = operator[](swapableMachines[1]);
@@ -218,11 +219,9 @@ public:
         machine1[k] = machine2[k];
         machine2[k] = jobTemp;
 
-        if (verbose)
-        {
-            //std::cout << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
-            //    " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << std::endl;
-        }
+        verbose.setRequiredLevel(2);
+        verbose << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
+        " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << "\n";
     }
     
 
@@ -248,6 +247,7 @@ public:
             sum_Cj += machine.getSumCj();
             sum_wj_Uj += machine.getSumWjUj();
         }
+
     }
 
     /**
@@ -257,43 +257,43 @@ public:
      * Late jobs are marked with a "*" before their number
      * The sum Cj and sum WjUj are displayed
      */
-    void print()
+    void completeVerbose()
     {
-        std::cout << "Solution :\n";
+        verbose << "Solution :\n";
 
         // Jobs assigned to high speed machines
         float HighSpeed = listHighSpeedMachines[0].getSpeed();
-        std::cout << "High Speed : " << HighSpeed << std::endl;
+        verbose << "High Speed : " << HighSpeed << "\n";
         for (Machine& machine : listHighSpeedMachines)
         {
-            std::cout << "[";
+            verbose << "[";
             for (const Job& job : machine.getAffectedJob())
             {
-                std::cout << (job.isLate() ? "*" : "");
-                std::cout << job.getNum() << "|p " << job.getPi() / HighSpeed << " d " << job.getDi() << " w " << job.getWi() << "| ";
+                verbose << (job.isLate() ? "*" : "");
+                verbose << job.getNum() << "|p " << job.getPi() / HighSpeed << " d " << job.getDi() << " w " << job.getWi() << "| ";
             }
-            std::cout << "]\n";
+            verbose << "]\n";
         }
-        std::cout << "- - -\n";
+        verbose << "- - -\n";
 
         // Jobs assigned to low speed machines
         float LowSpeed = listLowSpeedMachines[0].getSpeed();
-        std::cout << "Low Speed : " << LowSpeed << std::endl;
+        verbose << "Low Speed : " << LowSpeed << "\n";
         for (Machine& machine : listLowSpeedMachines)
         {
-            std::cout << "[";
+            verbose << "[";
             for (const Job& job : machine.getAffectedJob())
             {
-                std::cout << (job.isLate() ? "*" : "");
-                std::cout << job.getNum() << "|p " << job.getPi() / LowSpeed << " d " << job.getDi() << " w " << job.getWi() << "| ";
+                verbose << (job.isLate() ? "*" : "");
+                verbose << job.getNum() << "|p " << job.getPi() / LowSpeed << " d " << job.getDi() << " w " << job.getWi() << "| ";
             }
-            std::cout << "]\n";
+            verbose << "]\n";
         }
-        std::cout << "- - -\n";
+        verbose << "- - -\n";
 
         // the solution's score
-        std::cout << "Sum Cj : " << getSumCj() << std::endl;
-        std::cout << "Sum wjUj : " << getSumWjUj() << std::endl;
+        verbose << "Sum Cj : " << getSumCj() << "\n";
+        verbose << "Sum wjUj : " << getSumWjUj() << "\n";
     }
 
     /**
@@ -303,44 +303,44 @@ public:
      * The sum Cj and sum WjUj are displayed
      * The number of selected jobs in the solution (ignoring '0' ones) is displayed
      */
-    void compactPrint()
+    void compactVerbose()
     {
         unsigned int nbSelectedJobs = 0;
-        std::cout << "Solution :\n";
+        verbose << "Solution :\n";
 
         // Jobs assigned to high speed machines
         float HighSpeed = listHighSpeedMachines[0].getSpeed();
         for (Machine& machine : listHighSpeedMachines)
         {
-            std::cout << "[" << HighSpeed << "]-|";
+            verbose << "[" << HighSpeed << "]-|";
             for (const Job& job : machine.getAffectedJob())
             {
-                std::cout << (job.isLate() ? "*" : "");
-                std::cout << job.getNum() << " ";
+                verbose << (job.isLate() ? "*" : "");
+                verbose << job.getNum() << " ";
                 if (job.getNum() != 0) nbSelectedJobs++;
             }
-            std::cout << "|\n";
+            verbose << "|\n";
         }
 
         // Jobs assigned to low speed machines
         float LowSpeed = listLowSpeedMachines[0].getSpeed();
         for (Machine& machine : listLowSpeedMachines)
         {
-            std::cout << "[" << LowSpeed << "]-|";
+            verbose << "[" << LowSpeed << "]-|";
             for (const Job& job : machine.getAffectedJob())
             {
-                std::cout << (job.isLate() ? "*" : "");
-                std::cout << job.getNum() << " ";
+                verbose << (job.isLate() ? "*" : "");
+                verbose << job.getNum() << " ";
                 if (job.getNum() != 0) nbSelectedJobs++;
             }
-            std::cout << "|\n";
+            verbose << "|\n";
         }
-        std::cout << "- - -\n";
+        verbose << "- - -\n";
 
         // Solution's score and number of selected jobs
-        std::cout << "Sum Cj : " << getSumCj() << std::endl;
-        std::cout << "Sum wjUj : " << getSumWjUj() << std::endl;
-        std::cout << "n : " << nbSelectedJobs << std::endl;
+        verbose << "Sum Cj : " << getSumCj() << "\n";
+        verbose << "Sum wjUj : " << getSumWjUj() << "\n";
+        verbose << "n : " << nbSelectedJobs << "\n";
     }
 
     /********************/

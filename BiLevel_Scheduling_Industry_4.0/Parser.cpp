@@ -37,6 +37,10 @@ Parser::Parser() {}
  * @return the new instance
 */
 Instance Parser::readFromFile(std::string& filePath) const {
+
+    verbose.setRequiredLevel(1);
+    verbose << "Generating instance from file '" << filePath << "'...\n";
+
     Instance newInstance = Instance(filePath);
     std::fstream fileStream(newInstance.getInstancePath().lexically_normal(), std::fstream::in);
     std::string line; // new line
@@ -75,6 +79,11 @@ Instance Parser::readFromFile(std::string& filePath) const {
     // check if we have the right number of created job
     if (newInstance.getNbJobs() != newInstance.getListJobs().size()) throw std::invalid_argument("The number of jobs is not equals to N");
     if (newInstance.getNbToSelectJob() == 0) throw std::invalid_argument("The number of jobs to select is not defined");
+
+    // Affiche l'instance générée
+    verbose.setRequiredLevel(2);
+    verbose << newInstance;
+
     return newInstance;
 }
 
@@ -84,6 +93,9 @@ Instance Parser::readFromFile(std::string& filePath) const {
 * @param instance to serialize
 */
 void Parser::serializeInstance(Instance& instance) {
+
+    verbose.setRequiredLevel(1);
+    verbose << "Serializing instance '" << instance.getInstancePath().string() << "'...";
 
     std::fstream fileStream(instance.getInstancePath().lexically_normal().string(), std::fstream::out);
     if (fileStream.is_open()) {
@@ -102,6 +114,9 @@ void Parser::serializeInstance(Instance& instance) {
     }
     else throw std::invalid_argument("Can't open the file " + instance.getInstancePath().lexically_normal().string());
     fileStream.close();
+
+    verbose.setRequiredLevel(1);
+    verbose << "Done\n";
 }
 
 /*
@@ -112,15 +127,18 @@ void Parser::serializeInstance(Instance& instance) {
 * It is assumed that the file, whose path was given, already exist and contains the header's
 * 
 * @param filePath The file where data will be append
-* @param instance The instance solved by the solver
 * @param solver The solver which solved the instance, contains the solution and its resolution time
 * @param optimal_objective The sum wjUj found by an exact method. Used to compute derivation.
 */
-void Parser::saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective)
+void Parser::saveInFile(std::string& filepath, const ISolver* solver, unsigned int optimal_objective)
 {
     // Getting the instance's file path and the solver's best solution
+    const Instance& instance = *(solver->getInstance());
     const std::string& instanceFile = instance.getInstancePath().lexically_normal().string();
     const Solution& solution = *(solver->getSolution());
+
+    verbose.setRequiredLevel(1);
+    verbose << "Saving best solution...";
 
     // Opening the file to append data
     std::fstream fileStream(filepath, std::fstream::in | std::fstream::out | std::fstream::app);
@@ -206,6 +224,94 @@ void Parser::saveInFile(std::string& filepath, const Instance& instance, const I
     }
     else throw std::invalid_argument("Can't open the file " + filepath);
     fileStream.close();
+
+    verbose.setRequiredLevel(1);
+    verbose << "Done\n";
+}
+
+
+/*
+* This Method saves the solver's solution in the given file
+* The result is appended into the given file with a specific format (cf ReadMe.md)
+*
+* It is assumed that the solver already solved the instance and has a solution (optimal or not)
+* It is assumed that the file, whose path was given, already exist and contains the header's
+*
+* @param filePath The file where data will be append
+* @param solver The solver which solved the instance, contains the solution and its resolution time
+*/
+void Parser::saveSolutionInFile(std::string& filepath, const ISolver* solver)
+{
+    // Getting the instance's file path and the solver's best solution
+    const Instance& instance = *(solver->getInstance());
+    const std::string& instanceFile = instance.getInstancePath().lexically_normal().string();
+    const Solution& solution = *(solver->getSolution());
+
+    verbose.setRequiredLevel(1);
+    verbose << "Saving best solution...";
+
+    // Opening the file to append data
+    std::fstream fileStream(filepath, std::fstream::in | std::fstream::out | std::fstream::app);
+    if (fileStream.is_open()) {
+
+        // InstanceName, instanceFile, sum Cj, fonction objective (sum wjUj), N, n, number of machines
+        fileStream << instance.getInstanceName() << ";"
+            << instanceFile << ";"
+            << solution.getSumCj() << ";"
+            << solution.getSumWjUj() << ";"
+            << instance.getListJobs().size() << ";"
+            << instance.getNbToSelectJob() << ";"
+            << instance.getNbOfHighSpeedMachines() + instance.getNbOfLowSpeedMachines() << ";";
+
+        // HighSpeed Scheduling
+        fileStream << "\"";
+        for (unsigned int l = 0; l < instance.getNbOfHighSpeedMachines(); l++)
+        {
+            unsigned int j;
+            unsigned int nbJobs = solution.getMachine(l).getAffectedJob().size();
+            fileStream << "M" << l << " : ";
+            for (j = 0; j < nbJobs; j++)
+            {
+                fileStream << solution.getMachine(l)[j].getNum() << (j < nbJobs - 1 ? ", " : "");
+            }
+            fileStream << " | ";
+        }
+        fileStream << "\";";
+
+        // LowSpeed Scheduling
+        fileStream << "\"";
+        for (unsigned int l = 0; l < instance.getNbOfLowSpeedMachines(); l++)
+        {
+            unsigned int pos = l + instance.getNbOfHighSpeedMachines();
+            unsigned int j;
+            unsigned int nbJobs = solution.getMachine(pos).getAffectedJob().size();
+            fileStream << "M" << l << " : ";
+            for (j = 0; j < solution.getMachine(pos).getAffectedJob().size(); j++)
+            {
+                fileStream << solution.getMachine(pos)[j].getNum() << (j < nbJobs - 1 ? ", " : "");
+            }
+            fileStream << " | ";
+        }
+        fileStream << "\";";
+
+        // Heuristic's name
+        fileStream << solver->getHeuristicName() << ";";
+
+        // Description and paramters (rules used)
+        fileStream << solver->getHeuristicDescription() << ";";
+
+        // Time in microseconds to solve the instance saved as time in seconds
+        fileStream << solver->getTimeResol() / 1000000.0 << ";";
+
+
+        fileStream << "\n";
+
+    }
+    else throw std::invalid_argument("Can't open the file " + filepath);
+    fileStream.close();
+
+    verbose.setRequiredLevel(1);
+    verbose << "Done\n";
 }
 
 

@@ -49,9 +49,9 @@ public:
 	*/
 	virtual SwapOperation bestSwapV(const std::vector<SwapOperation>& possibleSwaps, const Solution& s) = 0;
 
-	void printOperator(const SwapOperation& swapOp)
+	void verboseOperator(const SwapOperation& swapOp)
 	{
-		//std::cout << "(" << swapOp.machine1 << ", " << swapOp.machine2 << ", " << swapOp.bloc << ") : " << swapOp.gain << std::endl;
+		verbose << "SwapOperation : (" << swapOp.machine1 << ", " << swapOp.machine2 << ", " << swapOp.bloc << ") : " << swapOp.gain << "\n";
 	}
 
 };

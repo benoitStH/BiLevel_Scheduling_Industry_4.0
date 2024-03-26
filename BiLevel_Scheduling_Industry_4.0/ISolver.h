@@ -10,10 +10,11 @@ class ISolver
 protected:
 	Solution* solution;  // Dynamically allocated
 	const Instance* instance;
-	bool verbose;
     std::vector<ILeaderSelectRule*> listRules;
     long timeResol;
     ISubSolver* subSolver;
+
+    Verbose verbose;
 
 public:
 
@@ -22,13 +23,13 @@ public:
     /************************/
 
     // Generate the solver with an empty solution
-	ISolver() : solution(new Solution()), instance(nullptr), verbose(false), listRules(std::vector<ILeaderSelectRule*>()), subSolver(nullptr), timeResol(0) {}
+	ISolver() : solution(new Solution()), instance(nullptr), listRules(std::vector<ILeaderSelectRule*>()), subSolver(nullptr), timeResol(0) {}
 
     /**
      * Constructor of a solver from a instance.
      * @param instance the instance to solve
      */
-    ISolver(const Instance* instance) : solution(new Solution(instance)), instance(instance), verbose(false), subSolver(nullptr), timeResol(0) {}
+    ISolver(const Instance* instance) : solution(new Solution(instance)), instance(instance), subSolver(nullptr), timeResol(0) {}
 
 
     /***********************/
@@ -55,11 +56,6 @@ public:
 
     void addRule(ILeaderSelectRule* selectRule) { listRules.push_back(selectRule); }
 
-    /**
-    * Method to display a message during verbose if its value is true
-    */
-    void printVerbose(std::string msg) { if (verbose) std::cout << msg << std::endl; }
-
     /********************/
     /*      GETTER      */
     /********************/
@@ -69,8 +65,6 @@ public:
     const Instance* getInstance() const { return instance; }
 
     const long getTimeResol() const { return timeResol; }
-
-    bool isVerbose() const { return verbose; }
 
     virtual std::string getHeuristicName() const = 0;
 
@@ -103,8 +97,6 @@ public:
     }
 
     void setInstance(const Instance* instance) { ISolver::instance = instance; }
-
-    void setVerbose(bool verbose) { ISolver::verbose = verbose; }
 
 
 

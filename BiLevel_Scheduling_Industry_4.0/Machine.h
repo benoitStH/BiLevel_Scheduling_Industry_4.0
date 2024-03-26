@@ -31,6 +31,7 @@ private:
     float speed; // the speed of the machine
     float sum_wj_Uj; // the sum of the number weighted tardy jobs on the machine
     float sum_Cj; // the sum of the completion time on the machine
+    Verbose verbose;
 
 public:
 
@@ -142,6 +143,16 @@ inline std::ostream& operator<<(std::ostream& os, const Machine& machine) {
     }
     os << "]";
     return os;
+}
+
+inline const Verbose& operator<<(const Verbose& verbose, const Machine& machine)
+{
+    verbose << "[";
+    for (const Job& job : machine.getAffectedJob()) {
+        verbose << job;
+    }
+    verbose << "]";
+    return verbose;
 }
 
 #endif //BILEVEL_SCHEDULING_MACHINE_H

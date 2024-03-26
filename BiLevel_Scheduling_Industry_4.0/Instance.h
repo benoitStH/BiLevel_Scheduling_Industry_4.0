@@ -29,6 +29,7 @@
 #include <ostream>
 #include <stdexcept>
 #include <algorithm>
+#include "Verbose.h"
 
 class Instance {
 
@@ -43,6 +44,7 @@ private:
     unsigned int highSpeed;  // speed of high speed machines
     unsigned int lowSpeed;   // speed of low speed machines
     std::vector<Job> listJobs; // the list of jobs
+    Verbose verbose;
 
 public:
 
@@ -132,8 +134,6 @@ public:
     void setLowSpeed(unsigned int lowSpeed) {Instance::lowSpeed = lowSpeed;}
 
     void setListJobs(const std::vector<Job> &listJobs) {Instance::listJobs = listJobs;}
-
-
 };
 
 /************************/
@@ -154,6 +154,23 @@ inline std::ostream &operator<<(std::ostream &os, const Instance &instance) {
     }
     os << "]";
     return os;
+}
+
+
+inline const Verbose& operator<<(const Verbose& verbose, const Instance& instance) {
+
+    verbose << "Instance Path : " << instance.getInstancePath().string() << "\n"
+        << "Instance name : " << instance.getInstanceName() << "\n"
+        << "Number of jobs to select / Total number of jobs : " << instance.getNbToSelectJob() << "/" << instance.getNbJobs() << "\n"
+        << "Number of high speed machines : " << instance.getNbOfHighSpeedMachines() << " with the speed of : " << instance.getHighSpeed() << "\n"
+        << "Number of low speed machines : " << instance.getNbOfLowSpeedMachines() << " with the speed of : " << instance.getLowSpeed() << "\n"
+        << "List of jobs : [" << "\n";
+
+    for (const Job& job : instance.getListJobs()) {
+        verbose << job << "\n";
+    }
+    verbose << "]";
+    return verbose;
 }
 
 #endif //BILEVEL_SCHEDULING_INSTANCE_H

@@ -9,6 +9,8 @@ protected:
 	std::string ruleName;  // rule's name
 	unsigned int ruleNumber;  // rule's number id
 
+	Verbose verbose;
+
 public:
 
 	/************************/

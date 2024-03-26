@@ -21,183 +21,72 @@ struct AtExit
     ~AtExit() { float x = 0; }
 } doAtExit;
 
-int main()
+unsigned int Verbose::level;
+unsigned int Verbose::requiredLevel;
+
+int main(int argc, char* argv[])
 {
-    // TODO: Tester avec de grosse instance, générer plusieurs grosses instances
+    // TODO: Tester avec de grosses instances, générer plusieurs grosses instances
     // Check : taux d'amélioration entre solution initial et final
-    // TODO : diapo règles essayées, tps de calcul pour instance X, comparaisons
-    // TOTRY : Diviser par speed à la fin des calculs de dates de fin
+    // TODO : Definir les niveaux de verbose
+    // TODO : Verbose::requiredLevel -> vector<unsigned int>
+    // TODO : Verbose::operator<< if level >= std::max_element(requiredLevel)
+    // TODO : Verbose::setRequiredLevel  requiredLavel.push_back   et  Verbose::EndRequiredLevel  requiredLevel.pop_back
 
-    // Start of the program, we take a snapshot at the brekpoint
-    Parser parser = Parser();
-    std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_3_N_15_tf_0.2_rdd_0.2_mMax_2_m0_2/instance0.txt";
-    //Instance instance;
-    bool generating = false;
+    int minArgC = 2;
+    if (argc-1 < minArgC)
+    {
+        cout << "This program requires at least " << minArgC << " argument(s)\n";
+        cout << "Mandatory Arguments are : instance's file path & result repository path\n";
+        return -1;
+    }
 
+    int maxArgC = 3;
+    if (argc-1 > maxArgC)
+    {
+        cout << "This program handles at most "<< maxArgC <<" arguments, " << argc - 1 << " were given\n";
+        cout << "Arguments are : instance's file path & result repository path & verbose value\n";
+        return -1;
+    }
+
+    Parser parser;
+    std::string path = argv[1];
+    std::string resultRepo = argv[2];
+    resultRepo.append("/resultSPT_VL_DUMB1.csv");
+    Verbose verbose;
+
+    // Setting the level of verbose (default = 0)
+    verbose.setLevel((argc-1 == maxArgC ? std::atoi(argv[argc-1]) : 0));
+
+    verbose.setRequiredLevel(1);
+    verbose << "Solving instance '" << path << "'\n";
+
+    Instance instance = parser.readFromFile(path);
 
     std::vector<ILeaderSelectRule*> sortRules;
-    sortRules.push_back(new LSortRule(sortRule::LPTRULE));
-    //sortRules.push_back(new LSortRule(sortRule::LWPTRULE));
-    //sortRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
-    //sortRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
+    sortRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
 
     std::vector<IFollowerSwapRule*> swapRules;
-    //swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
-    swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
+    swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
 
 
-    //// Testing single instance //
-    //instance = parser.readFromFile(path);
-    //cout << instance.getInstancePath() << std::endl;
+    ISolver* solver = nullptr;
+    ISubSolver* subSolver = nullptr;
 
-    //for (ILeaderSelectRule* selectRule : sortRules)
-    //{
-    //    for (IFollowerSwapRule* swapRule : swapRules)
-    //    {
-    //        FSolver subSolver;
-    //        subSolver.addRule(swapRule);
+    subSolver = new FSolver(swapRules);
 
-    //        LSolver solver;
-    //        solver.setInstance(&instance);
-    //        solver.setSubSolver(&subSolver);
-    //        solver.addRule(selectRule);
+    solver = new LSolver();
+    solver->setInstance(&instance);
+    solver->setSubSolver(subSolver);
+    solver->setRules(sortRules);
 
-    //        // Le solveur résout l'instance
-    //        solver.solve();
+    // Le solveur résout l'instance
+    solver->solve();
 
-    //        // Affichage du résultat
-    //        //cout << "Time : " << solver.getTimeResol() << " microseconde(s)\n";
-    //        Solution solution = Solution(*(solver.getSolution()));
-    //        std::cout << "Final Solution\n\n";
-    //        solution.compactPrint();
+    parser.saveSolutionInFile(resultRepo, solver);
 
-    //        cout << solver.getHeuristicName() << std::endl;
-    //        cout << solver.getHeuristicDescription();
-
-    //        // Enregistrement du résultat
-    //        //parser.saveInFile(saveFile, instance, &solver, optimal_objective);
-
-    //        //std::cout << "\n\n";
-    //    }
-    //}
-    //return 0;
-
-    // Tests avec plusieurs solveurs ayant chacun une règle
-    if (generating == false)
-    {
-        std::vector<std::string> instancePath_list;
-        std::vector<std::string> exactMethodTimeScore_list;
-        std::vector<unsigned int> exactMethodObjectiveScore_list;
-
-        std::filesystem::path testFile("C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultsMIP.csv");
-
-        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultLPT_LATE2EARLY.csv";
-        std::fstream fileStreamSaveFile(saveFile, std::fstream::out);
-        if (fileStreamSaveFile.is_open())
-        {
-            fileStreamSaveFile << "InstanceName;InstancePath;sumCj;fonction objective (sum wjUj);fonction objective MIP;";
-            fileStreamSaveFile << "N;n;m;HighSpeed Scheduling;LowSpeed Scheduling;Heuristic name;Heuristic description;time;deviation;precision\n";
-            fileStreamSaveFile.close();
-        }
-        else {
-            cout << "erreur ouverture savefile\n";
-            return 1;
-        }
-
-
-        unsigned int optimal_objective;
-        std::string line;
-        std::string element;
-
-        ISolver* solver = nullptr;
-        ISubSolver* subSolver = nullptr;
-
-        unsigned int counter = 1;
-
-        std::fstream filePerf(testFile, std::fstream::in);
-        if (filePerf.is_open())
-        {
-
-            std::getline(filePerf, line); // skipping first line with column's name
-            while (std::getline(filePerf, line)) {
-
-                std::istringstream stream(line);
-
-
-                // instance name
-                std::getline(stream, element, '\t');
-                // instance path
-                std::getline(stream, element, '\t');
-                instancePath_list.push_back(element);
-
-                // Time
-                std::getline(stream, element, '\t');
-                exactMethodTimeScore_list.push_back(element);
-
-                // LimitTime
-                std::getline(stream, element, '\t');
-
-                // Objective
-                stream >> optimal_objective;
-                exactMethodObjectiveScore_list.push_back(optimal_objective);
-            };
-            filePerf.close();
-        }
-
-
-        for (unsigned int i = 0; i < instancePath_list.size(); i++)
-        {
-            Instance instance = parser.readFromFile(instancePath_list[i]);
-            optimal_objective = exactMethodObjectiveScore_list[i];
-
-            //cout << instance->getInstancePath() << std::endl;
-            if ((counter + 1) % 100 == 0)
-                cout << counter + 1 << "\r";
-
-            /* if (instance->getInstancePath() == "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_10_N_20_tf_0.8_rdd_0.2_mMax_1_m0_1/instance2.txt")
-             {
-                 instance->getHighSpeed();
-             }*/
-
-            for (ILeaderSelectRule* selectRule : sortRules)
-            {
-                for (IFollowerSwapRule* swapRule : swapRules)
-                {
-                    if (subSolver != nullptr) { delete subSolver; }
-                    subSolver = new FSolver();
-                    subSolver->addRule(swapRule);
-
-                    if (solver != nullptr) { delete solver; }
-                    solver = new LSolver();
-                    solver->setInstance(&instance);
-                    solver->setSubSolver(subSolver);
-                    solver->addRule(selectRule);
-
-                    // Le solveur résout l'instance
-                    solver->solve();
-
-                    // Affichage du résultat
-                    //cout << "Time : " << solver.getTimeResol() << " microseconde(s)\n";
-                    Solution solution = Solution(*(solver->getSolution()));
-                    /*std::cout << "Final Solution\n\n";
-                    solution.compactPrint();
-
-                    cout << solver.getHeuristicName() << std::endl;
-                    cout << solver.getHeuristicDescription();*/
-
-                    // Enregistrement du résultat
-                    parser.saveInFile(saveFile, instance, solver, optimal_objective);
-
-                    //std::cout << "\n\n";
-                }
-            }
-            counter++;
-        }
-
-        if (solver != nullptr) { delete solver; }
-        if (subSolver != nullptr) { delete subSolver; }
-        
-    }
+    delete solver;
+    delete subSolver;
 
 
     for (ILeaderSelectRule* selectRule : sortRules)
@@ -210,58 +99,7 @@ int main()
         delete swapRule;
     }
 
-    // Test avec un solveur utilisant plusieurs règles //
-    //if (generating == false)
-    //{
-    //    instance = parser.readFromFile(path);
-    //    cout << instance;
-
-    //    // LSolver : Generalisation d'un solveur
-    //    std::vector<ILeaderSelectRule*> listLRules;
-    //    std::vector<IFollowerSwapRule*> listFRules;
-
-    //    // Allocatiing rules
-    //    listLRules.push_back(new LSortRule(sortRule::LPTRULE));
-    //    listLRules.push_back(new LSortRule(sortRule::SPT_EDD_CONST_LATENESS));
-    //    listLRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
-    //    //listLRules.push_back(new LSortRule(sortRule::InvEDDRULE));
-
-    //    //listFRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
-    //    listFRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
-
-    //    // Creating the Solver for the Follower and Leader
-    //    FSolver subsolver(listFRules);
-
-    //    LSolver solver;
-    //    solver.setInstance(&instance);
-    //    solver.setRules(listLRules);
-    //    solver.setSubSolver(&subsolver);
-
-    //    // Solving the instance
-    //    solver.solve();
-
-    //    cout << "Time : " << solver.getTimeResol() << " microseconde(s)\n";
-
-    //    // Show solution
-    //    Solution solution = Solution(*(solver.getSolution()));
-    //    std::cout << "Final Solution\n\n";
-    //    solution.compactPrint();
-    //    
-    //    cout << solver.getHeuristicName() << std::endl;
-    //    cout << solver.getHeuristicDescription();
-
-    //    // Deallocating Rules
-    //    for (ILeaderSelectRule* selectRule : listLRules)
-    //    {
-    //        delete selectRule;
-    //    }
-
-    //    for (IFollowerSwapRule* swapRule : listFRules)
-    //    {
-    //        delete swapRule;
-    //    }
-    //}
-    //    
+    return 0; 
 
     
 
@@ -288,26 +126,6 @@ int main()
     */
 
     //Machine machine = Machine(10);
-
-    if (generating)
-    {
-        // Sauvegarde et Chargement d'instance 
-        Generateur randomInstancer = Generateur();
-        Parser parser = Parser();
-
-        Instance instance = randomInstancer.generateInstance(path, 32, 3, 2, 10, 5);
-
-        cout << instance;
-
-        cout << "sauvegarde\n";
-        parser.serializeInstance(instance);
-        cout << "chargement\n";
-        Instance loadedInstance = parser.readFromFile(path);
-
-        cout << loadedInstance;
-
-        std::cout << "Hello World!\n";
-    }
     
     
 }

@@ -172,7 +172,7 @@ public:
 		machines.push_back(swapOp.machine1);
 		machines.push_back(swapOp.machine2);
 
-		test.swapV(machines, swapOp.bloc, false);
+		test.swapV(machines, swapOp.bloc);
 		test.evaluate();
 
 		swapOp.gain = s.getSumWjUj() - test.getSumWjUj();
@@ -300,7 +300,7 @@ public:
 
 		for (SwapOperation swapOp : possibleSwaps)
 		{
-			if (swapOp.gain > 0) { printOperator(swapOp); }
+			if (swapOp.gain > 0) { verboseOperator(swapOp); }
 
 			if (swapOp.gain > best.gain)
 			{

@@ -30,6 +30,10 @@ Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int s
 Instance Generateur::generateInstance(std::string newInstancePath, unsigned int nbJobs, unsigned int nbOfHighSpeedMachines,
     unsigned int nbOfLowSpeedMachines, unsigned int highSpeed, unsigned int lowSpeed) {
 
+    verbose.setRequiredLevel(1);
+    verbose << "Random generation of an instance (N: " << nbJobs << " m_Max: " << nbOfHighSpeedMachines << " m_0: "<< nbOfLowSpeedMachines
+        << " V_Max: " << highSpeed << " V_0: " << lowSpeed << ")...";
+
     Instance instance = Instance(newInstancePath);
 
     // set attributes
@@ -49,6 +53,9 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
     }
 
     instance.setListJobs(listJobs);
+
+    verbose.setRequiredLevel(1);
+    verbose << "Done\n";
 
     return instance;
 

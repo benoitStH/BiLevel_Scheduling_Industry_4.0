@@ -14,6 +14,8 @@ private:
     unsigned int seed;
     std::mt19937 numGenerator;
 
+    Verbose verbose;
+
 public:
     Generateur();
 

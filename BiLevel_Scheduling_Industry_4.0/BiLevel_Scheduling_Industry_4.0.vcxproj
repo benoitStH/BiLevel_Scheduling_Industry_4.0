@@ -154,6 +154,7 @@
     <ClCompile Include="Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Analyser.h" />
     <ClInclude Include="DeepestDescent.h" />
     <ClInclude Include="FLateToEarly.h" />
     <ClInclude Include="FSolver.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Rule.h" />
     <ClInclude Include="Solution.h" />
+    <ClInclude Include="Verbose.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -26,6 +26,9 @@
 
 class Parser {
 
+private:
+    Verbose verbose;
+
 public:
 
     /************************/
@@ -62,11 +65,22 @@ public:
     * It is assumed that the file, whose path was given, already exist and contains the header's
     *
     * @param filePath The file where data will be append
-    * @param instance The instance solved by the solver
     * @param solver The solver which solved the instance, contains the solution and its resolution time
     * @param optimal_objective The sum wjUj found by an exact method. Used to compute derivation.
     */
-    void saveInFile(std::string& filepath, const Instance& instance, const ISolver* solver, unsigned int optimal_objective);
+    void saveInFile(std::string& filepath, const ISolver* solver, unsigned int optimal_objective);
+
+    /*
+    * This Method saves the solver's solution in the given file
+    * The result is appended into the given file with a specific format (cf ReadMe.md)
+    * 
+    * It is assumed that the solver already solved the instance and has a solution (optimal or not)
+    * It is assumed that the file, whose path was given, already exist and contains the header's
+    * 
+    * @param filePath The file where data will be append
+    * @param solver The solver which solved the instance, contains the solution and its resolution time
+    */
+    void saveSolutionInFile(std::string& filepath, const ISolver* solver);
 };
 
 

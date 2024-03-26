@@ -9,16 +9,17 @@ class ISubSolver
 {
 protected:
 	Solution* solution;  // Dynamicaly allocated
-	bool verbose;
 	std::vector<IFollowerSwapRule*> listRules;
+
+	Verbose verbose;
 
 public:
 	/************************/
 	/*      CONSTRUCTOR     */
 	/************************/
-	ISubSolver() : solution(nullptr), verbose(false), listRules(std::vector<IFollowerSwapRule*>()) {};
+	ISubSolver() : solution(nullptr), listRules(std::vector<IFollowerSwapRule*>()) {};
 
-	ISubSolver(std::vector<IFollowerSwapRule*> listRule) : solution(nullptr), verbose(false), listRules(listRule) {};
+	ISubSolver(std::vector<IFollowerSwapRule*> listRule) : solution(nullptr), listRules(listRule) {};
 
 	~ISubSolver()
 	{
@@ -33,8 +34,6 @@ public:
 	/*      GETTERS     */
 	/********************/
 	const Solution* getSolution() const { return solution; }
-
-	bool isVerbose() const { return verbose; }
 
 	virtual std::string getHeuristicName() const = 0;
 
@@ -73,6 +72,9 @@ public:
 	 */
 	void generateInitialSolution(const std::vector<Job> listJobs, const Instance& instance)
 	{
+		verbose.setRequiredLevel(1);
+		verbose << "Generating initial solution...\n";
+
 		// Initialize the solution (with empty machines)
 		setSolution(new Solution(&instance));
 
