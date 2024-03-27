@@ -1,0 +1,93 @@
+\doxysection{LSolver Class Reference}
+\hypertarget{class_l_solver}{}\label{class_l_solver}\index{LSolver@{LSolver}}
+Inheritance diagram for LSolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_l_solver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_l_solver_ae4809ba8f95b5966a513e3380ee2a696}{solve}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_l_solver_a7aeaf0106bc569bb540676711fb043dd}{get\+Heuristic\+Name}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{class_l_solver_a6b6374efc0c50839a8875e24e9b645f4}{get\+Heuristic\+Description}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_solver}{ISolver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_solver_ab609c4ef4d840050006ab0baecc18d90}{ISolver}} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\item 
+void {\bfseries add\+Rule} (\mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*}select\+Rule)
+\item 
+const \mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Solution} () const
+\item 
+const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} () const
+\item 
+const long {\bfseries get\+Time\+Resol} () const
+\item 
+void {\bfseries set\+Rules} (std\+::vector$<$ \mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*} $>$ list\+Rule)
+\item 
+void {\bfseries set\+Sub\+Solver} (\mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}} \texorpdfstring{$\ast$}{*}sub\+Solver)
+\item 
+void {\bfseries set\+Solution} (\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*}solution)
+\item 
+void {\bfseries set\+Instance} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_i_solver}{ISolver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries solution}
+\item 
+const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*} {\bfseries instance}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries list\+Rules}
+\item 
+long {\bfseries time\+Resol}
+\item 
+\mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}} \texorpdfstring{$\ast$}{*} {\bfseries sub\+Solver}
+\item 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_l_solver_a6b6374efc0c50839a8875e24e9b645f4}\label{class_l_solver_a6b6374efc0c50839a8875e24e9b645f4} 
+\index{LSolver@{LSolver}!getHeuristicDescription@{getHeuristicDescription}}
+\index{getHeuristicDescription@{getHeuristicDescription}!LSolver@{LSolver}}
+\doxysubsubsection{\texorpdfstring{getHeuristicDescription()}{getHeuristicDescription()}}
+{\footnotesize\ttfamily std\+::string LSolver\+::get\+Heuristic\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_solver}{ISolver}}.
+
+\Hypertarget{class_l_solver_a7aeaf0106bc569bb540676711fb043dd}\label{class_l_solver_a7aeaf0106bc569bb540676711fb043dd} 
+\index{LSolver@{LSolver}!getHeuristicName@{getHeuristicName}}
+\index{getHeuristicName@{getHeuristicName}!LSolver@{LSolver}}
+\doxysubsubsection{\texorpdfstring{getHeuristicName()}{getHeuristicName()}}
+{\footnotesize\ttfamily std\+::string LSolver\+::get\+Heuristic\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_solver}{ISolver}}.
+
+\Hypertarget{class_l_solver_ae4809ba8f95b5966a513e3380ee2a696}\label{class_l_solver_ae4809ba8f95b5966a513e3380ee2a696} 
+\index{LSolver@{LSolver}!solve@{solve}}
+\index{solve@{solve}!LSolver@{LSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily void LSolver\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Overriden method which solve the instance using each selection rule The best solution has the smallest sum of wj\+Uj compared to the other selection rule The resolution time is measured 
+
+Implements \mbox{\hyperlink{class_i_solver_ae4a88311d9730a58934303ad8ac00965}{ISolver}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/LSolver.\+h\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/LSolver.\+cpp\end{DoxyCompactItemize}

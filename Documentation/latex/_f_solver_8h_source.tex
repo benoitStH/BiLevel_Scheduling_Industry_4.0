@@ -1,0 +1,36 @@
+\doxysection{FSolver.\+h}
+\hypertarget{_f_solver_8h_source}{}\label{_f_solver_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/FSolver.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/FSolver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_FSOLVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_FSOLVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ISubSolver.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_solver}{FSolver}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_sub_solver}{ISubSolver}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_f_solver}{FSolver}}()\ :\ \mbox{\hyperlink{class_i_sub_solver}{ISubSolver}}()\ \{\};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_f_solver}{FSolver}}(std::vector<IFollowerSwapRule*>\ listRule)\ :\ \mbox{\hyperlink{class_i_sub_solver}{ISubSolver}}(listRule)\ \{\};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ /*********************/}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ METHODS\ \ \ \ \ \ */}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /*********************/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_solver_ad241b424de5b70b7713cd6368662fd8c}{heuristic}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getHeuristicName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getHeuristicDescription()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_FSOLVER\_H}}
+\DoxyCodeLine{00037\ }
+
+\end{DoxyCode}

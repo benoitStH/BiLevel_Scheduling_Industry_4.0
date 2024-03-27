@@ -6,18 +6,20 @@
 #include <algorithm>
 #include <vector>
 
-/*
-* Verbose class allowing the print of messages depending on the level verbose defined in the program
-* Intended use in main():
+/**
+* Verbose class allowing the print of messages depending on the level verbose defined in the program\n 
+* Intended use in main():\n 
+* ```cpp
 * Verbose verbose;
-* verbose.setLevel(x);
+* verbose.setLevel(x); 
+* ```
 * 
-* Intended use to specify verbose message :
-* Verbose verbose;
-* verbose.setRequiredLevel(y); // Specify the minimal level of verbose required to show verbose
-* verbose << message;
-* functionWithVerbose();
-* verbose.endRequiredLevel();
+* Intended use to specify verbose message :\n 
+* Verbose verbose;\n 
+* verbose.setRequiredLevel(y); // Specify the minimal level of verbose required to show verbose\n 
+* verbose << message;\n 
+* functionWithVerbose();\n 
+* verbose.endRequiredLevel();\n 
 */
 class Verbose
 {
@@ -29,6 +31,12 @@ private:
 public:
 
 	// Définit le niveau de verbose actuel
+
+
+	/// <summary>
+	/// Creer automatique le solution
+	/// </summary>
+	/// <returns></returns>
 	static void setLevel(unsigned int newLevel) { Verbose::level = newLevel; }
 
 	// Définit le niveau de verbose minimum requis pour afficher les messages suivants

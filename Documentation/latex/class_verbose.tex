@@ -1,0 +1,79 @@
+\doxysection{Verbose Class Reference}
+\hypertarget{class_verbose}{}\label{class_verbose}\index{Verbose@{Verbose}}
+
+
+{\ttfamily \#include $<$Verbose.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_verbose_a83a70768f22e0b4b4b344dd30e6eb864}\label{class_verbose_a83a70768f22e0b4b4b344dd30e6eb864} 
+const \mbox{\hyperlink{class_verbose}{Verbose}} \& {\bfseries operator$<$$<$} (const char \texorpdfstring{$\ast$}{*}text) const
+\item 
+\Hypertarget{class_verbose_aa26b699e23c5a52875aecb9fadf4eec3}\label{class_verbose_aa26b699e23c5a52875aecb9fadf4eec3} 
+const \mbox{\hyperlink{class_verbose}{Verbose}} \& {\bfseries operator$<$$<$} (std\+::string text) const
+\item 
+\Hypertarget{class_verbose_a0268d30fc36b7a711265650c5777dfae}\label{class_verbose_a0268d30fc36b7a711265650c5777dfae} 
+const \mbox{\hyperlink{class_verbose}{Verbose}} \& {\bfseries operator$<$$<$} (int number) const
+\item 
+\Hypertarget{class_verbose_a373408d1274bf890212f6369f031972e}\label{class_verbose_a373408d1274bf890212f6369f031972e} 
+const \mbox{\hyperlink{class_verbose}{Verbose}} \& {\bfseries operator$<$$<$} (unsigned int ui\+Number) const
+\item 
+\Hypertarget{class_verbose_a3c4dfe7922876c0bb28cbd1dd516faef}\label{class_verbose_a3c4dfe7922876c0bb28cbd1dd516faef} 
+const \mbox{\hyperlink{class_verbose}{Verbose}} \& {\bfseries operator$<$$<$} (float float\+Number) const
+\item 
+\Hypertarget{class_verbose_a99882fb1fce6cffce84db3ad9bc41b94}\label{class_verbose_a99882fb1fce6cffce84db3ad9bc41b94} 
+const \mbox{\hyperlink{class_verbose}{Verbose}} \& {\bfseries operator$<$$<$} (long long\+Number) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_verbose_a1a82a273581aacf979ea117f5631a94e}{set\+Level}} (unsigned int new\+Level)
+\begin{DoxyCompactList}\small\item\em Creer automatique le solution. \end{DoxyCompactList}\item 
+\Hypertarget{class_verbose_acc7a995da9e05168fa881f0d3ada8250}\label{class_verbose_acc7a995da9e05168fa881f0d3ada8250} 
+static void {\bfseries set\+Required\+Level} (unsigned new\+Required\+Level)
+\item 
+\Hypertarget{class_verbose_a48a6ad9f4c7d2541aa87fd3b9374c65d}\label{class_verbose_a48a6ad9f4c7d2541aa87fd3b9374c65d} 
+static void {\bfseries end\+Required\+Level} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_verbose}{Verbose} class allowing the print of messages depending on the level verbose defined in the program~\newline
+ Intended use in main()\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{verbose.\mbox{\hyperlink{class_verbose_a1a82a273581aacf979ea117f5631a94e}{setLevel}}(x);\ }
+
+\end{DoxyCode}
+
+
+Intended use to specify verbose message \+:~\newline
+ \doxylink{class_verbose}{Verbose} verbose;~\newline
+ verbose.\+set\+Required\+Level(y); // Specify the minimal level of verbose required to show verbose~\newline
+ verbose \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} message;~\newline
+ function\+With\+Verbose();~\newline
+ verbose.\+end\+Required\+Level();~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_verbose_a1a82a273581aacf979ea117f5631a94e}\label{class_verbose_a1a82a273581aacf979ea117f5631a94e} 
+\index{Verbose@{Verbose}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!Verbose@{Verbose}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily static void Verbose\+::set\+Level (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creer automatique le solution. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Verbose.\+h\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0.\+cpp\end{DoxyCompactItemize}

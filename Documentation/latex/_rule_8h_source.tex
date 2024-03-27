@@ -1,0 +1,37 @@
+\doxysection{Rule.\+h}
+\hypertarget{_rule_8h_source}{}\label{_rule_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Rule.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Rule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_RULE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_RULE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rule}{Rule}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ ruleName;\ \ \textcolor{comment}{//\ rule's\ name}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ruleNumber;\ \ \textcolor{comment}{//\ rule's\ number\ id}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ CONSTRUCTOR\ \ \ \ \ */}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_rule}{Rule}}()\ :\ ruleName(\textcolor{stringliteral}{"{}Unknown"{}}),\ ruleNumber(0)\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_rule}{Rule}}(std::string\ ruleName,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ruleNumber)\ :\ ruleName(ruleName),\ ruleNumber(ruleNumber)\ \{\};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTERS\ \ \ \ \ */}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getRuleName()\ =\ 0;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getRuleNumber()\ \{\ \textcolor{keywordflow}{return}\ ruleNumber;\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_RULE\_H}}
+
+\end{DoxyCode}

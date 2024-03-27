@@ -1,0 +1,164 @@
+\doxysection{Instance.\+h}
+\hypertarget{_instance_8h_source}{}\label{_instance_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Instance.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Instance.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Copyright\ (C)\ 2024}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ EA\ 6300\ ERL\ CNRS\ 7002\ Laboratoire\ d'Informatique\ Fondamentale\ et\ Appliquée de\ Tours,\ Tours,\ France}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ DIGEP,\ Politecnico\ di\ Torino,\ Corso\ Duca\ degli\ Abruzzi\ 24,\ Torino,\ Italy}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ This\ file\ is\ part\ of\ bilevel-\/scheduling.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ of\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ See\ the\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ along\ with\ bilevel-\/scheduling.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_INSTANCE\_H}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_INSTANCE\_H}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}Job.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}Verbose.h"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_instance}{Instance}}\ \{}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ instanceName;}
+\DoxyCodeLine{00039\ \ \ \ \ std::filesystem::path\ instancePath;\ \textcolor{comment}{//\ the\ path\ to\ the\ instance}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbJobs;\ \textcolor{comment}{//\ the\ nb\ of\ job}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbToSelectJob;\ \textcolor{comment}{//\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbOfHighSpeedMachines;\ \textcolor{comment}{//\ the\ nb\ of\ high\ speed\ machine}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbOfLowSpeedMachines;\ \textcolor{comment}{//\ the\ nb\ of\ high\ low\ machine}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ highSpeed;\ \ \textcolor{comment}{//\ speed\ of\ high\ speed\ machines}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ lowSpeed;\ \ \ \textcolor{comment}{//\ speed\ of\ low\ speed\ machines}}
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<Job>\ listJobs;\ \textcolor{comment}{//\ the\ list\ of\ jobs}}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ CONSTRUCTOR\ \ \ \ \ */}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_instance_a399506c7e75ab9ab78fbc34a25932bbd}{Instance}}()\ :\ listJobs(std::vector<\mbox{\hyperlink{class_job}{Job}}>())\ \{\}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_instance_ac7a70cab4810251cf08a6403b72b8a93}{Instance}}(std::string\ \&newInstancePath)\ :\ listJobs(std::vector<\mbox{\hyperlink{class_job}{Job}}>())\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::filesystem::path\ newPath\ =\ std::filesystem::path(newInstancePath);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ instancePath\ =\ newPath\ ;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ instanceName\ =\ instancePath.stem().string();}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ METHODS\ \ \ \ \ */}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_instance_a197d24f4a2fe13a3d129d2e9c60567cc}{add\_job}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ newJob)\{listJobs.push\_back(newJob);\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_instance_ae5b04280e279bdbbe9aa9d28ec476a82}{sort\_by\_LPT}}()\{std::sort(listJobs.begin(),listJobs.end(),std::greater<Job>());\}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_instance_acaccbe4d8e42ef41494087764729aea6}{sort\_by\_LPT\_inv\_EDD}}()\{std::sort(listJobs.begin(),listJobs.end(),Job::LPT\_inv\_EDD);\}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00093\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{const}\ std::filesystem::path\ \&getInstancePath()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ instancePath;\}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&getInstanceName()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ instanceName;\}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getNbJobs()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ nbJobs;\}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getNbToSelectJob()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ nbToSelectJob;\}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getNbOfHighSpeedMachines()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ nbOfHighSpeedMachines;\}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getNbOfLowSpeedMachines()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ nbOfLowSpeedMachines;\}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{float}\ getHighSpeed()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ highSpeed;\}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{float}\ getLowSpeed()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ lowSpeed;\}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Job>\ \&getListJobs()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ listJobs;\}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ SETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ setInstanceName(\textcolor{keyword}{const}\ std::string\ \&instanceName)\{Instance::instanceName\ =\ instanceName;\}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ setInstancePath(\textcolor{keyword}{const}\ std::filesystem::path\ \&newInstancePath)\ \{instancePath\ =\ newInstancePath;\}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ setNbJobs(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbJobs)\ \{Instance::nbJobs\ =\ nbJobs;\}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ setNbToSelectJob(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbToSelectJob)\ \{Instance::nbToSelectJob\ =\ nbToSelectJob;\}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ setNbOfHighSpeedMachines(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbOfHighSpeedMachines)\ \{Instance::nbOfHighSpeedMachines\ =\ nbOfHighSpeedMachines;\}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ setNbOfLowSpeedMachines(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbOfHighLowMachines)\ \{Instance::nbOfLowSpeedMachines\ =\ nbOfHighLowMachines;\}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ setHighSpeed(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ highSpeed)\ \{Instance::highSpeed\ =\ highSpeed;\}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ setLowSpeed(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ lowSpeed)\ \{Instance::lowSpeed\ =\ lowSpeed;\}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ setListJobs(\textcolor{keyword}{const}\ std::vector<Job>\ \&listJobs)\ \{Instance::listJobs\ =\ listJobs;\}}
+\DoxyCodeLine{00137\ \};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{comment}{/************************/}}
+\DoxyCodeLine{00140\ \textcolor{comment}{/*\ \ \ \ \ \ OPERATORS\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00141\ \textcolor{comment}{/************************/}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{inline}\ std::ostream\ \&operator<<(std::ostream\ \&os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\ \&instance)\ \{}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ os\ \ <<\ \textcolor{stringliteral}{"{}Instance\ Path\ :\ "{}}\ <<\ instance.getInstancePath()\ <<\ std::endl}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Instance\ name\ :\ "{}}<<\ instance.getInstanceName()\ <<\ std::endl}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Number\ of\ jobs\ to\ select\ /\ Total\ number\ of\ jobs\ :\ "{}}\ <<\ instance.getNbToSelectJob()\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ instance.getNbJobs()\ <<\ std::endl}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Number\ of\ high\ speed\ machines\ :\ "{}}\ <<\ instance.getNbOfHighSpeedMachines()\ <<\ \textcolor{stringliteral}{"{}\ with\ the\ speed\ of\ :\ "{}}\ <<\ instance.getHighSpeed()\ <<\ std::endl}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Number\ of\ low\ speed\ machines\ :\ "{}}\ <<\ instance.getNbOfLowSpeedMachines()\ <<\ \textcolor{stringliteral}{"{}\ with\ the\ speed\ of\ :\ "{}}\ <<\ instance.getLowSpeed()\ <<\ std::endl}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}List\ of\ jobs\ :\ ["{}}\ <<\ std::endl;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ instance.getListJobs())\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ os\ <<\ job\ <<\ std::endl;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ verbose,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)\ \{}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Instance\ Path\ :\ "{}}\ <<\ instance.getInstancePath().string()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Instance\ name\ :\ "{}}\ <<\ instance.getInstanceName()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Number\ of\ jobs\ to\ select\ /\ Total\ number\ of\ jobs\ :\ "{}}\ <<\ instance.getNbToSelectJob()\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ instance.getNbJobs()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Number\ of\ high\ speed\ machines\ :\ "{}}\ <<\ instance.getNbOfHighSpeedMachines()\ <<\ \textcolor{stringliteral}{"{}\ with\ the\ speed\ of\ :\ "{}}\ <<\ instance.getHighSpeed()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Number\ of\ low\ speed\ machines\ :\ "{}}\ <<\ instance.getNbOfLowSpeedMachines()\ <<\ \textcolor{stringliteral}{"{}\ with\ the\ speed\ of\ :\ "{}}\ <<\ instance.getLowSpeed()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}List\ of\ jobs\ :\ ["{}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ instance.getListJobs())\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ verbose\ <<\ job\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{return}\ verbose;}
+\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_INSTANCE\_H}}
+
+\end{DoxyCode}

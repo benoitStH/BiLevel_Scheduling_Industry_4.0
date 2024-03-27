@@ -1,0 +1,87 @@
+\doxysection{FSolver Class Reference}
+\hypertarget{class_f_solver}{}\label{class_f_solver}\index{FSolver@{FSolver}}
+Inheritance diagram for FSolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_solver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_f_solver_aeea07c61587a8738e84765766ca7054f}\label{class_f_solver_aeea07c61587a8738e84765766ca7054f} 
+{\bfseries FSolver} (std\+::vector$<$ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*} $>$ list\+Rule)
+\item 
+virtual void \mbox{\hyperlink{class_f_solver_ad241b424de5b70b7713cd6368662fd8c}{heuristic}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_f_solver_a1c98281cd23aeca889aa249f6c1732c3}{get\+Heuristic\+Name}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{class_f_solver_abf5b6067df1f6c054ebb718f7df4e072}{get\+Heuristic\+Description}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries ISub\+Solver} (std\+::vector$<$ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*} $>$ list\+Rule)
+\item 
+const \mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Solution} () const
+\item 
+void {\bfseries set\+Solution} (\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*}solution)
+\item 
+void \mbox{\hyperlink{class_i_sub_solver_a3a1fe2f8a959e8cc725715d08e8361c2}{generate\+Initial\+Solution}} (const std\+::vector$<$ \mbox{\hyperlink{class_job}{Job}} $>$ list\+Jobs, const \mbox{\hyperlink{class_instance}{Instance}} \&instance)
+\item 
+void {\bfseries add\+Rule} (\mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*}swap\+Rule)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries solution}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries list\+Rules}
+\item 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_solver_abf5b6067df1f6c054ebb718f7df4e072}\label{class_f_solver_abf5b6067df1f6c054ebb718f7df4e072} 
+\index{FSolver@{FSolver}!getHeuristicDescription@{getHeuristicDescription}}
+\index{getHeuristicDescription@{getHeuristicDescription}!FSolver@{FSolver}}
+\doxysubsubsection{\texorpdfstring{getHeuristicDescription()}{getHeuristicDescription()}}
+{\footnotesize\ttfamily std\+::string FSolver\+::get\+Heuristic\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}}.
+
+\Hypertarget{class_f_solver_a1c98281cd23aeca889aa249f6c1732c3}\label{class_f_solver_a1c98281cd23aeca889aa249f6c1732c3} 
+\index{FSolver@{FSolver}!getHeuristicName@{getHeuristicName}}
+\index{getHeuristicName@{getHeuristicName}!FSolver@{FSolver}}
+\doxysubsubsection{\texorpdfstring{getHeuristicName()}{getHeuristicName()}}
+{\footnotesize\ttfamily std\+::string FSolver\+::get\+Heuristic\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}}.
+
+\Hypertarget{class_f_solver_ad241b424de5b70b7713cd6368662fd8c}\label{class_f_solver_ad241b424de5b70b7713cd6368662fd8c} 
+\index{FSolver@{FSolver}!heuristic@{heuristic}}
+\index{heuristic@{heuristic}!FSolver@{FSolver}}
+\doxysubsubsection{\texorpdfstring{heuristic()}{heuristic()}}
+{\footnotesize\ttfamily void FSolver\+::heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method which solves the lexicographic problem of the Follower Lex(sum Cj, Sum wj\+Uj) An initial solution must be generated before calling this method The solution attribute will contain the final solution found by the heuristic after calling this method 
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_sub_solver_aabcd791e0b699d2afec42a5c538eb241}{ISub\+Solver}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/FSolver.\+h\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/FSolver.\+cpp\end{DoxyCompactItemize}

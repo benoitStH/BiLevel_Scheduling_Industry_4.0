@@ -1,0 +1,82 @@
+\doxysection{Parser.\+h}
+\hypertarget{_parser_8h_source}{}\label{_parser_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Parser.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Parser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Copyright\ (C)\ 2024}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ EA\ 6300\ ERL\ CNRS\ 7002\ Laboratoire\ d'Informatique\ Fondamentale\ et\ Appliquée de\ Tours,\ Tours,\ France}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ DIGEP,\ Politecnico\ di\ Torino,\ Corso\ Duca\ degli\ Abruzzi\ 24,\ Torino,\ Italy}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ This\ file\ is\ part\ of\ bilevel-\/scheduling.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ of\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ See\ the\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ along\ with\ bilevel-\/scheduling.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_PARSER\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_PARSER\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}Instance.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}ISolver.h"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_parser}{Parser}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ CONSTRUCTOR\ \ \ \ \ */}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_parser}{Parser}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ METHODS\ \ \ \ \ */}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_instance}{Instance}}\ \mbox{\hyperlink{class_parser_a8595b4db00b5283e1b3e9d1130c71476}{readFromFile}}(std::string\&\ filePath)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_parser_a46c3b6aa36af35d4468723876d7f07c9}{serializeInstance}}(\mbox{\hyperlink{class_instance}{Instance}}\&\ instance);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ *\ Method\ which\ save\ the\ given\ instance's\ best\ solution\ found\ by\ the\ given\ solver}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ *\ The\ result\ is\ appended\ into\ the\ given\ file\ with\ a\ specific\ format\ (cf\ ReadMe.md)}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ *}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ *\ It\ is\ assumed\ that\ the\ solver\ already\ solved\ the\ instance\ and\ has\ a\ solution\ (optimal\ or\ not)}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ *\ It\ is\ assumed\ that\ the\ file,\ whose\ path\ was\ given,\ already\ exist\ and\ contains\ the\ header's}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ *}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ *\ @param\ filePath\ The\ file\ where\ data\ will\ be\ append}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ *\ @param\ solver\ The\ solver\ which\ solved\ the\ instance,\ contains\ the\ solution\ and\ its\ resolution\ time}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ *\ @param\ optimal\_objective\ The\ sum\ wjUj\ found\ by\ an\ exact\ method.\ Used\ to\ compute\ derivation.}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ saveInFile(std::string\&\ filepath,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_i_solver}{ISolver}}*\ solver,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ optimal\_objective);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ *\ This\ Method\ saves\ the\ solver's\ solution\ in\ the\ given\ file}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ *\ The\ result\ is\ appended\ into\ the\ given\ file\ with\ a\ specific\ format\ (cf\ ReadMe.md)}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ *\ }}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ *\ It\ is\ assumed\ that\ the\ solver\ already\ solved\ the\ instance\ and\ has\ a\ solution\ (optimal\ or\ not)}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ *\ It\ is\ assumed\ that\ the\ file,\ whose\ path\ was\ given,\ already\ exist\ and\ contains\ the\ header's}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ *\ }}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ *\ @param\ filePath\ The\ file\ where\ data\ will\ be\ append}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ *\ @param\ solver\ The\ solver\ which\ solved\ the\ instance,\ contains\ the\ solution\ and\ its\ resolution\ time}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ saveSolutionInFile(std::string\&\ filepath,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_i_solver}{ISolver}}*\ solver);}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_PARSER\_H}}
+
+\end{DoxyCode}

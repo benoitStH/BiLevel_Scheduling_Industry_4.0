@@ -1,0 +1,158 @@
+\doxysection{FLate\+To\+Early Class Reference}
+\hypertarget{class_f_late_to_early}{}\label{class_f_late_to_early}\index{FLateToEarly@{FLateToEarly}}
+Inheritance diagram for FLate\+To\+Early\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_f_late_to_early}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_f_late_to_early_ab7b1430a6d5ffd27e69e5f0991570e44}\label{class_f_late_to_early_ab7b1430a6d5ffd27e69e5f0991570e44} 
+{\bfseries FLate\+To\+Early} (unsigned int rule\+Number)
+\item 
+virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \mbox{\hyperlink{class_f_late_to_early_aa7935228c92b93f39410af0c79660e69}{swap\+VPossible\+For}} (const \mbox{\hyperlink{class_solution}{Solution}} \&s, unsigned int k, unsigned int l1, unsigned int l2)
+\item 
+void \mbox{\hyperlink{class_f_late_to_early_a0c1cfa0d4c7ddfb250244b763d7a6f90}{swap\+Late\+To\+Early}} (\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&swap\+Op, const \mbox{\hyperlink{class_machine}{Machine}} \&m1, const \mbox{\hyperlink{class_machine}{Machine}} \&m2, unsigned int k, float speed)
+\item 
+void \mbox{\hyperlink{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72}{swap\+Dumbly}} (\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&swap\+Op, const \mbox{\hyperlink{class_solution}{Solution}} \&s)
+\item 
+void \mbox{\hyperlink{class_f_late_to_early_aceeff3b863b70abe44a6911fc9f3835b}{swap\+Lateness}} (\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&swap\+Op, const \mbox{\hyperlink{class_solution}{Solution}} \&s)
+\item 
+void \mbox{\hyperlink{class_f_late_to_early_a139094a239c9b587e58e0d7fe84ab636}{swap\+Lateness\+Careful}} (\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&swap\+Op, const \mbox{\hyperlink{class_solution}{Solution}} \&s)
+\item 
+virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \mbox{\hyperlink{class_f_late_to_early_aa71cfba355ffb49e194b114dff9243c6}{best\+SwapV}} (const std\+::vector$<$ \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} $>$ \&possible\+Swaps, const \mbox{\hyperlink{class_solution}{Solution}} \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries IFollower\+Swap\+Rule} (std\+::string rule\+Name, unsigned int rule\+Number)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_i_follower_swap_rule_ac290caa626cfd5842457ca2bd1b5e2f8}{get\+Rule\+Name}} ()
+\item 
+void {\bfseries verbose\+Operator} (const \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&swap\+Op)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_rule}{Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rule} (std\+::string rule\+Name, unsigned int rule\+Number)
+\item 
+unsigned int {\bfseries get\+Rule\+Number} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_rule}{Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries rule\+Name}
+\item 
+unsigned int {\bfseries rule\+Number}
+\item 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_f_late_to_early_aa71cfba355ffb49e194b114dff9243c6}\label{class_f_late_to_early_aa71cfba355ffb49e194b114dff9243c6} 
+\index{FLateToEarly@{FLateToEarly}!bestSwapV@{bestSwapV}}
+\index{bestSwapV@{bestSwapV}!FLateToEarly@{FLateToEarly}}
+\doxysubsubsection{\texorpdfstring{bestSwapV()}{bestSwapV()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} FLate\+To\+Early\+::best\+SwapV (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} $>$ \&}]{possible\+Swaps,  }\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Method which return the swap with the highest gain as the best swap 
+\begin{DoxyParams}{Parameters}
+{\em possible\+Swaps} & is a vector of \doxylink{struct_swap_operation}{Swap\+Operation} to compare \\
+\hline
+{\em s} & the current solution (unused in this implementation) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the best swap operation If possible\+Swaps is empty, a swap operation with all atributes equal to 0 is returned 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_follower_swap_rule_a37aca3d7fc8ba06807fb1c4285eff8b1}{IFollower\+Swap\+Rule}}.
+
+\Hypertarget{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72}\label{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72} 
+\index{FLateToEarly@{FLateToEarly}!swapDumbly@{swapDumbly}}
+\index{swapDumbly@{swapDumbly}!FLateToEarly@{FLateToEarly}}
+\doxysubsubsection{\texorpdfstring{swapDumbly()}{swapDumbly()}}
+{\footnotesize\ttfamily void FLate\+To\+Early\+::swap\+Dumbly (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&}]{swap\+Op,  }\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Perform the swap and check the difference of sum wj\+Uj Update the swap operator\textquotesingle{}s gain 
+\begin{DoxyParams}{Parameters}
+{\em swap\+Op} & A \textquotesingle{}\doxylink{struct_swap_operation}{Swap\+Operation}\textquotesingle{} object representing the swapping of the k-\/th job between machine m1 and m2 \\
+\hline
+{\em s} & A \textquotesingle{}\doxylink{class_solution}{Solution}\textquotesingle{} object containing the schedule \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_late_to_early_aceeff3b863b70abe44a6911fc9f3835b}\label{class_f_late_to_early_aceeff3b863b70abe44a6911fc9f3835b} 
+\index{FLateToEarly@{FLateToEarly}!swapLateness@{swapLateness}}
+\index{swapLateness@{swapLateness}!FLateToEarly@{FLateToEarly}}
+\doxysubsubsection{\texorpdfstring{swapLateness()}{swapLateness()}}
+{\footnotesize\ttfamily void FLate\+To\+Early\+::swap\+Lateness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&}]{swap\+Op,  }\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if a swap will improve the solution by checking the lateness of the following jobs Update the swap operator\textquotesingle{}s gain 
+\begin{DoxyParams}{Parameters}
+{\em swap\+Op} & A \textquotesingle{}\doxylink{struct_swap_operation}{Swap\+Operation}\textquotesingle{} object representing the swapping of the k-\/th job between machine m1 and m2 \\
+\hline
+{\em s} & A \textquotesingle{}\doxylink{class_solution}{Solution}\textquotesingle{} object containing the schedule \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_late_to_early_a139094a239c9b587e58e0d7fe84ab636}\label{class_f_late_to_early_a139094a239c9b587e58e0d7fe84ab636} 
+\index{FLateToEarly@{FLateToEarly}!swapLatenessCareful@{swapLatenessCareful}}
+\index{swapLatenessCareful@{swapLatenessCareful}!FLateToEarly@{FLateToEarly}}
+\doxysubsubsection{\texorpdfstring{swapLatenessCareful()}{swapLatenessCareful()}}
+{\footnotesize\ttfamily void FLate\+To\+Early\+::swap\+Lateness\+Careful (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&}]{swap\+Op,  }\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if a swap will improve the solution by checking the lateness of the following jobs and the swaped jobs Update the swap operator\textquotesingle{}s gain 
+\begin{DoxyParams}{Parameters}
+{\em swap\+Op} & A \textquotesingle{}\doxylink{struct_swap_operation}{Swap\+Operation}\textquotesingle{} object representing the swapping of the k-\/th job between machine m1 and m2 \\
+\hline
+{\em s} & A \textquotesingle{}\doxylink{class_solution}{Solution}\textquotesingle{} object containing the schedule \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_late_to_early_a0c1cfa0d4c7ddfb250244b763d7a6f90}\label{class_f_late_to_early_a0c1cfa0d4c7ddfb250244b763d7a6f90} 
+\index{FLateToEarly@{FLateToEarly}!swapLateToEarly@{swapLateToEarly}}
+\index{swapLateToEarly@{swapLateToEarly}!FLateToEarly@{FLateToEarly}}
+\doxysubsubsection{\texorpdfstring{swapLateToEarly()}{swapLateToEarly()}}
+{\footnotesize\ttfamily void FLate\+To\+Early\+::swap\+Late\+To\+Early (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&}]{swap\+Op,  }\item[{const \mbox{\hyperlink{class_machine}{Machine}} \&}]{m1,  }\item[{const \mbox{\hyperlink{class_machine}{Machine}} \&}]{m2,  }\item[{unsigned int}]{k,  }\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check between the k-\/th job of equal speed machine l1 and l2 Update the swap operator\textquotesingle{}s gain 
+\begin{DoxyParams}{Parameters}
+{\em swap\+Op} & A \textquotesingle{}\doxylink{struct_swap_operation}{Swap\+Operation}\textquotesingle{} object representing the swapping of the k-\/th job between machine m1 and m2 \\
+\hline
+{\em mi} & the machines (m1 and m2) \\
+\hline
+{\em k} & the position of the k-\/th job \\
+\hline
+{\em speed} & the machine\textquotesingle{}s speed. We assume m1\textquotesingle{}s speed equals m2\textquotesingle{}s speed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_f_late_to_early_aa7935228c92b93f39410af0c79660e69}\label{class_f_late_to_early_aa7935228c92b93f39410af0c79660e69} 
+\index{FLateToEarly@{FLateToEarly}!swapVPossibleFor@{swapVPossibleFor}}
+\index{swapVPossibleFor@{swapVPossibleFor}!FLateToEarly@{FLateToEarly}}
+\doxysubsubsection{\texorpdfstring{swapVPossibleFor()}{swapVPossibleFor()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} FLate\+To\+Early\+::swap\+VPossible\+For (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s,  }\item[{unsigned int}]{k,  }\item[{unsigned int}]{l1,  }\item[{unsigned int}]{l2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Check if a swap is possible between the k-\/th job of equal speed machine l1 and l2 Returns a swap operator containing the gain we would obtain if this swap was to be performed 
+\begin{DoxyParams}{Parameters}
+{\em s} & A \textquotesingle{}\doxylink{class_solution}{Solution}\textquotesingle{} object containing the current scheduling \\
+\hline
+{\em k} & the position of the k-\/th job \\
+\hline
+{\em li} & the machine\textquotesingle{}s number. Must be between 0 and the total number of machines. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \doxylink{struct_swap_operation}{Swap\+Operation} containing the parameters (l1, l2, k, gain) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_follower_swap_rule_afd969e659142a62860f98edefe3b4aa1}{IFollower\+Swap\+Rule}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/FLate\+To\+Early.\+h\end{DoxyCompactItemize}

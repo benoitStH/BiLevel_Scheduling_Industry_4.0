@@ -1,0 +1,36 @@
+\doxysection{Generateur.\+h}
+\hypertarget{_generateur_8h_source}{}\label{_generateur_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Generateur.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Generateur.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_GENERATEUR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_GENERATEUR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Instance.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Solution.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_generateur}{Generateur}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ the\ seed\ use\ for\ generate\ instance}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed;}
+\DoxyCodeLine{00015\ \ \ \ \ std::mt19937\ numGenerator;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_generateur}{Generateur}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_generateur}{Generateur}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}\ \mbox{\hyperlink{class_generateur_a5859dbe3ce04a56d97bd2136e3431682}{generateJob}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ infPi\ =\ 1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ supPi\ =\ 10,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ infDi\ =\ 1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ supDi\ =\ 10,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ infWi\ =\ 1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ supWi\ =\ 20);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_instance}{Instance}}\ \mbox{\hyperlink{class_generateur_affba270de400cce001da809b5eee64aa}{generateInstance}}(std::string\ newInstancePath,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbJobs,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbOfHighSpeedMachines,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbOfLowSpeedMachines,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ highSpeed,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ lowSpeed);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_GENERATEUR\_H}}
+
+\end{DoxyCode}

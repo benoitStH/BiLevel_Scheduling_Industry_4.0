@@ -1,0 +1,224 @@
+\doxysection{Solution Class Reference}
+\hypertarget{class_solution}{}\label{class_solution}\index{Solution@{Solution}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution}} ()
+\item 
+\mbox{\hyperlink{class_solution_a04fb486dc095fd36cc8ec6435566f713}{Solution}} (const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \&list\+High\+Speed\+Machines, const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \&list\+Low\+Speed\+Machines)
+\item 
+\mbox{\hyperlink{class_solution_acda72af8baee4e1278eb99e96b0650d9}{Solution}} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\item 
+void \mbox{\hyperlink{class_solution_a6cf184fb7f0eb37ae61174c736561b44}{reset}} ()
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_solution_a11d8893f250f86b66ce5c93dc290d668}{possible\+SwapV}} (unsigned int k, bool consider\+Low\+Speed\+Machines)
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_solution_aa5a986d5fa05cfb6605b33714e16056c}{possible\+Swap\+VHigh\+Speed}} (unsigned int k)
+\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_solution_acbbf6f67dcfd487999a5d53fa14817bc}{possible\+Swap\+VLow\+Speed}} (unsigned int k)
+\item 
+unsigned int \mbox{\hyperlink{class_solution_ad1b7dadaac88cd4cb7e189c4d4fa6bd3}{get\+Max\+Number\+Of\+High\+Speed\+Blocs}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_solution_a773c9870fac116e333ca2fda4e25cf3b}{get\+Max\+Number\+Of\+Low\+Speed\+Blocs}} ()
+\item 
+void \mbox{\hyperlink{class_solution_afa0512a7336babd7fd800aa87c90fa98}{swapV}} (std\+::vector$<$ unsigned int $>$ swapable\+Machines, unsigned int k)
+\item 
+void \mbox{\hyperlink{class_solution_aa3e8919dc2722fdd31524108286cdd80}{evaluate}} ()
+\item 
+void \mbox{\hyperlink{class_solution_ad25d4da6d0e0402b01ebe9ccd057f580}{complete\+Verbose}} ()
+\item 
+void \mbox{\hyperlink{class_solution_a607803e25a640ffda00025453b13f75b}{compact\+Verbose}} ()
+\item 
+\Hypertarget{class_solution_a8552f7919ff60e9e84e85fbdb5a3b0f2}\label{class_solution_a8552f7919ff60e9e84e85fbdb5a3b0f2} 
+const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \& {\bfseries get\+List\+High\+Speed\+Machines} () const
+\item 
+\Hypertarget{class_solution_afc9e8b2e943dcf31d71196e3b61bb3fe}\label{class_solution_afc9e8b2e943dcf31d71196e3b61bb3fe} 
+const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \& {\bfseries get\+List\+Low\+Speed\+Machines} () const
+\item 
+\Hypertarget{class_solution_ab042499bb5b5ba01477099aeee3b787f}\label{class_solution_ab042499bb5b5ba01477099aeee3b787f} 
+float {\bfseries get\+Sum\+Wj\+Uj} () const
+\item 
+\Hypertarget{class_solution_a4776d6079d6fe2db17c019beb82fc34d}\label{class_solution_a4776d6079d6fe2db17c019beb82fc34d} 
+float {\bfseries get\+Sum\+Cj} () const
+\item 
+\mbox{\hyperlink{class_machine}{Machine}} \mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{get\+Machine}} (unsigned int pos) const
+\item 
+\Hypertarget{class_solution_a67de52ce0344263a9b166fefbdaa94f5}\label{class_solution_a67de52ce0344263a9b166fefbdaa94f5} 
+void {\bfseries set\+List\+High\+Speed\+Machines} (const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \&list\+High\+Speed\+Machines)
+\item 
+\Hypertarget{class_solution_aa3d0ad94a25951a30a98a38af7378388}\label{class_solution_aa3d0ad94a25951a30a98a38af7378388} 
+void {\bfseries set\+List\+Low\+Speed\+Machines} (const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \&list\+Low\+Speed\+Machines)
+\item 
+\Hypertarget{class_solution_a0fd27a44a2f6b34dc87eb0e71a8c83ec}\label{class_solution_a0fd27a44a2f6b34dc87eb0e71a8c83ec} 
+void {\bfseries set\+Sum\+Wj\+Uj} (float sum\+\_\+wj\+\_\+\+Uj)
+\item 
+\Hypertarget{class_solution_aa823fb9fcff4b81ba8277c643d515d13}\label{class_solution_aa823fb9fcff4b81ba8277c643d515d13} 
+void {\bfseries set\+Sum\+Cj} (float sum\+Cj)
+\item 
+\mbox{\hyperlink{class_machine}{Machine}} \& \mbox{\hyperlink{class_solution_aae97c57351ed7f6bf4ca37a3417b5144}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t pos)
+\item 
+\Hypertarget{class_solution_ac190a1fc441b958e638625e3c9d28c02}\label{class_solution_ac190a1fc441b958e638625e3c9d28c02} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_solution}{Solution}} \&sol) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_solution_a288de811d67608261c580aedb527b1a4}\label{class_solution_a288de811d67608261c580aedb527b1a4} 
+static bool {\bfseries smaller\+\_\+wj\+Uj} (const \mbox{\hyperlink{class_solution}{Solution}} \&lsol, const \mbox{\hyperlink{class_solution}{Solution}} \&rsol)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}\label{class_solution_ab55bd4b023d596ce11aaf737b9a6123b} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default Constructor \Hypertarget{class_solution_a04fb486dc095fd36cc8ec6435566f713}\label{class_solution_a04fb486dc095fd36cc8ec6435566f713} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \&}]{list\+High\+Speed\+Machines,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_machine}{Machine}} $>$ \&}]{list\+Low\+Speed\+Machines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a solution from list of machines 
+\begin{DoxyParams}{Parameters}
+{\em list\+High\+Speed\+Machines} & the list of high speed machines \\
+\hline
+{\em list\+Low\+Speed\+Machines} & the list of low speed machines \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_solution_acda72af8baee4e1278eb99e96b0650d9}\label{class_solution_acda72af8baee4e1278eb99e96b0650d9} 
+\index{Solution@{Solution}!Solution@{Solution}}
+\index{Solution@{Solution}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{Solution()}{Solution()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Solution\+::\+Solution (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a solution that create the list of empty machines. 
+\begin{DoxyParams}{Parameters}
+{\em nb\+High\+Speed\+Machines} & the number of machine with high speed \\
+\hline
+{\em nb\+Low\+Speed\+Machines} & the number of machine with low speed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_solution_a607803e25a640ffda00025453b13f75b}\label{class_solution_a607803e25a640ffda00025453b13f75b} 
+\index{Solution@{Solution}!compactVerbose@{compactVerbose}}
+\index{compactVerbose@{compactVerbose}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{compactVerbose()}{compactVerbose()}}
+{\footnotesize\ttfamily void Solution\+::compact\+Verbose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that output the data of the solution in a compact form Only the job\textquotesingle{}s number are displayed Late jobs are marked with a "{}\texorpdfstring{$\ast$}{*}"{} The sum Cj and sum Wj\+Uj are displayed The number of selected jobs in the solution (ignoring \textquotesingle{}0\textquotesingle{} ones) is displayed \Hypertarget{class_solution_ad25d4da6d0e0402b01ebe9ccd057f580}\label{class_solution_ad25d4da6d0e0402b01ebe9ccd057f580} 
+\index{Solution@{Solution}!completeVerbose@{completeVerbose}}
+\index{completeVerbose@{completeVerbose}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{completeVerbose()}{completeVerbose()}}
+{\footnotesize\ttfamily void Solution\+::complete\+Verbose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that output the data of the solution in a custom form The job number is displayed The processing time are divided by the machine\textquotesingle{}s speed Late jobs are marked with a "{}\texorpdfstring{$\ast$}{*}"{} before their number The sum Cj and sum Wj\+Uj are displayed \Hypertarget{class_solution_aa3e8919dc2722fdd31524108286cdd80}\label{class_solution_aa3e8919dc2722fdd31524108286cdd80} 
+\index{Solution@{Solution}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily void Solution\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that evaluate the solution by computing the sum Cj and the sum wj\+Uj The sum\+Cj and sum\+Wj\+Uj will be updated \Hypertarget{class_solution_a8abed3f8eeb774c83fe559abb20431f6}\label{class_solution_a8abed3f8eeb774c83fe559abb20431f6} 
+\index{Solution@{Solution}!getMachine@{getMachine}}
+\index{getMachine@{getMachine}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getMachine()}{getMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_machine}{Machine}} Solution\+::get\+Machine (\begin{DoxyParamCaption}\item[{unsigned int}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a reference to the element at specified location pos. If pos is greater than the number of high speed machine then the reference is from the list of low speed machine Else the reference is from the list of high speed machine. No bounds checking is performed. \Hypertarget{class_solution_ad1b7dadaac88cd4cb7e189c4d4fa6bd3}\label{class_solution_ad1b7dadaac88cd4cb7e189c4d4fa6bd3} 
+\index{Solution@{Solution}!getMaxNumberOfHighSpeedBlocs@{getMaxNumberOfHighSpeedBlocs}}
+\index{getMaxNumberOfHighSpeedBlocs@{getMaxNumberOfHighSpeedBlocs}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getMaxNumberOfHighSpeedBlocs()}{getMaxNumberOfHighSpeedBlocs()}}
+{\footnotesize\ttfamily unsigned int Solution\+::get\+Max\+Number\+Of\+High\+Speed\+Blocs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that returns the size of the longest sequence in a high speed machine \begin{DoxyReturn}{Returns}
+An unsigned int representing the size of the longest sequence in a high speed machine 
+\end{DoxyReturn}
+\Hypertarget{class_solution_a773c9870fac116e333ca2fda4e25cf3b}\label{class_solution_a773c9870fac116e333ca2fda4e25cf3b} 
+\index{Solution@{Solution}!getMaxNumberOfLowSpeedBlocs@{getMaxNumberOfLowSpeedBlocs}}
+\index{getMaxNumberOfLowSpeedBlocs@{getMaxNumberOfLowSpeedBlocs}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{getMaxNumberOfLowSpeedBlocs()}{getMaxNumberOfLowSpeedBlocs()}}
+{\footnotesize\ttfamily unsigned int Solution\+::get\+Max\+Number\+Of\+Low\+Speed\+Blocs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that returns the size of the longest sequence in a low speed machine \begin{DoxyReturn}{Returns}
+An unsigned int representing the size of the longest sequence in a low speed machine 
+\end{DoxyReturn}
+\Hypertarget{class_solution_aae97c57351ed7f6bf4ca37a3417b5144}\label{class_solution_aae97c57351ed7f6bf4ca37a3417b5144} 
+\index{Solution@{Solution}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_machine}{Machine}} \& Solution\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a reference to the element at specified location pos. If pos is greater than the number of high speed machine then the reference is from the list of low speed machine Else the reference is from the list of high speed machine. No bounds checking is performed. \Hypertarget{class_solution_a11d8893f250f86b66ce5c93dc290d668}\label{class_solution_a11d8893f250f86b66ce5c93dc290d668} 
+\index{Solution@{Solution}!possibleSwapV@{possibleSwapV}}
+\index{possibleSwapV@{possibleSwapV}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{possibleSwapV()}{possibleSwapV()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ Solution\+::possible\+SwapV (\begin{DoxyParamCaption}\item[{unsigned int}]{k,  }\item[{bool}]{consider\+Low\+Speed\+Machines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+DEPRECATED Method that returns the machines where a swap can happen between their k-\/th job 
+\begin{DoxyParams}{Parameters}
+{\em k} & the k-\/th job in the machines\textquotesingle{} sequence \\
+\hline
+{\em consider\+Low\+Speed\+Machines} & Are we considering a swap between low speed machines ? otherwise we consider high speed ones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$unsigned int$>$ of size 2. Contains the machines number. If no swap possible, the vector\textquotesingle{}s size is 0. 
+\end{DoxyReturn}
+\Hypertarget{class_solution_aa5a986d5fa05cfb6605b33714e16056c}\label{class_solution_aa5a986d5fa05cfb6605b33714e16056c} 
+\index{Solution@{Solution}!possibleSwapVHighSpeed@{possibleSwapVHighSpeed}}
+\index{possibleSwapVHighSpeed@{possibleSwapVHighSpeed}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{possibleSwapVHighSpeed()}{possibleSwapVHighSpeed()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ Solution\+::possible\+Swap\+VHigh\+Speed (\begin{DoxyParamCaption}\item[{unsigned int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+DEPRECATED Method that returns the machines where a swap can happen between their k-\/th job 
+\begin{DoxyParams}{Parameters}
+{\em k} & the k-\/th job in the machines\textquotesingle{} sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$unsigned int$>$ of size 2. Contains the machines number. If no swap possible, the vector\textquotesingle{}s size is 0. 
+\end{DoxyReturn}
+\Hypertarget{class_solution_acbbf6f67dcfd487999a5d53fa14817bc}\label{class_solution_acbbf6f67dcfd487999a5d53fa14817bc} 
+\index{Solution@{Solution}!possibleSwapVLowSpeed@{possibleSwapVLowSpeed}}
+\index{possibleSwapVLowSpeed@{possibleSwapVLowSpeed}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{possibleSwapVLowSpeed()}{possibleSwapVLowSpeed()}}
+{\footnotesize\ttfamily std\+::vector$<$ unsigned int $>$ Solution\+::possible\+Swap\+VLow\+Speed (\begin{DoxyParamCaption}\item[{unsigned int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+DEPRECATED Method that returns the machines where a swap can happen between their k-\/th job 
+\begin{DoxyParams}{Parameters}
+{\em k} & the k-\/th job in the machines\textquotesingle{} sequence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$unsigned int$>$ of size 2. Contains the machines number. If no swap possible, the vector\textquotesingle{}s size is 0. 
+\end{DoxyReturn}
+\Hypertarget{class_solution_a6cf184fb7f0eb37ae61174c736561b44}\label{class_solution_a6cf184fb7f0eb37ae61174c736561b44} 
+\index{Solution@{Solution}!reset@{reset}}
+\index{reset@{reset}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Solution\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that reset the current solution \Hypertarget{class_solution_afa0512a7336babd7fd800aa87c90fa98}\label{class_solution_afa0512a7336babd7fd800aa87c90fa98} 
+\index{Solution@{Solution}!swapV@{swapV}}
+\index{swapV@{swapV}!Solution@{Solution}}
+\doxysubsubsection{\texorpdfstring{swapV()}{swapV()}}
+{\footnotesize\ttfamily void Solution\+::swapV (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned int $>$}]{swapable\+Machines,  }\item[{unsigned int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method which will swap the k-\/th job of two given machines 
+\begin{DoxyParams}{Parameters}
+{\em swapable\+Machines} & an unsigned int vector of size 2 with the machine\textquotesingle{}s index in the solution \\
+\hline
+{\em k} & the position of the k-\/th jobs \\
+\hline
+{\em verbose} & (default=True) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Solution.\+h\end{DoxyCompactItemize}

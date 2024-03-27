@@ -1,0 +1,116 @@
+\doxysection{Machine Class Reference}
+\hypertarget{class_machine}{}\label{class_machine}\index{Machine@{Machine}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_machine_ad3194873d36d8664ada012a045e03711}{Machine}} (float speed)
+\item 
+void \mbox{\hyperlink{class_machine_af4376a00206c3e7cad3294c3061320f4}{reset}} ()
+\item 
+float \mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{start\+Time\+Of\+Job}} (unsigned int j) const
+\item 
+void \mbox{\hyperlink{class_machine_a430e9236f8d280245f319c7ec7f2aaee}{evaluate}} ()
+\item 
+void \mbox{\hyperlink{class_machine_acc5d9db832427c8bfecb05f30ff6a8cd}{add\+\_\+job}} (unsigned int position, const \mbox{\hyperlink{class_job}{Job}} \&affected\+Job)
+\item 
+void \mbox{\hyperlink{class_machine_acc95cecc555b5196a733fbedbd093635}{add\+\_\+job}} (const \mbox{\hyperlink{class_job}{Job}} \&affected\+Job)
+\item 
+\Hypertarget{class_machine_aab1ac76407939e7ee6742962bb6c1e27}\label{class_machine_aab1ac76407939e7ee6742962bb6c1e27} 
+const std\+::vector$<$ \mbox{\hyperlink{class_job}{Job}} $>$ \& {\bfseries get\+Affected\+Job} () const
+\item 
+\Hypertarget{class_machine_a3268d175beadb5700790d109bfdce02a}\label{class_machine_a3268d175beadb5700790d109bfdce02a} 
+float {\bfseries get\+Speed} () const
+\item 
+\Hypertarget{class_machine_a26f02c373afe721857a3947323cb7051}\label{class_machine_a26f02c373afe721857a3947323cb7051} 
+float {\bfseries get\+Sum\+Wj\+Uj} () const
+\item 
+\Hypertarget{class_machine_a15297e75b80b5016bba6371af1711519}\label{class_machine_a15297e75b80b5016bba6371af1711519} 
+float {\bfseries get\+Sum\+Cj} () const
+\item 
+\Hypertarget{class_machine_ae21e77bb3aee7cdb6357e15f1cde1c4f}\label{class_machine_ae21e77bb3aee7cdb6357e15f1cde1c4f} 
+void {\bfseries set\+Affected\+Job} (const std\+::vector$<$ \mbox{\hyperlink{class_job}{Job}} $>$ \&affected\+Job)
+\item 
+\Hypertarget{class_machine_ae754cebe094584e6215b1da3579b6520}\label{class_machine_ae754cebe094584e6215b1da3579b6520} 
+void {\bfseries set\+Speed} (float speed)
+\item 
+\Hypertarget{class_machine_aae392fd2d9bf81d17ba84016f3906a21}\label{class_machine_aae392fd2d9bf81d17ba84016f3906a21} 
+void {\bfseries set\+Sum\+Wj\+Uj} (float sum\+\_\+wj\+Uj)
+\item 
+\Hypertarget{class_machine_a12b9870ce2e19293fa77c0426fc8eef4}\label{class_machine_a12b9870ce2e19293fa77c0426fc8eef4} 
+void {\bfseries set\+Sum\+Cj} (float sum\+Cj)
+\item 
+\Hypertarget{class_machine_a9a2742c16846030d70e63d17a7294f45}\label{class_machine_a9a2742c16846030d70e63d17a7294f45} 
+\mbox{\hyperlink{class_job}{Job}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t pos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_machine_ad3194873d36d8664ada012a045e03711}\label{class_machine_ad3194873d36d8664ada012a045e03711} 
+\index{Machine@{Machine}!Machine@{Machine}}
+\index{Machine@{Machine}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{Machine()}{Machine()}}
+{\footnotesize\ttfamily Machine\+::\+Machine (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor a machine with the speed. 
+\begin{DoxyParams}{Parameters}
+{\em speed} & the speed of the current machine \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_machine_acc95cecc555b5196a733fbedbd093635}\label{class_machine_acc95cecc555b5196a733fbedbd093635} 
+\index{Machine@{Machine}!add\_job@{add\_job}}
+\index{add\_job@{add\_job}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{add\_job()}{add\_job()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Machine\+::add\+\_\+job (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_job}{Job}} \&}]{affected\+Job }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that add a job to be scheduled on machine. This job is added at the end of the machine\textquotesingle{}s sequence. 
+\begin{DoxyParams}{Parameters}
+{\em affected\+Job} & job to insert \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_acc5d9db832427c8bfecb05f30ff6a8cd}\label{class_machine_acc5d9db832427c8bfecb05f30ff6a8cd} 
+\index{Machine@{Machine}!add\_job@{add\_job}}
+\index{add\_job@{add\_job}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{add\_job()}{add\_job()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Machine\+::add\+\_\+job (\begin{DoxyParamCaption}\item[{unsigned int}]{position,  }\item[{const \mbox{\hyperlink{class_job}{Job}} \&}]{affected\+Job }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that add a job to be scheduled on machine. This job is added at the given position. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \+: position before which the content will be inserted \\
+\hline
+{\em affected\+Job} & \+: job to insert \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_machine_a430e9236f8d280245f319c7ec7f2aaee}\label{class_machine_a430e9236f8d280245f319c7ec7f2aaee} 
+\index{Machine@{Machine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily void Machine\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that evaluate the scheduling on the machine. It compute the sum of completion times and the sum of weighted tardy jobs. sum\+\_\+\+Cj and sum\+\_\+wj\+\_\+\+Uj will be updated. \Hypertarget{class_machine_af4376a00206c3e7cad3294c3061320f4}\label{class_machine_af4376a00206c3e7cad3294c3061320f4} 
+\index{Machine@{Machine}!reset@{reset}}
+\index{reset@{reset}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Machine\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that reset the machine \Hypertarget{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}\label{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04} 
+\index{Machine@{Machine}!startTimeOfJob@{startTimeOfJob}}
+\index{startTimeOfJob@{startTimeOfJob}!Machine@{Machine}}
+\doxysubsubsection{\texorpdfstring{startTimeOfJob()}{startTimeOfJob()}}
+{\footnotesize\ttfamily float Machine\+::start\+Time\+Of\+Job (\begin{DoxyParamCaption}\item[{unsigned int}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that return the starting time of a given job 
+\begin{DoxyParams}{Parameters}
+{\em j} & the job\textquotesingle{}s position in the machine\textquotesingle{}s sequence. 0 is the first job \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float The starting time of the job 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Machine.\+h\end{DoxyCompactItemize}

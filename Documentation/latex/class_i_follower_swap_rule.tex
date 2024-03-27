@@ -1,0 +1,78 @@
+\doxysection{IFollower\+Swap\+Rule Class Reference}
+\hypertarget{class_i_follower_swap_rule}{}\label{class_i_follower_swap_rule}\index{IFollowerSwapRule@{IFollowerSwapRule}}
+Inheritance diagram for IFollower\+Swap\+Rule\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_follower_swap_rule}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_follower_swap_rule_a76a420662583464de5b4d2b5491ee7a1}\label{class_i_follower_swap_rule_a76a420662583464de5b4d2b5491ee7a1} 
+{\bfseries IFollower\+Swap\+Rule} (std\+::string rule\+Name, unsigned int rule\+Number)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_i_follower_swap_rule_ac290caa626cfd5842457ca2bd1b5e2f8}{get\+Rule\+Name}} ()
+\item 
+virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \mbox{\hyperlink{class_i_follower_swap_rule_afd969e659142a62860f98edefe3b4aa1}{swap\+VPossible\+For}} (const \mbox{\hyperlink{class_solution}{Solution}} \&s, unsigned int k, unsigned int l1, unsigned int l2)=0
+\item 
+virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \mbox{\hyperlink{class_i_follower_swap_rule_a37aca3d7fc8ba06807fb1c4285eff8b1}{best\+SwapV}} (const std\+::vector$<$ \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} $>$ \&possible\+Swaps, const \mbox{\hyperlink{class_solution}{Solution}} \&s)=0
+\item 
+\Hypertarget{class_i_follower_swap_rule_a0d701aedd4cae809823c8bf6ebb750ba}\label{class_i_follower_swap_rule_a0d701aedd4cae809823c8bf6ebb750ba} 
+void {\bfseries verbose\+Operator} (const \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} \&swap\+Op)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_rule}{Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rule} (std\+::string rule\+Name, unsigned int rule\+Number)
+\item 
+unsigned int {\bfseries get\+Rule\+Number} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_rule}{Rule}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries rule\+Name}
+\item 
+unsigned int {\bfseries rule\+Number}
+\item 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_follower_swap_rule_a37aca3d7fc8ba06807fb1c4285eff8b1}\label{class_i_follower_swap_rule_a37aca3d7fc8ba06807fb1c4285eff8b1} 
+\index{IFollowerSwapRule@{IFollowerSwapRule}!bestSwapV@{bestSwapV}}
+\index{bestSwapV@{bestSwapV}!IFollowerSwapRule@{IFollowerSwapRule}}
+\doxysubsubsection{\texorpdfstring{bestSwapV()}{bestSwapV()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} IFollower\+Swap\+Rule\+::best\+SwapV (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} $>$ \&}]{possible\+Swaps,  }\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Method which return the best swap according to a criterion among a list of possible swap This method must be overriden 
+
+Implemented in \mbox{\hyperlink{class_f_late_to_early_aa71cfba355ffb49e194b114dff9243c6}{FLate\+To\+Early}}.
+
+\Hypertarget{class_i_follower_swap_rule_ac290caa626cfd5842457ca2bd1b5e2f8}\label{class_i_follower_swap_rule_ac290caa626cfd5842457ca2bd1b5e2f8} 
+\index{IFollowerSwapRule@{IFollowerSwapRule}!getRuleName@{getRuleName}}
+\index{getRuleName@{getRuleName}!IFollowerSwapRule@{IFollowerSwapRule}}
+\doxysubsubsection{\texorpdfstring{getRuleName()}{getRuleName()}}
+{\footnotesize\ttfamily virtual std\+::string IFollower\+Swap\+Rule\+::get\+Rule\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_rule}{Rule}}.
+
+\Hypertarget{class_i_follower_swap_rule_afd969e659142a62860f98edefe3b4aa1}\label{class_i_follower_swap_rule_afd969e659142a62860f98edefe3b4aa1} 
+\index{IFollowerSwapRule@{IFollowerSwapRule}!swapVPossibleFor@{swapVPossibleFor}}
+\index{swapVPossibleFor@{swapVPossibleFor}!IFollowerSwapRule@{IFollowerSwapRule}}
+\doxysubsubsection{\texorpdfstring{swapVPossibleFor()}{swapVPossibleFor()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_swap_operation}{Swap\+Operation}} IFollower\+Swap\+Rule\+::swap\+VPossible\+For (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_solution}{Solution}} \&}]{s,  }\item[{unsigned int}]{k,  }\item[{unsigned int}]{l1,  }\item[{unsigned int}]{l2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Method which return a swap operation if a swap between the k-\/th jobs of two machines l1 and l2 is possible This method needs too be overriden 
+
+Implemented in \mbox{\hyperlink{class_f_late_to_early_aa7935228c92b93f39410af0c79660e69}{FLate\+To\+Early}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/IFollower\+Swap\+Rule.\+h\end{DoxyCompactItemize}

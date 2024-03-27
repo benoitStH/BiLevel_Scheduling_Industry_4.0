@@ -1,0 +1,81 @@
+\doxysection{Deepest\+Descent Class Reference}
+\hypertarget{class_deepest_descent}{}\label{class_deepest_descent}\index{DeepestDescent@{DeepestDescent}}
+Inheritance diagram for Deepest\+Descent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_deepest_descent}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_deepest_descent_aa8a423d429ee442c986cf3f7bf936432}{solve}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_solver}{ISolver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_solver_ab609c4ef4d840050006ab0baecc18d90}{ISolver}} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\item 
+void {\bfseries add\+Rule} (\mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*}select\+Rule)
+\item 
+const \mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Solution} () const
+\item 
+const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} () const
+\item 
+const long {\bfseries get\+Time\+Resol} () const
+\item 
+virtual std\+::string {\bfseries get\+Heuristic\+Name} () const =0
+\item 
+virtual std\+::string {\bfseries get\+Heuristic\+Description} () const =0
+\item 
+void {\bfseries set\+Rules} (std\+::vector$<$ \mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*} $>$ list\+Rule)
+\item 
+void {\bfseries set\+Sub\+Solver} (\mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}} \texorpdfstring{$\ast$}{*}sub\+Solver)
+\item 
+void {\bfseries set\+Solution} (\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*}solution)
+\item 
+void {\bfseries set\+Instance} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_i_solver}{ISolver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries solution}
+\item 
+const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*} {\bfseries instance}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries list\+Rules}
+\item 
+long {\bfseries time\+Resol}
+\item 
+\mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}} \texorpdfstring{$\ast$}{*} {\bfseries sub\+Solver}
+\item 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_deepest_descent_aa8a423d429ee442c986cf3f7bf936432}\label{class_deepest_descent_aa8a423d429ee442c986cf3f7bf936432} 
+\index{DeepestDescent@{DeepestDescent}!solve@{solve}}
+\index{solve@{solve}!DeepestDescent@{DeepestDescent}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily void Deepest\+Descent\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Pure Virtual Method that implement an algorithm to solve the current instance. 
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{class_i_solver_ae4a88311d9730a58934303ad8ac00965}{ISolver}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Deepest\+Descent.\+h\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Deepest\+Descent.\+cpp\end{DoxyCompactItemize}

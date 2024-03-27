@@ -1,0 +1,532 @@
+\doxysection{LSort\+Rule.\+h}
+\hypertarget{_l_sort_rule_8h_source}{}\label{_l_sort_rule_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/LSortRule.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/LSortRule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_LLPTRULE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_LLPTRULE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ILeaderSelectRule.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }sortRule\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ RandomRule\ =\ 1;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LPTRULE\ =\ 2;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LWPTRULE\ =\ 3;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ InvEDDRULE\ =\ 4;\ \textcolor{comment}{//\ UNUSED}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ SPT\_EDD\_CONST\_LATENESS\ =\ 5;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ SPT\_EDD\_VAR\_LATENESS\ =\ 6;}
+\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_l_sort_rule}{LSortRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_leader_select_rule}{ILeaderSelectRule}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_l_sort_rule}{LSortRule}}()\ :\ \mbox{\hyperlink{class_i_leader_select_rule}{ILeaderSelectRule}}()\ \{\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_l_sort_rule}{LSortRule}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ruleNumber)\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setting\ the\ rule\ name\ according\ to\ the\ rule\ number}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ this-\/>ruleNumber\ =\ ruleNumber;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (ruleNumber)}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::RandomRule:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}RandomRule"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::LPTRULE:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}LPTRule"{}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::LWPTRULE:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}LWPTRule"{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::InvEDDRULE:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}invEDDRule"{}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::SPT\_EDD\_CONST\_LATENESS:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}SPT\_EDD\_WithConstantLateness"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::SPT\_EDD\_VAR\_LATENESS:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}SPT\_EDD\_WithVariableLateness"{}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ *\ Overriden\ Method\ which\ will\ select\ a\ subset\ of\ n\ jobs\ among\ the\ list\ of\ Jobs\ given}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ *\ This\ method\ will\ call\ a\ sorting\ rule\ according\ to\ its\ ruleNumber}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ *\ If\ the\ ruleNumber\ doesn't\ match,\ it\ return\ an\ empty\ list.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs\ and\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ selected\ jobs\ or\ an\ empty\ list\ by\ default}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<Job>\ selectJobsFrom(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ verbose.setRequiredLevel(3);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ we\ need\ to\ select\ every\ jobs,\ no\ need\ to\ apply\ a\ selection\ rule}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (instance.getNbToSelectJob()\ ==\ instance.getNbJobs())}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}N\ ==\ n,\ selection\ rule\ not\ needed\(\backslash\)n"{}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance.getListJobs();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Applying\ selection\ rule\ "{}}\ <<\ getRuleName()\ <<\ \textcolor{stringliteral}{"{}...\(\backslash\)n"{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ verbose.endRequiredLevel();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calling\ the\ selection\ method\ according\ to\ the\ ruleNumber}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (ruleNumber)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::RandomRule:}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ RandomRule(instance);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::LPTRULE:}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ LPTRule(instance);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::LWPTRULE:}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ LWPTRule(instance);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::InvEDDRULE:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<Job>();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::SPT\_EDD\_CONST\_LATENESS:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SptEddConstLateness(instance);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ sortRule::SPT\_EDD\_VAR\_LATENESS:}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SptEddVariableLateness(instance);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<Job>();}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ \ *\ Private\ Method\ which\ will\ select\ a\ random\ subset\ of\ n\ jobs\ among\ the\ list\ of\ Jobs\ given}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ \ *\ No\ Selection\ criterion\ is\ used}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs\ and\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ selected\ jobs}}
+\DoxyCodeLine{00121\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00122\ \ \ \ \ std::vector<Job>\ RandomRule(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ std::vector<Job>\ jobs\ =\ instance.getListJobs();\ \ \textcolor{comment}{//\ List\ of\ jobs}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::vector<Job>\ chosenJobs;\ \textcolor{comment}{//\ Jobs\ selected\ by\ the\ Leader's\ Rule}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shuffling\ the\ list\ of\ jobs}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ std::shuffle(jobs.begin(),\ jobs.end(),\ std::default\_random\_engine());}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Selecting\ jobs\ until\ we\ reach\ n\ jobs\ or\ all\ jobs\ are\ selected\ \ }}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ std::vector<Job>::iterator\ i\ =\ jobs.begin();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ !=\ jobs.end()\ \&\&\ chosenJobs.size()\ <\ instance.getNbToSelectJob())}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(*i);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chosenJobs;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00142\ \textcolor{comment}{\ \ \ \ \ *\ Private\ Method\ which\ will\ select\ a\ subset\ of\ n\ jobs\ among\ the\ list\ of\ Jobs\ given}}
+\DoxyCodeLine{00143\ \textcolor{comment}{\ \ \ \ \ *\ The\ Selection\ criterion\ is\ the\ Largest\ Processing\ Time.}}
+\DoxyCodeLine{00144\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs\ and\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ selected\ jobs}}
+\DoxyCodeLine{00146\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00147\ \ \ \ \ std::vector<Job>\ LPTRule(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00148\ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ std::vector<Job>\ jobs\ =\ instance.getListJobs();\ \ \textcolor{comment}{//\ List\ of\ jobs}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ std::vector<Job>\ chosenJobs;\ \textcolor{comment}{//\ Jobs\ selected\ by\ the\ Leader's\ Rule}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leader's\ selects\ the\ n\ among\ N\ jobs\ with\ the\ largest\ processing\ times}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ std::sort(jobs.begin(),\ jobs.end(),\ std::greater<Job>());}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ std::vector<Job>::iterator\ i\ =\ jobs.begin();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ select\ from\ largest\ to\ smallest\ job\ }}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ until\ we\ reach\ the\ number\ of\ jobs\ to\ select\ or\ all\ jobs\ are\ selected}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ !=\ jobs.end()\ \&\&\ chosenJobs.size()\ <\ instance.getNbToSelectJob())}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(*i);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chosenJobs;}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00168\ \textcolor{comment}{\ \ \ \ \ *\ Private\ Method\ which\ will\ select\ a\ subset\ of\ n\ jobs\ among\ the\ list\ of\ Jobs\ given}}
+\DoxyCodeLine{00169\ \textcolor{comment}{\ \ \ \ \ *\ The\ Selection\ criterion\ is\ the\ Largest\ Weighted\ Processing\ Time.}}
+\DoxyCodeLine{00170\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs\ and\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00171\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ selected\ jobs}}
+\DoxyCodeLine{00172\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00173\ \ \ \ \ std::vector<Job>\ LWPTRule(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00174\ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ std::vector<Job>\ jobs\ =\ instance.getListJobs();\ \ \textcolor{comment}{//\ List\ of\ jobs}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ std::vector<Job>\ chosenJobs;\ \textcolor{comment}{//\ Jobs\ selected\ by\ the\ Leader's\ Rule}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Leader's\ selects\ the\ n\ among\ N\ jobs\ with\ the\ largest\ weighted\ processing\ times}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ std::sort(jobs.begin(),\ jobs.end(),\ Job::LWPT);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ std::vector<Job>::iterator\ i\ =\ jobs.begin();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ select\ from\ largest\ to\ smallest\ job\ }}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ until\ we\ reach\ the\ number\ of\ jobs\ to\ select\ or\ all\ jobs\ are\ selected}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ !=\ jobs.end()\ \&\&\ chosenJobs.size()\ <\ instance.getNbToSelectJob())}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(*i);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chosenJobs;}
+\DoxyCodeLine{00191\ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00194\ \textcolor{comment}{\ \ \ \ \ *\ Method\ which\ will\ rule\ out\ permanently\ late\ jobs\ from\ the\ given\ instance}}
+\DoxyCodeLine{00195\ \textcolor{comment}{\ \ \ \ \ *\ If\ a\ job's\ processing\ time\ on\ high\ speed\ machine\ will\ still\ make\ the\ job\ late,\ it\ is\ considered\ permanently\ late}}
+\DoxyCodeLine{00196\ \textcolor{comment}{\ \ \ \ \ *\ Permanently\ jobs\ will\ be\ kept\ if\ the\ number\ of\ jobs\ to\ select\ isn't\ reacheable\ without\ them}}
+\DoxyCodeLine{00197\ \textcolor{comment}{\ \ \ \ \ *\ If\ they\ are\ kept,\ the\ selection\ criterion\ is\ the\ Smallest\ Weight.}}
+\DoxyCodeLine{00198\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs}}
+\DoxyCodeLine{00199\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ jobs}}
+\DoxyCodeLine{00200\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00201\ \ \ \ \ std::vector<Job>\ filterOutPermanentLateJobs(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00202\ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ std::vector<Job>\ jobs\ =\ instance.getListJobs();\ \ \textcolor{comment}{//\ List\ of\ jobs}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ std::vector<Job>\ chosenJobs;\ \textcolor{comment}{//\ Jobs\ selected\ by\ the\ Leader's\ Rule}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ std::vector<Job>\ permanentlyLateJobs;\ \ \textcolor{comment}{//\ Jobs\ which\ are\ permanently\ late\ (will\ be\ chosen\ as\ a\ last\ resort)}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sorting\ by\ increasing\ due\ date}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ std::sort(jobs.begin(),\ jobs.end(),\ Job::EDD);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ std::vector<Job>::iterator\ i\ =\ jobs.begin();}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ !=\ jobs.end())}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}\&\ job\ =\ *i;}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ job.getNum()\ <<\ "{}\ p\ "{}\ <<\ job.getPi()\ <<\ "{}\ d\ "{}\ <<\ job.getDi()\ <<\ "{}\ w\ "{}\ <<\ job.getWi();}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ due\ date\ is\ greater\ than\ the\ processing\ time\ on\ high\ speed\ machine,\ we\ keep\ the\ job}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job.getDi()\ *\ instance.getHighSpeed()\ >=\ job.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}())\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(*i);\ \textcolor{comment}{//std::cout\ <<\ "{}\ <-\/|"{};}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ permanentlyLateJobs.push\_back(*i);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ std::endl;}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sorting\ permanently\ late\ jobs\ according\ to\ increasing\ weight}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ std::sort(permanentlyLateJobs.begin(),\ permanentlyLateJobs.end(),\ Job::SmallestWeight);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Selecting\ jobs\ until\ the\ number\ of\ jobs\ to\ select\ is\ reached\ or\ all\ is\ selected}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ i\ =\ permanentlyLateJobs.begin();}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (chosenJobs.size()\ <\ instance.getNbToSelectJob()\ \&\&\ i\ !=\ permanentlyLateJobs.end())}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(*i);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chosenJobs;}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00246\ \textcolor{comment}{\ \ \ \ \ *\ Method\ which\ will\ select\ a\ subset\ of\ n\ jobs\ among\ the\ list\ of\ Jobs\ given}}
+\DoxyCodeLine{00247\ \textcolor{comment}{\ \ \ \ \ *\ The\ Selection\ criterion\ is\ the\ Lateness\ of\ jobs\ ordered\ by\ increasing\ processing\ time.}}
+\DoxyCodeLine{00248\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs\ and\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00249\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ selected\ jobs}}
+\DoxyCodeLine{00250\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00251\ \ \ \ \ std::vector<Job>\ SptEddConstLateness(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00252\ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ std::vector<Job>\ jobs\ =\ instance.getListJobs();\ \ \textcolor{comment}{//\ List\ of\ jobs}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ std::vector<Job>\ chosenJobs;\ \textcolor{comment}{//\ Jobs\ selected\ by\ the\ Leader's\ Rule}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ std::vector<float>\ lateness;\ \textcolor{comment}{//\ lateness\ of\ all\ jobs}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cumulatedEndTime\ =\ 0;}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sorting\ jobs\ by\ increasing\ processing\ time\ and\ earliest\ due\ date}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ std::sort(jobs.begin(),\ jobs.end(),\ std::less<Job>());}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculating\ each\ job's\ lateness}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ jobs)}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ cumulatedEndTime\ +=\ job.getPi();}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ lateness.push\_back(cumulatedEndTime\ -\/\ job.getDi());}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ job.getNum()\ <<\ "{}\ p\ "{}\ <<\ job.getPi()\ <<\ "{}\ d\ "{}\ <<\ job.getDi()\ <<\ "{}\ lateness\ "{}\ <<\ lateness[lateness.size()\ -\/\ 1]\ <<\ std::endl;}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ select\ jobs\ with\ a\ non\ positive\ lateness}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ until\ we\ reach\ the\ number\ of\ jobs\ to\ select\ or\ either\ all\ jobs\ are\ selected\ or\ none\ can\ be\ selected}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ !=\ jobs.size()\ \&\&\ chosenJobs.size()\ <\ instance.getNbToSelectJob())}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lateness[i]\ <=\ 0)}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}selected\ job\ "{}\ <<\ jobs[i].getNum()\ <<\ std::endl;}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(jobs[i]);}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ While\ there\ is\ still\ an\ amount\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (chosenJobs.size()\ <\ instance.getNbToSelectJob())}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ min\_i\ =\ -\/1;\ \ \textcolor{comment}{//\ job's\ index\ with\ the\ minimal\ positive\ lateness}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ min\_lateness\ =\ -\/1;\ \ \textcolor{comment}{//\ minimal\ positive\ lateness}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ compare\ the\ jobs}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ jobs.size();\ i++)}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ one\ of\ the\ job\ has\ a\ smaller\ positive\ lateness,\ we\ save\ its\ index\ number\ and\ its\ lateness}}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ also\ save\ it\ if\ min\_lateness\ is\ currently\ non\ positive}}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((0\ <\ lateness[i]\ \&\&\ lateness[i]\ <\ min\_lateness)\ ||\ min\_lateness\ <=\ 0)}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_i\ =\ i;}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_lateness\ =\ lateness[min\_i];}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ After\ that,\ if\ we\ found\ a\ job\ with\ the\ smallest\ positive\ lateness,\ We\ select\ it}}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\_lateness\ >\ 0)}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setting\ its\ lateness\ to\ zero\ to\ ensure\ it\ won't\ be\ selected\ again}}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lateness[min\_i]\ =\ 0;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}selected\ job\ "{}\ <<\ jobs[min\_i].getNum()\ <<\ std::endl;}}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(jobs[min\_i]);}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chosenJobs;}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00319\ \textcolor{comment}{\ \ \ \ \ *\ Private\ Method\ which\ will\ select\ a\ subset\ of\ n\ jobs\ among\ the\ list\ of\ Jobs\ given}}
+\DoxyCodeLine{00320\ \textcolor{comment}{\ \ \ \ \ *\ The\ Selection\ criterion\ is\ the\ Lateness\ of\ jobs\ ordered\ by\ increasing\ processing\ time.}}
+\DoxyCodeLine{00321\ \textcolor{comment}{\ \ \ \ \ *\ This\ criterion\ is\ recalculated\ when\ m\ jobs\ has\ been\ selected\ (m\ is\ the\ total\ number\ of\ machines)}}
+\DoxyCodeLine{00322\ \textcolor{comment}{\ \ \ \ \ *\ @param\ instance\ An\ instance\ with\ the\ list\ of\ jobs\ and\ the\ number\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00323\ \textcolor{comment}{\ \ \ \ \ *\ @return\ a\ list\ of\ selected\ jobs}}
+\DoxyCodeLine{00324\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00325\ \ \ \ \ std::vector<Job>\ SptEddVariableLateness(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}\&\ instance)}
+\DoxyCodeLine{00326\ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ std::vector<Job>\ jobs\ =\ filterOutPermanentLateJobs(instance);\ \ \textcolor{comment}{//\ List\ of\ jobs\ with\ least\ amount\ of\ permanently\ late\ jobs}}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ std::vector<Job>\ chosenJobs;\ \textcolor{comment}{//\ Jobs\ selected\ by\ the\ Leader's\ Rule}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ std::vector<float>\ lateness;\ \textcolor{comment}{//\ lateness\ of\ each\ job}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ std::vector<float>\ endTimes;\ \textcolor{comment}{//\ end\ time\ of\ each\ job}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cumulatedEndTime\ =\ 0;\ \ \textcolor{comment}{//\ sum\ of\ all\ jobs'\ processing\ time}}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ filtered\ list\ size\ is\ equal\ to\ n,\ return\ it}}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (jobs.size()\ ==\ instance.getNbToSelectJob())\ \{\ \textcolor{keywordflow}{return}\ jobs;\ \}}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ total\ machines\ :\ represent\ the\ size\ m\ of\ a\ bloc}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbTotalMachines\ =\ instance.getNbOfLowSpeedMachines()\ +\ instance.getNbOfHighSpeedMachines();}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sorting\ jobs\ by\ increasing\ processing\ time\ and\ earliest\ due\ date}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ std::sort(jobs.begin(),\ jobs.end(),\ std::less<Job>());}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculating\ and\ storing\ each\ job's\ lateness\ and\ end\ time\ if\ they\ were\ to\ be\ scheduled\ on\ one\ high\ speed\ Machine\ }}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbClean\ =\ 1;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ jobs)}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ cumulatedEndTime\ +=\ job.getPi();}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ lateness.push\_back(cumulatedEndTime\ -\/\ job.getDi());}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ endTimes.push\_back(cumulatedEndTime);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ job's\ end\ time\ on\ the\ high\ speed\ machine\ is\ higher\ than\ a\ threshold,\ it\ is\ penalized}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ thresold\ is\ the\ due\ date\ times\ the\ square\ root\ of\ the\ number\ of\ preceding\ jobs\ without\ penalization}}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(cumulatedEndTime/(std::sqrt(nbClean)\ *\ instance.getHighSpeed())\ -\/\ job.getDi()\ >\ 0)}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ penalization\ is\ to\ set\ its\ end\ time\ and\ lateness\ to\ a\ high\ value\ so\ it\ won't\ be\ selected\ first}}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ endTimes.pop\_back();\ endTimes.push\_back(1000\ -\/\ job.getPi()*instance.getHighSpeed());}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lateness.pop\_back();\ lateness.push\_back(1000\ -\/\ job.getPi()*\ instance.getHighSpeed()\ -\/\ job.getDi());}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Since\ it\ won't\ be\ selected\ first,\ we\ don't\ take\ into\ account\ its\ processing\ time}}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cumulatedEndTime\ -\/=\ job.getPi();}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}-\/-\/"{};}}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{\ nbClean++;\ \}\ \ \textcolor{comment}{//\ Otherwise,\ it\ is\ a\ job\ without\ penalization}}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ job.getNum()\ <<\ "{}\ p\ "{}\ <<\ job.getPi()\ <<\ "{}\ d\ "{}\ <<\ job.getDi()\ <<\ "{}\ lateness\ "{}\ <<\ lateness[lateness.size()\ -\/\ 1]}}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ <<\ "{}\ e\ "{}\ <<\ cumulatedEndTime\ <<\ std::endl;}}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbToSelectJobs\ =\ instance.getNbToSelectJob();\ \ \textcolor{comment}{//\ number\ n\ of\ jobs\ to\ select}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ lastNbSelectedJobs\ =\ 0;\ \ \textcolor{comment}{//\ Last\ number\ of\ selected\ jobs}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbFails\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ times\ where\ we\ didn't\ selected\ more\ jobs\ than\ last\ time}}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ maxFails\ =\ nbToSelectJobs;\ \textcolor{comment}{//\ Max\ number\ of\ fails\ before\ stopping\ the\ selection\ rule}}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ std::vector<unsigned\ int>\ selected\_i;\ \ \ \textcolor{comment}{//\ List\ of\ forcely\ selected\ jobs'\ index}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ While\ the\ number\ of\ selected\ jobs\ is\ less\ than\ n}}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (chosenJobs.size()\ <\ nbToSelectJobs)}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.clear();\ \ \textcolor{comment}{//\ (Re)Starting\ Selection\ of\ jobs}}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}(re)starting..."{}\ <<\ std::endl;}}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<float>\ PiPredecesseur;\ \ \textcolor{comment}{//\ Processing\ time\ of\ the\ last\ bloc's\ jobs}}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_PiPredecesseur\ =\ 0;\ \ \textcolor{comment}{//\ The\ sum\ of\ each\ selected\ job's\ processing\ time}}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ each\ job\ until\ the\ number\ of\ selected\ jobs\ is\ met}}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ jobs.size();\ i++)}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenJobs.size()\ >=\ nbToSelectJobs)}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ jobs[i].getNum()\ <<\ "{}\ lateness\ "{}\ <<\ lateness[i]\ -\/\ sum\_PiPredecesseur\ <<\ (lateness[i]\ -\/\ sum\_PiPredecesseur\ <=\ 0\ ?\ "{}\ <-\/|\ "{}\ :\ "{}"{})\ <<\ std::endl;}}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ a\ job\ is\ early,\ we\ select\ it,\ save\ its\ processing\ time\ and\ set\ its\ lateness\ to\ negative\ value}}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lateness[i]\ <=\ sum\_PiPredecesseur)}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(jobs[i]);}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PiPredecesseur.push\_back(jobs[i].getPi());}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lateness[i]\ =\ -\/1;\ \ \textcolor{comment}{//\ The\ job\ isn't\ late}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}selected\ job\ "{}\ <<\ jobs[i].getNum()\ <<\ std::endl;}}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ number\ of\ saved\ values\ can\ make\ a\ bloc,\ we\ add\ their\ processing\ time\ to\ sum\_PiPredecesseur}}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (PiPredecesseur.size()\ ==\ nbTotalMachines)}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_PiPredecesseurBloc\ =\ 0;}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::vector<float>::iterator\ pi\ =\ PiPredecesseur.begin();\ pi\ !=\ PiPredecesseur.end();\ pi++)}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\_PiPredecesseurBloc\ +=\ *pi;}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\_PiPredecesseur\ +=\ sum\_PiPredecesseurBloc;}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PiPredecesseur.clear();}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}sumPiPredecesseur\ "{}\ <<\ sum\_PiPredecesseur\ <<\ std::endl;}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ no\ new\ bloc\ has\ been\ made}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chosenJobs.size()\ <=\ lastNbSelectedJobs\ \&\&\ chosenJobs.size()\ <\ nbToSelectJobs)}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nbFails++;}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nbFails\ ==\ maxFails)\ \{\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ latenessWjThresold\ =\ 0;\ \ \textcolor{comment}{//\ jobs\ whose\ score\ is\ higher\ will\ be\ selected}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ While\ their\ is\ still\ jobs\ to\ be\ forcely\ added}}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (chosenJobs.size()-\/lastNbSelectedJobs\ <\ nbTotalMachines\ *\ nbFails\ \&\&\ chosenJobs.size()\ <=\ nbToSelectJobs)}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ min\_i\ =\ -\/1;\ \textcolor{comment}{//\ index\ of\ the\ job\ with\ the\ minimal\ positive\ lateness}}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ min\_latenessWj\ =\ -\/1;\ \textcolor{comment}{//\ minimal\ positive\ lateness\ multiplied\ by\ its\ job's\ weight}}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ latenessWj;}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ compare\ each\ job}}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ jobs.size();\ i++)}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ latenessWj\ =\ lateness[i]\ *\ jobs[i].getWi();\ \ \textcolor{comment}{//\ the\ job's\ score}}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ one\ of\ the\ job\ has\ a\ smaller\ score\ and\ above\ our\ Thresold,\ we\ save\ its\ index\ number\ and\ its\ score}}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ also\ save\ it\ if\ min\_latenessWj\ is\ currently\ non\ positive\ \ \ }}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ jobs[i].getNum()\ <<\ "{}\ score\ "{}\ <<\ latenessWj\ <<\ std::endl;}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((latenessWj\ <\ min\_latenessWj\ ||\ min\_latenessWj\ <=\ 0)\ \&\&\ latenessWj\ >\ latenessWjThresold)}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_i\ =\ i;}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\_latenessWj\ =\ latenessWj;}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ After\ that,\ if\ we\ found\ a\ job\ with\ the\ smallest\ score\ above\ our\ Thresold,\ We\ forcely\ select\ it}}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\_latenessWj\ >\ latenessWjThresold)}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ latenessWjThresold\ =\ min\_latenessWj;\ \ \textcolor{comment}{//\ update\ the\ Threshold}}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}forcely\ selected\ job\ "{}\ <<\ jobs[min\_i].getNum()\ <<\ std::endl;}}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Forcely\ selecting\ the\ job,\ saving\ its\ processing\ time\ and\ saving\ the\ job's\ index}}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.push\_back(jobs[min\_i]);}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PiPredecesseur.push\_back(jobs[min\_i].getPi());}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selected\_i.push\_back(min\_i);}
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ a\ bloc\ has\ been\ completed,\ we\ add\ its\ jobs'\ processing\ time\ into\ sum\_PiPredecesseur}}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (PiPredecesseur.size()\ ==\ nbTotalMachines)}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_PiPredecesseurBloc\ =\ 0;}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::vector<float>::iterator\ pi\ =\ PiPredecesseur.begin();\ pi\ !=\ PiPredecesseur.end();\ pi++)}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\_PiPredecesseurBloc\ +=\ *pi;}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\_PiPredecesseur\ +=\ sum\_PiPredecesseurBloc;}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PiPredecesseur.clear();}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}sumPiPredecesseur\ "{}\ <<\ sum\_PiPredecesseur\ <<\ std::endl;}}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//break;}}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \ \textcolor{comment}{//\ No\ job\ can\ be\ selected}}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}No\ more\ selectable\(\backslash\)n"{};}}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ no\ jobs\ were\ forcely\ selected,\ stop}}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selected\_i.size()\ ==\ 0)\ \{\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ reset\ the\ lateness\ of\ each\ job}}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ jobs.size();\ i++)}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lateness[i]\ =\ endTimes[i]\ -\/\ jobs[i].getDi();}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Each\ forcely\ selected\ jobs\ will\ be\ considered\ early\ for\ the\ next\ iteration}}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::vector<unsigned\ int>::iterator\ selected\_it\ =\ selected\_i.begin();\ selected\_it\ !=\ selected\_i.end();\ selected\_it++)}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lateness[*selected\_it]\ =\ -\/1;}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ take\ note\ of\ the\ number\ of\ selected\ jobs}}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ lastNbSelectedJobs\ =\ chosenJobs.size();}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ lastNbSelectedJobs\ <<\ "{}\ jobs\ selected\(\backslash\)n"{};}}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}Selection\ Done\ !\(\backslash\)n"{};}}
+\DoxyCodeLine{00513\ }
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (chosenJobs.size()\ >\ nbToSelectJobs)}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ chosenJobs.pop\_back();}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}Removing\ excess\(\backslash\)n"{};}}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00519\ }
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ chosenJobs;}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \ \ \ \ \}}
+\DoxyCodeLine{00523\ \ \ \ \ }
+\DoxyCodeLine{00524\ \};}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BILEVEL\_SCHEDULING\_LLPTRULE\_H}}
+\DoxyCodeLine{00527\ }
+
+\end{DoxyCode}

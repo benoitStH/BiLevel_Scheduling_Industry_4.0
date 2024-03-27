@@ -1,0 +1,257 @@
+\doxysection{Analyser.\+h}
+\hypertarget{_analyser_8h_source}{}\label{_analyser_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Analyser.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Analyser.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_ANALYSER}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_ANALYSER}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LSolver.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}FSolver.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}LSortRule.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}FLateToEarly.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Solution.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Parser.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Generateur.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_analyser}{Analyser}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_analyser}{Analyser}}()\ \{\};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_analyser}{\string~Analyser}}()\ \{\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ run()}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Start\ of\ the\ program,\ we\ take\ a\ snapshot\ at\ the\ brekpoint}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_parser}{Parser}}\ parser;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ path;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<ILeaderSelectRule*>\ sortRules;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ sortRules.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_l_sort_rule}{LSortRule}}(sortRule::LPTRULE));}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sortRules.push\_back(new\ LSortRule(sortRule::LWPTRULE));}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sortRules.push\_back(new\ LSortRule(sortRule::SPT\_EDD\_CONST\_LATENESS));}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sortRules.push\_back(new\ LSortRule(sortRule::SPT\_EDD\_VAR\_LATENESS));}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::vector<IFollowerSwapRule*>\ swapRules;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//swapRules.push\_back(new\ FLateToEarly(swapRule::DUMB\_METHOD));}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ swapRules.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_f_late_to_early}{FLateToEarly}}(swapRule::LATE2EARLY));}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::vector<std::string>\ instancePath\_list;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::vector<std::string>\ exactMethodTimeScore\_list;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::vector<unsigned\ int>\ exactMethodObjectiveScore\_list;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::filesystem::path\ testFile(\textcolor{stringliteral}{"{}C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/instances/instances60job/resultsMIP.csv"{}});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::string\ saveFile\ =\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)benhi\(\backslash\)\(\backslash\)source\(\backslash\)\(\backslash\)repos\(\backslash\)\(\backslash\)BiLevel\_Scheduling\_Industry\_4.0/instances/instances60job/resultLPT\_LATE2EARLY.csv"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::fstream\ fileStreamSaveFile(saveFile,\ std::fstream::out);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fileStreamSaveFile.is\_open())}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ fileStreamSaveFile\ <<\ \textcolor{stringliteral}{"{}InstanceName;InstancePath;sumCj;fonction\ objective\ (sum\ wjUj);fonction\ objective\ MIP;"{}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ fileStreamSaveFile\ <<\ \textcolor{stringliteral}{"{}N;n;m;HighSpeed\ Scheduling;LowSpeed\ Scheduling;Heuristic\ name;Heuristic\ description;time;deviation;precision\(\backslash\)n"{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ fileStreamSaveFile.close();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}erreur\ ouverture\ savefile\(\backslash\)n"{}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ optimal\_objective;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::string\ element;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_solver}{ISolver}}*\ solver\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_sub_solver}{ISubSolver}}*\ subSolver\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::fstream\ filePerf(testFile,\ std::fstream::in);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (filePerf.is\_open())}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(filePerf,\ line);\ \textcolor{comment}{//\ skipping\ first\ line\ with\ column's\ name}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(filePerf,\ line))\ \{}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::istringstream\ stream(line);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ instance\ name}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(stream,\ element,\ \textcolor{charliteral}{'\(\backslash\)t'});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ instance\ path}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(stream,\ element,\ \textcolor{charliteral}{'\(\backslash\)t'});}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instancePath\_list.push\_back(element);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(stream,\ element,\ \textcolor{charliteral}{'\(\backslash\)t'});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exactMethodTimeScore\_list.push\_back(element);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LimitTime}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(stream,\ element,\ \textcolor{charliteral}{'\(\backslash\)t'});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Objective}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stream\ >>\ optimal\_objective;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exactMethodObjectiveScore\_list.push\_back(optimal\_objective);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ filePerf.close();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ instancePath\_list.size();\ i++)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_instance}{Instance}}\ instance\ =\ parser.\mbox{\hyperlink{class_parser_a8595b4db00b5283e1b3e9d1130c71476}{readFromFile}}(instancePath\_list[i]);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ optimal\_objective\ =\ exactMethodObjectiveScore\_list[i];}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((counter\ +\ 1)\ \%\ 100\ ==\ 0)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose.setRequiredLevel(1);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ counter\ +\ 1\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)r"{}};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose.endRequiredLevel();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_leader_select_rule}{ILeaderSelectRule}}*\ selectRule\ :\ sortRules)}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}*\ swapRule\ :\ swapRules)}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (subSolver\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{keyword}{delete}\ subSolver;\ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subSolver\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_f_solver}{FSolver}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subSolver-\/>addRule(swapRule);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (solver\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{keyword}{delete}\ solver;\ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_l_solver}{LSolver}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>setInstance(\&instance);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>setSubSolver(subSolver);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>addRule(selectRule);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Le\ solveur\ résout\ l'instance}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>\mbox{\hyperlink{class_i_solver_ae4a88311d9730a58934303ad8ac00965}{solve}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Affichage\ du\ résultat}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_solution}{Solution}}\ solution\ =\ \mbox{\hyperlink{class_solution}{Solution}}(*(solver-\/>getSolution()));}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enregistrement\ du\ résultat}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parser.saveInFile(saveFile,\ solver,\ optimal\_objective);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose.setRequiredLevel(2);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose.endRequiredLevel();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ verbose.setRequiredLevel(1);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ verbose\ <<\ counter\ <<\ \textcolor{stringliteral}{"{}\ instances\ solved\(\backslash\)n"{}};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ verbose.endRequiredLevel();}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (solver\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{keyword}{delete}\ solver;\ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (subSolver\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{keyword}{delete}\ subSolver;\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_leader_select_rule}{ILeaderSelectRule}}*\ selectRule\ :\ sortRules)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ selectRule;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}*\ swapRule\ :\ swapRules)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ swapRule;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{int}\ run(std::string\ path)}
+\DoxyCodeLine{00165\ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_parser}{Parser}}\ parser;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_solver}{ISolver}}*\ solver\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_sub_solver}{ISubSolver}}*\ subSolver\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ std::vector<ILeaderSelectRule*>\ sortRules;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ sortRules.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_l_sort_rule}{LSortRule}}(sortRule::LPTRULE));}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sortRules.push\_back(new\ LSortRule(sortRule::LWPTRULE));}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sortRules.push\_back(new\ LSortRule(sortRule::SPT\_EDD\_CONST\_LATENESS));}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sortRules.push\_back(new\ LSortRule(sortRule::SPT\_EDD\_VAR\_LATENESS));}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ std::vector<IFollowerSwapRule*>\ swapRules;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{//swapRules.push\_back(new\ FLateToEarly(swapRule::DUMB\_METHOD));}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ swapRules.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_f_late_to_early}{FLateToEarly}}(swapRule::LATE2EARLY));}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ std::string\ saveFile\ =\ \textcolor{stringliteral}{"{}C:\(\backslash\)\(\backslash\)Users\(\backslash\)\(\backslash\)benhi\(\backslash\)\(\backslash\)source\(\backslash\)\(\backslash\)repos\(\backslash\)\(\backslash\)BiLevel\_Scheduling\_Industry\_4.0/instances/instances60job/resultLPT\_LATE2EARLY.csv"{}};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ std::fstream\ fileStreamSaveFile(saveFile,\ std::fstream::out);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fileStreamSaveFile.is\_open())}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ fileStreamSaveFile\ <<\ \textcolor{stringliteral}{"{}InstanceName;InstancePath;sumCj;fonction\ objective\ (sum\ wjUj);"{}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ fileStreamSaveFile\ <<\ \textcolor{stringliteral}{"{}N;n;m;HighSpeed\ Scheduling;LowSpeed\ Scheduling;Heuristic\ name;Heuristic\ description;time\(\backslash\)n"{}};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ fileStreamSaveFile.close();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}erreur\ ouverture\ savefile\(\backslash\)n"{}};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_instance}{Instance}}\ instance\ =\ parser.\mbox{\hyperlink{class_parser_a8595b4db00b5283e1b3e9d1130c71476}{readFromFile}}(path);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ std::cout\ <<\ instance.getInstancePath()\ <<\ std::endl;}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_leader_select_rule}{ILeaderSelectRule}}*\ selectRule\ :\ sortRules)}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}*\ swapRule\ :\ swapRules)}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (subSolver\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{keyword}{delete}\ subSolver;\ \}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subSolver\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_f_solver}{FSolver}}();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subSolver-\/>addRule(swapRule);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (solver\ !=\ \textcolor{keyword}{nullptr})\ \{\ \textcolor{keyword}{delete}\ solver;\ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_l_solver}{LSolver}}();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>setInstance(\&instance);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>setSubSolver(subSolver);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>addRule(selectRule);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Le\ solveur\ résout\ l'instance}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ solver-\/>\mbox{\hyperlink{class_i_solver_ae4a88311d9730a58934303ad8ac00965}{solve}}();}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Affichage\ du\ résultat}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_solution}{Solution}}\ solution\ =\ \mbox{\hyperlink{class_solution}{Solution}}(*(solver-\/>getSolution()));}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enregistrement\ du\ résultat}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parser.saveSolutionInFile(saveFile,\ solver);}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::cout\ <<\ "{}\(\backslash\)n\(\backslash\)n"{};}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{int}\ generateRandomInstance()}
+\DoxyCodeLine{00228\ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarde\ et\ Chargement\ d'instance\ }}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_generateur}{Generateur}}\ randomInstancer\ =\ \mbox{\hyperlink{class_generateur}{Generateur}}();}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_parser}{Parser}}\ parser;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ std::string\ path\ =\ \textcolor{stringliteral}{"{}C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/instances/performances/n\_3\_N\_15\_tf\_0.2\_rdd\_0.2\_mMax\_2\_m0\_2/instance0.txt"{}};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_instance}{Instance}}\ instance\ =\ randomInstancer.\mbox{\hyperlink{class_generateur_affba270de400cce001da809b5eee64aa}{generateInstance}}(path,\ 32,\ 3,\ 2,\ 10,\ 5);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ std::cout\ <<\ instance\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}sauvegarde\(\backslash\)n"{}};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ parser.\mbox{\hyperlink{class_parser_a46c3b6aa36af35d4468723876d7f07c9}{serializeInstance}}(instance);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}chargement\(\backslash\)n"{}};}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_instance}{Instance}}\ loadedInstance\ =\ parser.\mbox{\hyperlink{class_parser_a8595b4db00b5283e1b3e9d1130c71476}{readFromFile}}(path);}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ std::cout\ <<\ loadedInstance\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Hello\ World!\(\backslash\)n"{}};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \};}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BILEVEL\_SCHEDULING\_ANALYSER}}
+
+\end{DoxyCode}
