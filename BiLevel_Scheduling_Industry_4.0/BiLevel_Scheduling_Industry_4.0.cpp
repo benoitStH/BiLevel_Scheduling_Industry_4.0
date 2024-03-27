@@ -11,6 +11,7 @@
 #include "FLateToEarly.h"
 #include <fstream>
 #include <sstream>
+#include "Analyser.h"
 using namespace std;
 
 // Method called after main has returned and before program terminates.
@@ -21,17 +22,30 @@ struct AtExit
     ~AtExit() { float x = 0; }
 } doAtExit;
 
+
+std::vector<unsigned int> initVector()
+{
+    std::vector<unsigned int> v;
+    v.push_back(0);
+    return v;
+}
+
 unsigned int Verbose::level;
-unsigned int Verbose::requiredLevel;
+unsigned int Verbose::maxRequiredLevel;
+vector<unsigned int> Verbose::requiredLevels = initVector();
 
 int main(int argc, char* argv[])
 {
     // TODO: Tester avec de grosses instances, générer plusieurs grosses instances
     // Check : taux d'amélioration entre solution initial et final
     // TODO : Definir les niveaux de verbose
-    // TODO : Verbose::requiredLevel -> vector<unsigned int>
-    // TODO : Verbose::operator<< if level >= std::max_element(requiredLevel)
-    // TODO : Verbose::setRequiredLevel  requiredLavel.push_back   et  Verbose::EndRequiredLevel  requiredLevel.pop_back
+
+    Verbose verbose; 
+    
+    // Example on how to use the analyser
+    /*verbose.setLevel(2);
+    Analyser analyser;
+    return analyser.run();*/
 
     int minArgC = 2;
     if (argc-1 < minArgC)
@@ -53,13 +67,14 @@ int main(int argc, char* argv[])
     std::string path = argv[1];
     std::string resultRepo = argv[2];
     resultRepo.append("/resultSPT_VL_DUMB1.csv");
-    Verbose verbose;
 
     // Setting the level of verbose (default = 0)
     verbose.setLevel((argc-1 == maxArgC ? std::atoi(argv[argc-1]) : 0));
 
     verbose.setRequiredLevel(1);
+    verbose << "\n";
     verbose << "Solving instance '" << path << "'\n";
+    verbose.endRequiredLevel();
 
     Instance instance = parser.readFromFile(path);
 
@@ -98,6 +113,10 @@ int main(int argc, char* argv[])
     {
         delete swapRule;
     }
+
+    verbose.setRequiredLevel(1);
+    verbose << "End of program\n";
+    verbose.endRequiredLevel();
 
     return 0; 
 

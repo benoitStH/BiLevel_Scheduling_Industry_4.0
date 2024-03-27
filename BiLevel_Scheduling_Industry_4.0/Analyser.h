@@ -19,8 +19,8 @@ private:
     Verbose verbose;
 
 public:
-	Analyser();
-	~Analyser();
+    Analyser() {};
+    ~Analyser() {};
 
 	int run()
 	{
@@ -65,7 +65,7 @@ public:
         ISolver* solver = nullptr;
         ISubSolver* subSolver = nullptr;
 
-        unsigned int counter = 1;
+        unsigned int counter = 0;
 
         std::fstream filePerf(testFile, std::fstream::in);
         if (filePerf.is_open())
@@ -103,12 +103,11 @@ public:
             Instance instance = parser.readFromFile(instancePath_list[i]);
             optimal_objective = exactMethodObjectiveScore_list[i];
 
-            verbose.setRequiredLevel(2);
-            verbose << "Instance File '" << instance.getInstancePath().string() << "'\n";
             if ((counter + 1) % 100 == 0)
             {
                 verbose.setRequiredLevel(1);
                 verbose << counter + 1 << "\r";
+                verbose.endRequiredLevel();
             }
 
             for (ILeaderSelectRule* selectRule : sortRules)
@@ -134,15 +133,17 @@ public:
                     // Enregistrement du résultat
                     parser.saveInFile(saveFile, solver, optimal_objective);
 
-                    verbose.setRequiredLevel(1);
+                    verbose.setRequiredLevel(2);
                     verbose << "\n\n";
+                    verbose.endRequiredLevel();
                 }
             }
             counter++;
         }
 
         verbose.setRequiredLevel(1);
-        verbose << counter + 1 << "\n";
+        verbose << counter << " instances solved\n";
+        verbose.endRequiredLevel();
 
         if (solver != nullptr) { delete solver; }
         if (subSolver != nullptr) { delete subSolver; }
@@ -156,6 +157,8 @@ public:
         {
             delete swapRule;
         }
+
+        return 0;
 	}
 
     int run(std::string path)
@@ -241,6 +244,8 @@ public:
         std::cout << loadedInstance << "\n";
 
         std::cout << "Hello World!\n";
+
+        return 0;
     }
 };
 

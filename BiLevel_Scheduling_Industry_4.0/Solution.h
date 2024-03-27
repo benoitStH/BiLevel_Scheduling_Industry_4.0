@@ -219,9 +219,10 @@ public:
         machine1[k] = machine2[k];
         machine2[k] = jobTemp;
 
-        verbose.setRequiredLevel(2);
+        verbose.setRequiredLevel(3);
         verbose << "swapped job " << jobTemp.getNum() << " and " << machine1[k].getNum() <<
         " from machine " << swapableMachines[0] << " and " << swapableMachines[1] << " at bloc " << k << "\n";
+        verbose.endRequiredLevel();
     }
     
 

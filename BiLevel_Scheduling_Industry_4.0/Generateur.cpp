@@ -33,6 +33,7 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
     verbose.setRequiredLevel(1);
     verbose << "Random generation of an instance (N: " << nbJobs << " m_Max: " << nbOfHighSpeedMachines << " m_0: "<< nbOfLowSpeedMachines
         << " V_Max: " << highSpeed << " V_0: " << lowSpeed << ")...";
+    verbose.endRequiredLevel();
 
     Instance instance = Instance(newInstancePath);
 
@@ -56,6 +57,7 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
 
     verbose.setRequiredLevel(1);
     verbose << "Done\n";
+    verbose.endRequiredLevel();
 
     return instance;
 

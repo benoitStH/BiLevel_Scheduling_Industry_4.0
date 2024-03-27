@@ -66,7 +66,7 @@ public:
 	 */
 	virtual std::vector<Job> selectJobsFrom(const Instance& instance)
 	{
-		verbose.setRequiredLevel(1);
+		verbose.setRequiredLevel(3);
 
 		// If we need to select every jobs, no need to apply a selection rule
 		if (instance.getNbToSelectJob() == instance.getNbJobs())
@@ -76,6 +76,7 @@ public:
 		}
 
 		verbose << "Applying selection rule " << getRuleName() << "...\n";
+		verbose.endRequiredLevel();
 
 		// Calling the selection method according to the ruleNumber
 		switch (ruleNumber)

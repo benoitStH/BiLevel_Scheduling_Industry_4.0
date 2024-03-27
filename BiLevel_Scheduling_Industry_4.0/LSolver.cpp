@@ -11,9 +11,10 @@ void LSolver::solve()
 	// The Leader applies each selection rule as its decision
 	for (ILeaderSelectRule* selectRule : listRules)
 	{
-		verbose.setRequiredLevel(1);
+		verbose.setRequiredLevel(3);
 		verbose << "Applying " << selectRule->getRuleName() << " as Leader's decision criterion\n\n";
-		
+		verbose.endRequiredLevel();
+
 		// The subset of jobs chosen by the Leader's selection rule
 		std::vector<Job> chosenJobs = selectRule->selectJobsFrom(*instance);
 
@@ -23,8 +24,9 @@ void LSolver::solve()
 		subSolver->heuristic();
 		float final_score = subSolver->getSolution()->getSumWjUj();
 
-		verbose.setRequiredLevel(2);
+		verbose.setRequiredLevel(3);
 		verbose << "Taux d'amelio : " << (init_score == 0 ? 1 : (init_score - final_score) / init_score) << "\n";
+		verbose.endRequiredLevel();
 
 		// We save the best solution found by the follower
 		Solution follower_bestSolution = *(subSolver->getSolution());
@@ -35,16 +37,18 @@ void LSolver::solve()
 	std::sort(follower_solutions.begin(), follower_solutions.end(), Solution::smaller_wjUj);
 	setSolution(new Solution(follower_solutions[0]));
 
-	verbose.setRequiredLevel(1);
+	verbose.setRequiredLevel(3);
 	verbose << "Best among all solutions\n";
 	solution->compactVerbose(); verbose << "\n";
+	verbose.endRequiredLevel();
 
 	// Measuring resolution time
 	std::chrono::steady_clock::time_point timeEnd = std::chrono::high_resolution_clock::now();
 	timeResol = std::chrono::duration_cast<std::chrono::microseconds>(timeEnd - timeStart).count();
 
-	verbose.setRequiredLevel(1);
-	verbose << "Found in " << timeResol << " microsecond(s)\n";
+	verbose.setRequiredLevel(2);
+	verbose << "Solution found in " << timeResol << " microsecond(s)\n";
+	verbose.endRequiredLevel();
 }
 
 std::string LSolver::getHeuristicName() const

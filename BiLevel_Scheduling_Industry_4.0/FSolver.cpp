@@ -8,11 +8,13 @@ void FSolver::heuristic()
 		return;
 	}
 
-	verbose.setRequiredLevel(2);
+	verbose.setRequiredLevel(4);
 	solution->completeVerbose(); verbose << "\n";
+	verbose.endRequiredLevel();
 
-	verbose.setRequiredLevel(1);
+	verbose.setRequiredLevel(3);
 	solution->compactVerbose(); verbose << "\n";
+	verbose.endRequiredLevel();
 
 	Solution current_solution = Solution(*solution);
 	std::vector<SwapOperation> possibleSwaps;  // List of possible swaps on a bloc
@@ -23,8 +25,10 @@ void FSolver::heuristic()
 	unsigned int nbHighSpeedBlocs = current_solution.getMaxNumberOfHighSpeedBlocs();
 	unsigned int nbMachines = current_solution.getListHighSpeedMachines().size();
 
-	verbose.setRequiredLevel(1);
+	verbose.setRequiredLevel(3);
 	verbose << "HighSpeedMachines Swap\n";
+	verbose.endRequiredLevel();
+
 	bool NoSwapWasApplied;
 	do
 	{
@@ -59,10 +63,10 @@ void FSolver::heuristic()
 
 				current_solution.swapV(machines, k);
 				current_solution.evaluate();
-				verbose.setRequiredLevel(2);
 
-				verbose.setRequiredLevel(3);
+				verbose.setRequiredLevel(4);
 				listRules[0]->verboseOperator(swapOp);
+				verbose.endRequiredLevel();
 
 				NoSwapWasApplied = false;
 			}
@@ -71,29 +75,35 @@ void FSolver::heuristic()
 		// if the new solution is better, save it
 		if (current_solution < *solution)
 		{
-			verbose.setRequiredLevel(1);
+			verbose.setRequiredLevel(3);
 			current_solution.compactVerbose(); verbose << "\n";
+			verbose.endRequiredLevel();
+
 			setSolution(new Solution(current_solution));
 		}
 		else
 		{
-			verbose.setRequiredLevel(2);
+			verbose.setRequiredLevel(4);
 			current_solution.compactVerbose(); verbose << "\n";
 			verbose << "This is not better\n";
+			verbose.endRequiredLevel();
 		}
 
 	} while (NoSwapWasApplied == false);
 
-	verbose.setRequiredLevel(1);
+	verbose.setRequiredLevel(3);
 	solution->compactVerbose(); verbose << "\n";
+	verbose.endRequiredLevel();
 
 	// LOW SPEED MACHINES //
 
 	unsigned int nbLowSpeedBlocs = current_solution.getMaxNumberOfLowSpeedBlocs();
 	unsigned int nbTotalMachines = current_solution.getListLowSpeedMachines().size() + nbMachines;
 
-	verbose.setRequiredLevel(1);
+	verbose.setRequiredLevel(3);
 	verbose << "LowSpeedMachines Swap\n";
+	verbose.endRequiredLevel();
+
 	do
 	{
 		NoSwapWasApplied = true; // No swap has been performed
@@ -128,8 +138,9 @@ void FSolver::heuristic()
 				current_solution.swapV(machines, k);
 				current_solution.evaluate();
 
-				verbose.setRequiredLevel(3);
+				verbose.setRequiredLevel(4);
 				listRules[0]->verboseOperator(swapOp);
+				verbose.endRequiredLevel();
 
 				NoSwapWasApplied = false;
 			}
@@ -139,21 +150,25 @@ void FSolver::heuristic()
 		// if the new solution is better, save it
 		if (current_solution < *solution)
 		{
-			verbose.setRequiredLevel(1);
+			verbose.setRequiredLevel(3);
 			current_solution.compactVerbose(); verbose << "\n";
+			verbose.endRequiredLevel();
+
 			setSolution(new Solution(current_solution));
 		}
 		else
 		{
-			verbose.setRequiredLevel(2);
+			verbose.setRequiredLevel(4);
 			current_solution.compactVerbose(); verbose << "\n";
 			verbose << "This is not better\n";
+			verbose.endRequiredLevel();
 		}
 
 	} while (NoSwapWasApplied == false);
 
-	verbose.setRequiredLevel(1);
+	verbose.setRequiredLevel(3);
 	solution->compactVerbose(); verbose << "\n";
+	verbose.endRequiredLevel();
 
 }
 

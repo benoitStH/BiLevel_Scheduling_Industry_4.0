@@ -172,8 +172,11 @@ public:
 		machines.push_back(swapOp.machine1);
 		machines.push_back(swapOp.machine2);
 
+		verbose.setRequiredLevel(5);
 		test.swapV(machines, swapOp.bloc);
 		test.evaluate();
+		test.compactVerbose(); verbose << "\n";
+		verbose.endRequiredLevel();
 
 		swapOp.gain = s.getSumWjUj() - test.getSumWjUj();
 

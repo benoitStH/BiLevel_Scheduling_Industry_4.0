@@ -112,4 +112,4 @@ inline const Verbose& operator<<(const Verbose& verbose, const Job& job)
     return verbose;
 }
 
-#endif //BILEVEL_SCHEDULING_JOB_H
+#endif // BILEVEL_SCHEDULING_JOB_H

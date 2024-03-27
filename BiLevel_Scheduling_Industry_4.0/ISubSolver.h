@@ -72,8 +72,9 @@ public:
 	 */
 	void generateInitialSolution(const std::vector<Job> listJobs, const Instance& instance)
 	{
-		verbose.setRequiredLevel(1);
+		verbose.setRequiredLevel(3);
 		verbose << "Generating initial solution...\n";
+		verbose.endRequiredLevel();
 
 		// Initialize the solution (with empty machines)
 		setSolution(new Solution(&instance));

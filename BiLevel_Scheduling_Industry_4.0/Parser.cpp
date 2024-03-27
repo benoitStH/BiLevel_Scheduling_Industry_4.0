@@ -38,8 +38,9 @@ Parser::Parser() {}
 */
 Instance Parser::readFromFile(std::string& filePath) const {
 
-    verbose.setRequiredLevel(1);
+    verbose.setRequiredLevel(2);
     verbose << "Generating instance from file '" << filePath << "'...\n";
+    verbose.endRequiredLevel();
 
     Instance newInstance = Instance(filePath);
     std::fstream fileStream(newInstance.getInstancePath().lexically_normal(), std::fstream::in);
@@ -81,8 +82,9 @@ Instance Parser::readFromFile(std::string& filePath) const {
     if (newInstance.getNbToSelectJob() == 0) throw std::invalid_argument("The number of jobs to select is not defined");
 
     // Affiche l'instance générée
-    verbose.setRequiredLevel(2);
+    verbose.setRequiredLevel(3);
     verbose << newInstance;
+    verbose.endRequiredLevel();
 
     return newInstance;
 }
@@ -96,6 +98,7 @@ void Parser::serializeInstance(Instance& instance) {
 
     verbose.setRequiredLevel(1);
     verbose << "Serializing instance '" << instance.getInstancePath().string() << "'...";
+    verbose.endRequiredLevel();
 
     std::fstream fileStream(instance.getInstancePath().lexically_normal().string(), std::fstream::out);
     if (fileStream.is_open()) {
@@ -117,6 +120,7 @@ void Parser::serializeInstance(Instance& instance) {
 
     verbose.setRequiredLevel(1);
     verbose << "Done\n";
+    verbose.endRequiredLevel();
 }
 
 /*
@@ -137,8 +141,9 @@ void Parser::saveInFile(std::string& filepath, const ISolver* solver, unsigned i
     const std::string& instanceFile = instance.getInstancePath().lexically_normal().string();
     const Solution& solution = *(solver->getSolution());
 
-    verbose.setRequiredLevel(1);
+    verbose.setRequiredLevel(2);
     verbose << "Saving best solution...";
+    verbose.endRequiredLevel();
 
     // Opening the file to append data
     std::fstream fileStream(filepath, std::fstream::in | std::fstream::out | std::fstream::app);
@@ -225,8 +230,9 @@ void Parser::saveInFile(std::string& filepath, const ISolver* solver, unsigned i
     else throw std::invalid_argument("Can't open the file " + filepath);
     fileStream.close();
 
-    verbose.setRequiredLevel(1);
+    verbose.setRequiredLevel(2);
     verbose << "Done\n";
+    verbose.endRequiredLevel();
 }
 
 
@@ -247,8 +253,9 @@ void Parser::saveSolutionInFile(std::string& filepath, const ISolver* solver)
     const std::string& instanceFile = instance.getInstancePath().lexically_normal().string();
     const Solution& solution = *(solver->getSolution());
 
-    verbose.setRequiredLevel(1);
+    verbose.setRequiredLevel(2);
     verbose << "Saving best solution...";
+    verbose.endRequiredLevel();
 
     // Opening the file to append data
     std::fstream fileStream(filepath, std::fstream::in | std::fstream::out | std::fstream::app);
@@ -310,8 +317,9 @@ void Parser::saveSolutionInFile(std::string& filepath, const ISolver* solver)
     else throw std::invalid_argument("Can't open the file " + filepath);
     fileStream.close();
 
-    verbose.setRequiredLevel(1);
+    verbose.setRequiredLevel(2);
     verbose << "Done\n";
+    verbose.endRequiredLevel();
 }
 
 
