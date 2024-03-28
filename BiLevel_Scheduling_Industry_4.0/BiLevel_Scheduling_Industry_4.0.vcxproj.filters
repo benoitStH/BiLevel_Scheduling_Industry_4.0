@@ -89,7 +89,7 @@
     <ClInclude Include="LSortRule.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="FLateToEarly.h">
+    <ClInclude Include="FSwapRule.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="FSolver.h">

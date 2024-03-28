@@ -36,7 +36,7 @@ public:
 
         std::vector<IFollowerSwapRule*> swapRules;
         //swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
-        swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
+        swapRules.push_back(new FSwapRule(swapRule::LATE2EARLY));
 
         std::vector<std::string> instancePath_list;
         std::vector<std::string> exactMethodTimeScore_list;
@@ -176,7 +176,7 @@ public:
 
         std::vector<IFollowerSwapRule*> swapRules;
         //swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
-        swapRules.push_back(new FLateToEarly(swapRule::LATE2EARLY));
+        swapRules.push_back(new FSwapRule(swapRule::LATE2EARLY));
 
         std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultLPT_LATE2EARLY.csv";
         std::fstream fileStreamSaveFile(saveFile, std::fstream::out);

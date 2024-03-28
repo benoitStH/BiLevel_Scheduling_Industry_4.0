@@ -10,13 +10,13 @@ namespace swapRule {
 	const unsigned int LATENESS_CAREFUL = 4;
 }
 
-class FLateToEarly : public IFollowerSwapRule
+class FSwapRule : public IFollowerSwapRule
 {
 
 public:
-	FLateToEarly() : IFollowerSwapRule() {};
+	FSwapRule() : IFollowerSwapRule() {};
 
-	FLateToEarly(unsigned int ruleNumber)
+	FSwapRule(unsigned int ruleNumber)
 	{
 
 		// Setting the name according to the ruleNumber

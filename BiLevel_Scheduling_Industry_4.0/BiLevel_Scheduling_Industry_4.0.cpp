@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
     sortRules.push_back(new LSortRule(sortRule::SPT_EDD_VAR_LATENESS));
 
     std::vector<IFollowerSwapRule*> swapRules;
-    swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
+    swapRules.push_back(new FSwapRule(swapRule::DUMB_METHOD));
 
 
     ISolver* solver = nullptr;

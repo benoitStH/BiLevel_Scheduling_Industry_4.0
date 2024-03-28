@@ -156,7 +156,7 @@
   <ItemGroup>
     <ClInclude Include="Analyser.h" />
     <ClInclude Include="DeepestDescent.h" />
-    <ClInclude Include="FLateToEarly.h" />
+    <ClInclude Include="FSwapRule.h" />
     <ClInclude Include="FSolver.h" />
     <ClInclude Include="Generateur.h" />
     <ClInclude Include="IFollowerSwapRule.h" />
