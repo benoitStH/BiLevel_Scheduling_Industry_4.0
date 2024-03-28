@@ -4,19 +4,25 @@
 This project aims to offer an heuristic for the bilevel scheduling problem
 
 ## Installation
-You must clone the repo and compile the code using Visual Studio 2019 in Release mode or use gcc
+You must clone the repo and compile the code using Visual Studio 2019 in Release mode or use gcc<br>
 <INSERT INSTRUCTIONS>
 
 ## Usage
-This program is used in command line.
+This program is used in command line.<br>
 You need to call the exe file to execute the program.
 
 ### Parameters
-There are three paramaters available where two are mandatory :
-instancePath - instance's file path containing the instance's data with (Mandatory)
-resultDirectory - directory which will contain the result file (Mandatory)
-verbose - the level of verbose wanted from 0 to 5, default value is 0
-These 3 arguments must be passed between " ".
+There are three paramaters available where two are mandatory :<br>
+instancePath - instance's file path containing the instance's data with (Mandatory)<br>
+resultDirectory - directory which will contain the result file (Mandatory)<br>
+verbose - the level of verbose wanted from 0 to 5, default value is 0<br>
+These 3 arguments must be passed between " ".<br>
+
+### Expected behavior
+According to the specified level of verbose, some text can appear on the console.
+
+The solution is added at the end of the result file in resultDirectory.<br>
+If the result file doesn't exist yet, it will be created with headers (cf Specification Result file).
 
 ## Specification
 
