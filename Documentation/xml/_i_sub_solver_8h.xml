@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_i_sub_solver_8h" kind="file" language="C++">
+    <compoundname>ISubSolver.h</compoundname>
+    <includes refid="_solution_8h" local="yes">Solution.h</includes>
+    <includes refid="_instance_8h" local="yes">Instance.h</includes>
+    <includes refid="_i_follower_swap_rule_8h" local="yes">IFollowerSwapRule.h</includes>
+    <includedby refid="_f_solver_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.h</includedby>
+    <includedby refid="_i_solver_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.h</includedby>
+    <incdepgraph>
+      <node id="15">
+        <label>IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h</label>
+        <link refid="_i_sub_solver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Instance.h</label>
+        <link refid="_instance_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Job.h</label>
+        <link refid="_job_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Machine.h</label>
+        <link refid="_machine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Rule.h</label>
+        <link refid="_rule_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Verbose.h</label>
+        <link refid="_verbose_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>filesystem</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>ostream</label>
+      </node>
+      <node id="9">
+        <label>random</label>
+      </node>
+      <node id="13">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h</label>
+        <link refid="_analyser_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</label>
+        <link refid="_bi_level___scheduling___industry__4_80_8cpp"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.cpp</label>
+        <link refid="_deepest_descent_8cpp"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h</label>
+        <link refid="_deepest_descent_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.cpp</label>
+        <link refid="_f_solver_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.h</label>
+        <link refid="_f_solver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.cpp</label>
+        <link refid="_i_solver_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.h</label>
+        <link refid="_i_solver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h</label>
+        <link refid="_i_sub_solver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp</label>
+        <link refid="_l_solver_8cpp"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h</label>
+        <link refid="_l_solver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp</label>
+        <link refid="_parser_8cpp"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h</label>
+        <link refid="_parser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_i_sub_solver" prot="public">ISubSolver</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BILEVEL_SCHEDULING_ISUBSOLVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BILEVEL_SCHEDULING_ISUBSOLVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_solution_8h" kindref="compound">Solution.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_instance_8h" kindref="compound">Instance.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_follower_swap_rule_8h" kindref="compound">IFollowerSwapRule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_i_sub_solver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_i_sub_solver" kindref="compound">ISubSolver</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_solution" kindref="compound">Solution</ref>*<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Dynamicaly<sp/>allocated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;IFollowerSwapRule*&gt;<sp/><ref refid="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" kindref="member">listRules</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_verbose" kindref="compound">Verbose</ref><sp/><ref refid="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" kindref="member">verbose</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>CONSTRUCTOR<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_i_sub_solver_1a70d4df07cc36fbd62373c580574138b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a70d4df07cc36fbd62373c580574138b8" kindref="member">ISubSolver</ref>()<sp/>:<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>(nullptr),<sp/><ref refid="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" kindref="member">listRules</ref>(std::vector&lt;<ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref>*&gt;())<sp/>{};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_i_sub_solver_1a5e0b5557d3051e378654ae89f31e85ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a5e0b5557d3051e378654ae89f31e85ff" kindref="member">ISubSolver</ref>(std::vector&lt;IFollowerSwapRule*&gt;<sp/>listRule)<sp/>:<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>(nullptr),<sp/><ref refid="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" kindref="member">listRules</ref>(listRule)<sp/>{};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_i_sub_solver_1a3952b6a2f3a0138ff7bde989db7c7e08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a3952b6a2f3a0138ff7bde989db7c7e08" kindref="member">~ISubSolver</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_i_sub_solver_1a3e4ed988e91a7ccd3e69fa60f7c563b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>*<sp/><ref refid="class_i_sub_solver_1a3e4ed988e91a7ccd3e69fa60f7c563b1" kindref="member">getSolution</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_i_sub_solver_1a76eeec69a402acd777e21093cbcd7055" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_i_sub_solver_1a76eeec69a402acd777e21093cbcd7055" kindref="member">getHeuristicName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_i_sub_solver_1a8bdaad5babdc23c22368cda377097e91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_i_sub_solver_1a8bdaad5babdc23c22368cda377097e91" kindref="member">getHeuristicDescription</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>SETTERS<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_i_sub_solver_1a83155cc19e3ad6ad551d42aaa68788af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_sub_solver_1a83155cc19e3ad6ad551d42aaa68788af" kindref="member">setSolution</ref>(<ref refid="class_solution" kindref="compound">Solution</ref>*<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;solution<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;solution<sp/>=<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>METHODS<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_i_sub_solver_1aabcd791e0b699d2afec42a5c538eb241" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_sub_solver_1aabcd791e0b699d2afec42a5c538eb241" kindref="member">heuristic</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_i_sub_solver_1a3a1fe2f8a959e8cc725715d08e8361c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_sub_solver_1a3a1fe2f8a959e8cc725715d08e8361c2" kindref="member">generateInitialSolution</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Job&gt;<sp/>listJobs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_instance" kindref="compound">Instance</ref>&amp;<sp/>instance)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" kindref="member">verbose</ref>.<ref refid="class_verbose_1acc7a995da9e05168fa881f0d3ada8250" kindref="member">setRequiredLevel</ref>(3);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" kindref="member">verbose</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Generating<sp/>initial<sp/>solution...\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" kindref="member">verbose</ref>.<ref refid="class_verbose_1a48a6ad9f4c7d2541aa87fd3b9374c65d" kindref="member">endRequiredLevel</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>solution<sp/>(with<sp/>empty<sp/>machines)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1a83155cc19e3ad6ad551d42aaa68788af" kindref="member">setSolution</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>(&amp;instance));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>getting<sp/>the<sp/>sorted<sp/>list<sp/>of<sp/>jobs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Job&gt;<sp/>listLPT_jobs<sp/>=<sp/>listJobs;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::sort(listLPT_jobs.begin(),<sp/>listLPT_jobs.end(),<sp/><ref refid="class_job_1a9db7e3aa37a954f880ad037d22a9c59c" kindref="member">Job::LPT_inv_EDD</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>total<sp/>number<sp/>of<sp/>machines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbMachines<sp/>=<sp/>instance.<ref refid="class_instance_1a983469731bdc65611ba0e862be0b87c1" kindref="member">getNbOfHighSpeedMachines</ref>()<sp/>+<sp/>instance.<ref refid="class_instance_1a4295bd3d930f2832bc7e1d94084392e5" kindref="member">getNbOfLowSpeedMachines</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>affectation<sp/>weights<sp/>of<sp/>each<sp/>machine<sp/>which<sp/>are<sp/>each<sp/>equal<sp/>to<sp/>(number<sp/>of<sp/>affected<sp/>jobs<sp/>+<sp/>1)/speed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/>affectationWeights<sp/>=<sp/>std::vector&lt;float&gt;(nbMachines,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(1));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nbMachines;<sp/>i++)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectationWeights[i]<sp/>=<sp/>affectationWeights[i]<sp/>/<sp/>(*solution)[i].getSpeed();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>machine<sp/>whose<sp/>affectation<sp/>weight<sp/>is<sp/>the<sp/>smallest<sp/>(only<sp/>the<sp/>first<sp/>occurence)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_index;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>each<sp/>job</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job<sp/>:<sp/>listLPT_jobs)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>the<sp/>machine<sp/>with<sp/>smallest<sp/>affectation<sp/>weight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>min_index<sp/>=<sp/>std::distance(affectationWeights.begin(),<sp/>std::min_element(affectationWeights.begin(),<sp/>affectationWeights.end()));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inserting<sp/>the<sp/>job<sp/>at<sp/>the<sp/>start<sp/>of<sp/>the<sp/>machine&apos;s<sp/>sequence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*solution)[min_index].add_job(0,<sp/>job);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>updating<sp/>the<sp/>machine&apos;s<sp/>affectation<sp/>weight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>affectationWeights[min_index]<sp/>=<sp/>((*solution)[min_index].getAffectedJob().size()<sp/>+<sp/>1)<sp/>/<sp/>(*<ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>)[min_index].getSpeed();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbJobsOnHighSpeedMachines<sp/>=<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>-&gt;<ref refid="class_solution_1ad1b7dadaac88cd4cb7e189c4d4fa6bd3" kindref="member">getMaxNumberOfHighSpeedBlocs</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbHighMachines<sp/>=<sp/>instance.<ref refid="class_instance_1a983469731bdc65611ba0e862be0b87c1" kindref="member">getNbOfHighSpeedMachines</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbJobsOnLowSpeedMachines<sp/>=<sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>-&gt;<ref refid="class_solution_1a773c9870fac116e333ca2fda4e25cf3b" kindref="member">getMaxNumberOfLowSpeedBlocs</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbLowSpeedMachines<sp/>=<sp/>instance.<ref refid="class_instance_1a4295bd3d930f2832bc7e1d94084392e5" kindref="member">getNbOfLowSpeedMachines</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adding<sp/>ghost<sp/>jobs<sp/>(whose<sp/>number,<sp/>processing<sp/>time,<sp/>due<sp/>date<sp/>and<sp/>weight<sp/>are<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>0;<sp/>m<sp/>&lt;<sp/>nbMachines;<sp/>m++)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((*<ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>)[m].getAffectedJob().size()<sp/>&lt;<sp/>(<sp/>m<sp/>&lt;<sp/>nbHighMachines<sp/>?<sp/>nbJobsOnHighSpeedMachines<sp/>:<sp/>nbJobsOnLowSpeedMachines))</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inserting<sp/>a<sp/>ghost<sp/>job<sp/>at<sp/>the<sp/>start<sp/>of<sp/>the<sp/>machine&apos;s<sp/>sequence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*solution)[m].add_job(0,<sp/><ref refid="class_job" kindref="compound">Job</ref>());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>&quot;added<sp/>ghost<sp/>job<sp/>at<sp/>machine<sp/>&quot;<sp/>&lt;&lt;<sp/>m<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>evaluate<sp/>solution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" kindref="member">solution</ref>-&gt;<ref refid="class_solution_1aa3e8919dc2722fdd31524108286cdd80" kindref="member">evaluate</ref>();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_i_sub_solver_1a2dbc48b0cf0d2cfa21c9938ecf323449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_sub_solver_1a2dbc48b0cf0d2cfa21c9938ecf323449" kindref="member">addRule</ref>(<ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref>*<sp/><ref refid="namespaceswap_rule" kindref="compound">swapRule</ref>)<sp/>{<sp/><ref refid="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" kindref="member">listRules</ref>.push_back(<ref refid="namespaceswap_rule" kindref="compound">swapRule</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BILEVEL_SCHEDULING_ISUBSOLVER_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h"/>
+  </compounddef>
+</doxygen>

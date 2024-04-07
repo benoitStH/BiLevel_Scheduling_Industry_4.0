@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespaceswap_rule" kind="namespace" language="C++">
+    <compoundname>swapRule</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceswap_rule_1a53c3d47729b62b204b0b54e439a34f57" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int swapRule::LATE2EARLY</definition>
+        <argsstring></argsstring>
+        <name>LATE2EARLY</name>
+        <qualifiedname>swapRule::LATE2EARLY</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="7" column="20" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceswap_rule_1a030b549a2823ce62cc7f1280ba6ae826" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int swapRule::DUMB_METHOD</definition>
+        <argsstring></argsstring>
+        <name>DUMB_METHOD</name>
+        <qualifiedname>swapRule::DUMB_METHOD</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="8" column="20" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceswap_rule_1a1b3e39429154845a1556849b49632a24" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int swapRule::LATENESS</definition>
+        <argsstring></argsstring>
+        <name>LATENESS</name>
+        <qualifiedname>swapRule::LATENESS</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="9" column="20" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceswap_rule_1a324ef1a3f6c83e32679c521a05fb34ab" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int swapRule::LATENESS_CAREFUL</definition>
+        <argsstring></argsstring>
+        <name>LATENESS_CAREFUL</name>
+        <qualifiedname>swapRule::LATENESS_CAREFUL</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="10" column="20" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="6" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,4 @@
-#ifndef BILEVEL_SCHEDULING_RULE_H
+﻿#ifndef BILEVEL_SCHEDULING_RULE_H
 #define BILEVEL_SCHEDULING_RULE_H
 
 #include <string>

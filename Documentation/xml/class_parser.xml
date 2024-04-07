@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_parser" kind="class" language="C++" prot="public">
+    <compoundname>Parser</compoundname>
+    <includes refid="_parser_8h" local="no">Parser.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_parser_1afdd9ac15a70396c876084dfed14ce241" prot="private" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose Parser::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Parser::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="30" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_parser_1a12234f6cd36b61af4b50c94a179422c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Parser::Parser</definition>
+        <argsstring>()</argsstring>
+        <name>Parser</name>
+        <qualifiedname>Parser::Parser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="38" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parser_1a8595b4db00b5283e1b3e9d1130c71476" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_instance" kindref="compound">Instance</ref></type>
+        <definition>Instance Parser::readFromFile</definition>
+        <argsstring>(std::string &amp;filePath) const</argsstring>
+        <name>readFromFile</name>
+        <qualifiedname>Parser::readFromFile</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This Method parse a file to generate an instance. It&apos;s an <ref refid="class_instance" kindref="compound">Instance</ref> constructor The file must respect the intended format (cf ReadMe.md) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the file to parse </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the new instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="51" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp" bodystart="39" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parser_1a46c3b6aa36af35d4468723876d7f07c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Parser::serializeInstance</definition>
+        <argsstring>(Instance &amp;instance)</argsstring>
+        <name>serializeInstance</name>
+        <qualifiedname>Parser::serializeInstance</qualifiedname>
+        <param>
+          <type><ref refid="class_instance" kindref="compound">Instance</ref> &amp;</type>
+          <declname>instance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that serialize an instance into the corresponding file given by the attributeInstance::instancePath. The file contains the instance&apos;s data in a specific format (cf ReadMe.md) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to serialize </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="58" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp" bodystart="97" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parser_1ade48868713be272ea3e8e3f5cac7c998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Parser::saveInFile</definition>
+        <argsstring>(std::string &amp;filepath, const ISolver *solver, unsigned int optimal_objective)</argsstring>
+        <name>saveInFile</name>
+        <qualifiedname>Parser::saveInFile</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_i_solver" kindref="compound">ISolver</ref> *</type>
+          <declname>solver</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>optimal_objective</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="71" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp" bodystart="137" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_parser_1a2d8c3d982450c1174b2b26245a2cee4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Parser::saveSolutionInFile</definition>
+        <argsstring>(std::string &amp;filepath, const ISolver *solver)</argsstring>
+        <name>saveSolutionInFile</name>
+        <qualifiedname>Parser::saveSolutionInFile</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_i_solver" kindref="compound">ISolver</ref> *</type>
+          <declname>solver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="83" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp" bodystart="249" bodyend="323"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" line="27" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h" bodystart="27" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_parser_1a12234f6cd36b61af4b50c94a179422c1" prot="public" virt="non-virtual"><scope>Parser</scope><name>Parser</name></member>
+      <member refid="class_parser_1a8595b4db00b5283e1b3e9d1130c71476" prot="public" virt="non-virtual"><scope>Parser</scope><name>readFromFile</name></member>
+      <member refid="class_parser_1ade48868713be272ea3e8e3f5cac7c998" prot="public" virt="non-virtual"><scope>Parser</scope><name>saveInFile</name></member>
+      <member refid="class_parser_1a2d8c3d982450c1174b2b26245a2cee4b" prot="public" virt="non-virtual"><scope>Parser</scope><name>saveSolutionInFile</name></member>
+      <member refid="class_parser_1a46c3b6aa36af35d4468723876d7f07c9" prot="public" virt="non-virtual"><scope>Parser</scope><name>serializeInstance</name></member>
+      <member refid="class_parser_1afdd9ac15a70396c876084dfed14ce241" prot="private" virt="non-virtual"><scope>Parser</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

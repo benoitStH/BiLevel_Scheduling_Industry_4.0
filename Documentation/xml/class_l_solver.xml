@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_l_solver" kind="class" language="C++" prot="public">
+    <compoundname>LSolver</compoundname>
+    <basecompoundref refid="class_i_solver" prot="public" virt="non-virtual">ISolver</basecompoundref>
+    <includes refid="_l_solver_8h" local="no">LSolver.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_l_solver_1ae4809ba8f95b5966a513e3380ee2a696" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LSolver::solve</definition>
+        <argsstring>()</argsstring>
+        <name>solve</name>
+        <qualifiedname>LSolver::solve</qualifiedname>
+        <reimplements refid="class_i_solver_1ae4a88311d9730a58934303ad8ac00965">solve</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overriden method which solve the instance using each selection rule The best solution has the smallest sum of wjUj compared to the other selection rule The resolution time is measured </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h" line="16" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp" bodystart="3" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_l_solver_1a7aeaf0106bc569bb540676711fb043dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string LSolver::getHeuristicName</definition>
+        <argsstring>() const</argsstring>
+        <name>getHeuristicName</name>
+        <qualifiedname>LSolver::getHeuristicName</qualifiedname>
+        <reimplements refid="class_i_solver_1abcb7265471377e5247dec52b61ccc9e4">getHeuristicName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h" line="18" column="21" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_l_solver_1a6b6374efc0c50839a8875e24e9b645f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string LSolver::getHeuristicDescription</definition>
+        <argsstring>() const</argsstring>
+        <name>getHeuristicDescription</name>
+        <qualifiedname>LSolver::getHeuristicDescription</qualifiedname>
+        <reimplements refid="class_i_solver_1a15d727748af5b718c85854e688f4e319">getHeuristicDescription</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h" line="19" column="21" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp" bodystart="59" bodyend="73"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ISolver</label>
+        <link refid="class_i_solver"/>
+      </node>
+      <node id="1">
+        <label>LSolver</label>
+        <link refid="class_l_solver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ISolver</label>
+        <link refid="class_i_solver"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>solution</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>subSolver</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ISubSolver</label>
+        <link refid="class_i_sub_solver"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>solution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Instance</label>
+        <link refid="class_instance"/>
+      </node>
+      <node id="1">
+        <label>LSolver</label>
+        <link refid="class_l_solver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Solution</label>
+        <link refid="class_solution"/>
+      </node>
+      <node id="6">
+        <label>Verbose</label>
+        <link refid="class_verbose"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h" line="7" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_i_solver_1aba4d34aa65950ec6f9eaf1b9a30c4ca3" prot="public" virt="non-virtual"><scope>LSolver</scope><name>addRule</name></member>
+      <member refid="class_l_solver_1a6b6374efc0c50839a8875e24e9b645f4" prot="public" virt="virtual"><scope>LSolver</scope><name>getHeuristicDescription</name></member>
+      <member refid="class_l_solver_1a7aeaf0106bc569bb540676711fb043dd" prot="public" virt="virtual"><scope>LSolver</scope><name>getHeuristicName</name></member>
+      <member refid="class_i_solver_1aa3e5a1c200e50c10dda6e45dc6ae9ad7" prot="public" virt="non-virtual"><scope>LSolver</scope><name>getInstance</name></member>
+      <member refid="class_i_solver_1a4b725d604db8a2fc73e67c150656c680" prot="public" virt="non-virtual"><scope>LSolver</scope><name>getSolution</name></member>
+      <member refid="class_i_solver_1a0372e9a230cff150ff24de5fc3c6000a" prot="public" virt="non-virtual"><scope>LSolver</scope><name>getTimeResol</name></member>
+      <member refid="class_i_solver_1a56e3d4fb8bf0845abb09432b88e04a09" prot="protected" virt="non-virtual"><scope>LSolver</scope><name>instance</name></member>
+      <member refid="class_i_solver_1aa26fccd083f0603e32745461e75c8936" prot="public" virt="non-virtual"><scope>LSolver</scope><name>ISolver</name></member>
+      <member refid="class_i_solver_1ab609c4ef4d840050006ab0baecc18d90" prot="public" virt="non-virtual"><scope>LSolver</scope><name>ISolver</name></member>
+      <member refid="class_i_solver_1a4efd4b920c5613c64a6dc4e4b13ee335" prot="protected" virt="non-virtual"><scope>LSolver</scope><name>listRules</name></member>
+      <member refid="class_i_solver_1aa31bdcbad0a3a7b1673fa3404a01d3e3" prot="public" virt="non-virtual"><scope>LSolver</scope><name>setInstance</name></member>
+      <member refid="class_i_solver_1aeb48b049a431ac2c902b45f0886b1ee8" prot="public" virt="non-virtual"><scope>LSolver</scope><name>setRules</name></member>
+      <member refid="class_i_solver_1ade3f1122734e836c456d45a8f9cb8637" prot="public" virt="non-virtual"><scope>LSolver</scope><name>setSolution</name></member>
+      <member refid="class_i_solver_1adfd73d198a7373c5ed9e832a813c8f41" prot="public" virt="non-virtual"><scope>LSolver</scope><name>setSubSolver</name></member>
+      <member refid="class_i_solver_1a05c42de4ad04ef3c761a72e87c9fbaab" prot="protected" virt="non-virtual"><scope>LSolver</scope><name>solution</name></member>
+      <member refid="class_l_solver_1ae4809ba8f95b5966a513e3380ee2a696" prot="public" virt="virtual"><scope>LSolver</scope><name>solve</name></member>
+      <member refid="class_i_solver_1a7a89e270fa895524d4bf94cd10189bc8" prot="protected" virt="non-virtual"><scope>LSolver</scope><name>subSolver</name></member>
+      <member refid="class_i_solver_1a21331ea32a77680f92f8a8064a29ea4e" prot="protected" virt="non-virtual"><scope>LSolver</scope><name>timeResol</name></member>
+      <member refid="class_i_solver_1a9f7fc485cd3e1456dd1da5fe42e2f9c3" prot="protected" virt="non-virtual"><scope>LSolver</scope><name>verbose</name></member>
+      <member refid="class_i_solver_1a257c4811c2d67a5d33a1ea8ac0b2d3d2" prot="public" virt="virtual"><scope>LSolver</scope><name>~ISolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

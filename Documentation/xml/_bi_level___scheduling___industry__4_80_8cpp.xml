@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_bi_level___scheduling___industry__4_80_8cpp" kind="file" language="C++">
+    <compoundname>BiLevel_Scheduling_Industry_4.0.cpp</compoundname>
+    <includes refid="_instance_8h" local="yes">Instance.h</includes>
+    <includes refid="_parser_8h" local="yes">Parser.h</includes>
+    <includes refid="_generateur_8h" local="yes">Generateur.h</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_l_solver_8h" local="yes">LSolver.h</includes>
+    <includes refid="_f_solver_8h" local="yes">FSolver.h</includes>
+    <includes refid="_l_sort_rule_8h" local="yes">LSortRule.h</includes>
+    <includes refid="_f_swap_rule_8h" local="yes">FSwapRule.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="_analyser_8h" local="yes">Analyser.h</includes>
+    <incdepgraph>
+      <node id="29">
+        <label>Analyser.h</label>
+        <link refid="_analyser_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</label>
+        <link refid="_bi_level___scheduling___industry__4_80_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>FSolver.h</label>
+        <link refid="_f_solver_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>FSwapRule.h</label>
+        <link refid="_f_swap_rule_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Generateur.h</label>
+        <link refid="_generateur_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ILeaderSelectRule.h</label>
+        <link refid="_i_leader_select_rule_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>ISolver.h</label>
+        <link refid="_i_solver_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ISubSolver.h</label>
+        <link refid="_i_sub_solver_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Instance.h</label>
+        <link refid="_instance_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Job.h</label>
+        <link refid="_job_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>LSolver.h</label>
+        <link refid="_l_solver_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>LSortRule.h</label>
+        <link refid="_l_sort_rule_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Machine.h</label>
+        <link refid="_machine_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Parser.h</label>
+        <link refid="_parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Rule.h</label>
+        <link refid="_rule_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Verbose.h</label>
+        <link refid="_verbose_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>algorithm</label>
+      </node>
+      <node id="4">
+        <label>filesystem</label>
+      </node>
+      <node id="27">
+        <label>fstream</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>ostream</label>
+      </node>
+      <node id="6">
+        <label>random</label>
+      </node>
+      <node id="28">
+        <label>sstream</label>
+      </node>
+      <node id="12">
+        <label>stdexcept</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_at_exit" prot="public">AtExit</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_bi_level___scheduling___industry__4_80_8cpp_1a9c7c4d471aff11ebe5552b9eaa0b0885" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_at_exit" kindref="compound">AtExit</ref></type>
+        <definition>struct AtExit doAtExit</definition>
+        <argsstring></argsstring>
+        <name>doAtExit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" line="23" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_bi_level___scheduling___industry__4_80_8cpp_1a04dc066746b9f402ecd7a53f49285603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt; unsigned int &gt; initVector</definition>
+        <argsstring>()</argsstring>
+        <name>initVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" line="26" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="_bi_level___scheduling___industry__4_80_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" line="37" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" bodystart="37" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>BiLevel_Scheduling_Industry_4.0.cpp<sp/>:<sp/>Ce<sp/>fichier<sp/>contient<sp/>la<sp/>fonction<sp/>&apos;main&apos;.<sp/>L&apos;exécution<sp/>du<sp/>programme<sp/>commence<sp/>et<sp/>se<sp/>termine<sp/>à<sp/>cet<sp/>endroit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_instance_8h" kindref="compound">Instance.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_parser_8h" kindref="compound">Parser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generateur_8h" kindref="compound">Generateur.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>for<sp/>random<sp/>instance<sp/>generation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_solver_8h" kindref="compound">LSolver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_f_solver_8h" kindref="compound">FSolver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_sort_rule_8h" kindref="compound">LSortRule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_f_swap_rule_8h" kindref="compound">FSwapRule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_analyser_8h" kindref="compound">Analyser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Method<sp/>called<sp/>after<sp/>main<sp/>has<sp/>returned<sp/>and<sp/>before<sp/>program<sp/>terminates.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>use<sp/>a<sp/>breakpoint<sp/>here<sp/>to<sp/>take<sp/>a<sp/>snapshot<sp/>of<sp/>the<sp/>memory<sp/>in<sp/>VS<sp/>2019<sp/>and<sp/>check<sp/>any<sp/>memory<sp/>leaks<sp/>between<sp/>the<sp/>two<sp/>snapshots</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>No<sp/>memory<sp/>leaks<sp/>should<sp/>be<sp/>here,<sp/>but<sp/>strangely<sp/>some<sp/>memory<sp/>are<sp/>still<sp/>allocated<sp/>by<sp/>fstream<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_at_exit" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_at_exit" kindref="compound">AtExit</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_at_exit_1a1ef9c61a9b89a26adde9a08742d36e55" kindref="member">~AtExit</ref>()<sp/>{<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><ref refid="_bi_level___scheduling___industry__4_80_8cpp_1a9c7c4d471aff11ebe5552b9eaa0b0885" kindref="member">doAtExit</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">std::vector&lt;unsigned<sp/>int&gt;<sp/><ref refid="_bi_level___scheduling___industry__4_80_8cpp_1a04dc066746b9f402ecd7a53f49285603" kindref="member">initVector</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;unsigned<sp/>int&gt;<sp/>v;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>v.push_back(0);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Verbose::level;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Verbose::maxRequiredLevel;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">vector&lt;unsigned<sp/>int&gt;<sp/>Verbose::requiredLevels<sp/>=<sp/><ref refid="_bi_level___scheduling___industry__4_80_8cpp_1a04dc066746b9f402ecd7a53f49285603" kindref="member">initVector</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_bi_level___scheduling___industry__4_80_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])<sp/></highlight><highlight class="comment">//<sp/>.exe<sp/>instanceFile<sp/>resultRepository<sp/>[verbose]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_verbose" kindref="compound">Verbose</ref><sp/>verbose;<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Example<sp/>on<sp/>how<sp/>to<sp/>use<sp/>the<sp/>analyser<sp/>for<sp/>several<sp/>instance<sp/>resolution<sp/>and<sp/>comparing<sp/>with<sp/>MIP<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Analyser<sp/>analyser;<sp/>analyser.run(argc,<sp/>argv);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Example<sp/>on<sp/>how<sp/>to<sp/>use<sp/>analyser<sp/>for<sp/>single<sp/>instance<sp/>resolution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Analyser<sp/>analyser;<sp/>analyser.runSingleInstance(argc,<sp/>argv);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Example<sp/>on<sp/>how<sp/>to<sp/>use<sp/>analyser<sp/>for<sp/>generating<sp/>random<sp/>solution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Analyser<sp/>analyser;<sp/>analyser.generateRandomInstance(argc,<sp/>argv);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minArgC<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc-1<sp/>&lt;<sp/>minArgC)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>program<sp/>requires<sp/>at<sp/>least<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>minArgC<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>argument(s)\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Mandatory<sp/>Arguments<sp/>are<sp/>:<sp/>instance&apos;s<sp/>file<sp/>path<sp/>&amp;<sp/>result<sp/>repository<sp/>path\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxArgC<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc-1<sp/>&gt;<sp/>maxArgC)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>program<sp/>handles<sp/>at<sp/>most<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;<sp/>maxArgC<sp/>&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>arguments,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>argc<sp/>-<sp/>1<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>were<sp/>given\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Arguments<sp/>are<sp/>:<sp/>instance&apos;s<sp/>file<sp/>path<sp/>&amp;<sp/>result<sp/>repository<sp/>path<sp/>&amp;<sp/>verbose<sp/>value\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_parser" kindref="compound">Parser</ref><sp/>parser;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>path<sp/>=<sp/>argv[1];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>resultRepo<sp/>=<sp/>argv[2];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>resultRepo.append(</highlight><highlight class="stringliteral">&quot;/resultSPT_VL_DUMB1.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setting<sp/>the<sp/>level<sp/>of<sp/>verbose<sp/>(default<sp/>=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose.<ref refid="class_verbose_1a1a82a273581aacf979ea117f5631a94e" kindref="member">setLevel</ref>((argc-1<sp/>==<sp/>maxArgC<sp/>?<sp/>std::atoi(argv[argc-1])<sp/>:<sp/>0));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose.<ref refid="class_verbose_1acc7a995da9e05168fa881f0d3ada8250" kindref="member">setRequiredLevel</ref>(1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Solving<sp/>instance<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>path<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose.<ref refid="class_verbose_1a48a6ad9f4c7d2541aa87fd3b9374c65d" kindref="member">endRequiredLevel</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_instance" kindref="compound">Instance</ref><sp/>instance<sp/>=<sp/>parser.<ref refid="class_parser_1a8595b4db00b5283e1b3e9d1130c71476" kindref="member">readFromFile</ref>(path);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;ILeaderSelectRule*&gt;<sp/>sortRules;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>sortRules.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_l_sort_rule" kindref="compound">LSortRule</ref>(<ref refid="namespacesort_rule_1ada9f4fe8decd95f66b92e32cb16a7f81" kindref="member">sortRule::SPT_EDD_VAR_LATENESS</ref>));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;IFollowerSwapRule*&gt;<sp/>swapRules;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>swapRules.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_f_swap_rule" kindref="compound">FSwapRule</ref>(<ref refid="namespaceswap_rule_1a030b549a2823ce62cc7f1280ba6ae826" kindref="member">swapRule::DUMB_METHOD</ref>));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_solver" kindref="compound">ISolver</ref>*<sp/>solver<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_sub_solver" kindref="compound">ISubSolver</ref>*<sp/>subSolver<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>subSolver<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_f_solver" kindref="compound">FSolver</ref>(swapRules);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>solver<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_l_solver" kindref="compound">LSolver</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>solver-&gt;<ref refid="class_i_solver_1aa31bdcbad0a3a7b1673fa3404a01d3e3" kindref="member">setInstance</ref>(&amp;instance);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>solver-&gt;<ref refid="class_i_solver_1adfd73d198a7373c5ed9e832a813c8f41" kindref="member">setSubSolver</ref>(subSolver);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>solver-&gt;<ref refid="class_i_solver_1aeb48b049a431ac2c902b45f0886b1ee8" kindref="member">setRules</ref>(sortRules);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Solving<sp/>the<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>solver-&gt;<ref refid="class_i_solver_1ae4a88311d9730a58934303ad8ac00965" kindref="member">solve</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>parser.<ref refid="class_parser_1a2d8c3d982450c1174b2b26245a2cee4b" kindref="member">saveSolutionInFile</ref>(resultRepo,<sp/>solver);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>solver;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>subSolver;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="class_i_leader_select_rule" kindref="compound">ILeaderSelectRule</ref>*<sp/>selectRule<sp/>:<sp/>sortRules)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>selectRule;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref>*<sp/><ref refid="namespaceswap_rule" kindref="compound">swapRule</ref><sp/>:<sp/>swapRules)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule" kindref="compound">swapRule</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose.<ref refid="class_verbose_1acc7a995da9e05168fa881f0d3ada8250" kindref="member">setRequiredLevel</ref>(1);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;End<sp/>of<sp/>program\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose.<ref refid="class_verbose_1a48a6ad9f4c7d2541aa87fd3b9374c65d" kindref="member">endRequiredLevel</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Exécuter<sp/>le<sp/>programme :<sp/>Ctrl+F5<sp/>ou<sp/>menu<sp/>Déboguer &gt;<sp/>Exécuter<sp/>sans<sp/>débogage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Déboguer<sp/>le<sp/>programme :<sp/>F5<sp/>ou<sp/>menu<sp/>Déboguer &gt;<sp/>Démarrer<sp/>le<sp/>débogage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Astuces<sp/>pour<sp/>bien<sp/>démarrer :<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>1.<sp/>Utilisez<sp/>la<sp/>fenêtre<sp/>Explorateur<sp/>de<sp/>solutions<sp/>pour<sp/>ajouter<sp/>des<sp/>fichiers<sp/>et<sp/>les<sp/>gérer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>2.<sp/>Utilisez<sp/>la<sp/>fenêtre<sp/>Team<sp/>Explorer<sp/>pour<sp/>vous<sp/>connecter<sp/>au<sp/>contrôle<sp/>de<sp/>code<sp/>source.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>3.<sp/>Utilisez<sp/>la<sp/>fenêtre<sp/>Sortie<sp/>pour<sp/>voir<sp/>la<sp/>sortie<sp/>de<sp/>la<sp/>génération<sp/>et<sp/>d&apos;autres<sp/>messages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>4.<sp/>Utilisez<sp/>la<sp/>fenêtre<sp/>Liste<sp/>d&apos;erreurs<sp/>pour<sp/>voir<sp/>les<sp/>erreurs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>5.<sp/>Accédez<sp/>à<sp/>Projet &gt;<sp/>Ajouter<sp/>un<sp/>nouvel<sp/>élément<sp/>pour<sp/>créer<sp/>des<sp/>fichiers<sp/>de<sp/>code,<sp/>ou<sp/>à<sp/>Projet &gt;<sp/>Ajouter<sp/>un<sp/>élément<sp/>existant<sp/>pour<sp/>ajouter<sp/>des<sp/>fichiers<sp/>de<sp/>code<sp/>existants<sp/>au<sp/>projet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>6.<sp/>Pour<sp/>rouvrir<sp/>ce<sp/>projet<sp/>plus<sp/>tard,<sp/>accédez<sp/>à<sp/>Fichier &gt;<sp/>Ouvrir &gt;<sp/>Projet<sp/>et<sp/>sélectionnez<sp/>le<sp/>fichier<sp/>.sln.</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_i_sub_solver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ISubSolver</compoundname>
+    <derivedcompoundref refid="class_f_solver" prot="public" virt="non-virtual">FSolver</derivedcompoundref>
+    <includes refid="_i_sub_solver_8h" local="no">ISubSolver.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_solution" kindref="compound">Solution</ref> *</type>
+        <definition>Solution* ISubSolver::solution</definition>
+        <argsstring></argsstring>
+        <name>solution</name>
+        <qualifiedname>ISubSolver::solution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="11" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref> * &gt;</type>
+        <definition>std::vector&lt;IFollowerSwapRule*&gt; ISubSolver::listRules</definition>
+        <argsstring></argsstring>
+        <name>listRules</name>
+        <qualifiedname>ISubSolver::listRules</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="12" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose ISubSolver::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>ISubSolver::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="14" column="9" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_sub_solver_1a70d4df07cc36fbd62373c580574138b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ISubSolver::ISubSolver</definition>
+        <argsstring>()</argsstring>
+        <name>ISubSolver</name>
+        <qualifiedname>ISubSolver::ISubSolver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="20" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a5e0b5557d3051e378654ae89f31e85ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ISubSolver::ISubSolver</definition>
+        <argsstring>(std::vector&lt; IFollowerSwapRule * &gt; listRule)</argsstring>
+        <name>ISubSolver</name>
+        <qualifiedname>ISubSolver::ISubSolver</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref> * &gt;</type>
+          <declname>listRule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="22" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a3952b6a2f3a0138ff7bde989db7c7e08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ISubSolver::~ISubSolver</definition>
+        <argsstring>()</argsstring>
+        <name>~ISubSolver</name>
+        <qualifiedname>ISubSolver::~ISubSolver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="24" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="24" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a3e4ed988e91a7ccd3e69fa60f7c563b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_solution" kindref="compound">Solution</ref> *</type>
+        <definition>const Solution * ISubSolver::getSolution</definition>
+        <argsstring>() const</argsstring>
+        <name>getSolution</name>
+        <qualifiedname>ISubSolver::getSolution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="36" column="16" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a76eeec69a402acd777e21093cbcd7055" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string ISubSolver::getHeuristicName</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getHeuristicName</name>
+        <qualifiedname>ISubSolver::getHeuristicName</qualifiedname>
+        <reimplementedby refid="class_f_solver_1a1c98281cd23aeca889aa249f6c1732c3">getHeuristicName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="38" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a8bdaad5babdc23c22368cda377097e91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string ISubSolver::getHeuristicDescription</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getHeuristicDescription</name>
+        <qualifiedname>ISubSolver::getHeuristicDescription</qualifiedname>
+        <reimplementedby refid="class_f_solver_1abf5b6067df1f6c054ebb718f7df4e072">getHeuristicDescription</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="40" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a83155cc19e3ad6ad551d42aaa68788af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ISubSolver::setSolution</definition>
+        <argsstring>(Solution *solution)</argsstring>
+        <name>setSolution</name>
+        <qualifiedname>ISubSolver::setSolution</qualifiedname>
+        <param>
+          <type><ref refid="class_solution" kindref="compound">Solution</ref> *</type>
+          <declname>solution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="45" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1aabcd791e0b699d2afec42a5c538eb241" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ISubSolver::heuristic</definition>
+        <argsstring>()=0</argsstring>
+        <name>heuristic</name>
+        <qualifiedname>ISubSolver::heuristic</qualifiedname>
+        <reimplementedby refid="class_f_solver_1ad241b424de5b70b7713cd6368662fd8c">heuristic</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method which solves the lexicographic problem of the Follower Lex(sum Cj, Sum wjUj) An initial solution must be generated before calling this method The solution attribute will contain the final solution found by the heuristic after calling this method <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a3a1fe2f8a959e8cc725715d08e8361c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ISubSolver::generateInitialSolution</definition>
+        <argsstring>(const std::vector&lt; Job &gt; listJobs, const Instance &amp;instance)</argsstring>
+        <name>generateInitialSolution</name>
+        <qualifiedname>ISubSolver::generateInitialSolution</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt;</type>
+          <declname>listJobs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_instance" kindref="compound">Instance</ref> &amp;</type>
+          <declname>instance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that generate an initial solution from a given list of jobs of an instance This solution is evaluated after generation and minimize the sum Cj <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listJobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a list of selected jobs to schedule </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the instance to solve </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="73" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="73" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_sub_solver_1a2dbc48b0cf0d2cfa21c9938ecf323449" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ISubSolver::addRule</definition>
+        <argsstring>(IFollowerSwapRule *swapRule)</argsstring>
+        <name>addRule</name>
+        <qualifiedname>ISubSolver::addRule</qualifiedname>
+        <param>
+          <type><ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref> *</type>
+          <declname>swapRule</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="134" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="134" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>FSolver</label>
+        <link refid="class_f_solver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ISubSolver</label>
+        <link refid="class_i_sub_solver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ISubSolver</label>
+        <link refid="class_i_sub_solver"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>solution</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Solution</label>
+        <link refid="class_solution"/>
+      </node>
+      <node id="3">
+        <label>Verbose</label>
+        <link refid="class_verbose"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" line="8" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h" bodystart="9" bodyend="136"/>
+    <listofallmembers>
+      <member refid="class_i_sub_solver_1a2dbc48b0cf0d2cfa21c9938ecf323449" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>addRule</name></member>
+      <member refid="class_i_sub_solver_1a3a1fe2f8a959e8cc725715d08e8361c2" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>generateInitialSolution</name></member>
+      <member refid="class_i_sub_solver_1a8bdaad5babdc23c22368cda377097e91" prot="public" virt="pure-virtual"><scope>ISubSolver</scope><name>getHeuristicDescription</name></member>
+      <member refid="class_i_sub_solver_1a76eeec69a402acd777e21093cbcd7055" prot="public" virt="pure-virtual"><scope>ISubSolver</scope><name>getHeuristicName</name></member>
+      <member refid="class_i_sub_solver_1a3e4ed988e91a7ccd3e69fa60f7c563b1" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>getSolution</name></member>
+      <member refid="class_i_sub_solver_1aabcd791e0b699d2afec42a5c538eb241" prot="public" virt="pure-virtual"><scope>ISubSolver</scope><name>heuristic</name></member>
+      <member refid="class_i_sub_solver_1a70d4df07cc36fbd62373c580574138b8" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>ISubSolver</name></member>
+      <member refid="class_i_sub_solver_1a5e0b5557d3051e378654ae89f31e85ff" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>ISubSolver</name></member>
+      <member refid="class_i_sub_solver_1a0d3492749bc7822ff5a8d799838b10a3" prot="protected" virt="non-virtual"><scope>ISubSolver</scope><name>listRules</name></member>
+      <member refid="class_i_sub_solver_1a83155cc19e3ad6ad551d42aaa68788af" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>setSolution</name></member>
+      <member refid="class_i_sub_solver_1afa2b56137f238099398cf26e2a6e68c4" prot="protected" virt="non-virtual"><scope>ISubSolver</scope><name>solution</name></member>
+      <member refid="class_i_sub_solver_1a5a9d2be3579e871de93067c1ae7a48f9" prot="protected" virt="non-virtual"><scope>ISubSolver</scope><name>verbose</name></member>
+      <member refid="class_i_sub_solver_1a3952b6a2f3a0138ff7bde989db7c7e08" prot="public" virt="non-virtual"><scope>ISubSolver</scope><name>~ISubSolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

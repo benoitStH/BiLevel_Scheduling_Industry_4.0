@@ -1,4 +1,4 @@
-#ifndef BILEVEL_SCHEDULING_LLPTRULE_H
+﻿#ifndef BILEVEL_SCHEDULING_LLPTRULE_H
 #define BILEVEL_SCHEDULING_LLPTRULE_H
 
 #include "ILeaderSelectRule.h"
@@ -328,7 +328,7 @@ private:
 		std::vector<Job> chosenJobs; // Jobs selected by the Leader's Rule
 
 		std::vector<float> lateness; // lateness of each job
-		std::vector<float> endTimes; // end time of each job
+		std::vector<float> endTimes; // end time of each job, used to compute each job's lateness for each iteration
 		float cumulatedEndTime = 0;  // sum of all jobs' processing time
 
 		// If the filtered list size is equal to n, return it
@@ -374,8 +374,7 @@ private:
 
 		unsigned int nbToSelectJobs = instance.getNbToSelectJob();  // number n of jobs to select
 		unsigned int lastNbSelectedJobs = 0;  // Last number of selected jobs
-		unsigned int nbFails = 0;			  // Number of times where we didn't selected more jobs than last time
-		unsigned int maxFails = nbToSelectJobs; // Max number of fails before stopping the selection rule
+		unsigned int nbFails = 0;			  // Number of times where we didn't selected more jobs since last iteration
 		std::vector<unsigned int> selected_i;   // List of forcely selected jobs' index
 
 
@@ -421,16 +420,15 @@ private:
 			}
 
 
-			// If no new bloc has been made
+			// If the number of selected jobs didn't increase
 			if (chosenJobs.size() <= lastNbSelectedJobs && chosenJobs.size() < nbToSelectJobs)
 			{
 
 				nbFails++;
-				if (nbFails == maxFails) { break; }
-				float latenessWjThresold = 0;  // jobs whose score is higher will be selected
+				float latenessWjThresold = 0;  // jobs whose score is highest will be selected
 
 				// While their is still jobs to be forcely added
-				while (chosenJobs.size()-lastNbSelectedJobs < nbTotalMachines * nbFails && chosenJobs.size() <= nbToSelectJobs)
+				while (chosenJobs.size()-lastNbSelectedJobs < nbTotalMachines * nbFails && chosenJobs.size() < nbToSelectJobs)
 				{
 					unsigned int min_i = -1; // index of the job with the minimal positive lateness
 					float min_latenessWj = -1; // minimal positive lateness multiplied by its job's weight
@@ -457,26 +455,9 @@ private:
 						latenessWjThresold = min_latenessWj;  // update the Threshold
 						//std::cout << "forcely selected job " << jobs[min_i].getNum() << std::endl;
 
-						// Forcely selecting the job, saving its processing time and saving the job's index
+						// Forcely selecting the job and saving the job's index
 						chosenJobs.push_back(jobs[min_i]);
-						PiPredecesseur.push_back(jobs[min_i].getPi());
 						selected_i.push_back(min_i);
-
-
-						// If a bloc has been completed, we add its jobs' processing time into sum_PiPredecesseur
-						if (PiPredecesseur.size() == nbTotalMachines)
-						{
-							float sum_PiPredecesseurBloc = 0;
-							for (std::vector<float>::iterator pi = PiPredecesseur.begin(); pi != PiPredecesseur.end(); pi++)
-							{
-								sum_PiPredecesseurBloc += *pi;
-							}
-
-							sum_PiPredecesseur += sum_PiPredecesseurBloc;
-							PiPredecesseur.clear();
-							//std::cout << "sumPiPredecesseur " << sum_PiPredecesseur << std::endl;
-							//break;
-						}
 					}
 					else  // No job can be selected
 					{

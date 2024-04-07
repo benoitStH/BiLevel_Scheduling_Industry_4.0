@@ -34,18 +34,18 @@ unsigned int Verbose::level;
 unsigned int Verbose::maxRequiredLevel;
 vector<unsigned int> Verbose::requiredLevels = initVector();
 
-int main(int argc, char* argv[])
+int main(int argc, char* argv[]) // .exe instanceFile resultRepository [verbose]
 {
-    // TODO: Tester avec de grosses instances, générer plusieurs grosses instances
-    // Check : taux d'amélioration entre solution initial et final
-    // TODO : Definir les niveaux de verbose
-
     Verbose verbose; 
     
-    // Example on how to use the analyser
-    /*verbose.setLevel(2);
-    Analyser analyser;
-    return analyser.run();*/
+    // Example on how to use the analyser for several instance resolution and comparing with MIP results
+    // Analyser analyser; analyser.run(argc, argv);
+
+    // Example on how to use analyser for single instance resolution
+    // Analyser analyser; analyser.runSingleInstance(argc, argv);
+
+    // Example on how to use analyser for generating random solution
+    // Analyser analyser; analyser.generateRandomInstance(argc, argv);
 
     int minArgC = 2;
     if (argc-1 < minArgC)
@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
     solver->setSubSolver(subSolver);
     solver->setRules(sortRules);
 
-    // Le solveur résout l'instance
+    // Solving the instance
     solver->solve();
 
     parser.saveSolutionInFile(resultRepo, solver);
@@ -119,33 +119,6 @@ int main(int argc, char* argv[])
     verbose.endRequiredLevel();
 
     return 0; 
-
-    
-
-    //// Première heuristique : DeepestDescent
-    //ISolver* solver = new DeepestDescent();
-
-    //solver->setInstance(&instance);
-    //solver->solve();
-
-    //Solution s = Solution(*(solver->getSolution()));
-    //cout << "Solver's Solution\n";
-    //s.compactPrint();
-
-    //delete solver;
-
-    /* // Création d'une solution initiale 
-    Generateur generateur;
-
-    Solution solution_init = generateur.generateInitialSolution(instance);
-
-    //cout << solution_init;
-    solution_init.print();
-    solution_init.compactPrint();
-    */
-
-    //Machine machine = Machine(10);
-    
     
 }
 

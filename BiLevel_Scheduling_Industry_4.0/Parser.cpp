@@ -1,5 +1,5 @@
-//  Copyright (C) 2024
-//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliquée de Tours, Tours, France
+ï»¿//  Copyright (C) 2024
+//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et AppliquÃ©e de Tours, Tours, France
 //
 //  DIGEP, Politecnico di Torino, Corso Duca degli Abruzzi 24, Torino, Italy
 //  This file is part of bilevel-scheduling.
@@ -81,7 +81,7 @@ Instance Parser::readFromFile(std::string& filePath) const {
     if (newInstance.getNbJobs() != newInstance.getListJobs().size()) throw std::invalid_argument("The number of jobs is not equals to N");
     if (newInstance.getNbToSelectJob() == 0) throw std::invalid_argument("The number of jobs to select is not defined");
 
-    // Affiche l'instance générée
+    // Affiche l'instance gÃ©nÃ©rÃ©e
     verbose.setRequiredLevel(3);
     verbose << newInstance;
     verbose.endRequiredLevel();

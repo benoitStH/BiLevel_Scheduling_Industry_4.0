@@ -1,4 +1,4 @@
-#include "FSolver.h"
+﻿#include "FSolver.h"
 
 void FSolver::heuristic()
 {

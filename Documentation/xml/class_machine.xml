@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_machine" kind="class" language="C++" prot="public">
+    <compoundname>Machine</compoundname>
+    <includes refid="_machine_8h" local="no">Machine.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_machine_1ae073482da11ca93ff2b23343390fed6c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt;</type>
+        <definition>std::vector&lt;Job&gt; Machine::listAffectedJobs</definition>
+        <argsstring></argsstring>
+        <name>listAffectedJobs</name>
+        <qualifiedname>Machine::listAffectedJobs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="30" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_machine_1ababf7efc33e06b95aeb0a8014a87a0a5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Machine::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>Machine::speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="31" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_machine_1a5e7a609b362851e4148f8f244ee78e08" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Machine::sum_wj_Uj</definition>
+        <argsstring></argsstring>
+        <name>sum_wj_Uj</name>
+        <qualifiedname>Machine::sum_wj_Uj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="32" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_machine_1a7abb426931d3e7c76a3d0af715a7b275" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Machine::sum_Cj</definition>
+        <argsstring></argsstring>
+        <name>sum_Cj</name>
+        <qualifiedname>Machine::sum_Cj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="33" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_machine_1a95a803c208f479ebe16891a1c5982c33" prot="private" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose Machine::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Machine::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="34" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_machine_1a99427b767b7c15ceb33e391166cd7d68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Machine::Machine</definition>
+        <argsstring>()</argsstring>
+        <name>Machine</name>
+        <qualifiedname>Machine::Machine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="42" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1ad3194873d36d8664ada012a045e03711" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Machine::Machine</definition>
+        <argsstring>(float speed)</argsstring>
+        <name>Machine</name>
+        <qualifiedname>Machine::Machine</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor a machine with the speed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the speed of the current machine </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="48" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1af4376a00206c3e7cad3294c3061320f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Machine::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that reset the machine </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="57" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Machine::startTimeOfJob</definition>
+        <argsstring>(unsigned int j) const</argsstring>
+        <name>startTimeOfJob</name>
+        <qualifiedname>Machine::startTimeOfJob</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that return the starting time of a given job <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the job&apos;s position in the machine&apos;s sequence. 0 is the first job </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float The starting time of the job </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="64" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a430e9236f8d280245f319c7ec7f2aaee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>Machine::evaluate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that evaluate the scheduling on the machine. It compute the sum of completion times and the sum of weighted tardy jobs. sum_Cj and sum_wj_Uj will be updated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="74" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="74" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1acc5d9db832427c8bfecb05f30ff6a8cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::add_job</definition>
+        <argsstring>(unsigned int position, const Job &amp;affectedJob)</argsstring>
+        <name>add_job</name>
+        <qualifiedname>Machine::add_job</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>affectedJob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that add a job to be scheduled on machine. This job is added at the given position. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: position before which the content will be inserted </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>affectedJob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: job to insert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="95" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1acc95cecc555b5196a733fbedbd093635" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::add_job</definition>
+        <argsstring>(const Job &amp;affectedJob)</argsstring>
+        <name>add_job</name>
+        <qualifiedname>Machine::add_job</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>affectedJob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that add a job to be scheduled on machine. This job is added at the end of the machine&apos;s sequence. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>affectedJob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>job to insert </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="101" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Job &gt; &amp; Machine::getAffectedJob</definition>
+        <argsstring>() const</argsstring>
+        <name>getAffectedJob</name>
+        <qualifiedname>Machine::getAffectedJob</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="108" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a3268d175beadb5700790d109bfdce02a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Machine::getSpeed</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpeed</name>
+        <qualifiedname>Machine::getSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="110" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a26f02c373afe721857a3947323cb7051" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Machine::getSumWjUj</definition>
+        <argsstring>() const</argsstring>
+        <name>getSumWjUj</name>
+        <qualifiedname>Machine::getSumWjUj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="112" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a15297e75b80b5016bba6371af1711519" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Machine::getSumCj</definition>
+        <argsstring>() const</argsstring>
+        <name>getSumCj</name>
+        <qualifiedname>Machine::getSumCj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="114" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1ae21e77bb3aee7cdb6357e15f1cde1c4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::setAffectedJob</definition>
+        <argsstring>(const std::vector&lt; Job &gt; &amp;affectedJob)</argsstring>
+        <name>setAffectedJob</name>
+        <qualifiedname>Machine::setAffectedJob</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt; &amp;</type>
+          <declname>affectedJob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="121" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1ae754cebe094584e6215b1da3579b6520" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::setSpeed</definition>
+        <argsstring>(float speed)</argsstring>
+        <name>setSpeed</name>
+        <qualifiedname>Machine::setSpeed</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="123" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1aae392fd2d9bf81d17ba84016f3906a21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::setSumWjUj</definition>
+        <argsstring>(float sum_wjUj)</argsstring>
+        <name>setSumWjUj</name>
+        <qualifiedname>Machine::setSumWjUj</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>sum_wjUj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="125" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a12b9870ce2e19293fa77c0426fc8eef4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Machine::setSumCj</definition>
+        <argsstring>(float sumCj)</argsstring>
+        <name>setSumCj</name>
+        <qualifiedname>Machine::setSumCj</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>sumCj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="127" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_machine_1a9a2742c16846030d70e63d17a7294f45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+        <definition>Job &amp; Machine::operator[]</definition>
+        <argsstring>(size_t pos)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Machine::operator[]</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="134" column="9" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="134" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" line="27" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h" bodystart="27" bodyend="136"/>
+    <listofallmembers>
+      <member refid="class_machine_1acc5d9db832427c8bfecb05f30ff6a8cd" prot="public" virt="non-virtual"><scope>Machine</scope><name>add_job</name></member>
+      <member refid="class_machine_1acc95cecc555b5196a733fbedbd093635" prot="public" virt="non-virtual"><scope>Machine</scope><name>add_job</name></member>
+      <member refid="class_machine_1a430e9236f8d280245f319c7ec7f2aaee" prot="public" virt="non-virtual"><scope>Machine</scope><name>evaluate</name></member>
+      <member refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" prot="public" virt="non-virtual"><scope>Machine</scope><name>getAffectedJob</name></member>
+      <member refid="class_machine_1a3268d175beadb5700790d109bfdce02a" prot="public" virt="non-virtual"><scope>Machine</scope><name>getSpeed</name></member>
+      <member refid="class_machine_1a15297e75b80b5016bba6371af1711519" prot="public" virt="non-virtual"><scope>Machine</scope><name>getSumCj</name></member>
+      <member refid="class_machine_1a26f02c373afe721857a3947323cb7051" prot="public" virt="non-virtual"><scope>Machine</scope><name>getSumWjUj</name></member>
+      <member refid="class_machine_1ae073482da11ca93ff2b23343390fed6c" prot="private" virt="non-virtual"><scope>Machine</scope><name>listAffectedJobs</name></member>
+      <member refid="class_machine_1a99427b767b7c15ceb33e391166cd7d68" prot="public" virt="non-virtual"><scope>Machine</scope><name>Machine</name></member>
+      <member refid="class_machine_1ad3194873d36d8664ada012a045e03711" prot="public" virt="non-virtual"><scope>Machine</scope><name>Machine</name></member>
+      <member refid="class_machine_1a9a2742c16846030d70e63d17a7294f45" prot="public" virt="non-virtual"><scope>Machine</scope><name>operator[]</name></member>
+      <member refid="class_machine_1af4376a00206c3e7cad3294c3061320f4" prot="public" virt="non-virtual"><scope>Machine</scope><name>reset</name></member>
+      <member refid="class_machine_1ae21e77bb3aee7cdb6357e15f1cde1c4f" prot="public" virt="non-virtual"><scope>Machine</scope><name>setAffectedJob</name></member>
+      <member refid="class_machine_1ae754cebe094584e6215b1da3579b6520" prot="public" virt="non-virtual"><scope>Machine</scope><name>setSpeed</name></member>
+      <member refid="class_machine_1a12b9870ce2e19293fa77c0426fc8eef4" prot="public" virt="non-virtual"><scope>Machine</scope><name>setSumCj</name></member>
+      <member refid="class_machine_1aae392fd2d9bf81d17ba84016f3906a21" prot="public" virt="non-virtual"><scope>Machine</scope><name>setSumWjUj</name></member>
+      <member refid="class_machine_1ababf7efc33e06b95aeb0a8014a87a0a5" prot="private" virt="non-virtual"><scope>Machine</scope><name>speed</name></member>
+      <member refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" prot="public" virt="non-virtual"><scope>Machine</scope><name>startTimeOfJob</name></member>
+      <member refid="class_machine_1a7abb426931d3e7c76a3d0af715a7b275" prot="private" virt="non-virtual"><scope>Machine</scope><name>sum_Cj</name></member>
+      <member refid="class_machine_1a5e7a609b362851e4148f8f244ee78e08" prot="private" virt="non-virtual"><scope>Machine</scope><name>sum_wj_Uj</name></member>
+      <member refid="class_machine_1a95a803c208f479ebe16891a1c5982c33" prot="private" virt="non-virtual"><scope>Machine</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

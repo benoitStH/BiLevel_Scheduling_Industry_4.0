@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_dc84256901e0e8fe3ad9c958652a749d" kind="dir">
+    <compoundname>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0</compoundname>
+    <innerfile refid="_analyser_8h">Analyser.h</innerfile>
+    <innerfile refid="_bi_level___scheduling___industry__4_80_8cpp">BiLevel_Scheduling_Industry_4.0.cpp</innerfile>
+    <innerfile refid="_deepest_descent_8cpp">DeepestDescent.cpp</innerfile>
+    <innerfile refid="_deepest_descent_8h">DeepestDescent.h</innerfile>
+    <innerfile refid="_f_solver_8cpp">FSolver.cpp</innerfile>
+    <innerfile refid="_f_solver_8h">FSolver.h</innerfile>
+    <innerfile refid="_f_swap_rule_8h">FSwapRule.h</innerfile>
+    <innerfile refid="_generateur_8cpp">Generateur.cpp</innerfile>
+    <innerfile refid="_generateur_8h">Generateur.h</innerfile>
+    <innerfile refid="_i_follower_swap_rule_8h">IFollowerSwapRule.h</innerfile>
+    <innerfile refid="_i_leader_select_rule_8h">ILeaderSelectRule.h</innerfile>
+    <innerfile refid="_instance_8cpp">Instance.cpp</innerfile>
+    <innerfile refid="_instance_8h">Instance.h</innerfile>
+    <innerfile refid="_i_solver_8cpp">ISolver.cpp</innerfile>
+    <innerfile refid="_i_solver_8h">ISolver.h</innerfile>
+    <innerfile refid="_i_sub_solver_8h">ISubSolver.h</innerfile>
+    <innerfile refid="_job_8cpp">Job.cpp</innerfile>
+    <innerfile refid="_job_8h">Job.h</innerfile>
+    <innerfile refid="_l_solver_8cpp">LSolver.cpp</innerfile>
+    <innerfile refid="_l_solver_8h">LSolver.h</innerfile>
+    <innerfile refid="_l_sort_rule_8h">LSortRule.h</innerfile>
+    <innerfile refid="_machine_8cpp">Machine.cpp</innerfile>
+    <innerfile refid="_machine_8h">Machine.h</innerfile>
+    <innerfile refid="_parser_8cpp">Parser.cpp</innerfile>
+    <innerfile refid="_parser_8h">Parser.h</innerfile>
+    <innerfile refid="_rule_8h">Rule.h</innerfile>
+    <innerfile refid="_solution_8cpp">Solution.cpp</innerfile>
+    <innerfile refid="_solution_8h">Solution.h</innerfile>
+    <innerfile refid="_verbose_8h">Verbose.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/"/>
+  </compounddef>
+</doxygen>

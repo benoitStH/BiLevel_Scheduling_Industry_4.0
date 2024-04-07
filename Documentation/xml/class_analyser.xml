@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_analyser" kind="class" language="C++" prot="public">
+    <compoundname>Analyser</compoundname>
+    <includes refid="_analyser_8h" local="no">Analyser.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_analyser_1a489cb53da9f181d6aeaf263251e0b6a4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose Analyser::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Analyser::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="19" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_analyser_1a149ec9bc9d06a865c08182918fb021dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Analyser::Analyser</definition>
+        <argsstring>()</argsstring>
+        <name>Analyser</name>
+        <qualifiedname>Analyser::Analyser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="22" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analyser_1adfdb6d462ed9c7c6616c0feb186add99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Analyser::~Analyser</definition>
+        <argsstring>()</argsstring>
+        <name>~Analyser</name>
+        <qualifiedname>Analyser::~Analyser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="23" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analyser_1af0e1ff629f66c07163e58469289b90ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Analyser::run</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>run</name>
+        <qualifiedname>Analyser::run</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="25" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="25" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analyser_1a9e6ad4ad743b8f7955fc7d94f3f1f0bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Analyser::runSingleInstance</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>runSingleInstance</name>
+        <qualifiedname>Analyser::runSingleInstance</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="183" column="9" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="183" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analyser_1ab5d28c1f4f3dc37b394a063bd965e499" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Analyser::generateRandomInstance</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>generateRandomInstance</name>
+        <qualifiedname>Analyser::generateRandomInstance</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="264" column="9" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="264" bodyend="305"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" line="16" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h" bodystart="17" bodyend="306"/>
+    <listofallmembers>
+      <member refid="class_analyser_1a149ec9bc9d06a865c08182918fb021dc" prot="public" virt="non-virtual"><scope>Analyser</scope><name>Analyser</name></member>
+      <member refid="class_analyser_1ab5d28c1f4f3dc37b394a063bd965e499" prot="public" virt="non-virtual"><scope>Analyser</scope><name>generateRandomInstance</name></member>
+      <member refid="class_analyser_1af0e1ff629f66c07163e58469289b90ac" prot="public" virt="non-virtual"><scope>Analyser</scope><name>run</name></member>
+      <member refid="class_analyser_1a9e6ad4ad743b8f7955fc7d94f3f1f0bd" prot="public" virt="non-virtual"><scope>Analyser</scope><name>runSingleInstance</name></member>
+      <member refid="class_analyser_1a489cb53da9f181d6aeaf263251e0b6a4" prot="private" virt="non-virtual"><scope>Analyser</scope><name>verbose</name></member>
+      <member refid="class_analyser_1adfdb6d462ed9c7c6616c0feb186add99" prot="public" virt="non-virtual"><scope>Analyser</scope><name>~Analyser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

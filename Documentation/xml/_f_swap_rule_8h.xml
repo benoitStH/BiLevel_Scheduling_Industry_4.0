@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_f_swap_rule_8h" kind="file" language="C++">
+    <compoundname>FSwapRule.h</compoundname>
+    <includes refid="_i_follower_swap_rule_8h" local="yes">IFollowerSwapRule.h</includes>
+    <includedby refid="_analyser_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h</includedby>
+    <includedby refid="_bi_level___scheduling___industry__4_80_8cpp" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h</label>
+        <link refid="_f_swap_rule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Instance.h</label>
+        <link refid="_instance_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Job.h</label>
+        <link refid="_job_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Machine.h</label>
+        <link refid="_machine_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Rule.h</label>
+        <link refid="_rule_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Verbose.h</label>
+        <link refid="_verbose_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="9">
+        <label>filesystem</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>ostream</label>
+      </node>
+      <node id="11">
+        <label>random</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h</label>
+        <link refid="_analyser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</label>
+        <link refid="_bi_level___scheduling___industry__4_80_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h</label>
+        <link refid="_f_swap_rule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_f_swap_rule" prot="public">FSwapRule</innerclass>
+    <innernamespace refid="namespaceswap_rule">swapRule</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BILEVEL_SCHEDULING_FLATETOEARLY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BILEVEL_SCHEDULING_FLATETOEARLY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_follower_swap_rule_8h" kindref="compound">IFollowerSwapRule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="namespaceswap_rule" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceswap_rule" kindref="compound">swapRule</ref><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="namespaceswap_rule_1a53c3d47729b62b204b0b54e439a34f57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a53c3d47729b62b204b0b54e439a34f57" kindref="member">LATE2EARLY</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="8" refid="namespaceswap_rule_1a030b549a2823ce62cc7f1280ba6ae826" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a030b549a2823ce62cc7f1280ba6ae826" kindref="member">DUMB_METHOD</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="9" refid="namespaceswap_rule_1a1b3e39429154845a1556849b49632a24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a1b3e39429154845a1556849b49632a24" kindref="member">LATENESS</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="10" refid="namespaceswap_rule_1a324ef1a3f6c83e32679c521a05fb34ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a324ef1a3f6c83e32679c521a05fb34ab" kindref="member">LATENESS_CAREFUL</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_f_swap_rule" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_f_swap_rule" kindref="compound">FSwapRule</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="class_f_swap_rule_1a66f424576011ad1e1f7b066e2be0d1af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1a66f424576011ad1e1f7b066e2be0d1af" kindref="member">FSwapRule</ref>()<sp/>:<sp/><ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_f_swap_rule_1aca900a40219b70862702bc316f321e93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1aca900a40219b70862702bc316f321e93" kindref="member">FSwapRule</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setting<sp/>the<sp/>name<sp/>according<sp/>to<sp/>the<sp/>ruleNumber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;ruleNumber<sp/>=<sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a53c3d47729b62b204b0b54e439a34f57" kindref="member">swapRule::LATE2EARLY</ref>:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;LateToEarly&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a030b549a2823ce62cc7f1280ba6ae826" kindref="member">swapRule::DUMB_METHOD</ref>:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Dumb&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a1b3e39429154845a1556849b49632a24" kindref="member">swapRule::LATENESS</ref>:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Lateness&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a324ef1a3f6c83e32679c521a05fb34ab" kindref="member">swapRule::LATENESS_CAREFUL</ref>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;LatenessCareful&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Unknown&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_f_swap_rule_1a6b5afe6cdc2dc90cbf56e6f84e6cd7ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/><ref refid="class_f_swap_rule_1a6b5afe6cdc2dc90cbf56e6f84e6cd7ad" kindref="member">swapVPossibleFor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l2)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Our<sp/>default<sp/>answer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/>swapOp;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref><sp/>=<sp/>l1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref><sp/>=<sp/>l2;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref><sp/>=<sp/>k;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>-1;<sp/><sp/></highlight><highlight class="comment">//<sp/>Negative<sp/>gain<sp/>means<sp/>its<sp/>not<sp/>worth<sp/>swapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref><sp/>m1<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(l1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref><sp/>m2<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(l2);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(l1).<ref refid="class_machine_1a3268d175beadb5700790d109bfdce02a" kindref="member">getSpeed</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>assume<sp/>l1&apos;s<sp/>speed<sp/>and<sp/>l2&apos;s<sp/>speed<sp/>are<sp/>the<sp/>same</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>one<sp/>of<sp/>the<sp/>machine<sp/>doesn&apos;t<sp/>have<sp/>a<sp/>k-th<sp/>job,<sp/>return<sp/>default<sp/>answer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>().size()<sp/>&lt;=<sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>swapOp;<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m2.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>().size()<sp/>&lt;=<sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>swapOp;<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>the<sp/>rule<sp/>associated<sp/>with<sp/>ruleNumber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a53c3d47729b62b204b0b54e439a34f57" kindref="member">swapRule::LATE2EARLY</ref>:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1a3bc5b2365a4d0188d03259cc9e866a45" kindref="member">swapLateToEarly</ref>(swapOp,<sp/>m1,<sp/>m2,<sp/>k,<sp/>speed);<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a030b549a2823ce62cc7f1280ba6ae826" kindref="member">swapRule::DUMB_METHOD</ref>:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" kindref="member">swapDumbly</ref>(swapOp,<sp/>s);<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a1b3e39429154845a1556849b49632a24" kindref="member">swapRule::LATENESS</ref>:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1ac01b34c9e5096fce63b5f18bdb8043e4" kindref="member">swapLateness</ref>(swapOp,<sp/>s);<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceswap_rule_1a324ef1a3f6c83e32679c521a05fb34ab" kindref="member">swapRule::LATENESS_CAREFUL</ref>:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1a710bada64f7202e73848447a73ea33ae" kindref="member">swapLatenessCareful</ref>(swapOp,<sp/>s);<sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>swapOp;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_f_swap_rule_1a3bc5b2365a4d0188d03259cc9e866a45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_swap_rule_1a3bc5b2365a4d0188d03259cc9e866a45" kindref="member">swapLateToEarly</ref>(<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&amp;<sp/>swapOp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref>&amp;<sp/>m1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref>&amp;<sp/>m2,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job1<sp/>=<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job2<sp/>=<sp/>m2.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p1<sp/>=<sp/>job1.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>/<sp/>speed;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p2<sp/>=<sp/>job2.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>/<sp/>speed;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w1<sp/>=<sp/>job1.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w2<sp/>=<sp/>job2.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>d1<sp/>=<sp/>job1.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>d2<sp/>=<sp/>job2.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>swapIsPossible;<sp/></highlight><highlight class="comment">//<sp/>Is<sp/>a<sp/>swap<sp/>possible<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Are<sp/>the<sp/>jobs<sp/>both<sp/>late<sp/>and<sp/>swapping<sp/>will<sp/>make<sp/>job1<sp/>early<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapIsPossible<sp/>=<sp/>(job1.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>job2.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>(m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p1)<sp/>&lt;<sp/>d1);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Otherwise,<sp/>Is<sp/>job1<sp/>the<sp/>only<sp/>one<sp/>late<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(job1.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>!job2.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>swapIsPossible<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Swapping<sp/>will<sp/>make<sp/>job1<sp/>early<sp/>and<sp/>job2<sp/>will<sp/>still<sp/>be<sp/>early</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapIsPossible<sp/>=<sp/>((m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p1<sp/>&lt;<sp/>d1)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p2<sp/>&lt;<sp/>d2);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapIsPossible)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>w1;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Or<sp/>Swapping<sp/>will<sp/>make<sp/>job1<sp/>early<sp/>and<sp/>job2<sp/>will<sp/>be<sp/>late,<sp/>Swap<sp/>is<sp/>possible<sp/>if<sp/>w1<sp/>&gt;<sp/>w2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapIsPossible<sp/>=<sp/>(m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p1<sp/>&lt;<sp/>d1);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapIsPossible<sp/>&amp;&amp;<sp/>w1<sp/>&gt;<sp/>w2)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>w1<sp/>-<sp/>w2;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(job2.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>!job1.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>())<sp/><sp/></highlight><highlight class="comment">//<sp/>Is<sp/>job2<sp/>the<sp/>only<sp/>one<sp/>late<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Swapping<sp/>will<sp/>make<sp/>job2<sp/>early<sp/>and<sp/>job1<sp/>will<sp/>still<sp/>be<sp/>early</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapIsPossible<sp/>=<sp/>((m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p1<sp/>&lt;<sp/>d1)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m1.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p2<sp/>&lt;<sp/>d2);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapIsPossible)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>w2;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Or<sp/>Swapping<sp/>will<sp/>make<sp/>job2<sp/>early<sp/>and<sp/>job1<sp/>will<sp/>be<sp/>late,<sp/>Swap<sp/>is<sp/>possible<sp/>if<sp/>w2<sp/>&gt;<sp/>w1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapIsPossible<sp/>=<sp/>(m1.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>p2<sp/>&lt;<sp/>d2);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapIsPossible<sp/>&amp;&amp;<sp/>w2<sp/>&gt;<sp/>w1)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>w2<sp/>-<sp/>w1;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" kindref="member">swapDumbly</ref>(<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&amp;<sp/>swapOp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_solution" kindref="compound">Solution</ref><sp/>test<sp/>=<sp/><ref refid="class_solution" kindref="compound">Solution</ref>(s);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;unsigned<sp/>int&gt;<sp/>machines;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>machines.push_back(swapOp.<ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>machines.push_back(swapOp.<ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a687105cb2347eda6e574cb52efc72483" kindref="member">verbose</ref>.<ref refid="class_verbose_1acc7a995da9e05168fa881f0d3ada8250" kindref="member">setRequiredLevel</ref>(5);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>test.<ref refid="class_solution_1afa0512a7336babd7fd800aa87c90fa98" kindref="member">swapV</ref>(machines,<sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>test.<ref refid="class_solution_1aa3e8919dc2722fdd31524108286cdd80" kindref="member">evaluate</ref>();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>test.<ref refid="class_solution_1a607803e25a640ffda00025453b13f75b" kindref="member">compactVerbose</ref>();<sp/><ref refid="class_rule_1a687105cb2347eda6e574cb52efc72483" kindref="member">verbose</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a687105cb2347eda6e574cb52efc72483" kindref="member">verbose</ref>.<ref refid="class_verbose_1a48a6ad9f4c7d2541aa87fd3b9374c65d" kindref="member">endRequiredLevel</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>s.<ref refid="class_solution_1ab042499bb5b5ba01477099aeee3b787f" kindref="member">getSumWjUj</ref>()<sp/>-<sp/>test.<ref refid="class_solution_1ab042499bb5b5ba01477099aeee3b787f" kindref="member">getSumWjUj</ref>();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_f_swap_rule_1ac01b34c9e5096fce63b5f18bdb8043e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_swap_rule_1ac01b34c9e5096fce63b5f18bdb8043e4" kindref="member">swapLateness</ref>(<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&amp;<sp/>swapOp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref>&amp;<sp/>m1<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(swapOp.<ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref>&amp;<sp/>m2<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(swapOp.<ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job1<sp/>=<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job2<sp/>=<sp/>m2.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k];</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/>m1.<ref refid="class_machine_1a3268d175beadb5700790d109bfdce02a" kindref="member">getSpeed</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pi_diff<sp/>=<sp/>(job1.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>-<sp/>job2.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>())<sp/>/<sp/>speed;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>is<sp/>the<sp/>last<sp/>bloc,<sp/>use<sp/>the<sp/>dumb<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref><sp/>==<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>().size()<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" kindref="member">swapDumbly</ref>(swapOp,<sp/>s);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lateness1;<sp/></highlight><highlight class="comment">//<sp/>lateness<sp/>of<sp/>job1&apos;s<sp/>following<sp/>job</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>nextJob1<sp/>=<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k<sp/>+<sp/>1];<sp/><sp/></highlight><highlight class="comment">//<sp/>job1&apos;s<sp/>following<sp/>job</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lateness1<sp/>=<sp/>m1.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref><sp/>+<sp/>2)<sp/>-<sp/>float(nextJob1.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>computing<sp/>its<sp/>lateness</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>is<sp/>late<sp/>and<sp/>the<sp/>lateness<sp/>is<sp/>smaller<sp/>than<sp/>the<sp/>difference<sp/>of<sp/>job1&apos;s<sp/>and<sp/>job2&apos;s<sp/>processing<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0<sp/>&lt;<sp/>lateness1<sp/>&amp;&amp;<sp/>lateness1<sp/>&lt;=<sp/>pi_diff)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>swap&apos;s<sp/>gain<sp/>at<sp/>0<sp/>if<sp/>that<sp/>is<sp/>not<sp/>the<sp/>case<sp/>already</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>&lt;<sp/>0)<sp/>{<sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>choose<sp/>this<sp/>swap,<sp/>this<sp/>following<sp/>job<sp/>will<sp/>become<sp/>early,<sp/>we<sp/>add<sp/>its<sp/>weight<sp/>to<sp/>our<sp/>swap&apos;s<sp/>gain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>+=<sp/>nextJob1.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k++;<sp/></highlight><highlight class="comment">//<sp/>We<sp/>check<sp/>the<sp/>next<sp/>following<sp/>job<sp/>until<sp/>we<sp/>reach<sp/>the<sp/>one<sp/>before<sp/>last<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(k<sp/>&lt;<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>().size()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239" refid="class_f_swap_rule_1a710bada64f7202e73848447a73ea33ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_f_swap_rule_1a710bada64f7202e73848447a73ea33ae" kindref="member">swapLatenessCareful</ref>(<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&amp;<sp/>swapOp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref>&amp;<sp/>m1<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(swapOp.<ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_machine" kindref="compound">Machine</ref>&amp;<sp/>m2<sp/>=<sp/>s.<ref refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" kindref="member">getMachine</ref>(swapOp.<ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref>);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job1<sp/>=<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k];</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job2<sp/>=<sp/>m2.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>()[k];</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/>m1.<ref refid="class_machine_1a3268d175beadb5700790d109bfdce02a" kindref="member">getSpeed</ref>();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>is<sp/>the<sp/>last<sp/>bloc,<sp/>use<sp/>the<sp/>dumb<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref><sp/>==<sp/>m1.<ref refid="class_machine_1aab1ac76407939e7ee6742962bb6c1e27" kindref="member">getAffectedJob</ref>().size()<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" kindref="member">swapDumbly</ref>(swapOp,<sp/>s);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>job1<sp/>is<sp/>late<sp/>and<sp/>will<sp/>be<sp/>early<sp/>after<sp/>swapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(job1.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>(job1.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>/<sp/>speed)<sp/>&lt;=<sp/>job1.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>())</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>+=<sp/>job1.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>job1<sp/>is<sp/>early<sp/>and<sp/>will<sp/>be<sp/>late<sp/>after<sp/>swapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(job1.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>(job1.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>/<sp/>speed)<sp/>&gt;<sp/>job1.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>())</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>-=<sp/>job1.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>job2<sp/>is<sp/>late<sp/>and<sp/>will<sp/>be<sp/>early<sp/>after<sp/>swapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(job2.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>&amp;&amp;<sp/>m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>(job2.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>/<sp/>speed)<sp/>&lt;=<sp/>job2.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>())</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>+=<sp/>job2.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>job2<sp/>is<sp/>early<sp/>and<sp/>will<sp/>be<sp/>late<sp/>after<sp/>swapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(job2.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>m2.<ref refid="class_machine_1a354ce63a5f0b4e0132d31e895b6e3e04" kindref="member">startTimeOfJob</ref>(k)<sp/>+<sp/>(job2.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>/<sp/>speed)<sp/>&gt;<sp/>job2.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>())</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>-=<sp/>job2.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>();</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>job1&apos;s<sp/>following<sp/>jobs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_f_swap_rule_1ac01b34c9e5096fce63b5f18bdb8043e4" kindref="member">swapLateness</ref>(swapOp,<sp/>s);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="class_f_swap_rule_1aabba63b53d913fe5ba393c26d052bae4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/><ref refid="class_f_swap_rule_1aabba63b53d913fe5ba393c26d052bae4" kindref="member">bestSwapV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;SwapOperation&gt;&amp;<sp/>possibleSwaps,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/>best;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best.<ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best.<ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(possibleSwaps.empty())<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>best;<sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/>swapOp<sp/>:<sp/>possibleSwaps)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapOp.gain<sp/>&gt;<sp/>0)<sp/>{<sp/><ref refid="class_i_follower_swap_rule_1a0d701aedd4cae809823c8bf6ebb750ba" kindref="member">verboseOperator</ref>(swapOp);<sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swapOp.gain<sp/>&gt;<sp/>best.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref>)</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best<sp/>=<sp/>swapOp;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>best;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BILEVEL_SCHEDULING_FLATETOEARLY_H</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h"/>
+  </compounddef>
+</doxygen>

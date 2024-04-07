@@ -1,4 +1,4 @@
-#include "Generateur.h"
+﻿#include "Generateur.h"
 
 
 Generateur::Generateur()

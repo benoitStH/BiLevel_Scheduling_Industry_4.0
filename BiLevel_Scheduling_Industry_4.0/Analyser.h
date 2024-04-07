@@ -1,10 +1,10 @@
-#ifndef BILEVEL_SCHEDULING_ANALYSER
+ï»¿#ifndef BILEVEL_SCHEDULING_ANALYSER
 #define BILEVEL_SCHEDULING_ANALYSER
 
 #include "LSolver.h"
 #include "FSolver.h"
 #include "LSortRule.h"
-#include "FLateToEarly.h"
+#include "FSwapRule.h"
 #include "Solution.h"
 #include "Parser.h"
 #include "Generateur.h"
@@ -22,9 +22,28 @@ public:
     Analyser() {};
     ~Analyser() {};
 
-	int run()
+	int run(int argc, char* argv[]) // .exe testFile saveFile [verbose]
 	{
-        // Start of the program, we take a snapshot at the brekpoint
+        int minArgC = 2;
+        if (argc - 1 < minArgC)
+        {
+            cout << "This program requires at least " << minArgC << " argument(s)\n";
+            cout << "Mandatory Arguments are : file path of MIP Results to compare & which file path of heuristics results will be saved\n";
+            return -1;
+        }
+
+        int maxArgC = 3;
+        if (argc - 1 > maxArgC)
+        {
+            cout << "This program handles at most " << maxArgC << " arguments, " << argc - 1 << " were given\n";
+            cout << "Arguments are : file path of MIP Results to compare & which file path of heuristics results will be saved & verbose\n";
+            return -1;
+        }
+
+        // Setting the level of verbose (default = 0)
+        verbose.setLevel((argc - 1 == maxArgC ? std::atoi(argv[argc - 1]) : 0));
+
+        // Start of the program, we take a snapshot at the breakpoint
         Parser parser;
         std::string path;
 
@@ -42,9 +61,9 @@ public:
         std::vector<std::string> exactMethodTimeScore_list;
         std::vector<unsigned int> exactMethodObjectiveScore_list;
 
-        std::filesystem::path testFile("C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultsMIP.csv");
+        std::filesystem::path testFile(argv[1]);
 
-        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultLPT_LATE2EARLY.csv";
+        std::string saveFile = argv[2];
         std::fstream fileStreamSaveFile(saveFile, std::fstream::out);
         if (fileStreamSaveFile.is_open())
         {
@@ -124,13 +143,13 @@ public:
                     solver->setSubSolver(subSolver);
                     solver->addRule(selectRule);
 
-                    // Le solveur résout l'instance
+                    // Solving the instance
                     solver->solve();
 
-                    // Affichage du résultat
+                    // Extracting solution
                     Solution solution = Solution(*(solver->getSolution()));
 
-                    // Enregistrement du résultat
+                    // Saving result
                     parser.saveInFile(saveFile, solver, optimal_objective);
 
                     verbose.setRequiredLevel(2);
@@ -142,7 +161,7 @@ public:
         }
 
         verbose.setRequiredLevel(1);
-        verbose << counter << " instances solved\n";
+        verbose << "\n" << counter << " instances solved\n";
         verbose.endRequiredLevel();
 
         if (solver != nullptr) { delete solver; }
@@ -161,8 +180,28 @@ public:
         return 0;
 	}
 
-    int run(std::string path)
+    int runSingleInstance(int argc, char* argv[]) // .exe instanceFile saveFile [verbose]
     {
+        int minArgC = 1;
+        if (argc - 1 < minArgC)
+        {
+            cout << "This program requires at least " << minArgC << " argument(s)\n";
+            cout << "Mandatory Arguments are : instance's file path & which file path the heuristic's results will be saved\n";
+            return -1;
+        }
+
+        int maxArgC = 2;
+        if (argc - 1 > maxArgC)
+        {
+            cout << "This program handles at most " << maxArgC << " arguments, " << argc - 1 << " were given\n";
+            cout << "Arguments are : instance's file path & which file path the heuristic's results will be saved & verbose\n";
+            return -1;
+        }
+
+        // Setting the level of verbose (default = 0)
+        verbose.setLevel((argc - 1 == maxArgC ? std::atoi(argv[argc - 1]) : 0));
+
+
         //// Testing single instance //
         Parser parser;
         ISolver* solver = nullptr;
@@ -178,7 +217,7 @@ public:
         //swapRules.push_back(new FLateToEarly(swapRule::DUMB_METHOD));
         swapRules.push_back(new FSwapRule(swapRule::LATE2EARLY));
 
-        std::string saveFile = "C:\\Users\\benhi\\source\\repos\\BiLevel_Scheduling_Industry_4.0/instances/instances60job/resultLPT_LATE2EARLY.csv";
+        std::string saveFile = argv[2];
         std::fstream fileStreamSaveFile(saveFile, std::fstream::out);
         if (fileStreamSaveFile.is_open())
         {
@@ -191,8 +230,8 @@ public:
             return 1;
         }
 
-
-        Instance instance = parser.readFromFile(path);
+        std::string instanceFile = argv[1];
+        Instance instance = parser.readFromFile(instanceFile);
         std::cout << instance.getInstancePath() << std::endl;
 
         for (ILeaderSelectRule* selectRule : sortRules)
@@ -209,41 +248,58 @@ public:
                 solver->setSubSolver(subSolver);
                 solver->addRule(selectRule);
 
-                // Le solveur résout l'instance
+                // Solving the instance
                 solver->solve();
 
-                // Affichage du résultat
+                // Extracting solution
                 Solution solution = Solution(*(solver->getSolution()));
 
-                // Enregistrement du résultat
+                // Saving result
                 parser.saveSolutionInFile(saveFile, solver);
-
-                //std::cout << "\n\n";
             }
         }
         return 0;
     }
 
-    int generateRandomInstance()
+    int generateRandomInstance(int argc, char* argv[]) // .exe instancePath [verbose]
     {
+        int minArgC = 1;
+        if (argc - 1 < minArgC)
+        {
+            cout << "This program requires at least " << minArgC << " argument(s)\n";
+            cout << "Mandatory Arguments are : instance's file path where it will be saved\n";
+            return -1;
+        }
+
+        int maxArgC = 2;
+        if (argc - 1 > maxArgC)
+        {
+            cout << "This program handles at most " << maxArgC << " arguments, " << argc - 1 << " were given\n";
+            cout << "Arguments are : instance's file path where it will be saved & verbose\n";
+            return -1;
+        }
+
+        // Setting the level of verbose (default = 0)
+        verbose.setLevel((argc - 1 == maxArgC ? std::atoi(argv[argc - 1]) : 0));
+
         // Sauvegarde et Chargement d'instance 
         Generateur randomInstancer = Generateur();
         Parser parser;
-        std::string path = "C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/instances/performances/n_3_N_15_tf_0.2_rdd_0.2_mMax_2_m0_2/instance0.txt";
+        std::string path = argv[1];
 
 
         Instance instance = randomInstancer.generateInstance(path, 32, 3, 2, 10, 5);
 
-        std::cout << instance << "\n";
+        verbose.setRequiredLevel(1);
+        verbose << instance << "\n";
 
-        std::cout << "sauvegarde\n";
+        verbose << "sauvegarde\n";
         parser.serializeInstance(instance);
-        std::cout << "chargement\n";
+        verbose << "chargement\n";
         Instance loadedInstance = parser.readFromFile(path);
 
-        std::cout << loadedInstance << "\n";
-
-        std::cout << "Hello World!\n";
+        verbose << loadedInstance << "\n";
+        verbose.endRequiredLevel();
 
         return 0;
     }

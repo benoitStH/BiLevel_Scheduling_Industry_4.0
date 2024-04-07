@@ -1,0 +1,580 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_instance" kind="class" language="C++" prot="public">
+    <compoundname>Instance</compoundname>
+    <includes refid="_instance_8h" local="no">Instance.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_instance_1a71e6b641e231bdfcfb4f255c6b9e58af" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Instance::instanceName</definition>
+        <argsstring></argsstring>
+        <name>instanceName</name>
+        <qualifiedname>Instance::instanceName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="38" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1a258bb398e19dfd8692015a0038b1c9e3" prot="private" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path Instance::instancePath</definition>
+        <argsstring></argsstring>
+        <name>instancePath</name>
+        <qualifiedname>Instance::instancePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="39" column="27" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1a928143186c5b7664d82d2aabc7838b69" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::nbJobs</definition>
+        <argsstring></argsstring>
+        <name>nbJobs</name>
+        <qualifiedname>Instance::nbJobs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="40" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1af3c23df3f7bbc9dc95fb3435e6f84563" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::nbToSelectJob</definition>
+        <argsstring></argsstring>
+        <name>nbToSelectJob</name>
+        <qualifiedname>Instance::nbToSelectJob</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="41" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1ad613495144468c48839d085fcd5a7068" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::nbOfHighSpeedMachines</definition>
+        <argsstring></argsstring>
+        <name>nbOfHighSpeedMachines</name>
+        <qualifiedname>Instance::nbOfHighSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="42" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1a2805cc02856883eaa21bafbf3b1a098a" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::nbOfLowSpeedMachines</definition>
+        <argsstring></argsstring>
+        <name>nbOfLowSpeedMachines</name>
+        <qualifiedname>Instance::nbOfLowSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="43" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1a445fa6cc3b262fb2fa074d75b2b4758d" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::highSpeed</definition>
+        <argsstring></argsstring>
+        <name>highSpeed</name>
+        <qualifiedname>Instance::highSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="44" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1ac3d0922d21b251fd7556d69416e03a6c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::lowSpeed</definition>
+        <argsstring></argsstring>
+        <name>lowSpeed</name>
+        <qualifiedname>Instance::lowSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="45" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1a28ee45affe9bd09429d8bb2bbb5186a0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt;</type>
+        <definition>std::vector&lt;Job&gt; Instance::listJobs</definition>
+        <argsstring></argsstring>
+        <name>listJobs</name>
+        <qualifiedname>Instance::listJobs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="46" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_instance_1ad2798bc9fd432530f2a306bd9da76226" prot="private" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose Instance::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Instance::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="47" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_instance_1a399506c7e75ab9ab78fbc34a25932bbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Instance::Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <qualifiedname>Instance::Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="58" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1ac7a70cab4810251cf08a6403b72b8a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Instance::Instance</definition>
+        <argsstring>(std::string &amp;newInstancePath)</argsstring>
+        <name>Instance</name>
+        <qualifiedname>Instance::Instance</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>newInstancePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor by instance&apos;s path. It construct an instance with setting the attribute path. The instance name is extracted from the path and set to the instanceName attribute. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newInstancePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="65" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a197d24f4a2fe13a3d129d2e9c60567cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::add_job</definition>
+        <argsstring>(const Job &amp;newJob)</argsstring>
+        <name>add_job</name>
+        <qualifiedname>Instance::add_job</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>newJob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that add a new job to the list of jobs of this instance <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newJob</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the job to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="79" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1ae5b04280e279bdbbe9aa9d28ec476a82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::sort_by_LPT</definition>
+        <argsstring>()</argsstring>
+        <name>sort_by_LPT</name>
+        <qualifiedname>Instance::sort_by_LPT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sort job according to the Longest Processing Time rule. If processing times are equals then sort according to increasing due date. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="84" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1acaccbe4d8e42ef41494087764729aea6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::sort_by_LPT_inv_EDD</definition>
+        <argsstring>()</argsstring>
+        <name>sort_by_LPT_inv_EDD</name>
+        <qualifiedname>Instance::sort_by_LPT_inv_EDD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sort job according to the Longest Processing Time rule. If processing times are equals then sort according to decreasing due date. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="89" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1af1a88e81397fddb12e1ec27223c7090a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::filesystem::path &amp;</type>
+        <definition>const std::filesystem::path &amp; Instance::getInstancePath</definition>
+        <argsstring>() const</argsstring>
+        <name>getInstancePath</name>
+        <qualifiedname>Instance::getInstancePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="96" column="33" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1af1ee9b120fe449adee7c34209844e107" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Instance::getInstanceName</definition>
+        <argsstring>() const</argsstring>
+        <name>getInstanceName</name>
+        <qualifiedname>Instance::getInstanceName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="98" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a335847c369f7a03f1a70fa84f02cd851" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::getNbJobs</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbJobs</name>
+        <qualifiedname>Instance::getNbJobs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="100" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a9d0d21d4bc42916a36611f2caf3f47f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::getNbToSelectJob</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbToSelectJob</name>
+        <qualifiedname>Instance::getNbToSelectJob</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="102" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a983469731bdc65611ba0e862be0b87c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::getNbOfHighSpeedMachines</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbOfHighSpeedMachines</name>
+        <qualifiedname>Instance::getNbOfHighSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="104" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a4295bd3d930f2832bc7e1d94084392e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Instance::getNbOfLowSpeedMachines</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbOfLowSpeedMachines</name>
+        <qualifiedname>Instance::getNbOfLowSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="106" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a3db3374f300738c02d9180327e1714ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Instance::getHighSpeed</definition>
+        <argsstring>() const</argsstring>
+        <name>getHighSpeed</name>
+        <qualifiedname>Instance::getHighSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="108" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1acab3b525d6b7ae7455f0c0e33fd88f52" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Instance::getLowSpeed</definition>
+        <argsstring>() const</argsstring>
+        <name>getLowSpeed</name>
+        <qualifiedname>Instance::getLowSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="110" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a4862c780b82a3d1b59657cd33cc4d6b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Job &gt; &amp; Instance::getListJobs</definition>
+        <argsstring>() const</argsstring>
+        <name>getListJobs</name>
+        <qualifiedname>Instance::getListJobs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="112" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1af43bb7dbaacc0e36e2c8687b87d73941" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setInstanceName</definition>
+        <argsstring>(const std::string &amp;instanceName)</argsstring>
+        <name>setInstanceName</name>
+        <qualifiedname>Instance::setInstanceName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>instanceName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="120" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1ac226c9046713d84af562ec65920435f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setInstancePath</definition>
+        <argsstring>(const std::filesystem::path &amp;newInstancePath)</argsstring>
+        <name>setInstancePath</name>
+        <qualifiedname>Instance::setInstancePath</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>newInstancePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="122" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a02258c39bce2f8341f0fc9b200711847" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setNbJobs</definition>
+        <argsstring>(unsigned int nbJobs)</argsstring>
+        <name>setNbJobs</name>
+        <qualifiedname>Instance::setNbJobs</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>nbJobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="124" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a344891b499b7913ce0436dafe357f510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setNbToSelectJob</definition>
+        <argsstring>(unsigned int nbToSelectJob)</argsstring>
+        <name>setNbToSelectJob</name>
+        <qualifiedname>Instance::setNbToSelectJob</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>nbToSelectJob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="126" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a7580ec4bce287afecf0ec61b1eee40d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setNbOfHighSpeedMachines</definition>
+        <argsstring>(unsigned int nbOfHighSpeedMachines)</argsstring>
+        <name>setNbOfHighSpeedMachines</name>
+        <qualifiedname>Instance::setNbOfHighSpeedMachines</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>nbOfHighSpeedMachines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="128" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a751b4109a32a2f3c92d842094a65063f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setNbOfLowSpeedMachines</definition>
+        <argsstring>(unsigned int nbOfHighLowMachines)</argsstring>
+        <name>setNbOfLowSpeedMachines</name>
+        <qualifiedname>Instance::setNbOfLowSpeedMachines</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>nbOfHighLowMachines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="130" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a1040ceebed59623c539a4f5b277f3fab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setHighSpeed</definition>
+        <argsstring>(unsigned int highSpeed)</argsstring>
+        <name>setHighSpeed</name>
+        <qualifiedname>Instance::setHighSpeed</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>highSpeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="132" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1ac034c41c0cff359204af7043b0f850d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setLowSpeed</definition>
+        <argsstring>(unsigned int lowSpeed)</argsstring>
+        <name>setLowSpeed</name>
+        <qualifiedname>Instance::setLowSpeed</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>lowSpeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="134" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_instance_1a14ce59f4175434bfe837bc08d3bfd5e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Instance::setListJobs</definition>
+        <argsstring>(const std::vector&lt; Job &gt; &amp;listJobs)</argsstring>
+        <name>setListJobs</name>
+        <qualifiedname>Instance::setListJobs</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_job" kindref="compound">Job</ref> &gt; &amp;</type>
+          <declname>listJobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="136" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" line="34" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h" bodystart="34" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_instance_1a197d24f4a2fe13a3d129d2e9c60567cc" prot="public" virt="non-virtual"><scope>Instance</scope><name>add_job</name></member>
+      <member refid="class_instance_1a3db3374f300738c02d9180327e1714ae" prot="public" virt="non-virtual"><scope>Instance</scope><name>getHighSpeed</name></member>
+      <member refid="class_instance_1af1ee9b120fe449adee7c34209844e107" prot="public" virt="non-virtual"><scope>Instance</scope><name>getInstanceName</name></member>
+      <member refid="class_instance_1af1a88e81397fddb12e1ec27223c7090a" prot="public" virt="non-virtual"><scope>Instance</scope><name>getInstancePath</name></member>
+      <member refid="class_instance_1a4862c780b82a3d1b59657cd33cc4d6b0" prot="public" virt="non-virtual"><scope>Instance</scope><name>getListJobs</name></member>
+      <member refid="class_instance_1acab3b525d6b7ae7455f0c0e33fd88f52" prot="public" virt="non-virtual"><scope>Instance</scope><name>getLowSpeed</name></member>
+      <member refid="class_instance_1a335847c369f7a03f1a70fa84f02cd851" prot="public" virt="non-virtual"><scope>Instance</scope><name>getNbJobs</name></member>
+      <member refid="class_instance_1a983469731bdc65611ba0e862be0b87c1" prot="public" virt="non-virtual"><scope>Instance</scope><name>getNbOfHighSpeedMachines</name></member>
+      <member refid="class_instance_1a4295bd3d930f2832bc7e1d94084392e5" prot="public" virt="non-virtual"><scope>Instance</scope><name>getNbOfLowSpeedMachines</name></member>
+      <member refid="class_instance_1a9d0d21d4bc42916a36611f2caf3f47f2" prot="public" virt="non-virtual"><scope>Instance</scope><name>getNbToSelectJob</name></member>
+      <member refid="class_instance_1a445fa6cc3b262fb2fa074d75b2b4758d" prot="private" virt="non-virtual"><scope>Instance</scope><name>highSpeed</name></member>
+      <member refid="class_instance_1a399506c7e75ab9ab78fbc34a25932bbd" prot="public" virt="non-virtual"><scope>Instance</scope><name>Instance</name></member>
+      <member refid="class_instance_1ac7a70cab4810251cf08a6403b72b8a93" prot="public" virt="non-virtual"><scope>Instance</scope><name>Instance</name></member>
+      <member refid="class_instance_1a71e6b641e231bdfcfb4f255c6b9e58af" prot="private" virt="non-virtual"><scope>Instance</scope><name>instanceName</name></member>
+      <member refid="class_instance_1a258bb398e19dfd8692015a0038b1c9e3" prot="private" virt="non-virtual"><scope>Instance</scope><name>instancePath</name></member>
+      <member refid="class_instance_1a28ee45affe9bd09429d8bb2bbb5186a0" prot="private" virt="non-virtual"><scope>Instance</scope><name>listJobs</name></member>
+      <member refid="class_instance_1ac3d0922d21b251fd7556d69416e03a6c" prot="private" virt="non-virtual"><scope>Instance</scope><name>lowSpeed</name></member>
+      <member refid="class_instance_1a928143186c5b7664d82d2aabc7838b69" prot="private" virt="non-virtual"><scope>Instance</scope><name>nbJobs</name></member>
+      <member refid="class_instance_1ad613495144468c48839d085fcd5a7068" prot="private" virt="non-virtual"><scope>Instance</scope><name>nbOfHighSpeedMachines</name></member>
+      <member refid="class_instance_1a2805cc02856883eaa21bafbf3b1a098a" prot="private" virt="non-virtual"><scope>Instance</scope><name>nbOfLowSpeedMachines</name></member>
+      <member refid="class_instance_1af3c23df3f7bbc9dc95fb3435e6f84563" prot="private" virt="non-virtual"><scope>Instance</scope><name>nbToSelectJob</name></member>
+      <member refid="class_instance_1a1040ceebed59623c539a4f5b277f3fab" prot="public" virt="non-virtual"><scope>Instance</scope><name>setHighSpeed</name></member>
+      <member refid="class_instance_1af43bb7dbaacc0e36e2c8687b87d73941" prot="public" virt="non-virtual"><scope>Instance</scope><name>setInstanceName</name></member>
+      <member refid="class_instance_1ac226c9046713d84af562ec65920435f5" prot="public" virt="non-virtual"><scope>Instance</scope><name>setInstancePath</name></member>
+      <member refid="class_instance_1a14ce59f4175434bfe837bc08d3bfd5e8" prot="public" virt="non-virtual"><scope>Instance</scope><name>setListJobs</name></member>
+      <member refid="class_instance_1ac034c41c0cff359204af7043b0f850d6" prot="public" virt="non-virtual"><scope>Instance</scope><name>setLowSpeed</name></member>
+      <member refid="class_instance_1a02258c39bce2f8341f0fc9b200711847" prot="public" virt="non-virtual"><scope>Instance</scope><name>setNbJobs</name></member>
+      <member refid="class_instance_1a7580ec4bce287afecf0ec61b1eee40d1" prot="public" virt="non-virtual"><scope>Instance</scope><name>setNbOfHighSpeedMachines</name></member>
+      <member refid="class_instance_1a751b4109a32a2f3c92d842094a65063f" prot="public" virt="non-virtual"><scope>Instance</scope><name>setNbOfLowSpeedMachines</name></member>
+      <member refid="class_instance_1a344891b499b7913ce0436dafe357f510" prot="public" virt="non-virtual"><scope>Instance</scope><name>setNbToSelectJob</name></member>
+      <member refid="class_instance_1ae5b04280e279bdbbe9aa9d28ec476a82" prot="public" virt="non-virtual"><scope>Instance</scope><name>sort_by_LPT</name></member>
+      <member refid="class_instance_1acaccbe4d8e42ef41494087764729aea6" prot="public" virt="non-virtual"><scope>Instance</scope><name>sort_by_LPT_inv_EDD</name></member>
+      <member refid="class_instance_1ad2798bc9fd432530f2a306bd9da76226" prot="private" virt="non-virtual"><scope>Instance</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

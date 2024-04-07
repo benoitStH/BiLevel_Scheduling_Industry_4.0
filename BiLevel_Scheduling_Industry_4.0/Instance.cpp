@@ -1,5 +1,5 @@
-//  Copyright (C) 2024
-//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliqu�e de Tours, Tours, France
+﻿//  Copyright (C) 2024
+//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliquée de Tours, Tours, France
 //
 //  DIGEP, Politecnico di Torino, Corso Duca degli Abruzzi 24, Torino, Italy
 //  This file is part of bilevel-scheduling.
