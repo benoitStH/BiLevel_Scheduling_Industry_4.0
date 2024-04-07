@@ -1,5 +1,5 @@
-//  Copyright (C) 2024
-//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliqu�e de Tours, Tours, France
+﻿//  Copyright (C) 2024
+//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliquée de Tours, Tours, France
 //
 //  DIGEP, Politecnico di Torino, Corso Duca degli Abruzzi 24, Torino, Italy
 //  This file is part of bilevel-scheduling.
@@ -23,6 +23,7 @@
 #include <vector>
 #include <ostream>
 #include "Job.h"
+
 class Machine {
 
 private:
@@ -30,6 +31,7 @@ private:
     float speed; // the speed of the machine
     float sum_wj_Uj; // the sum of the number weighted tardy jobs on the machine
     float sum_Cj; // the sum of the completion time on the machine
+    Verbose verbose;
 
 public:
 
@@ -39,17 +41,35 @@ public:
 
     Machine() : listAffectedJobs(std::vector<Job>()), speed(0.0), sum_wj_Uj(0.0), sum_Cj(0.0) {}
 
-
+    /**
+     * Constructor a machine with the speed.
+     * @param speed the speed of the current machine
+     */
     Machine(float speed) : listAffectedJobs(std::vector<Job>()), speed(speed), sum_wj_Uj(0.0), sum_Cj(0.0) {}
 
     /********************/
     /*      METHODS     */
     /********************/
 
+    /**
+     * Method that reset the machine
+     */
     void reset() { listAffectedJobs.clear(); sum_wj_Uj = 0.0; sum_Cj = 0.0; }
 
     /**
+     * Method that return the starting time of a given job
+     * @param j the job's position in the machine's sequence. 0 is the first job
+     * @return float The starting time of the job
+     */
+    float startTimeOfJob(unsigned int j) const { 
+        if (j == 0) { return 0; }
+        
+        return startTimeOfJob(j - 1) + listAffectedJobs[j-1].getPi() / speed;
+    }
+
+    /**
      * Method that evaluate the scheduling on the machine. It compute the sum of completion times and the sum of weighted tardy jobs.
+     * sum_Cj and sum_wj_Uj will be updated.
      */
     void evaluate() {
         float cumulativeWeightedTardyJob = 0.0; float cumulativeCompletionTimes = 0.0; float completionTimes = 0.0;
@@ -58,7 +78,10 @@ public:
             // compute cumulative completion times, a job at position i count (nbJobs-i) times
             cumulativeCompletionTimes += (nbJobs - i) * listAffectedJobs[i].getPi() / speed;
             completionTimes += listAffectedJobs[i].getPi() / speed;
-            cumulativeWeightedTardyJob += listAffectedJobs[i].getDi() < completionTimes ? listAffectedJobs[i].getWi() : 0.0;
+
+            // the job is late if the completion time is past its due date
+            listAffectedJobs[i].setLate((listAffectedJobs[i].getDi() < completionTimes));
+            cumulativeWeightedTardyJob += listAffectedJobs[i].isLate() ? listAffectedJobs[i].getWi() : 0.0;
         }
         sum_Cj = cumulativeCompletionTimes;
         sum_wj_Uj = cumulativeWeightedTardyJob;
@@ -66,13 +89,13 @@ public:
 
     /**
      * Method that add a job to be scheduled on machine. This job is added at the given position.
-     * @param pos iterator before which the content will be inserted
-     * @param affectedJob job to insert
+     * @param pos : position before which the content will be inserted
+     * @param affectedJob : job to insert
      */
     void add_job(unsigned int position, const Job& affectedJob) { listAffectedJobs.insert(listAffectedJobs.begin() + position, affectedJob); }
 
     /**
-     * Method that add a job to be scheduled on machine. This job is added at the end of the machine.
+     * Method that add a job to be scheduled on machine. This job is added at the end of the machine's sequence.
      * @param affectedJob job to insert
      */
     void add_job(const Job& affectedJob) { listAffectedJobs.push_back(affectedJob); }
@@ -99,15 +122,19 @@ public:
 
     void setSpeed(float speed) { Machine::speed = speed; }
 
-    void setSumWjUj(float sumWjUj) { sum_wj_Uj = sumWjUj; }
+    void setSumWjUj(float sum_wjUj) { sum_wj_Uj = sum_wjUj; }
 
     void setSumCj(float sumCj) { sum_Cj = sumCj; }
 
+    /************************/
+    /*      OPERATORS       */
+    /************************/
+
+    /* Return the pos-th job in the machine. No out-of-bounds checks.*/
+    Job& operator[](size_t pos) { return listAffectedJobs[pos]; }
+
 };
 
-/************************/
-/*      OPERATORS       */
-/************************/
 
 inline std::ostream& operator<<(std::ostream& os, const Machine& machine) {
     os << "[";
@@ -116,6 +143,16 @@ inline std::ostream& operator<<(std::ostream& os, const Machine& machine) {
     }
     os << "]";
     return os;
+}
+
+inline const Verbose& operator<<(const Verbose& verbose, const Machine& machine)
+{
+    verbose << "[";
+    for (const Job& job : machine.getAffectedJob()) {
+        verbose << job;
+    }
+    verbose << "]";
+    return verbose;
 }
 
 #endif //BILEVEL_SCHEDULING_MACHINE_H

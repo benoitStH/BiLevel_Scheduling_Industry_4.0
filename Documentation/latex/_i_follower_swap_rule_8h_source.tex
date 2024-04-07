@@ -1,0 +1,56 @@
+\doxysection{IFollower\+Swap\+Rule.\+h}
+\hypertarget{_i_follower_swap_rule_8h_source}{}\label{_i_follower_swap_rule_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/IFollowerSwapRule.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/IFollowerSwapRule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_IFOLLOWER\_SWAPRULE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_IFOLLOWER\_SWAPRULE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Rule.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Solution.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00008\ \textcolor{comment}{Represent\ a\ swap\ operation\ to\ apply\ between\ two\ machines\ on\ a\ specific\ bloc}}
+\DoxyCodeLine{00009\ \textcolor{comment}{machine<i>\ is\ the\ index\ of\ the\ machine\ i}}
+\DoxyCodeLine{00010\ \textcolor{comment}{bloc\ is\ the\ job's\ position\ on\ each\ machine}}
+\DoxyCodeLine{00011\ \textcolor{comment}{gain\ is\ the\ improvement\ we\ can\ obtain\ if\ we\ apply\ this\ swap\ operation\ (The\ higher,\ the\ better)}}
+\DoxyCodeLine{00012\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_swap_operation}{SwapOperation}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ machine1;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ machine2;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bloc;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ gain;\ \textcolor{comment}{//\ How\ much\ will\ this\ operation\ improve\ our\ solution\ ?\ The\ higher,\ the\ better.\ }}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_rule}{Rule}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ CONSTRUCTOR\ \ \ \ \ */}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}()\ :\ \mbox{\hyperlink{class_rule}{Rule}}()\ \{\};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}(std::string\ ruleName,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ruleNumber)\ :\ \mbox{\hyperlink{class_rule}{Rule}}(ruleName,\ ruleNumber)\ \{\};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTERS\ \ \ \ \ */}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getRuleName()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}F\_"{}}\ +\ ruleName;\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ METHODS\ \ \ \ \ */}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ \mbox{\hyperlink{class_i_follower_swap_rule_afd969e659142a62860f98edefe3b4aa1}{swapVPossibleFor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ l1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ l2)\ =\ 0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ \mbox{\hyperlink{class_i_follower_swap_rule_a37aca3d7fc8ba06807fb1c4285eff8b1}{bestSwapV}}(\textcolor{keyword}{const}\ std::vector<SwapOperation>\&\ possibleSwaps,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s)\ =\ 0;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ verboseOperator(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\&\ swapOp)}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}SwapOperation\ :\ ("{}}\ <<\ swapOp.machine1\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ swapOp.machine2\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ swapOp.bloc\ <<\ \textcolor{stringliteral}{"{})\ :\ "{}}\ <<\ swapOp.gain\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BILEVEL\_SCHEDULING\_IFOLLOWER\_SWAPRULE\_H}}
+
+\end{DoxyCode}

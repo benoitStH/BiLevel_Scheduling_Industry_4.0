@@ -1,0 +1,81 @@
+\doxysection{ISub\+Solver Class Reference}
+\hypertarget{class_i_sub_solver}{}\label{class_i_sub_solver}\index{ISubSolver@{ISubSolver}}
+Inheritance diagram for ISub\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_sub_solver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_sub_solver_a5e0b5557d3051e378654ae89f31e85ff}\label{class_i_sub_solver_a5e0b5557d3051e378654ae89f31e85ff} 
+{\bfseries ISub\+Solver} (std\+::vector$<$ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*} $>$ list\+Rule)
+\item 
+\Hypertarget{class_i_sub_solver_a3e4ed988e91a7ccd3e69fa60f7c563b1}\label{class_i_sub_solver_a3e4ed988e91a7ccd3e69fa60f7c563b1} 
+const \mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Solution} () const
+\item 
+\Hypertarget{class_i_sub_solver_a76eeec69a402acd777e21093cbcd7055}\label{class_i_sub_solver_a76eeec69a402acd777e21093cbcd7055} 
+virtual std\+::string {\bfseries get\+Heuristic\+Name} () const =0
+\item 
+\Hypertarget{class_i_sub_solver_a8bdaad5babdc23c22368cda377097e91}\label{class_i_sub_solver_a8bdaad5babdc23c22368cda377097e91} 
+virtual std\+::string {\bfseries get\+Heuristic\+Description} () const =0
+\item 
+\Hypertarget{class_i_sub_solver_a83155cc19e3ad6ad551d42aaa68788af}\label{class_i_sub_solver_a83155cc19e3ad6ad551d42aaa68788af} 
+void {\bfseries set\+Solution} (\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*}solution)
+\item 
+virtual void \mbox{\hyperlink{class_i_sub_solver_aabcd791e0b699d2afec42a5c538eb241}{heuristic}} ()=0
+\item 
+void \mbox{\hyperlink{class_i_sub_solver_a3a1fe2f8a959e8cc725715d08e8361c2}{generate\+Initial\+Solution}} (const std\+::vector$<$ \mbox{\hyperlink{class_job}{Job}} $>$ list\+Jobs, const \mbox{\hyperlink{class_instance}{Instance}} \&instance)
+\item 
+\Hypertarget{class_i_sub_solver_a2dbc48b0cf0d2cfa21c9938ecf323449}\label{class_i_sub_solver_a2dbc48b0cf0d2cfa21c9938ecf323449} 
+void {\bfseries add\+Rule} (\mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*}swap\+Rule)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_sub_solver_afa2b56137f238099398cf26e2a6e68c4}\label{class_i_sub_solver_afa2b56137f238099398cf26e2a6e68c4} 
+\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries solution}
+\item 
+\Hypertarget{class_i_sub_solver_a0d3492749bc7822ff5a8d799838b10a3}\label{class_i_sub_solver_a0d3492749bc7822ff5a8d799838b10a3} 
+std\+::vector$<$ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollower\+Swap\+Rule}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries list\+Rules}
+\item 
+\Hypertarget{class_i_sub_solver_a5a9d2be3579e871de93067c1ae7a48f9}\label{class_i_sub_solver_a5a9d2be3579e871de93067c1ae7a48f9} 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_sub_solver_a3a1fe2f8a959e8cc725715d08e8361c2}\label{class_i_sub_solver_a3a1fe2f8a959e8cc725715d08e8361c2} 
+\index{ISubSolver@{ISubSolver}!generateInitialSolution@{generateInitialSolution}}
+\index{generateInitialSolution@{generateInitialSolution}!ISubSolver@{ISubSolver}}
+\doxysubsubsection{\texorpdfstring{generateInitialSolution()}{generateInitialSolution()}}
+{\footnotesize\ttfamily void ISub\+Solver\+::generate\+Initial\+Solution (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_job}{Job}} $>$}]{list\+Jobs,  }\item[{const \mbox{\hyperlink{class_instance}{Instance}} \&}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method that generate an initial solution from a given list of jobs of an instance This solution is evaluated after generation and minimize the sum Cj 
+\begin{DoxyParams}{Parameters}
+{\em list\+Jobs} & a list of selected jobs to schedule \\
+\hline
+{\em instance} & the instance to solve \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_sub_solver_aabcd791e0b699d2afec42a5c538eb241}\label{class_i_sub_solver_aabcd791e0b699d2afec42a5c538eb241} 
+\index{ISubSolver@{ISubSolver}!heuristic@{heuristic}}
+\index{heuristic@{heuristic}!ISubSolver@{ISubSolver}}
+\doxysubsubsection{\texorpdfstring{heuristic()}{heuristic()}}
+{\footnotesize\ttfamily virtual void ISub\+Solver\+::heuristic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Method which solves the lexicographic problem of the Follower Lex(sum Cj, Sum wj\+Uj) An initial solution must be generated before calling this method The solution attribute will contain the final solution found by the heuristic after calling this method 
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_f_solver_ad241b424de5b70b7713cd6368662fd8c}{FSolver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/ISub\+Solver.\+h\end{DoxyCompactItemize}

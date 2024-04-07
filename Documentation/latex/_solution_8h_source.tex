@@ -1,0 +1,353 @@
+\doxysection{Solution.\+h}
+\hypertarget{_solution_8h_source}{}\label{_solution_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Solution.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Solution.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Copyright\ (C)\ 2024}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ EA\ 6300\ ERL\ CNRS\ 7002\ Laboratoire\ d'Informatique\ Fondamentale\ et\ Appliquée de\ Tours,\ Tours,\ France}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ DIGEP,\ Politecnico\ di\ Torino,\ Corso\ Duca\ degli\ Abruzzi\ 24,\ Torino,\ Italy}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ This\ file\ is\ part\ of\ bilevel-\/scheduling.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ of\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ See\ the\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ along\ with\ bilevel-\/scheduling.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_SOLUTION\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_SOLUTION\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}Instance.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}Machine.h"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_solution}{Solution}}\ \{}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<Machine>\ listHighSpeedMachines;\ \textcolor{comment}{//\ list\ of\ high\ speed\ machines}}
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<Machine>\ listLowSpeedMachines;\ \textcolor{comment}{//\ list\ of\ low\ speed\ machines}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_wj\_Uj\{\};\ \textcolor{comment}{//\ the\ sum\ of\ the\ number\ weighted\ tardy\ jobs\ of\ the\ solution}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_Cj\{\};\ \textcolor{comment}{//\ the\ sum\ of\ the\ completion\ time\ of\ the\ solution}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ CONSTRUCTOR\ \ \ \ \ */}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_solution_ab55bd4b023d596ce11aaf737b9a6123b}{Solution}}()\ :\ sum\_wj\_Uj(0.0),\ sum\_Cj(0.0)\ \{\};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_solution_a04fb486dc095fd36cc8ec6435566f713}{Solution}}(\textcolor{keyword}{const}\ std::vector<Machine>\&\ listHighSpeedMachines,\ \textcolor{keyword}{const}\ std::vector<Machine>\&\ listLowSpeedMachines)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ :\ listHighSpeedMachines(listHighSpeedMachines),\ listLowSpeedMachines(listLowSpeedMachines),\ sum\_wj\_Uj(0.0),}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ sum\_Cj(0.0)\ \{\}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_solution_acda72af8baee4e1278eb99e96b0650d9}{Solution}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_instance}{Instance}}*\ instance)\ :\ sum\_wj\_Uj(0.0),\ sum\_Cj(0.0)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ listHighSpeedMachines\ =\ std::vector<Machine>(instance-\/>getNbOfHighSpeedMachines(),}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}(instance-\/>getHighSpeed()));}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ listLowSpeedMachines\ =\ std::vector<Machine>(instance-\/>getNbOfLowSpeedMachines(),}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}(instance-\/>getLowSpeed()));}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ METHODS\ \ \ \ \ */}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_solution_a6cf184fb7f0eb37ae61174c736561b44}{reset}}()\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ reset\ all\ machines}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ listHighSpeedMachines)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ machine.reset();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ listLowSpeedMachines)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ machine.reset();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ sum\_wj\_Uj\ =\ 0.0;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ sum\_Cj\ =\ 0.0;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ std::vector<unsigned\ int>\ \mbox{\hyperlink{class_solution_a11d8893f250f86b66ce5c93dc290d668}{possibleSwapV}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k,\ \textcolor{keywordtype}{bool}\ considerLowSpeedMachines)}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ list\ of\ machines\ we\ consider}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ std::vector<Machine>\&\ listMachines\ =\ considerLowSpeedMachines\ ?\ listLowSpeedMachines\ :\ listHighSpeedMachines;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Two\ machines\ from\ the\ list}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexMachine1\ =\ 0;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ indexMachine2;}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ speed\ =\ listMachines[0].getSpeed();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ std::vector<unsigned\ int>\ swapableMachines;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ each\ machine\ of\ the\ list}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (indexMachine1\ <\ listMachines.size()\ -\/\ 1)}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listMachines[indexMachine1].getAffectedJob().size()\ >\ k)}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}\&\ job1\ =\ listMachines[indexMachine1][k];\ \textcolor{comment}{//\ get\ its\ k-\/th\ job}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indexMachine2\ =\ indexMachine1;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ each\ next\ machine}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indexMachine2++;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listMachines[indexMachine2].getAffectedJob().size()\ >\ k)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}\&\ job2\ =\ listMachines[indexMachine2][k];\ \textcolor{comment}{//\ get\ its\ k-\/th\ job}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ job1\ and\ job2\ are\ late\ and\ job1\ will\ be\ early\ after\ swapping\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job1.isLate())}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job2.isLate()\ \&\&\ (listMachines[indexMachine2].startTimeOfJob(k)\ +\ job1.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed)\ <\ job1.getDi())}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ These\ machines\ can\ swap\ their\ k-\/th\ job}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapableMachines.push\_back(indexMachine1\ +\ (considerLowSpeedMachines\ ?\ listHighSpeedMachines.size()\ :\ 0));}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapableMachines.push\_back(indexMachine2\ +\ (considerLowSpeedMachines\ ?\ listHighSpeedMachines.size()\ :\ 0));}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ swapableMachines;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (indexMachine2\ <\ listMachines.size()\ -\/\ 1);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ swap\ isn't\ possible\ check\ with\ the\ next\ machine}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ indexMachine1++;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ an\ empty\ list}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ swapableMachines;}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00154\ \ \ \ \ std::vector<unsigned\ int>\ \mbox{\hyperlink{class_solution_aa5a986d5fa05cfb6605b33714e16056c}{possibleSwapVHighSpeed}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_solution_a11d8893f250f86b66ce5c93dc290d668}{possibleSwapV}}(k,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ std::vector<unsigned\ int>\ \mbox{\hyperlink{class_solution_acbbf6f67dcfd487999a5d53fa14817bc}{possibleSwapVLowSpeed}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k)\ \{}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_solution_a11d8893f250f86b66ce5c93dc290d668}{possibleSwapV}}(k,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00166\ \ \ \ \ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_solution_ad1b7dadaac88cd4cb7e189c4d4fa6bd3}{getMaxNumberOfHighSpeedBlocs}}()}
+\DoxyCodeLine{00173\ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbBlocs\ =\ 0;}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\ machine\ :\ listHighSpeedMachines)}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (machine.getAffectedJob().size()\ >\ nbBlocs)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nbBlocs\ =\ machine.getAffectedJob().size();}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nbBlocs;}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ }
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_solution_a773c9870fac116e333ca2fda4e25cf3b}{getMaxNumberOfLowSpeedBlocs}}()}
+\DoxyCodeLine{00193\ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbBlocs\ =\ 0;}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\ machine\ :\ listLowSpeedMachines)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (machine.getAffectedJob().size()\ >\ nbBlocs)}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nbBlocs\ =\ machine.getAffectedJob().size();}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ nbBlocs;}
+\DoxyCodeLine{00205\ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_solution_afa0512a7336babd7fd800aa87c90fa98}{swapV}}(std::vector<unsigned\ int>\ swapableMachines,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k)}
+\DoxyCodeLine{00214\ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}\&\ machine1\ =\ \mbox{\hyperlink{class_solution_aae97c57351ed7f6bf4ca37a3417b5144}{operator[]}}(swapableMachines[0]);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}\&\ machine2\ =\ \mbox{\hyperlink{class_solution_aae97c57351ed7f6bf4ca37a3417b5144}{operator[]}}(swapableMachines[1]);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}\ jobTemp\ =\ machine1[k];}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ machine1[k]\ =\ machine2[k];}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ machine2[k]\ =\ jobTemp;}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ verbose.setRequiredLevel(3);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}swapped\ job\ "{}}\ <<\ jobTemp.getNum()\ <<\ \textcolor{stringliteral}{"{}\ and\ "{}}\ <<\ machine1[k].getNum()\ <<}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ from\ machine\ "{}}\ <<\ swapableMachines[0]\ <<\ \textcolor{stringliteral}{"{}\ and\ "{}}\ <<\ swapableMachines[1]\ <<\ \textcolor{stringliteral}{"{}\ at\ bloc\ "{}}\ <<\ k\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ verbose.endRequiredLevel();}
+\DoxyCodeLine{00226\ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ }
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_solution_aa3e8919dc2722fdd31524108286cdd80}{evaluate}}()\ \{}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ sum\_Cj\ =\ 0;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ sum\_wj\_Uj\ =\ 0;}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ compute\ the\ objective\ function\ for\ the\ high\ speed\ machines}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ machine\ :\ listHighSpeedMachines)\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ machine.evaluate();}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ sum\_Cj\ +=\ machine.getSumCj();}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ sum\_wj\_Uj\ +=\ machine.getSumWjUj();}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ compute\ the\ objective\ function\ for\ the\ low\ speed\ machines}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ machine\ :\ listLowSpeedMachines)\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ machine.evaluate();}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ sum\_Cj\ +=\ machine.getSumCj();}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ sum\_wj\_Uj\ +=\ machine.getSumWjUj();}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_solution_ad25d4da6d0e0402b01ebe9ccd057f580}{completeVerbose}}()}
+\DoxyCodeLine{00262\ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Solution\ :\(\backslash\)n"{}};}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Jobs\ assigned\ to\ high\ speed\ machines}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ HighSpeed\ =\ listHighSpeedMachines[0].getSpeed();}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}High\ Speed\ :\ "{}}\ <<\ HighSpeed\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ listHighSpeedMachines)}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ machine.getAffectedJob())}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ (job.isLate()\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ job.getNum()\ <<\ \textcolor{stringliteral}{"{}|p\ "{}}\ <<\ job.getPi()\ /\ HighSpeed\ <<\ \textcolor{stringliteral}{"{}\ d\ "{}}\ <<\ job.getDi()\ <<\ \textcolor{stringliteral}{"{}\ w\ "{}}\ <<\ job.getWi()\ <<\ \textcolor{stringliteral}{"{}|\ "{}};}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}]\(\backslash\)n"{}};}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}-\/\ -\/\ -\/\(\backslash\)n"{}};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Jobs\ assigned\ to\ low\ speed\ machines}}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ LowSpeed\ =\ listLowSpeedMachines[0].getSpeed();}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Low\ Speed\ :\ "{}}\ <<\ LowSpeed\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ listLowSpeedMachines)}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ machine.getAffectedJob())}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ (job.isLate()\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ job.getNum()\ <<\ \textcolor{stringliteral}{"{}|p\ "{}}\ <<\ job.getPi()\ /\ LowSpeed\ <<\ \textcolor{stringliteral}{"{}\ d\ "{}}\ <<\ job.getDi()\ <<\ \textcolor{stringliteral}{"{}\ w\ "{}}\ <<\ job.getWi()\ <<\ \textcolor{stringliteral}{"{}|\ "{}};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}]\(\backslash\)n"{}};}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}-\/\ -\/\ -\/\(\backslash\)n"{}};}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ solution's\ score}}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Sum\ Cj\ :\ "{}}\ <<\ getSumCj()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Sum\ wjUj\ :\ "{}}\ <<\ getSumWjUj()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00298\ \ \ \ \ \}}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_solution_a607803e25a640ffda00025453b13f75b}{compactVerbose}}()}
+\DoxyCodeLine{00308\ \ \ \ \ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbSelectedJobs\ =\ 0;}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Solution\ :\(\backslash\)n"{}};}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Jobs\ assigned\ to\ high\ speed\ machines}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ HighSpeed\ =\ listHighSpeedMachines[0].getSpeed();}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ listHighSpeedMachines)}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ HighSpeed\ <<\ \textcolor{stringliteral}{"{}]-\/|"{}};}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ machine.getAffectedJob())}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ (job.isLate()\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ job.getNum()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job.getNum()\ !=\ 0)\ nbSelectedJobs++;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}|\(\backslash\)n"{}};}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Jobs\ assigned\ to\ low\ speed\ machines}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ LowSpeed\ =\ listLowSpeedMachines[0].getSpeed();}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ listLowSpeedMachines)}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ LowSpeed\ <<\ \textcolor{stringliteral}{"{}]-\/|"{}};}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ machine.getAffectedJob())}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ (job.isLate()\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ job.getNum()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job.getNum()\ !=\ 0)\ nbSelectedJobs++;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}|\(\backslash\)n"{}};}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}-\/\ -\/\ -\/\(\backslash\)n"{}};}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Solution's\ score\ and\ number\ of\ selected\ jobs}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Sum\ Cj\ :\ "{}}\ <<\ getSumCj()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}Sum\ wjUj\ :\ "{}}\ <<\ getSumWjUj()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}n\ :\ "{}}\ <<\ nbSelectedJobs\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00345\ \ \ \ \ \}}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00349\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Machine>\&\ getListHighSpeedMachines()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ listHighSpeedMachines;\ \}}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Machine>\&\ getListLowSpeedMachines()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ listLowSpeedMachines;\ \}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keywordtype}{float}\ getSumWjUj()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sum\_wj\_Uj;\ \}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \textcolor{keywordtype}{float}\ getSumCj()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sum\_Cj;\ \}}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00364\ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}\ \mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pos)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pos\ <\ listHighSpeedMachines.size()\ ?\ listHighSpeedMachines[pos]\ :\ listLowSpeedMachines[pos\ -\/\ listHighSpeedMachines.size()];\ \}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ SETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00369\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordtype}{void}\ setListHighSpeedMachines(\textcolor{keyword}{const}\ std::vector<Machine>\&\ listHighSpeedMachines)\ \{\ Solution::listHighSpeedMachines\ =\ listHighSpeedMachines;\ \}}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordtype}{void}\ setListLowSpeedMachines(\textcolor{keyword}{const}\ std::vector<Machine>\&\ listLowSpeedMachines)\ \{\ Solution::listLowSpeedMachines\ =\ listLowSpeedMachines;\ \}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{void}\ setSumWjUj(\textcolor{keywordtype}{float}\ sum\_wj\_Uj)\ \{\ Solution::sum\_wj\_Uj\ =\ sum\_wj\_Uj;\ \}}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordtype}{void}\ setSumCj(\textcolor{keywordtype}{float}\ sumCj)\ \{\ sum\_Cj\ =\ sumCj;\ \}}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ OPERATORS\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00382\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00389\ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}\&\ \mbox{\hyperlink{class_solution_aae97c57351ed7f6bf4ca37a3417b5144}{operator[]}}(\textcolor{keywordtype}{size\_t}\ pos)\ \{\ \textcolor{keywordflow}{return}\ pos\ <\ listHighSpeedMachines.size()\ ?\ listHighSpeedMachines[pos]\ :\ listLowSpeedMachines[pos\ -\/\ listHighSpeedMachines.size()];\ \}}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00392\ \textcolor{comment}{\ \ \ \ *\ Operator\ to\ compare\ this\ object\ with\ another\ Solution\ object}}
+\DoxyCodeLine{00393\ \textcolor{comment}{\ \ \ \ *\ We\ first\ compare\ the\ sum\ Cj\ and\ if\ both\ have\ the\ same\ value,\ compare\ the\ sum\ wjUj}}
+\DoxyCodeLine{00394\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00395\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ sol)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ ((sum\_Cj\ ==\ sol.sum\_Cj)\ ?\ (sum\_wj\_Uj\ <\ sol.sum\_wj\_Uj)\ :\ (sum\_Cj\ <\ sol.sum\_Cj));\ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00398\ \textcolor{comment}{\ \ \ \ *\ Static\ method\ which\ only\ compare\ the\ sum\ wj\ Uj}}
+\DoxyCodeLine{00399\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00400\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ smaller\_wjUj(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ lsol,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ rsol)\ \{\ \textcolor{keywordflow}{return}\ (lsol.sum\_wj\_Uj\ <\ rsol.sum\_wj\_Uj);\ \}}
+\DoxyCodeLine{00401\ \};}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \textcolor{keyword}{inline}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ solution)\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Solution\ :\ "{}}\ <<\ std::endl}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}high\ speed\ machines\ :\ ["{}}\ <<\ std::endl;}
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ solution.getListHighSpeedMachines())\ \{}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ os\ <<\ machine\ <<\ std::endl;}
+\DoxyCodeLine{00410\ \ \ \ \ \}}
+\DoxyCodeLine{00411\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}low\ speed\ machines\ :\ ["{}}\ <<\ std::endl;}
+\DoxyCodeLine{00413\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ machine\ :\ solution.getListLowSpeedMachines())\ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ os\ <<\ machine\ <<\ std::endl;}
+\DoxyCodeLine{00415\ \ \ \ \ \}}
+\DoxyCodeLine{00416\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}]"{}}\ <<\ std::endl\ <<\ \textcolor{stringliteral}{"{}Sum\ Cj\ :\ "{}}\ <<\ solution.getSumCj()\ <<\ std::endl\ <<\ \textcolor{stringliteral}{"{}Sum\ wjUj\ :\ "{}}\ <<\ solution.getSumWjUj()\ <<\ std::endl;}
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \}}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_SOLUTION\_H}}
+
+\end{DoxyCode}

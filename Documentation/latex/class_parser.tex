@@ -1,0 +1,49 @@
+\doxysection{Parser Class Reference}
+\hypertarget{class_parser}{}\label{class_parser}\index{Parser@{Parser}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_instance}{Instance}} \mbox{\hyperlink{class_parser_a8595b4db00b5283e1b3e9d1130c71476}{read\+From\+File}} (std\+::string \&file\+Path) const
+\item 
+void \mbox{\hyperlink{class_parser_a46c3b6aa36af35d4468723876d7f07c9}{serialize\+Instance}} (\mbox{\hyperlink{class_instance}{Instance}} \&instance)
+\item 
+\Hypertarget{class_parser_ade48868713be272ea3e8e3f5cac7c998}\label{class_parser_ade48868713be272ea3e8e3f5cac7c998} 
+void {\bfseries save\+In\+File} (std\+::string \&filepath, const \mbox{\hyperlink{class_i_solver}{ISolver}} \texorpdfstring{$\ast$}{*}solver, unsigned int optimal\+\_\+objective)
+\item 
+\Hypertarget{class_parser_a2d8c3d982450c1174b2b26245a2cee4b}\label{class_parser_a2d8c3d982450c1174b2b26245a2cee4b} 
+void {\bfseries save\+Solution\+In\+File} (std\+::string \&filepath, const \mbox{\hyperlink{class_i_solver}{ISolver}} \texorpdfstring{$\ast$}{*}solver)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_parser_a8595b4db00b5283e1b3e9d1130c71476}\label{class_parser_a8595b4db00b5283e1b3e9d1130c71476} 
+\index{Parser@{Parser}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_instance}{Instance}} Parser\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string \&}]{file\+Path }\end{DoxyParamCaption}) const}
+
+This Method parse a file to generate an instance. It\textquotesingle{}s an \doxylink{class_instance}{Instance} constructor The file must respect the intended format (cf Read\+Me.\+md) 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & the path of the file to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new instance 
+\end{DoxyReturn}
+\Hypertarget{class_parser_a46c3b6aa36af35d4468723876d7f07c9}\label{class_parser_a46c3b6aa36af35d4468723876d7f07c9} 
+\index{Parser@{Parser}!serializeInstance@{serializeInstance}}
+\index{serializeInstance@{serializeInstance}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{serializeInstance()}{serializeInstance()}}
+{\footnotesize\ttfamily void Parser\+::serialize\+Instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_instance}{Instance}} \&}]{instance }\end{DoxyParamCaption})}
+
+Method that serialize an instance into the corresponding file given by the attribute\+Instance\+::instance\+Path. The file contains the instance\textquotesingle{}s data in a specific format (cf Read\+Me.\+md) 
+\begin{DoxyParams}{Parameters}
+{\em instance} & to serialize \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Parser.\+h\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Parser.\+cpp\end{DoxyCompactItemize}

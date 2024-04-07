@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_i_follower_swap_rule_8h" kind="file" language="C++">
+    <compoundname>IFollowerSwapRule.h</compoundname>
+    <includes refid="_rule_8h" local="yes">Rule.h</includes>
+    <includes refid="_solution_8h" local="yes">Solution.h</includes>
+    <includedby refid="_f_swap_rule_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h</includedby>
+    <includedby refid="_i_sub_solver_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Instance.h</label>
+        <link refid="_instance_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Job.h</label>
+        <link refid="_job_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Machine.h</label>
+        <link refid="_machine_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Rule.h</label>
+        <link refid="_rule_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Verbose.h</label>
+        <link refid="_verbose_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="8">
+        <label>filesystem</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="6">
+        <label>ostream</label>
+      </node>
+      <node id="10">
+        <label>random</label>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h</label>
+        <link refid="_analyser_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</label>
+        <link refid="_bi_level___scheduling___industry__4_80_8cpp"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.cpp</label>
+        <link refid="_deepest_descent_8cpp"/>
+      </node>
+      <node id="9">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h</label>
+        <link refid="_deepest_descent_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.cpp</label>
+        <link refid="_f_solver_8cpp"/>
+      </node>
+      <node id="6">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.h</label>
+        <link refid="_f_solver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h</label>
+        <link refid="_f_swap_rule_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.cpp</label>
+        <link refid="_i_solver_8cpp"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.h</label>
+        <link refid="_i_solver_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h</label>
+        <link refid="_i_sub_solver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp</label>
+        <link refid="_l_solver_8cpp"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h</label>
+        <link refid="_l_solver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp</label>
+        <link refid="_parser_8cpp"/>
+      </node>
+      <node id="14">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h</label>
+        <link refid="_parser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_swap_operation" prot="public">SwapOperation</innerclass>
+    <innerclass refid="class_i_follower_swap_rule" prot="public">IFollowerSwapRule</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BILEVEL_SCHEDULING_IFOLLOWER_SWAPRULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BILEVEL_SCHEDULING_IFOLLOWER_SWAPRULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_rule_8h" kindref="compound">Rule.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_solution_8h" kindref="compound">Solution.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">Represent<sp/>a<sp/>swap<sp/>operation<sp/>to<sp/>apply<sp/>between<sp/>two<sp/>machines<sp/>on<sp/>a<sp/>specific<sp/>bloc</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">machine&lt;i&gt;<sp/>is<sp/>the<sp/>index<sp/>of<sp/>the<sp/>machine<sp/>i</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">bloc<sp/>is<sp/>the<sp/>job&apos;s<sp/>position<sp/>on<sp/>each<sp/>machine</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">gain<sp/>is<sp/>the<sp/>improvement<sp/>we<sp/>can<sp/>obtain<sp/>if<sp/>we<sp/>apply<sp/>this<sp/>swap<sp/>operation<sp/>(The<sp/>higher,<sp/>the<sp/>better)</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="struct_swap_operation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref>;</highlight></codeline>
+<codeline lineno="16" refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref>;</highlight></codeline>
+<codeline lineno="17" refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref>;</highlight></codeline>
+<codeline lineno="18" refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref>;<sp/></highlight><highlight class="comment">//<sp/>How<sp/>much<sp/>will<sp/>this<sp/>operation<sp/>improve<sp/>our<sp/>solution<sp/>?<sp/>The<sp/>higher,<sp/>the<sp/>better.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_i_follower_swap_rule" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_i_follower_swap_rule" kindref="compound">IFollowerSwapRule</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rule" kindref="compound">Rule</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>CONSTRUCTOR<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_i_follower_swap_rule_1acef68509b2416283651a54b0df2a5bee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_follower_swap_rule_1acef68509b2416283651a54b0df2a5bee" kindref="member">IFollowerSwapRule</ref>()<sp/>:<sp/><ref refid="class_rule" kindref="compound">Rule</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="29" refid="class_i_follower_swap_rule_1a76a420662583464de5b4d2b5491ee7a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_follower_swap_rule_1a76a420662583464de5b4d2b5491ee7a1" kindref="member">IFollowerSwapRule</ref>(std::string<sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)<sp/>:<sp/><ref refid="class_rule" kindref="compound">Rule</ref>(<ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>,<sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)<sp/>{};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_i_follower_swap_rule_1ac290caa626cfd5842457ca2bd1b5e2f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_i_follower_swap_rule_1ac290caa626cfd5842457ca2bd1b5e2f8" kindref="member">getRuleName</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;F_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>METHODS<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_i_follower_swap_rule_1afd969e659142a62860f98edefe3b4aa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/><ref refid="class_i_follower_swap_rule_1afd969e659142a62860f98edefe3b4aa1" kindref="member">swapVPossibleFor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l2)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_i_follower_swap_rule_1a37aca3d7fc8ba06807fb1c4285eff8b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref><sp/><ref refid="class_i_follower_swap_rule_1a37aca3d7fc8ba06807fb1c4285eff8b1" kindref="member">bestSwapV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;SwapOperation&gt;&amp;<sp/>possibleSwaps,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_solution" kindref="compound">Solution</ref>&amp;<sp/>s)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_i_follower_swap_rule_1a0d701aedd4cae809823c8bf6ebb750ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i_follower_swap_rule_1a0d701aedd4cae809823c8bf6ebb750ba" kindref="member">verboseOperator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&amp;<sp/>swapOp)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rule_1a687105cb2347eda6e574cb52efc72483" kindref="member">verbose</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SwapOperation<sp/>:<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>swapOp.<ref refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" kindref="member">machine1</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>swapOp.<ref refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" kindref="member">machine2</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>swapOp.<ref refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" kindref="member">bloc</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>swapOp.<ref refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" kindref="member">gain</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BILEVEL_SCHEDULING_IFOLLOWER_SWAPRULE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h"/>
+  </compounddef>
+</doxygen>

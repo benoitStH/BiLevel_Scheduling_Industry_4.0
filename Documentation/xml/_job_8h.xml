@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_job_8h" kind="file" language="C++">
+    <compoundname>Job.h</compoundname>
+    <includes local="no">random</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_verbose_8h" local="yes">Verbose.h</includes>
+    <includedby refid="_instance_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h</includedby>
+    <includedby refid="_job_8cpp" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.cpp</includedby>
+    <includedby refid="_machine_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h</label>
+        <link refid="_job_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Verbose.h</label>
+        <link refid="_verbose_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>random</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h</label>
+        <link refid="_analyser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</label>
+        <link refid="_bi_level___scheduling___industry__4_80_8cpp"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.cpp</label>
+        <link refid="_deepest_descent_8cpp"/>
+      </node>
+      <node id="9">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h</label>
+        <link refid="_deepest_descent_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.cpp</label>
+        <link refid="_f_solver_8cpp"/>
+      </node>
+      <node id="18">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.h</label>
+        <link refid="_f_solver_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h</label>
+        <link refid="_f_swap_rule_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Generateur.cpp</label>
+        <link refid="_generateur_8cpp"/>
+      </node>
+      <node id="4">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Generateur.h</label>
+        <link refid="_generateur_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ILeaderSelectRule.h</label>
+        <link refid="_i_leader_select_rule_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.cpp</label>
+        <link refid="_i_solver_8cpp"/>
+      </node>
+      <node id="8">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.h</label>
+        <link refid="_i_solver_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h</label>
+        <link refid="_i_sub_solver_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.cpp</label>
+        <link refid="_instance_8cpp"/>
+      </node>
+      <node id="2">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Instance.h</label>
+        <link refid="_instance_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.cpp</label>
+        <link refid="_job_8cpp"/>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h</label>
+        <link refid="_job_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp</label>
+        <link refid="_l_solver_8cpp"/>
+      </node>
+      <node id="12">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h</label>
+        <link refid="_l_solver_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSortRule.h</label>
+        <link refid="_l_sort_rule_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.cpp</label>
+        <link refid="_machine_8cpp"/>
+      </node>
+      <node id="26">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Machine.h</label>
+        <link refid="_machine_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp</label>
+        <link refid="_parser_8cpp"/>
+      </node>
+      <node id="14">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h</label>
+        <link refid="_parser_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.cpp</label>
+        <link refid="_solution_8cpp"/>
+      </node>
+      <node id="21">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h</label>
+        <link refid="_solution_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_job" prot="public">Job</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_job_8h_1a6e574174d732eb9249c50293db429705" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Job &amp;job)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="104" column="8" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="_job_8h_1a3151fd76eb2bbd1ef5321b11b997be77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; operator&lt;&lt;</definition>
+        <argsstring>(const Verbose &amp;verbose, const Job &amp;job)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+          <declname>verbose</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="109" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="109" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/><sp/>Copyright<sp/>(C)<sp/>2024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>EA<sp/>6300<sp/>ERL<sp/>CNRS<sp/>7002<sp/>Laboratoire<sp/>d&apos;Informatique<sp/>Fondamentale<sp/>et<sp/>Appliquée<sp/>de<sp/>Tours,<sp/>Tours,<sp/>France</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>DIGEP,<sp/>Politecnico<sp/>di<sp/>Torino,<sp/>Corso<sp/>Duca<sp/>degli<sp/>Abruzzi<sp/>24,<sp/>Torino,<sp/>Italy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>bilevel-scheduling.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bilevel-scheduling<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bilevel-scheduling<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>of<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>See<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>along<sp/>with<sp/>bilevel-scheduling.<sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BILEVEL_SCHEDULING_JOB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BILEVEL_SCHEDULING_JOB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_verbose_8h" kindref="compound">Verbose.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_job" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_job" kindref="compound">Job</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pi;<sp/><sp/></highlight><highlight class="comment">//<sp/>job&apos;s<sp/>processing<sp/>time<sp/>for<sp/>a<sp/>machine<sp/>whose<sp/>speed<sp/>equals<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>di;<sp/><sp/></highlight><highlight class="comment">//<sp/>job&apos;s<sp/>deadline</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wi;<sp/><sp/></highlight><highlight class="comment">//<sp/>job&apos;s<sp/>weight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num;<sp/></highlight><highlight class="comment">//<sp/>job<sp/>number<sp/>(0<sp/>means<sp/>its<sp/>a<sp/>ghost<sp/>job)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>late;<sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>the<sp/>job<sp/>late<sp/>?<sp/>(always<sp/>initialized<sp/>to<sp/>false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_verbose" kindref="compound">Verbose</ref><sp/>verbose;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Generate<sp/>a<sp/>&apos;ghost&apos;<sp/>job<sp/>with<sp/>all<sp/>attributes<sp/>equal<sp/>to<sp/>0*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_job_1a666013a882e328576a340ad37118ccba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_job_1a666013a882e328576a340ad37118ccba" kindref="member">Job</ref>()<sp/>:<sp/>pi(0),<sp/>di(0),<sp/>wi(0),<sp/>num(0),<sp/>late(false)<sp/>{};</highlight></codeline>
+<codeline lineno="40" refid="class_job_1a21ea5b77a622387e57f831a5f035988b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_job_1a21ea5b77a622387e57f831a5f035988b" kindref="member">Job</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pi,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>di,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wi,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num)<sp/>:<sp/>pi(pi),<sp/>di(di),<sp/>wi(wi),<sp/>num(num),<sp/>late(false)<sp/>{}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>GETTER<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi;<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>di;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_job_1a318a23d444801f67a6748cffd050543c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>wi;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_job_1a57ea9cddb0914b8eaad121b6f140c054" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_job_1a57ea9cddb0914b8eaad121b6f140c054" kindref="member">getNum</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>num;<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>late;<sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>SETTER<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_job_1a9d4d101c4b1019315fcb602ecb6736e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_job_1a9d4d101c4b1019315fcb602ecb6736e7" kindref="member">setLate</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>)<sp/>{<sp/>late<sp/>=<sp/><ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>OPERATORS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="class_job_1a9db7e3aa37a954f880ad037d22a9c59c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1a9db7e3aa37a954f880ad037d22a9c59c" kindref="member">LPT_inv_EDD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(lhs.pi<sp/>==<sp/>rhs.pi)<sp/>?<sp/>(lhs.di<sp/>&gt;<sp/>rhs.di)<sp/>:<sp/>(lhs.pi<sp/>&gt;<sp/>rhs.pi);<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_job_1acb8649ab2565cf76e6b9580535cb8e92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1acb8649ab2565cf76e6b9580535cb8e92" kindref="member">LWPT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>rhs)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lhs.wi<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rhs.wi<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((lhs.pi<sp/>/<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(lhs.wi))<sp/>&lt;<sp/>(rhs.pi<sp/>/<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">(rhs.wi)));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_job_1afacc25f2091bae172e1ea3e562ca119f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1afacc25f2091bae172e1ea3e562ca119f" kindref="member">EDD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(lhs.di<sp/>==<sp/>rhs.di<sp/>?<sp/>(lhs.pi<sp/>&lt;<sp/>rhs.pi)<sp/>:<sp/>(lhs.di<sp/>&lt;<sp/>rhs.di));<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_job_1aaf8dfd6018d7c178ea58ce65674af334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1aaf8dfd6018d7c178ea58ce65674af334" kindref="member">SmallestWeight</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>rhs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(lhs.wi<sp/>&lt;<sp/>rhs.wi);<sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_job_1ad065e0ef271615520b3dd202635e327b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1ad065e0ef271615520b3dd202635e327b" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>J)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pi<sp/>==<sp/>J.pi<sp/>&amp;&amp;<sp/>di<sp/>==<sp/>J.di<sp/>&amp;&amp;<sp/>wi<sp/>==<sp/>J.wi;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="class_job_1a64d7508ab3cf5b0d962476daac594e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1a64d7508ab3cf5b0d962476daac594e80" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>J)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(J<sp/>==<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Inequalities<sp/>Operators<sp/>compare<sp/>processing<sp/>times<sp/>and<sp/>due<sp/>date<sp/>in<sp/>case<sp/>of<sp/>equalities<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_job_1ad7065bd14cac5d0bec1f794508c6bd1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1ad7065bd14cac5d0bec1f794508c6bd1f" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>J)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pi<sp/>==<sp/>J.pi)<sp/>?<sp/>(di<sp/>&lt;<sp/>J.di)<sp/>:<sp/>(pi<sp/>&lt;<sp/>J.pi);<sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_job_1a2f51ac9dbef9b389993067345f1d6a89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1a2f51ac9dbef9b389993067345f1d6a89" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>J)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pi<sp/>==<sp/>J.pi)<sp/>?<sp/>(di<sp/>&gt;<sp/>J.di)<sp/>:<sp/>(pi<sp/>&gt;<sp/>J.pi);<sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_job_1a101ec9387cdbeb3e94684c25fa8563e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1a101ec9387cdbeb3e94684c25fa8563e6" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>J)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pi<sp/>==<sp/>J.pi)<sp/>?<sp/>(di<sp/>&lt;=<sp/>J.di)<sp/>:<sp/>(pi<sp/>&lt;=<sp/>J.pi);<sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="class_job_1abdcd4563af9a8c243ae600b2a0350423" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_job_1abdcd4563af9a8c243ae600b2a0350423" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>J)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(pi<sp/>==<sp/>J.pi)<sp/>?<sp/>(di<sp/>&gt;=<sp/>J.di)<sp/>:<sp/>(pi<sp/>&gt;=<sp/>J.pi);<sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="_job_8h_1a6e574174d732eb9249c50293db429705" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="_job_8h_1a6e574174d732eb9249c50293db429705" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;|<sp/>pi:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>job.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>di:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>job.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>wi:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>job.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>()<sp/>&lt;&lt;<sp/>(job.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;|&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="_job_8h_1a3151fd76eb2bbd1ef5321b11b997be77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_verbose" kindref="compound">Verbose</ref>&amp;<sp/><ref refid="_job_8h_1a6e574174d732eb9249c50293db429705" kindref="member">operator&lt;&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_verbose" kindref="compound">Verbose</ref>&amp;<sp/>verbose,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_job" kindref="compound">Job</ref>&amp;<sp/>job)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>verbose<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;|<sp/>pi:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>job.<ref refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" kindref="member">getPi</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>di:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>job.<ref refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" kindref="member">getDi</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>wi:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>job.<ref refid="class_job_1a318a23d444801f67a6748cffd050543c" kindref="member">getWi</ref>()<sp/>&lt;&lt;<sp/>(job.<ref refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" kindref="member">isLate</ref>()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;|&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>verbose;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BILEVEL_SCHEDULING_JOB_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h"/>
+  </compounddef>
+</doxygen>

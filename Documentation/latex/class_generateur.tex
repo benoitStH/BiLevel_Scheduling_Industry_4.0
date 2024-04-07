@@ -1,0 +1,63 @@
+\doxysection{Generateur Class Reference}
+\hypertarget{class_generateur}{}\label{class_generateur}\index{Generateur@{Generateur}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_generateur_ad0e541d64aa7a6cf986177497eeac87f}\label{class_generateur_ad0e541d64aa7a6cf986177497eeac87f} 
+{\bfseries Generateur} (unsigned int seed)
+\item 
+\mbox{\hyperlink{class_job}{Job}} \mbox{\hyperlink{class_generateur_a5859dbe3ce04a56d97bd2136e3431682}{generate\+Job}} (unsigned int num, unsigned int inf\+Pi=1, unsigned int sup\+Pi=10, unsigned int inf\+Di=1, unsigned int sup\+Di=10, unsigned int inf\+Wi=1, unsigned int sup\+Wi=20)
+\item 
+\mbox{\hyperlink{class_instance}{Instance}} \mbox{\hyperlink{class_generateur_affba270de400cce001da809b5eee64aa}{generate\+Instance}} (std\+::string new\+Instance\+Path, unsigned int nb\+Jobs, unsigned int nb\+Of\+High\+Speed\+Machines, unsigned int nb\+Of\+Low\+Speed\+Machines, unsigned int high\+Speed, unsigned int low\+Speed)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_generateur_affba270de400cce001da809b5eee64aa}\label{class_generateur_affba270de400cce001da809b5eee64aa} 
+\index{Generateur@{Generateur}!generateInstance@{generateInstance}}
+\index{generateInstance@{generateInstance}!Generateur@{Generateur}}
+\doxysubsubsection{\texorpdfstring{generateInstance()}{generateInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_instance}{Instance}} Generateur\+::generate\+Instance (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Instance\+Path,  }\item[{unsigned int}]{nb\+Jobs,  }\item[{unsigned int}]{nb\+Of\+High\+Speed\+Machines,  }\item[{unsigned int}]{nb\+Of\+Low\+Speed\+Machines,  }\item[{unsigned int}]{high\+Speed,  }\item[{unsigned int}]{low\+Speed }\end{DoxyParamCaption})}
+
+Method that generate a instance from the given parameters 
+\begin{DoxyParams}{Parameters}
+{\em nb\+Jobs} & the number of jobs to generate \\
+\hline
+{\em nb\+Of\+High\+Speed\+Machines} & the number of high speed machines to create \\
+\hline
+{\em nb\+Of\+High\+Low\+Machines} & the number of low speed machines to create \\
+\hline
+{\em high\+Speed} & the high speed for machine \\
+\hline
+{\em low\+Speed} & the low speed for machine \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_generateur_a5859dbe3ce04a56d97bd2136e3431682}\label{class_generateur_a5859dbe3ce04a56d97bd2136e3431682} 
+\index{Generateur@{Generateur}!generateJob@{generateJob}}
+\index{generateJob@{generateJob}!Generateur@{Generateur}}
+\doxysubsubsection{\texorpdfstring{generateJob()}{generateJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_job}{Job}} Generateur\+::generate\+Job (\begin{DoxyParamCaption}\item[{unsigned int}]{num,  }\item[{unsigned int}]{inf\+Pi = {\ttfamily 1},  }\item[{unsigned int}]{sup\+Pi = {\ttfamily 10},  }\item[{unsigned int}]{inf\+Di = {\ttfamily 1},  }\item[{unsigned int}]{sup\+Di = {\ttfamily 10},  }\item[{unsigned int}]{inf\+Wi = {\ttfamily 1},  }\item[{unsigned int}]{sup\+Wi = {\ttfamily 20} }\end{DoxyParamCaption})}
+
+Method that generate a job from the given parameters 
+\begin{DoxyParams}{Parameters}
+{\em num} & the job\textquotesingle{}s number \\
+\hline
+{\em inf\+Pi} & the smallest processing time possible \\
+\hline
+{\em sup\+Pi} & the largest processing time possible \\
+\hline
+{\em inf\+Di} & the earliest due date possible \\
+\hline
+{\em sup\+Di} & the latest due date possible \\
+\hline
+{\em inf\+Wi} & the smallest weight possible \\
+\hline
+{\em sup\+Wi} & the largest weight possible \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Generateur.\+h\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/Generateur.\+cpp\end{DoxyCompactItemize}

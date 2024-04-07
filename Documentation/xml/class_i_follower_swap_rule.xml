@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_i_follower_swap_rule" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IFollowerSwapRule</compoundname>
+    <basecompoundref refid="class_rule" prot="public" virt="non-virtual">Rule</basecompoundref>
+    <derivedcompoundref refid="class_f_swap_rule" prot="public" virt="non-virtual">FSwapRule</derivedcompoundref>
+    <includes refid="_i_follower_swap_rule_8h" local="no">IFollowerSwapRule.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_follower_swap_rule_1acef68509b2416283651a54b0df2a5bee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IFollowerSwapRule::IFollowerSwapRule</definition>
+        <argsstring>()</argsstring>
+        <name>IFollowerSwapRule</name>
+        <qualifiedname>IFollowerSwapRule::IFollowerSwapRule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="28" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_follower_swap_rule_1a76a420662583464de5b4d2b5491ee7a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IFollowerSwapRule::IFollowerSwapRule</definition>
+        <argsstring>(std::string ruleName, unsigned int ruleNumber)</argsstring>
+        <name>IFollowerSwapRule</name>
+        <qualifiedname>IFollowerSwapRule::IFollowerSwapRule</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>ruleName</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>ruleNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="29" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_follower_swap_rule_1ac290caa626cfd5842457ca2bd1b5e2f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string IFollowerSwapRule::getRuleName</definition>
+        <argsstring>()</argsstring>
+        <name>getRuleName</name>
+        <qualifiedname>IFollowerSwapRule::getRuleName</qualifiedname>
+        <reimplements refid="class_rule_1a0cb72e5ed2847b80267d1a57b8c1ce2d">getRuleName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="34" column="21" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_follower_swap_rule_1afd969e659142a62860f98edefe3b4aa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref></type>
+        <definition>virtual SwapOperation IFollowerSwapRule::swapVPossibleFor</definition>
+        <argsstring>(const Solution &amp;s, unsigned int k, unsigned int l1, unsigned int l2)=0</argsstring>
+        <name>swapVPossibleFor</name>
+        <qualifiedname>IFollowerSwapRule::swapVPossibleFor</qualifiedname>
+        <reimplementedby refid="class_f_swap_rule_1a6b5afe6cdc2dc90cbf56e6f84e6cd7ad">swapVPossibleFor</reimplementedby>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l1</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method which return a swap operation if a swap between the k-th jobs of two machines l1 and l2 is possible This method needs too be overriden </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="44" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_follower_swap_rule_1a37aca3d7fc8ba06807fb1c4285eff8b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref></type>
+        <definition>virtual SwapOperation IFollowerSwapRule::bestSwapV</definition>
+        <argsstring>(const std::vector&lt; SwapOperation &gt; &amp;possibleSwaps, const Solution &amp;s)=0</argsstring>
+        <name>bestSwapV</name>
+        <qualifiedname>IFollowerSwapRule::bestSwapV</qualifiedname>
+        <reimplementedby refid="class_f_swap_rule_1aabba63b53d913fe5ba393c26d052bae4">bestSwapV</reimplementedby>
+        <param>
+          <type>const std::vector&lt; <ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &gt; &amp;</type>
+          <declname>possibleSwaps</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method which return the best swap according to a criterion among a list of possible swap This method must be overriden </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="50" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_follower_swap_rule_1a0d701aedd4cae809823c8bf6ebb750ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IFollowerSwapRule::verboseOperator</definition>
+        <argsstring>(const SwapOperation &amp;swapOp)</argsstring>
+        <name>verboseOperator</name>
+        <qualifiedname>IFollowerSwapRule::verboseOperator</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &amp;</type>
+          <declname>swapOp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="52" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>FSwapRule</label>
+        <link refid="class_f_swap_rule"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IFollowerSwapRule</label>
+        <link refid="class_i_follower_swap_rule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Rule</label>
+        <link refid="class_rule"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>IFollowerSwapRule</label>
+        <link refid="class_i_follower_swap_rule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Rule</label>
+        <link refid="class_rule"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Verbose</label>
+        <link refid="class_verbose"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="21" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="22" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_i_follower_swap_rule_1a37aca3d7fc8ba06807fb1c4285eff8b1" prot="public" virt="pure-virtual"><scope>IFollowerSwapRule</scope><name>bestSwapV</name></member>
+      <member refid="class_i_follower_swap_rule_1ac290caa626cfd5842457ca2bd1b5e2f8" prot="public" virt="virtual"><scope>IFollowerSwapRule</scope><name>getRuleName</name></member>
+      <member refid="class_rule_1a4a1eca38190de16698b6851cf9f243eb" prot="public" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>getRuleNumber</name></member>
+      <member refid="class_i_follower_swap_rule_1acef68509b2416283651a54b0df2a5bee" prot="public" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>IFollowerSwapRule</name></member>
+      <member refid="class_i_follower_swap_rule_1a76a420662583464de5b4d2b5491ee7a1" prot="public" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>IFollowerSwapRule</name></member>
+      <member refid="class_rule_1aeb73d8de3bba02f37d8cab6efb645424" prot="public" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>Rule</name></member>
+      <member refid="class_rule_1ab5c30d4e161e9dc5f6dd77029c2fbd67" prot="public" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>Rule</name></member>
+      <member refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" prot="protected" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>ruleName</name></member>
+      <member refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" prot="protected" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>ruleNumber</name></member>
+      <member refid="class_i_follower_swap_rule_1afd969e659142a62860f98edefe3b4aa1" prot="public" virt="pure-virtual"><scope>IFollowerSwapRule</scope><name>swapVPossibleFor</name></member>
+      <member refid="class_rule_1a687105cb2347eda6e574cb52efc72483" prot="protected" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>verbose</name></member>
+      <member refid="class_i_follower_swap_rule_1a0d701aedd4cae809823c8bf6ebb750ba" prot="public" virt="non-virtual"><scope>IFollowerSwapRule</scope><name>verboseOperator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

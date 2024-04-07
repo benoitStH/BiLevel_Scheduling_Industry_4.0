@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_swap_operation" kind="struct" language="C++" prot="public">
+    <compoundname>SwapOperation</compoundname>
+    <includes refid="_i_follower_swap_rule_8h" local="no">IFollowerSwapRule.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SwapOperation::machine1</definition>
+        <argsstring></argsstring>
+        <name>machine1</name>
+        <qualifiedname>SwapOperation::machine1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="15" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SwapOperation::machine2</definition>
+        <argsstring></argsstring>
+        <name>machine2</name>
+        <qualifiedname>SwapOperation::machine2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="16" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SwapOperation::bloc</definition>
+        <argsstring></argsstring>
+        <name>bloc</name>
+        <qualifiedname>SwapOperation::bloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="17" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SwapOperation::gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <qualifiedname>SwapOperation::gain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="18" column="7" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" line="13" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h" bodystart="14" bodyend="19"/>
+    <listofallmembers>
+      <member refid="struct_swap_operation_1a6e25b1c7e1d96d83baa13372bc1343db" prot="public" virt="non-virtual"><scope>SwapOperation</scope><name>bloc</name></member>
+      <member refid="struct_swap_operation_1a546e87fa9ad22079b4b106b2218d887d" prot="public" virt="non-virtual"><scope>SwapOperation</scope><name>gain</name></member>
+      <member refid="struct_swap_operation_1a292d7c7faaddde94763b509d0272edbe" prot="public" virt="non-virtual"><scope>SwapOperation</scope><name>machine1</name></member>
+      <member refid="struct_swap_operation_1a2fcb2ba66e950f4f4d804a86caa28268" prot="public" virt="non-virtual"><scope>SwapOperation</scope><name>machine2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

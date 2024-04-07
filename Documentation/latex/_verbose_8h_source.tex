@@ -1,0 +1,52 @@
+\doxysection{Verbose.\+h}
+\hypertarget{_verbose_8h_source}{}\label{_verbose_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Verbose.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Verbose.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_VERBOSE}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_VERBOSE}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_verbose}{Verbose}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ level;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ maxRequiredLevel;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<unsigned\ int>\ requiredLevels;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Définit\ le\ niveau\ de\ verbose\ actuel}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_verbose_a1a82a273581aacf979ea117f5631a94e}{setLevel}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ newLevel)\ \{\ Verbose::level\ =\ newLevel;\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Définit\ le\ niveau\ de\ verbose\ minimum\ requis\ pour\ afficher\ les\ messages\ suivants}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ setRequiredLevel(\textcolor{keywordtype}{unsigned}\ newRequiredLevel)\ }
+\DoxyCodeLine{00044\ \ \ \ \ \{\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ Verbose::requiredLevels.push\_back(newRequiredLevel);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ Verbose::maxRequiredLevel\ =\ *std::max\_element(Verbose::requiredLevels.begin(),\ Verbose::requiredLevels.end());\ }
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Retire\ le\ dernier\ niveau\ défini\ par\ setRequiredLevel()}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ endRequiredLevel()}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ Verbose::requiredLevels.pop\_back();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ Verbose::maxRequiredLevel\ =\ *std::max\_element(Verbose::requiredLevels.begin(),\ Verbose::requiredLevels.end());}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Affiche\ le\ message\ seulement\ si\ le\ niveau\ de\ verbose\ est\ superieur\ ou\ égal\ à tous\ les\ niveaux\ requis}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{if}\ (Verbose::level\ >=\ Verbose::maxRequiredLevel)\ std::cout\ <<\ text;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(std::string\ text)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{if}\ (Verbose::level\ >=\ Verbose::maxRequiredLevel)\ std::cout\ <<\ text;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keywordtype}{int}\ number)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{if}\ (Verbose::level\ >=\ Verbose::maxRequiredLevel)\ std::cout\ <<\ number;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ uiNumber)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{if}\ (Verbose::level\ >=\ Verbose::maxRequiredLevel)\ std::cout\ <<\ uiNumber;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keywordtype}{float}\ floatNumber)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{if}\ (Verbose::level\ >=\ Verbose::maxRequiredLevel)\ \ std::cout\ <<\ floatNumber;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keywordtype}{long}\ longNumber)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{if}\ (Verbose::level\ >=\ Verbose::maxRequiredLevel)\ std::cout\ <<\ longNumber;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BILEVEL\_SCHEDULING\_VERBOSE\ }}
+
+\end{DoxyCode}

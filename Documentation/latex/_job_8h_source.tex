@@ -1,0 +1,118 @@
+\doxysection{Job.\+h}
+\hypertarget{_job_8h_source}{}\label{_job_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Job.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Job.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Copyright\ (C)\ 2024}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ EA\ 6300\ ERL\ CNRS\ 7002\ Laboratoire\ d'Informatique\ Fondamentale\ et\ Appliquée de\ Tours,\ Tours,\ France}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ DIGEP,\ Politecnico\ di\ Torino,\ Corso\ Duca\ degli\ Abruzzi\ 24,\ Torino,\ Italy}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ This\ file\ is\ part\ of\ bilevel-\/scheduling.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ of\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ See\ the\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ along\ with\ bilevel-\/scheduling.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_JOB\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_JOB\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}Verbose.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_job}{Job}}\ \{}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pi;\ \ \textcolor{comment}{//\ job's\ processing\ time\ for\ a\ machine\ whose\ speed\ equals\ 1}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ di;\ \ \textcolor{comment}{//\ job's\ deadline}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wi;\ \ \textcolor{comment}{//\ job's\ weight}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num;\ \textcolor{comment}{//\ job\ number\ (0\ means\ its\ a\ ghost\ job)}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ late;\ \ \textcolor{comment}{//\ is\ the\ job\ late\ ?\ (always\ initialized\ to\ false)}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{/*\ Generate\ a\ 'ghost'\ job\ with\ all\ attributes\ equal\ to\ 0*/}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}()\ :\ pi(0),\ di(0),\ wi(0),\ num(0),\ late(\textcolor{keyword}{false})\ \{\};}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ di,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wi,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num)\ :\ pi(pi),\ di(di),\ wi(wi),\ num(num),\ late(\textcolor{keyword}{false})\ \{\}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pi;\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getDi()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ di;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getWi()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ wi;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ getNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ num;\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ isLate()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ late;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ SETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ setLate(\textcolor{keywordtype}{bool}\ isLate)\ \{\ late\ =\ isLate;\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ OPERATORS\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LPT\_inv\_EDD(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ rhs)\ \{\ \textcolor{keywordflow}{return}\ (lhs.pi\ ==\ rhs.pi)\ ?\ (lhs.di\ >\ rhs.di)\ :\ (lhs.pi\ >\ rhs.pi);\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LWPT(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ rhs)\ \{}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lhs.wi\ ==\ 0)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rhs.wi\ ==\ 0)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((lhs.pi\ /\ \textcolor{keywordtype}{float}(lhs.wi))\ <\ (rhs.pi\ /\ \textcolor{keywordtype}{float}(rhs.wi)));}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ EDD(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ rhs)\ \{\ \textcolor{keywordflow}{return}\ (lhs.di\ ==\ rhs.di\ ?\ (lhs.pi\ <\ rhs.pi)\ :\ (lhs.di\ <\ rhs.di));\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ SmallestWeight(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ rhs)\ \{\ \textcolor{keywordflow}{return}\ (lhs.wi\ <\ rhs.wi);\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ J)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pi\ ==\ J.pi\ \&\&\ di\ ==\ J.di\ \&\&\ wi\ ==\ J.wi;\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ J)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !(J\ ==\ *\textcolor{keyword}{this});\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{/*\ Inequalities\ Operators\ compare\ processing\ times\ and\ due\ date\ in\ case\ of\ equalities\ */}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ J)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ (pi\ ==\ J.pi)\ ?\ (di\ <\ J.di)\ :\ (pi\ <\ J.pi);\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ J)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ (pi\ ==\ J.pi)\ ?\ (di\ >\ J.di)\ :\ (pi\ >\ J.pi);\ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ J)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ (pi\ ==\ J.pi)\ ?\ (di\ <=\ J.di)\ :\ (pi\ <=\ J.pi);\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator>=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ J)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ (pi\ ==\ J.pi)\ ?\ (di\ >=\ J.di)\ :\ (pi\ >=\ J.pi);\ \}}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{inline}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job)\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}|\ pi:\ "{}}\ <<\ job.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ <<\ \textcolor{stringliteral}{"{}\ di:\ "{}}\ <<\ job.getDi()\ <<\ \textcolor{stringliteral}{"{}\ wi:\ "{}}\ <<\ job.getWi()\ <<\ (job.isLate()\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ <<\ \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ verbose,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job)}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}|\ pi:\ "{}}\ <<\ job.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ <<\ \textcolor{stringliteral}{"{}\ di:\ "{}}\ <<\ job.getDi()\ <<\ \textcolor{stringliteral}{"{}\ wi:\ "{}}\ <<\ job.getWi()\ <<\ (job.isLate()\ ?\ \textcolor{stringliteral}{"{}*"{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ <<\ \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return}\ verbose;}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BILEVEL\_SCHEDULING\_JOB\_H}}
+
+\end{DoxyCode}

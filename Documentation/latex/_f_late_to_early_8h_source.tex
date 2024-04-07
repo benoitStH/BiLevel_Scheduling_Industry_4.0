@@ -1,0 +1,283 @@
+\doxysection{FLate\+To\+Early.\+h}
+\hypertarget{_f_late_to_early_8h_source}{}\label{_f_late_to_early_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/FLateToEarly.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/FLateToEarly.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_FLATETOEARLY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_FLATETOEARLY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IFollowerSwapRule.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }swapRule\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LATE2EARLY\ =\ 1;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ DUMB\_METHOD\ =\ 2;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LATENESS\ =\ 3;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ LATENESS\_CAREFUL\ =\ 4;}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_f_late_to_early}{FLateToEarly}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early}{FLateToEarly}}()\ :\ \mbox{\hyperlink{class_i_follower_swap_rule}{IFollowerSwapRule}}()\ \{\};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early}{FLateToEarly}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ruleNumber)}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setting\ the\ name\ according\ to\ the\ ruleNumber}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ this-\/>ruleNumber\ =\ ruleNumber;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (ruleNumber)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::LATE2EARLY:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}LateToEarly"{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::DUMB\_METHOD:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}Dumb"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::LATENESS:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}Lateness"{}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::LATENESS\_CAREFUL:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}LatenessCareful"{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ ruleName\ =\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ \mbox{\hyperlink{class_f_late_to_early_aa7935228c92b93f39410af0c79660e69}{swapVPossibleFor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ l1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ l2)}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Our\ default\ answer}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ swapOp;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ swapOp.machine1\ =\ l1;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ swapOp.machine2\ =\ l2;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ swapOp.bloc\ =\ k;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ swapOp.gain\ =\ -\/1;\ \ \textcolor{comment}{//\ Negative\ gain\ means\ its\ not\ worth\ swapping}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\ m1\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(l1);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\ m2\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(l2);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ speed\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(l1).getSpeed();\ \ \textcolor{comment}{//\ We\ assume\ l1's\ speed\ and\ l2's\ speed\ are\ the\ same}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ one\ of\ the\ machine\ doesn't\ have\ a\ k-\/th\ job,\ return\ default\ answer}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m1.getAffectedJob().size()\ <=\ swapOp.bloc)\ \{\ \textcolor{keywordflow}{return}\ swapOp;\ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m2.getAffectedJob().size()\ <=\ swapOp.bloc)\ \{\ \textcolor{keywordflow}{return}\ swapOp;\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Using\ the\ rule\ associated\ with\ ruleNumber}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (ruleNumber)}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::LATE2EARLY:}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_a0c1cfa0d4c7ddfb250244b763d7a6f90}{swapLateToEarly}}(swapOp,\ m1,\ m2,\ k,\ speed);\ \textcolor{comment}{//}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::DUMB\_METHOD:}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72}{swapDumbly}}(swapOp,\ s);\ \textcolor{comment}{//}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::LATENESS:}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_aceeff3b863b70abe44a6911fc9f3835b}{swapLateness}}(swapOp,\ s);\ \textcolor{comment}{//}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ swapRule::LATENESS\_CAREFUL:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_a139094a239c9b587e58e0d7fe84ab636}{swapLatenessCareful}}(swapOp,\ s);\ \textcolor{comment}{//}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ swapOp;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_late_to_early_a0c1cfa0d4c7ddfb250244b763d7a6f90}{swapLateToEarly}}(\mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\&\ swapOp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ m1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ m2,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k,\ \textcolor{keywordtype}{float}\ speed)}
+\DoxyCodeLine{00109\ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job1\ =\ m1.getAffectedJob()[k];}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job2\ =\ m2.getAffectedJob()[k];}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p1\ =\ job1.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p2\ =\ job2.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ w1\ =\ job1.getWi();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ w2\ =\ job2.getWi();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ d1\ =\ job1.getDi();}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ d2\ =\ job2.getDi();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ swapIsPossible;\ \textcolor{comment}{//\ Is\ a\ swap\ possible\ ?}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Are\ the\ jobs\ both\ late\ and\ swapping\ will\ make\ job1\ early\ ?}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ swapIsPossible\ =\ (job1.isLate()\ \&\&\ job2.isLate()\ \&\&\ (m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p1)\ <\ d1);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Otherwise,\ Is\ job1\ the\ only\ one\ late\ ?}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job1.isLate()\ \&\&\ !job2.isLate()\ \&\&\ swapIsPossible\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Swapping\ will\ make\ job1\ early\ and\ job2\ will\ still\ be\ early}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ swapIsPossible\ =\ ((m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p1\ <\ d1)\ \&\&}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m1.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p2\ <\ d2);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapIsPossible)\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ =\ w1;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Or\ Swapping\ will\ make\ job1\ early\ and\ job2\ will\ be\ late,\ Swap\ is\ possible\ if\ w1\ >\ w2}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ swapIsPossible\ =\ (m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p1\ <\ d1);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapIsPossible\ \&\&\ w1\ >\ w2)}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ =\ w1\ -\/\ w2;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (job2.isLate()\ \&\&\ !job1.isLate())\ \ \textcolor{comment}{//\ Is\ job2\ the\ only\ one\ late\ ?}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Swapping\ will\ make\ job2\ early\ and\ job1\ will\ still\ be\ early}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ swapIsPossible\ =\ ((m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p1\ <\ d1)\ \&\&}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m1.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p2\ <\ d2);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapIsPossible)}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ =\ w2;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Or\ Swapping\ will\ make\ job2\ early\ and\ job1\ will\ be\ late,\ Swap\ is\ possible\ if\ w2\ >\ w1}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ swapIsPossible\ =\ (m1.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ p2\ <\ d2);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapIsPossible\ \&\&\ w2\ >\ w1)}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ =\ w2\ -\/\ w1;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72}{swapDumbly}}(\mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\&\ swapOp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s)}
+\DoxyCodeLine{00169\ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_solution}{Solution}}\ test\ =\ \mbox{\hyperlink{class_solution}{Solution}}(s);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ std::vector<unsigned\ int>\ machines;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ machines.push\_back(swapOp.machine1);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ machines.push\_back(swapOp.machine2);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ verbose.setRequiredLevel(5);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ test.\mbox{\hyperlink{class_solution_afa0512a7336babd7fd800aa87c90fa98}{swapV}}(machines,\ swapOp.bloc);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ test.\mbox{\hyperlink{class_solution_aa3e8919dc2722fdd31524108286cdd80}{evaluate}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ test.\mbox{\hyperlink{class_solution_a607803e25a640ffda00025453b13f75b}{compactVerbose}}();\ verbose\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ verbose.endRequiredLevel();}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ swapOp.gain\ =\ s.getSumWjUj()\ -\/\ test.getSumWjUj();}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_late_to_early_aceeff3b863b70abe44a6911fc9f3835b}{swapLateness}}(\mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\&\ swapOp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s)}
+\DoxyCodeLine{00192\ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k\ =\ swapOp.bloc;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ m1\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(swapOp.machine1);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ m2\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(swapOp.machine2);}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job1\ =\ m1.getAffectedJob()[k];}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job2\ =\ m2.getAffectedJob()[k];}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ speed\ =\ m1.getSpeed();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ pi\_diff\ =\ (job1.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ -\/\ job2.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}())\ /\ speed;}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ it\ is\ the\ last\ bloc,\ use\ the\ dumb\ method}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapOp.bloc\ ==\ m1.getAffectedJob().size()\ -\/\ 1)}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72}{swapDumbly}}(swapOp,\ s);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ lateness1;\ \textcolor{comment}{//\ lateness\ of\ job1's\ following\ job}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ nextJob1\ =\ m1.getAffectedJob()[k\ +\ 1];\ \ \textcolor{comment}{//\ job1's\ following\ job}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ lateness1\ =\ m1.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(swapOp.bloc\ +\ 2)\ -\/\ float(nextJob1.getDi());\ \ \textcolor{comment}{//\ computing\ its\ lateness}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ it\ is\ late\ and\ the\ lateness\ is\ smaller\ than\ the\ difference\ of\ job1's\ and\ job2's\ processing\ time}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (0\ <\ lateness1\ \&\&\ lateness1\ <=\ pi\_diff)}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ the\ swap's\ gain\ at\ 0\ if\ that\ is\ not\ the\ case\ already}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapOp.gain\ <\ 0)\ \{\ swapOp.gain\ =\ 0;\ \}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ we\ choose\ this\ swap,\ this\ following\ job\ will\ become\ early,\ we\ add\ its\ weight\ to\ our\ swap's\ gain}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ +=\ nextJob1.getWi();}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ k++;\ \textcolor{comment}{//\ We\ check\ the\ next\ following\ job\ until\ we\ reach\ the\ one\ before\ last\ one}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (k\ <\ m1.getAffectedJob().size()\ -\/\ 1);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_f_late_to_early_a139094a239c9b587e58e0d7fe84ab636}{swapLatenessCareful}}(\mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\&\ swapOp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s)}
+\DoxyCodeLine{00240\ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k\ =\ swapOp.bloc;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ m1\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(swapOp.machine1);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ m2\ =\ s.\mbox{\hyperlink{class_solution_a8abed3f8eeb774c83fe559abb20431f6}{getMachine}}(swapOp.machine2);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job1\ =\ m1.getAffectedJob()[k];}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job2\ =\ m2.getAffectedJob()[k];}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ speed\ =\ m1.getSpeed();}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ it\ is\ the\ last\ bloc,\ use\ the\ dumb\ method}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapOp.bloc\ ==\ m1.getAffectedJob().size()\ -\/\ 1)}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_a8d354988a2dc1725af0c456055657c72}{swapDumbly}}(swapOp,\ s);}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ swapOp.gain\ =\ 0;}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ job1\ is\ late\ and\ will\ be\ early\ after\ swapping}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job1.isLate()\ \&\&\ m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ (job1.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed)\ <=\ job1.getDi())}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ +=\ job1.getWi();}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ job1\ is\ early\ and\ will\ be\ late\ after\ swapping}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job1.isLate()\ ==\ \textcolor{keyword}{false}\ \&\&\ m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ (job1.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed)\ >\ job1.getDi())}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ -\/=\ job1.getWi();}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ job2\ is\ late\ and\ will\ be\ early\ after\ swapping}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job2.isLate()\ \&\&\ m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ (job2.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed)\ <=\ job2.getDi())}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ +=\ job2.getWi();}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ job2\ is\ early\ and\ will\ be\ late\ after\ swapping}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (job2.isLate()\ ==\ \textcolor{keyword}{false}\ \&\&\ m2.\mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(k)\ +\ (job2.\mbox{\hyperlink{class_job_abd3e9abbb4a526de5ef93f752b25dbc4}{getPi}}()\ /\ speed)\ >\ job2.getDi())}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ swapOp.gain\ -\/=\ job2.getWi();}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ job1's\ following\ jobs}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_f_late_to_early_aceeff3b863b70abe44a6911fc9f3835b}{swapLateness}}(swapOp,\ s);}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ \mbox{\hyperlink{class_f_late_to_early_aa71cfba355ffb49e194b114dff9243c6}{bestSwapV}}(\textcolor{keyword}{const}\ std::vector<SwapOperation>\&\ possibleSwaps,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_solution}{Solution}}\&\ s)}
+\DoxyCodeLine{00295\ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ best;}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ best.machine1\ =\ 0;}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ best.machine2\ =\ 0;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ best.bloc\ =\ 0;}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ best.gain\ =\ 0;}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (possibleSwaps.empty())\ \{\ \textcolor{keywordflow}{return}\ best;\ \}}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{struct_swap_operation}{SwapOperation}}\ swapOp\ :\ possibleSwaps)}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapOp.gain\ >\ 0)\ \{\ verboseOperator(swapOp);\ \}}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapOp.gain\ >\ best.gain)}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ best\ =\ swapOp;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ best;}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \};}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_FLATETOEARLY\_H}}
+
+\end{DoxyCode}

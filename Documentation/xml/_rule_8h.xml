@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_rule_8h" kind="file" language="C++">
+    <compoundname>Rule.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="_i_follower_swap_rule_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h</includedby>
+    <includedby refid="_i_leader_select_rule_8h" local="yes">C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ILeaderSelectRule.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Rule.h</label>
+        <link refid="_rule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Analyser.h</label>
+        <link refid="_analyser_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp</label>
+        <link refid="_bi_level___scheduling___industry__4_80_8cpp"/>
+      </node>
+      <node id="11">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.cpp</label>
+        <link refid="_deepest_descent_8cpp"/>
+      </node>
+      <node id="10">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h</label>
+        <link refid="_deepest_descent_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.cpp</label>
+        <link refid="_f_solver_8cpp"/>
+      </node>
+      <node id="7">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSolver.h</label>
+        <link refid="_f_solver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h</label>
+        <link refid="_f_swap_rule_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/IFollowerSwapRule.h</label>
+        <link refid="_i_follower_swap_rule_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ILeaderSelectRule.h</label>
+        <link refid="_i_leader_select_rule_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.cpp</label>
+        <link refid="_i_solver_8cpp"/>
+      </node>
+      <node id="9">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISolver.h</label>
+        <link refid="_i_solver_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/ISubSolver.h</label>
+        <link refid="_i_sub_solver_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.cpp</label>
+        <link refid="_l_solver_8cpp"/>
+      </node>
+      <node id="13">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSolver.h</label>
+        <link refid="_l_solver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/LSortRule.h</label>
+        <link refid="_l_sort_rule_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.cpp</label>
+        <link refid="_parser_8cpp"/>
+      </node>
+      <node id="15">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Parser.h</label>
+        <link refid="_parser_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Rule.h</label>
+        <link refid="_rule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rule" prot="public">Rule</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BILEVEL_SCHEDULING_RULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BILEVEL_SCHEDULING_RULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_rule" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rule" kindref="compound">Rule</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>rule&apos;s<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>rule&apos;s<sp/>number<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_rule_1a687105cb2347eda6e574cb52efc72483" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_verbose" kindref="compound">Verbose</ref><sp/><ref refid="class_rule_1a687105cb2347eda6e574cb52efc72483" kindref="member">verbose</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>CONSTRUCTOR<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_rule_1aeb73d8de3bba02f37d8cab6efb645424" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rule_1aeb73d8de3bba02f37d8cab6efb645424" kindref="member">Rule</ref>()<sp/>:<sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>(</highlight><highlight class="stringliteral">&quot;Unknown&quot;</highlight><highlight class="normal">),<sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>(0)<sp/>{};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_rule_1ab5c30d4e161e9dc5f6dd77029c2fbd67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rule_1ab5c30d4e161e9dc5f6dd77029c2fbd67" kindref="member">Rule</ref>(std::string<sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)<sp/>:<sp/><ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>(<ref refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" kindref="member">ruleName</ref>),<sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>(<ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>)<sp/>{};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_rule_1a0cb72e5ed2847b80267d1a57b8c1ce2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_rule_1a0cb72e5ed2847b80267d1a57b8c1ce2d" kindref="member">getRuleName</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_rule_1a4a1eca38190de16698b6851cf9f243eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rule_1a4a1eca38190de16698b6851cf9f243eb" kindref="member">getRuleNumber</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" kindref="member">ruleNumber</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BILEVEL_SCHEDULING_RULE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Rule.h"/>
+  </compounddef>
+</doxygen>

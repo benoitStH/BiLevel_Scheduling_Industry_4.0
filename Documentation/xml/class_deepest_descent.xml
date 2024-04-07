@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_deepest_descent" kind="class" language="C++" prot="public">
+    <compoundname>DeepestDescent</compoundname>
+    <basecompoundref refid="class_i_solver" prot="public" virt="non-virtual">ISolver</basecompoundref>
+    <includes refid="_deepest_descent_8h" local="no">DeepestDescent.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_deepest_descent_1aa8a423d429ee442c986cf3f7bf936432" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DeepestDescent::solve</definition>
+        <argsstring>() override</argsstring>
+        <name>solve</name>
+        <qualifiedname>DeepestDescent::solve</qualifiedname>
+        <reimplements refid="class_i_solver_1ae4a88311d9730a58934303ad8ac00965">solve</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pure Virtual Method that implement an algorithm to solve the current instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h" line="11" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.cpp" bodystart="3" bodyend="132"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DeepestDescent</label>
+        <link refid="class_deepest_descent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISolver</label>
+        <link refid="class_i_solver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DeepestDescent</label>
+        <link refid="class_deepest_descent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ISolver</label>
+        <link refid="class_i_solver"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>solution</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>subSolver</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ISubSolver</label>
+        <link refid="class_i_sub_solver"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>solution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Instance</label>
+        <link refid="class_instance"/>
+      </node>
+      <node id="3">
+        <label>Solution</label>
+        <link refid="class_solution"/>
+      </node>
+      <node id="6">
+        <label>Verbose</label>
+        <link refid="class_verbose"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h" line="6" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/DeepestDescent.h" bodystart="7" bodyend="12"/>
+    <listofallmembers>
+      <member refid="class_i_solver_1aba4d34aa65950ec6f9eaf1b9a30c4ca3" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>addRule</name></member>
+      <member refid="class_i_solver_1a15d727748af5b718c85854e688f4e319" prot="public" virt="pure-virtual"><scope>DeepestDescent</scope><name>getHeuristicDescription</name></member>
+      <member refid="class_i_solver_1abcb7265471377e5247dec52b61ccc9e4" prot="public" virt="pure-virtual"><scope>DeepestDescent</scope><name>getHeuristicName</name></member>
+      <member refid="class_i_solver_1aa3e5a1c200e50c10dda6e45dc6ae9ad7" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>getInstance</name></member>
+      <member refid="class_i_solver_1a4b725d604db8a2fc73e67c150656c680" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>getSolution</name></member>
+      <member refid="class_i_solver_1a0372e9a230cff150ff24de5fc3c6000a" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>getTimeResol</name></member>
+      <member refid="class_i_solver_1a56e3d4fb8bf0845abb09432b88e04a09" prot="protected" virt="non-virtual"><scope>DeepestDescent</scope><name>instance</name></member>
+      <member refid="class_i_solver_1aa26fccd083f0603e32745461e75c8936" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>ISolver</name></member>
+      <member refid="class_i_solver_1ab609c4ef4d840050006ab0baecc18d90" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>ISolver</name></member>
+      <member refid="class_i_solver_1a4efd4b920c5613c64a6dc4e4b13ee335" prot="protected" virt="non-virtual"><scope>DeepestDescent</scope><name>listRules</name></member>
+      <member refid="class_i_solver_1aa31bdcbad0a3a7b1673fa3404a01d3e3" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>setInstance</name></member>
+      <member refid="class_i_solver_1aeb48b049a431ac2c902b45f0886b1ee8" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>setRules</name></member>
+      <member refid="class_i_solver_1ade3f1122734e836c456d45a8f9cb8637" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>setSolution</name></member>
+      <member refid="class_i_solver_1adfd73d198a7373c5ed9e832a813c8f41" prot="public" virt="non-virtual"><scope>DeepestDescent</scope><name>setSubSolver</name></member>
+      <member refid="class_i_solver_1a05c42de4ad04ef3c761a72e87c9fbaab" prot="protected" virt="non-virtual"><scope>DeepestDescent</scope><name>solution</name></member>
+      <member refid="class_deepest_descent_1aa8a423d429ee442c986cf3f7bf936432" prot="public" virt="virtual"><scope>DeepestDescent</scope><name>solve</name></member>
+      <member refid="class_i_solver_1a7a89e270fa895524d4bf94cd10189bc8" prot="protected" virt="non-virtual"><scope>DeepestDescent</scope><name>subSolver</name></member>
+      <member refid="class_i_solver_1a21331ea32a77680f92f8a8064a29ea4e" prot="protected" virt="non-virtual"><scope>DeepestDescent</scope><name>timeResol</name></member>
+      <member refid="class_i_solver_1a9f7fc485cd3e1456dd1da5fe42e2f9c3" prot="protected" virt="non-virtual"><scope>DeepestDescent</scope><name>verbose</name></member>
+      <member refid="class_i_solver_1a257c4811c2d67a5d33a1ea8ac0b2d3d2" prot="public" virt="virtual"><scope>DeepestDescent</scope><name>~ISolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

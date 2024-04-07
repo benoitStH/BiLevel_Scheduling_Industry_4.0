@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct_at_exit" kind="struct" language="C++" prot="public">
+    <compoundname>AtExit</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_at_exit_1a1ef9c61a9b89a26adde9a08742d36e55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AtExit::~AtExit</definition>
+        <argsstring>()</argsstring>
+        <name>~AtExit</name>
+        <qualifiedname>AtExit::~AtExit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" line="22" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" line="20" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0.cpp" bodystart="21" bodyend="23"/>
+    <listofallmembers>
+      <member refid="struct_at_exit_1a1ef9c61a9b89a26adde9a08742d36e55" prot="public" virt="non-virtual"><scope>AtExit</scope><name>~AtExit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

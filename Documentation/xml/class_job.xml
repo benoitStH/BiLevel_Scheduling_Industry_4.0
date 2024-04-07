@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_job" kind="class" language="C++" prot="public">
+    <compoundname>Job</compoundname>
+    <includes refid="_job_8h" local="no">Job.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_job_1a946490fcea0279e1872ed36bc58eccda" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <qualifiedname>Job::pi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="29" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_job_1a08e509dd7bfbd67e24c3916073c7075b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::di</definition>
+        <argsstring></argsstring>
+        <name>di</name>
+        <qualifiedname>Job::di</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="30" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_job_1acf5780938d000b0070407553c64913be" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::wi</definition>
+        <argsstring></argsstring>
+        <name>wi</name>
+        <qualifiedname>Job::wi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="31" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_job_1a07041939628e016d04d9ec9f5b9cb6f5" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <qualifiedname>Job::num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="32" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_job_1a03acdf40993ce08bb1855cb94f4ee809" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Job::late</definition>
+        <argsstring></argsstring>
+        <name>late</name>
+        <qualifiedname>Job::late</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="33" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_job_1ad1cd8e332f55ffb4cbde7e9bf5600e54" prot="private" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose Job::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Job::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="34" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_job_1a666013a882e328576a340ad37118ccba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Job::Job</definition>
+        <argsstring>()</argsstring>
+        <name>Job</name>
+        <qualifiedname>Job::Job</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="39" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a21ea5b77a622387e57f831a5f035988b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Job::Job</definition>
+        <argsstring>(unsigned int pi, unsigned int di, unsigned int wi, unsigned int num)</argsstring>
+        <name>Job</name>
+        <qualifiedname>Job::Job</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pi</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>di</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>wi</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="40" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::getPi</definition>
+        <argsstring>() const</argsstring>
+        <name>getPi</name>
+        <qualifiedname>Job::getPi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Processing time with a machine whose speed is 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="49" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::getDi</definition>
+        <argsstring>() const</argsstring>
+        <name>getDi</name>
+        <qualifiedname>Job::getDi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="51" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a318a23d444801f67a6748cffd050543c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::getWi</definition>
+        <argsstring>() const</argsstring>
+        <name>getWi</name>
+        <qualifiedname>Job::getWi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="53" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a57ea9cddb0914b8eaad121b6f140c054" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Job::getNum</definition>
+        <argsstring>() const</argsstring>
+        <name>getNum</name>
+        <qualifiedname>Job::getNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="55" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::isLate</definition>
+        <argsstring>() const</argsstring>
+        <name>isLate</name>
+        <qualifiedname>Job::isLate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="57" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a9d4d101c4b1019315fcb602ecb6736e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Job::setLate</definition>
+        <argsstring>(bool isLate)</argsstring>
+        <name>setLate</name>
+        <qualifiedname>Job::setLate</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>isLate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="63" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1ad065e0ef271615520b3dd202635e327b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::operator==</definition>
+        <argsstring>(const Job &amp;J) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>Job::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>J</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="90" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a64d7508ab3cf5b0d962476daac594e80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::operator!=</definition>
+        <argsstring>(const Job &amp;J) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>Job::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>J</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="92" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1ad7065bd14cac5d0bec1f794508c6bd1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::operator&lt;</definition>
+        <argsstring>(const Job &amp;J) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>Job::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>J</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="95" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a2f51ac9dbef9b389993067345f1d6a89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::operator&gt;</definition>
+        <argsstring>(const Job &amp;J) const</argsstring>
+        <name>operator&gt;</name>
+        <qualifiedname>Job::operator&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>J</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="97" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1a101ec9387cdbeb3e94684c25fa8563e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::operator&lt;=</definition>
+        <argsstring>(const Job &amp;J) const</argsstring>
+        <name>operator&lt;=</name>
+        <qualifiedname>Job::operator&lt;=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>J</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="99" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1abdcd4563af9a8c243ae600b2a0350423" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Job::operator&gt;=</definition>
+        <argsstring>(const Job &amp;J) const</argsstring>
+        <name>operator&gt;=</name>
+        <qualifiedname>Job::operator&gt;=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>J</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="101" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_job_1a9db7e3aa37a954f880ad037d22a9c59c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Job::LPT_inv_EDD</definition>
+        <argsstring>(const Job &amp;lhs, const Job &amp;rhs)</argsstring>
+        <name>LPT_inv_EDD</name>
+        <qualifiedname>Job::LPT_inv_EDD</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="69" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1acb8649ab2565cf76e6b9580535cb8e92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Job::LWPT</definition>
+        <argsstring>(const Job &amp;lhs, const Job &amp;rhs)</argsstring>
+        <name>LWPT</name>
+        <qualifiedname>Job::LWPT</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="71" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="71" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1afacc25f2091bae172e1ea3e562ca119f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Job::EDD</definition>
+        <argsstring>(const Job &amp;lhs, const Job &amp;rhs)</argsstring>
+        <name>EDD</name>
+        <qualifiedname>Job::EDD</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="86" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_job_1aaf8dfd6018d7c178ea58ce65674af334" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Job::SmallestWeight</definition>
+        <argsstring>(const Job &amp;lhs, const Job &amp;rhs)</argsstring>
+        <name>SmallestWeight</name>
+        <qualifiedname>Job::SmallestWeight</qualifiedname>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_job" kindref="compound">Job</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="88" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" line="26" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Job.h" bodystart="26" bodyend="102"/>
+    <listofallmembers>
+      <member refid="class_job_1a08e509dd7bfbd67e24c3916073c7075b" prot="private" virt="non-virtual"><scope>Job</scope><name>di</name></member>
+      <member refid="class_job_1afacc25f2091bae172e1ea3e562ca119f" prot="public" virt="non-virtual"><scope>Job</scope><name>EDD</name></member>
+      <member refid="class_job_1a81c09ed6bfffede94cb1bc6ef1dcdb98" prot="public" virt="non-virtual"><scope>Job</scope><name>getDi</name></member>
+      <member refid="class_job_1a57ea9cddb0914b8eaad121b6f140c054" prot="public" virt="non-virtual"><scope>Job</scope><name>getNum</name></member>
+      <member refid="class_job_1abd3e9abbb4a526de5ef93f752b25dbc4" prot="public" virt="non-virtual"><scope>Job</scope><name>getPi</name></member>
+      <member refid="class_job_1a318a23d444801f67a6748cffd050543c" prot="public" virt="non-virtual"><scope>Job</scope><name>getWi</name></member>
+      <member refid="class_job_1ac09e89ca5dbdda2603abaee14e3e850c" prot="public" virt="non-virtual"><scope>Job</scope><name>isLate</name></member>
+      <member refid="class_job_1a666013a882e328576a340ad37118ccba" prot="public" virt="non-virtual"><scope>Job</scope><name>Job</name></member>
+      <member refid="class_job_1a21ea5b77a622387e57f831a5f035988b" prot="public" virt="non-virtual"><scope>Job</scope><name>Job</name></member>
+      <member refid="class_job_1a03acdf40993ce08bb1855cb94f4ee809" prot="private" virt="non-virtual"><scope>Job</scope><name>late</name></member>
+      <member refid="class_job_1a9db7e3aa37a954f880ad037d22a9c59c" prot="public" virt="non-virtual"><scope>Job</scope><name>LPT_inv_EDD</name></member>
+      <member refid="class_job_1acb8649ab2565cf76e6b9580535cb8e92" prot="public" virt="non-virtual"><scope>Job</scope><name>LWPT</name></member>
+      <member refid="class_job_1a07041939628e016d04d9ec9f5b9cb6f5" prot="private" virt="non-virtual"><scope>Job</scope><name>num</name></member>
+      <member refid="class_job_1a64d7508ab3cf5b0d962476daac594e80" prot="public" virt="non-virtual"><scope>Job</scope><name>operator!=</name></member>
+      <member refid="class_job_1ad7065bd14cac5d0bec1f794508c6bd1f" prot="public" virt="non-virtual"><scope>Job</scope><name>operator&lt;</name></member>
+      <member refid="class_job_1a101ec9387cdbeb3e94684c25fa8563e6" prot="public" virt="non-virtual"><scope>Job</scope><name>operator&lt;=</name></member>
+      <member refid="class_job_1ad065e0ef271615520b3dd202635e327b" prot="public" virt="non-virtual"><scope>Job</scope><name>operator==</name></member>
+      <member refid="class_job_1a2f51ac9dbef9b389993067345f1d6a89" prot="public" virt="non-virtual"><scope>Job</scope><name>operator&gt;</name></member>
+      <member refid="class_job_1abdcd4563af9a8c243ae600b2a0350423" prot="public" virt="non-virtual"><scope>Job</scope><name>operator&gt;=</name></member>
+      <member refid="class_job_1a946490fcea0279e1872ed36bc58eccda" prot="private" virt="non-virtual"><scope>Job</scope><name>pi</name></member>
+      <member refid="class_job_1a9d4d101c4b1019315fcb602ecb6736e7" prot="public" virt="non-virtual"><scope>Job</scope><name>setLate</name></member>
+      <member refid="class_job_1aaf8dfd6018d7c178ea58ce65674af334" prot="public" virt="non-virtual"><scope>Job</scope><name>SmallestWeight</name></member>
+      <member refid="class_job_1ad1cd8e332f55ffb4cbde7e9bf5600e54" prot="private" virt="non-virtual"><scope>Job</scope><name>verbose</name></member>
+      <member refid="class_job_1acf5780938d000b0070407553c64913be" prot="private" virt="non-virtual"><scope>Job</scope><name>wi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

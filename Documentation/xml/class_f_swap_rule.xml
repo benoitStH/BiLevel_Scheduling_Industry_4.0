@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_f_swap_rule" kind="class" language="C++" prot="public">
+    <compoundname>FSwapRule</compoundname>
+    <basecompoundref refid="class_i_follower_swap_rule" prot="public" virt="non-virtual">IFollowerSwapRule</basecompoundref>
+    <includes refid="_f_swap_rule_8h" local="no">FSwapRule.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_f_swap_rule_1a66f424576011ad1e1f7b066e2be0d1af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FSwapRule::FSwapRule</definition>
+        <argsstring>()</argsstring>
+        <name>FSwapRule</name>
+        <qualifiedname>FSwapRule::FSwapRule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="17" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1aca900a40219b70862702bc316f321e93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FSwapRule::FSwapRule</definition>
+        <argsstring>(unsigned int ruleNumber)</argsstring>
+        <name>FSwapRule</name>
+        <qualifiedname>FSwapRule::FSwapRule</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>ruleNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="19" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="19" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1a6b5afe6cdc2dc90cbf56e6f84e6cd7ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref></type>
+        <definition>virtual SwapOperation FSwapRule::swapVPossibleFor</definition>
+        <argsstring>(const Solution &amp;s, unsigned int k, unsigned int l1, unsigned int l2)</argsstring>
+        <name>swapVPossibleFor</name>
+        <qualifiedname>FSwapRule::swapVPossibleFor</qualifiedname>
+        <reimplements refid="class_i_follower_swap_rule_1afd969e659142a62860f98edefe3b4aa1">swapVPossibleFor</reimplements>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l1</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>l2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a swap is possible between the k-th job of equal speed machine l1 and l2 Returns a swap operator containing the gain we would obtain if this swap was to be performed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="class_solution" kindref="compound">Solution</ref>&apos; object containing the current scheduling </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position of the k-th job </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>li</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the machine&apos;s number. Must be between 0 and the total number of machines. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> containing the parameters (l1, l2, k, gain) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="56" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="56" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1a3bc5b2365a4d0188d03259cc9e866a45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FSwapRule::swapLateToEarly</definition>
+        <argsstring>(SwapOperation &amp;swapOp, const Machine &amp;m1, const Machine &amp;m2, unsigned int k, float speed)</argsstring>
+        <name>swapLateToEarly</name>
+        <qualifiedname>FSwapRule::swapLateToEarly</qualifiedname>
+        <param>
+          <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &amp;</type>
+          <declname>swapOp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_machine" kindref="compound">Machine</ref> &amp;</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_machine" kindref="compound">Machine</ref> &amp;</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check between the k-th job of equal speed machine l1 and l2 Update the swap operator&apos;s gain <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>swapOp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&apos; object representing the swapping of the k-th job between machine m1 and m2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the machines (m1 and m2) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position of the k-th job </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the machine&apos;s speed. We assume m1&apos;s speed equals m2&apos;s speed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="108" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="108" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FSwapRule::swapDumbly</definition>
+        <argsstring>(SwapOperation &amp;swapOp, const Solution &amp;s)</argsstring>
+        <name>swapDumbly</name>
+        <qualifiedname>FSwapRule::swapDumbly</qualifiedname>
+        <param>
+          <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &amp;</type>
+          <declname>swapOp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform the swap and check the difference of sum wjUj Update the swap operator&apos;s gain <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>swapOp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&apos; object representing the swapping of the k-th job between machine m1 and m2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="class_solution" kindref="compound">Solution</ref>&apos; object containing the schedule </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="168" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="168" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1ac01b34c9e5096fce63b5f18bdb8043e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FSwapRule::swapLateness</definition>
+        <argsstring>(SwapOperation &amp;swapOp, const Solution &amp;s)</argsstring>
+        <name>swapLateness</name>
+        <qualifiedname>FSwapRule::swapLateness</qualifiedname>
+        <param>
+          <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &amp;</type>
+          <declname>swapOp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a swap will improve the solution by checking the lateness of the following jobs Update the swap operator&apos;s gain <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>swapOp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&apos; object representing the swapping of the k-th job between machine m1 and m2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="class_solution" kindref="compound">Solution</ref>&apos; object containing the schedule </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="191" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="191" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1a710bada64f7202e73848447a73ea33ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FSwapRule::swapLatenessCareful</definition>
+        <argsstring>(SwapOperation &amp;swapOp, const Solution &amp;s)</argsstring>
+        <name>swapLatenessCareful</name>
+        <qualifiedname>FSwapRule::swapLatenessCareful</qualifiedname>
+        <param>
+          <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &amp;</type>
+          <declname>swapOp</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a swap will improve the solution by checking the lateness of the following jobs and the swaped jobs Update the swap operator&apos;s gain <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>swapOp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref>&apos; object representing the swapping of the k-th job between machine m1 and m2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A &apos;<ref refid="class_solution" kindref="compound">Solution</ref>&apos; object containing the schedule </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="239" column="6" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="239" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_f_swap_rule_1aabba63b53d913fe5ba393c26d052bae4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref></type>
+        <definition>virtual SwapOperation FSwapRule::bestSwapV</definition>
+        <argsstring>(const std::vector&lt; SwapOperation &gt; &amp;possibleSwaps, const Solution &amp;s)</argsstring>
+        <name>bestSwapV</name>
+        <qualifiedname>FSwapRule::bestSwapV</qualifiedname>
+        <reimplements refid="class_i_follower_swap_rule_1a37aca3d7fc8ba06807fb1c4285eff8b1">bestSwapV</reimplements>
+        <param>
+          <type>const std::vector&lt; <ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> &gt; &amp;</type>
+          <declname>possibleSwaps</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method which return the swap with the highest gain as the best swap <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>possibleSwaps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a vector of <ref refid="struct_swap_operation" kindref="compound">SwapOperation</ref> to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current solution (unused in this implementation) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the best swap operation If possibleSwaps is empty, a swap operation with all atributes equal to 0 is returned </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="294" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="294" bodyend="315"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FSwapRule</label>
+        <link refid="class_f_swap_rule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IFollowerSwapRule</label>
+        <link refid="class_i_follower_swap_rule"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Rule</label>
+        <link refid="class_rule"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FSwapRule</label>
+        <link refid="class_f_swap_rule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IFollowerSwapRule</label>
+        <link refid="class_i_follower_swap_rule"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Rule</label>
+        <link refid="class_rule"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Verbose</label>
+        <link refid="class_verbose"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" line="13" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/FSwapRule.h" bodystart="14" bodyend="316"/>
+    <listofallmembers>
+      <member refid="class_f_swap_rule_1aabba63b53d913fe5ba393c26d052bae4" prot="public" virt="virtual"><scope>FSwapRule</scope><name>bestSwapV</name></member>
+      <member refid="class_f_swap_rule_1a66f424576011ad1e1f7b066e2be0d1af" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>FSwapRule</name></member>
+      <member refid="class_f_swap_rule_1aca900a40219b70862702bc316f321e93" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>FSwapRule</name></member>
+      <member refid="class_i_follower_swap_rule_1ac290caa626cfd5842457ca2bd1b5e2f8" prot="public" virt="virtual"><scope>FSwapRule</scope><name>getRuleName</name></member>
+      <member refid="class_rule_1a4a1eca38190de16698b6851cf9f243eb" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>getRuleNumber</name></member>
+      <member refid="class_i_follower_swap_rule_1acef68509b2416283651a54b0df2a5bee" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>IFollowerSwapRule</name></member>
+      <member refid="class_i_follower_swap_rule_1a76a420662583464de5b4d2b5491ee7a1" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>IFollowerSwapRule</name></member>
+      <member refid="class_rule_1aeb73d8de3bba02f37d8cab6efb645424" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>Rule</name></member>
+      <member refid="class_rule_1ab5c30d4e161e9dc5f6dd77029c2fbd67" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>Rule</name></member>
+      <member refid="class_rule_1a5642c235b7cb580d14b08daf4cac6c91" prot="protected" virt="non-virtual"><scope>FSwapRule</scope><name>ruleName</name></member>
+      <member refid="class_rule_1a5f5c4ad8614c4c45075f2462b034ce07" prot="protected" virt="non-virtual"><scope>FSwapRule</scope><name>ruleNumber</name></member>
+      <member refid="class_f_swap_rule_1a128f26f4c98dd480dc978a9fc56ba609" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>swapDumbly</name></member>
+      <member refid="class_f_swap_rule_1ac01b34c9e5096fce63b5f18bdb8043e4" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>swapLateness</name></member>
+      <member refid="class_f_swap_rule_1a710bada64f7202e73848447a73ea33ae" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>swapLatenessCareful</name></member>
+      <member refid="class_f_swap_rule_1a3bc5b2365a4d0188d03259cc9e866a45" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>swapLateToEarly</name></member>
+      <member refid="class_f_swap_rule_1a6b5afe6cdc2dc90cbf56e6f84e6cd7ad" prot="public" virt="virtual"><scope>FSwapRule</scope><name>swapVPossibleFor</name></member>
+      <member refid="class_rule_1a687105cb2347eda6e574cb52efc72483" prot="protected" virt="non-virtual"><scope>FSwapRule</scope><name>verbose</name></member>
+      <member refid="class_i_follower_swap_rule_1a0d701aedd4cae809823c8bf6ebb750ba" prot="public" virt="non-virtual"><scope>FSwapRule</scope><name>verboseOperator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

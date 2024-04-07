@@ -1,0 +1,98 @@
+\doxysection{ISolver Class Reference}
+\hypertarget{class_i_solver}{}\label{class_i_solver}\index{ISolver@{ISolver}}
+Inheritance diagram for ISolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_solver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_solver_ab609c4ef4d840050006ab0baecc18d90}{ISolver}} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\item 
+virtual void \mbox{\hyperlink{class_i_solver_ae4a88311d9730a58934303ad8ac00965}{solve}} ()=0
+\item 
+\Hypertarget{class_i_solver_aba4d34aa65950ec6f9eaf1b9a30c4ca3}\label{class_i_solver_aba4d34aa65950ec6f9eaf1b9a30c4ca3} 
+void {\bfseries add\+Rule} (\mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*}select\+Rule)
+\item 
+\Hypertarget{class_i_solver_a4b725d604db8a2fc73e67c150656c680}\label{class_i_solver_a4b725d604db8a2fc73e67c150656c680} 
+const \mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Solution} () const
+\item 
+\Hypertarget{class_i_solver_aa3e5a1c200e50c10dda6e45dc6ae9ad7}\label{class_i_solver_aa3e5a1c200e50c10dda6e45dc6ae9ad7} 
+const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} () const
+\item 
+\Hypertarget{class_i_solver_a0372e9a230cff150ff24de5fc3c6000a}\label{class_i_solver_a0372e9a230cff150ff24de5fc3c6000a} 
+const long {\bfseries get\+Time\+Resol} () const
+\item 
+\Hypertarget{class_i_solver_abcb7265471377e5247dec52b61ccc9e4}\label{class_i_solver_abcb7265471377e5247dec52b61ccc9e4} 
+virtual std\+::string {\bfseries get\+Heuristic\+Name} () const =0
+\item 
+\Hypertarget{class_i_solver_a15d727748af5b718c85854e688f4e319}\label{class_i_solver_a15d727748af5b718c85854e688f4e319} 
+virtual std\+::string {\bfseries get\+Heuristic\+Description} () const =0
+\item 
+\Hypertarget{class_i_solver_aeb48b049a431ac2c902b45f0886b1ee8}\label{class_i_solver_aeb48b049a431ac2c902b45f0886b1ee8} 
+void {\bfseries set\+Rules} (std\+::vector$<$ \mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*} $>$ list\+Rule)
+\item 
+\Hypertarget{class_i_solver_adfd73d198a7373c5ed9e832a813c8f41}\label{class_i_solver_adfd73d198a7373c5ed9e832a813c8f41} 
+void {\bfseries set\+Sub\+Solver} (\mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}} \texorpdfstring{$\ast$}{*}sub\+Solver)
+\item 
+\Hypertarget{class_i_solver_ade3f1122734e836c456d45a8f9cb8637}\label{class_i_solver_ade3f1122734e836c456d45a8f9cb8637} 
+void {\bfseries set\+Solution} (\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*}solution)
+\item 
+\Hypertarget{class_i_solver_aa31bdcbad0a3a7b1673fa3404a01d3e3}\label{class_i_solver_aa31bdcbad0a3a7b1673fa3404a01d3e3} 
+void {\bfseries set\+Instance} (const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}instance)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_solver_a05c42de4ad04ef3c761a72e87c9fbaab}\label{class_i_solver_a05c42de4ad04ef3c761a72e87c9fbaab} 
+\mbox{\hyperlink{class_solution}{Solution}} \texorpdfstring{$\ast$}{*} {\bfseries solution}
+\item 
+\Hypertarget{class_i_solver_a56e3d4fb8bf0845abb09432b88e04a09}\label{class_i_solver_a56e3d4fb8bf0845abb09432b88e04a09} 
+const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*} {\bfseries instance}
+\item 
+\Hypertarget{class_i_solver_a4efd4b920c5613c64a6dc4e4b13ee335}\label{class_i_solver_a4efd4b920c5613c64a6dc4e4b13ee335} 
+std\+::vector$<$ \mbox{\hyperlink{class_i_leader_select_rule}{ILeader\+Select\+Rule}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries list\+Rules}
+\item 
+\Hypertarget{class_i_solver_a21331ea32a77680f92f8a8064a29ea4e}\label{class_i_solver_a21331ea32a77680f92f8a8064a29ea4e} 
+long {\bfseries time\+Resol}
+\item 
+\Hypertarget{class_i_solver_a7a89e270fa895524d4bf94cd10189bc8}\label{class_i_solver_a7a89e270fa895524d4bf94cd10189bc8} 
+\mbox{\hyperlink{class_i_sub_solver}{ISub\+Solver}} \texorpdfstring{$\ast$}{*} {\bfseries sub\+Solver}
+\item 
+\Hypertarget{class_i_solver_a9f7fc485cd3e1456dd1da5fe42e2f9c3}\label{class_i_solver_a9f7fc485cd3e1456dd1da5fe42e2f9c3} 
+\mbox{\hyperlink{class_verbose}{Verbose}} {\bfseries verbose}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_solver_ab609c4ef4d840050006ab0baecc18d90}\label{class_i_solver_ab609c4ef4d840050006ab0baecc18d90} 
+\index{ISolver@{ISolver}!ISolver@{ISolver}}
+\index{ISolver@{ISolver}!ISolver@{ISolver}}
+\doxysubsubsection{\texorpdfstring{ISolver()}{ISolver()}}
+{\footnotesize\ttfamily ISolver\+::\+ISolver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_instance}{Instance}} \texorpdfstring{$\ast$}{*}}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a solver from a instance. 
+\begin{DoxyParams}{Parameters}
+{\em instance} & the instance to solve \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_solver_ae4a88311d9730a58934303ad8ac00965}\label{class_i_solver_ae4a88311d9730a58934303ad8ac00965} 
+\index{ISolver@{ISolver}!solve@{solve}}
+\index{solve@{solve}!ISolver@{ISolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily virtual void ISolver\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure Virtual Method that implement an algorithm to solve the current instance. 
+
+Implemented in \mbox{\hyperlink{class_l_solver_ae4809ba8f95b5966a513e3380ee2a696}{LSolver}}, and \mbox{\hyperlink{class_deepest_descent_aa8a423d429ee442c986cf3f7bf936432}{Deepest\+Descent}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/benhi/source/repos/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/\+Bi\+Level\+\_\+\+Scheduling\+\_\+\+Industry\+\_\+4.\+0/ISolver.\+h\end{DoxyCompactItemize}

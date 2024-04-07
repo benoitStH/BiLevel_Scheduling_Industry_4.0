@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_verbose" kind="class" language="C++" prot="public">
+    <compoundname>Verbose</compoundname>
+    <includes refid="_verbose_8h" local="no">Verbose.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_verbose_1a82c881152e8ce1fa1e4991b2267edb0d" prot="private" static="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Verbose::level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <qualifiedname>Verbose::level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="27" column="21" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_verbose_1af86b993bbc85a65400e0232599bd914e" prot="private" static="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Verbose::maxRequiredLevel</definition>
+        <argsstring></argsstring>
+        <name>maxRequiredLevel</name>
+        <qualifiedname>Verbose::maxRequiredLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="28" column="21" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_verbose_1a89a6878d8e05054d719e9dc5940db266" prot="private" static="yes" mutable="no">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>vector&lt; unsigned int &gt; Verbose::requiredLevels</definition>
+        <argsstring></argsstring>
+        <name>requiredLevels</name>
+        <qualifiedname>Verbose::requiredLevels</qualifiedname>
+        <initializer>= <ref refid="_bi_level___scheduling___industry__4_80_8cpp_1a04dc066746b9f402ecd7a53f49285603" kindref="member">initVector</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="29" column="20" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_verbose_1a1a82a273581aacf979ea117f5631a94e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Verbose::setLevel</definition>
+        <argsstring>(unsigned int newLevel)</argsstring>
+        <name>setLevel</name>
+        <qualifiedname>Verbose::setLevel</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>newLevel</declname>
+        </param>
+        <briefdescription>
+<para>Creer automatique le solution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="40" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1acc7a995da9e05168fa881f0d3ada8250" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Verbose::setRequiredLevel</definition>
+        <argsstring>(unsigned newRequiredLevel)</argsstring>
+        <name>setRequiredLevel</name>
+        <qualifiedname>Verbose::setRequiredLevel</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>newRequiredLevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="43" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1a48a6ad9f4c7d2541aa87fd3b9374c65d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Verbose::endRequiredLevel</definition>
+        <argsstring>()</argsstring>
+        <name>endRequiredLevel</name>
+        <qualifiedname>Verbose::endRequiredLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="50" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="50" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_verbose_1a83a70768f22e0b4b4b344dd30e6eb864" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; Verbose::operator&lt;&lt;</definition>
+        <argsstring>(const char *text) const</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Verbose::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="57" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1aa26b699e23c5a52875aecb9fadf4eec3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; Verbose::operator&lt;&lt;</definition>
+        <argsstring>(std::string text) const</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Verbose::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="58" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1a0268d30fc36b7a711265650c5777dfae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; Verbose::operator&lt;&lt;</definition>
+        <argsstring>(int number) const</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Verbose::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="59" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1a373408d1274bf890212f6369f031972e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; Verbose::operator&lt;&lt;</definition>
+        <argsstring>(unsigned int uiNumber) const</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Verbose::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>uiNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="60" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1a3c4dfe7922876c0bb28cbd1dd516faef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; Verbose::operator&lt;&lt;</definition>
+        <argsstring>(float floatNumber) const</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Verbose::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>floatNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="61" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_verbose_1a99882fb1fce6cffce84db3ad9bc41b94" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_verbose" kindref="compound">Verbose</ref> &amp;</type>
+        <definition>const Verbose &amp; Verbose::operator&lt;&lt;</definition>
+        <argsstring>(long longNumber) const</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Verbose::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>long</type>
+          <declname>longNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="62" column="14" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_verbose" kindref="compound">Verbose</ref> class allowing the print of messages depending on the level verbose defined in the program<linebreak/>
+ Intended use in <ref refid="_bi_level___scheduling___industry__4_80_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main()</ref>:<linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="class_verbose" kindref="compound">Verbose</ref><sp/>verbose;</highlight></codeline>
+<codeline><highlight class="normal">verbose.<ref refid="class_verbose_1a1a82a273581aacf979ea117f5631a94e" kindref="member">setLevel</ref>(x);<sp/></highlight></codeline>
+</programlisting></para>
+<para>Intended use to specify verbose message :<linebreak/>
+ <ref refid="class_verbose" kindref="compound">Verbose</ref> verbose;<linebreak/>
+ verbose.setRequiredLevel(y); // Specify the minimal level of verbose required to show verbose<linebreak/>
+ verbose &lt;&lt; message;<linebreak/>
+ functionWithVerbose();<linebreak/>
+ verbose.endRequiredLevel();<linebreak/>
+ </para>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" line="24" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Verbose.h" bodystart="25" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_verbose_1a48a6ad9f4c7d2541aa87fd3b9374c65d" prot="public" virt="non-virtual"><scope>Verbose</scope><name>endRequiredLevel</name></member>
+      <member refid="class_verbose_1a82c881152e8ce1fa1e4991b2267edb0d" prot="private" virt="non-virtual"><scope>Verbose</scope><name>level</name></member>
+      <member refid="class_verbose_1af86b993bbc85a65400e0232599bd914e" prot="private" virt="non-virtual"><scope>Verbose</scope><name>maxRequiredLevel</name></member>
+      <member refid="class_verbose_1a83a70768f22e0b4b4b344dd30e6eb864" prot="public" virt="non-virtual"><scope>Verbose</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_verbose_1aa26b699e23c5a52875aecb9fadf4eec3" prot="public" virt="non-virtual"><scope>Verbose</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_verbose_1a0268d30fc36b7a711265650c5777dfae" prot="public" virt="non-virtual"><scope>Verbose</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_verbose_1a373408d1274bf890212f6369f031972e" prot="public" virt="non-virtual"><scope>Verbose</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_verbose_1a3c4dfe7922876c0bb28cbd1dd516faef" prot="public" virt="non-virtual"><scope>Verbose</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_verbose_1a99882fb1fce6cffce84db3ad9bc41b94" prot="public" virt="non-virtual"><scope>Verbose</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_verbose_1a89a6878d8e05054d719e9dc5940db266" prot="private" virt="non-virtual"><scope>Verbose</scope><name>requiredLevels</name></member>
+      <member refid="class_verbose_1a1a82a273581aacf979ea117f5631a94e" prot="public" virt="non-virtual"><scope>Verbose</scope><name>setLevel</name></member>
+      <member refid="class_verbose_1acc7a995da9e05168fa881f0d3ada8250" prot="public" virt="non-virtual"><scope>Verbose</scope><name>setRequiredLevel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

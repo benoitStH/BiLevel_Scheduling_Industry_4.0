@@ -1,5 +1,5 @@
-//  Copyright (C) 2024
-//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliqu�e de Tours, Tours, France
+﻿//  Copyright (C) 2024
+//  EA 6300 ERL CNRS 7002 Laboratoire d'Informatique Fondamentale et Appliquée de Tours, Tours, France
 //
 //  DIGEP, Politecnico di Torino, Corso Duca degli Abruzzi 24, Torino, Italy
 //  This file is part of bilevel-scheduling.
@@ -21,9 +21,13 @@
 #define BILEVEL_SCHEDULING_PARSER_H
 
 #include "Instance.h"
+#include "ISolver.h"
 #include <string>
 
 class Parser {
+
+private:
+    Verbose verbose;
 
 public:
 
@@ -39,17 +43,44 @@ public:
 
 
     /**
-     * This Method parse a file to generate an instance. It's a Instance constructor
+     * This Method parse a file to generate an instance. It's an Instance constructor
+     * The file must respect the intended format (cf ReadMe.md)
      * @param filePath the path of the file to parse
      * @return the new instance
-     */
+    */
     Instance readFromFile(std::string& filePath) const;
 
     /**
-     * Method that serialize an instance into the corresponding file given by the attributeInstance::instancePath.
-     * @param instance
-     */
+    * Method that serialize an instance into the corresponding file given by the attributeInstance::instancePath.
+    * The file contains the instance's data in a specific format (cf ReadMe.md)
+    * @param instance to serialize
+    */
     void serializeInstance(Instance& instance);
+
+    /*
+    * Method which save the given instance's best solution found by the given solver
+    * The result is appended into the given file with a specific format (cf ReadMe.md)
+    *
+    * It is assumed that the solver already solved the instance and has a solution (optimal or not)
+    * It is assumed that the file, whose path was given, already exist and contains the header's
+    *
+    * @param filePath The file where data will be append
+    * @param solver The solver which solved the instance, contains the solution and its resolution time
+    * @param optimal_objective The sum wjUj found by an exact method. Used to compute derivation.
+    */
+    void saveInFile(std::string& filepath, const ISolver* solver, unsigned int optimal_objective);
+
+    /*
+    * This Method saves the solver's solution in the given file
+    * The result is appended into the given file with a specific format (cf ReadMe.md)
+    * 
+    * It is assumed that the solver already solved the instance and has a solution (optimal or not)
+    * It is assumed that the file, whose path was given, already exist and contains the header's
+    * 
+    * @param filePath The file where data will be append
+    * @param solver The solver which solved the instance, contains the solution and its resolution time
+    */
+    void saveSolutionInFile(std::string& filepath, const ISolver* solver);
 };
 
 

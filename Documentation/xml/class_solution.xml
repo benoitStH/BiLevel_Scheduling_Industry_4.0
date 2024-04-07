@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="class_solution" kind="class" language="C++" prot="public">
+    <compoundname>Solution</compoundname>
+    <includes refid="_solution_8h" local="no">Solution.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_solution_1a513fd00f42ef51193d7c957864494814" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt;</type>
+        <definition>std::vector&lt;Machine&gt; Solution::listHighSpeedMachines</definition>
+        <argsstring></argsstring>
+        <name>listHighSpeedMachines</name>
+        <qualifiedname>Solution::listHighSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="32" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_solution_1a2b12a59be3942868635e6553791acac5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt;</type>
+        <definition>std::vector&lt;Machine&gt; Solution::listLowSpeedMachines</definition>
+        <argsstring></argsstring>
+        <name>listLowSpeedMachines</name>
+        <qualifiedname>Solution::listLowSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="33" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_solution_1aab58f808af920bc9ac653c98bf6755ce" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Solution::sum_wj_Uj</definition>
+        <argsstring></argsstring>
+        <name>sum_wj_Uj</name>
+        <qualifiedname>Solution::sum_wj_Uj</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="34" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_solution_1abb18275f1c1fd3fb932cf271e1abbc56" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Solution::sum_Cj</definition>
+        <argsstring></argsstring>
+        <name>sum_Cj</name>
+        <qualifiedname>Solution::sum_Cj</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="35" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_solution_1aa9d18e0df1478e9f72de0f6043cfe541" prot="private" static="no" mutable="no">
+        <type><ref refid="class_verbose" kindref="compound">Verbose</ref></type>
+        <definition>Verbose Solution::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Solution::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="36" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_solution_1ab55bd4b023d596ce11aaf737b9a6123b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Solution::Solution</definition>
+        <argsstring>()</argsstring>
+        <name>Solution</name>
+        <qualifiedname>Solution::Solution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="47" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a04fb486dc095fd36cc8ec6435566f713" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Solution::Solution</definition>
+        <argsstring>(const std::vector&lt; Machine &gt; &amp;listHighSpeedMachines, const std::vector&lt; Machine &gt; &amp;listLowSpeedMachines)</argsstring>
+        <name>Solution</name>
+        <qualifiedname>Solution::Solution</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt; &amp;</type>
+          <declname>listHighSpeedMachines</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt; &amp;</type>
+          <declname>listLowSpeedMachines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor of a solution from list of machines <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listHighSpeedMachines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of high speed machines </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listLowSpeedMachines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of low speed machines </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="54" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1acda72af8baee4e1278eb99e96b0650d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Solution::Solution</definition>
+        <argsstring>(const Instance *instance)</argsstring>
+        <name>Solution</name>
+        <qualifiedname>Solution::Solution</qualifiedname>
+        <param>
+          <type>const <ref refid="class_instance" kindref="compound">Instance</ref> *</type>
+          <declname>instance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor of a solution that create the list of empty machines. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbHighSpeedMachines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of machine with high speed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nbLowSpeedMachines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of machine with low speed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="64" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a6cf184fb7f0eb37ae61174c736561b44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>Solution::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that reset the current solution </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="77" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="77" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a11d8893f250f86b66ce5c93dc290d668" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt; unsigned int &gt; Solution::possibleSwapV</definition>
+        <argsstring>(unsigned int k, bool considerLowSpeedMachines)</argsstring>
+        <name>possibleSwapV</name>
+        <qualifiedname>Solution::possibleSwapV</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>considerLowSpeedMachines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED Method that returns the machines where a swap can happen between their k-th job <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the k-th job in the machines&apos; sequence </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>considerLowSpeedMachines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Are we considering a swap between low speed machines ? otherwise we consider high speed ones </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;unsigned int&gt; of size 2. Contains the machines number. If no swap possible, the vector&apos;s size is 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="95" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="95" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1aa5a986d5fa05cfb6605b33714e16056c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt; unsigned int &gt; Solution::possibleSwapVHighSpeed</definition>
+        <argsstring>(unsigned int k)</argsstring>
+        <name>possibleSwapVHighSpeed</name>
+        <qualifiedname>Solution::possibleSwapVHighSpeed</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED Method that returns the machines where a swap can happen between their k-th job <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the k-th job in the machines&apos; sequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;unsigned int&gt; of size 2. Contains the machines number. If no swap possible, the vector&apos;s size is 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="154" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1acbbf6f67dcfd487999a5d53fa14817bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; unsigned int &gt;</type>
+        <definition>std::vector&lt; unsigned int &gt; Solution::possibleSwapVLowSpeed</definition>
+        <argsstring>(unsigned int k)</argsstring>
+        <name>possibleSwapVLowSpeed</name>
+        <qualifiedname>Solution::possibleSwapVLowSpeed</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED Method that returns the machines where a swap can happen between their k-th job <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the k-th job in the machines&apos; sequence </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;unsigned int&gt; of size 2. Contains the machines number. If no swap possible, the vector&apos;s size is 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="163" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1ad1b7dadaac88cd4cb7e189c4d4fa6bd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Solution::getMaxNumberOfHighSpeedBlocs</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxNumberOfHighSpeedBlocs</name>
+        <qualifiedname>Solution::getMaxNumberOfHighSpeedBlocs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that returns the size of the longest sequence in a high speed machine <simplesect kind="return"><para>An unsigned int representing the size of the longest sequence in a high speed machine </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="172" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="172" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a773c9870fac116e333ca2fda4e25cf3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Solution::getMaxNumberOfLowSpeedBlocs</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxNumberOfLowSpeedBlocs</name>
+        <qualifiedname>Solution::getMaxNumberOfLowSpeedBlocs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that returns the size of the longest sequence in a low speed machine <simplesect kind="return"><para>An unsigned int representing the size of the longest sequence in a low speed machine </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="192" column="18" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="192" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1afa0512a7336babd7fd800aa87c90fa98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::swapV</definition>
+        <argsstring>(std::vector&lt; unsigned int &gt; swapableMachines, unsigned int k)</argsstring>
+        <name>swapV</name>
+        <qualifiedname>Solution::swapV</qualifiedname>
+        <param>
+          <type>std::vector&lt; unsigned int &gt;</type>
+          <declname>swapableMachines</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method which will swap the k-th job of two given machines <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>swapableMachines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an unsigned int vector of size 2 with the machine&apos;s index in the solution </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position of the k-th jobs </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(default=True) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="213" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="213" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1aa3e8919dc2722fdd31524108286cdd80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>Solution::evaluate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that evaluate the solution by computing the sum Cj and the sum wjUj The sumCj and sumWjUj will be updated </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="233" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="233" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1ad25d4da6d0e0402b01ebe9ccd057f580" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::completeVerbose</definition>
+        <argsstring>()</argsstring>
+        <name>completeVerbose</name>
+        <qualifiedname>Solution::completeVerbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that output the data of the solution in a custom form The job number is displayed The processing time are divided by the machine&apos;s speed Late jobs are marked with a &quot;*&quot; before their number The sum Cj and sum WjUj are displayed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="261" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="261" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a607803e25a640ffda00025453b13f75b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::compactVerbose</definition>
+        <argsstring>()</argsstring>
+        <name>compactVerbose</name>
+        <qualifiedname>Solution::compactVerbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method that output the data of the solution in a compact form Only the job&apos;s number are displayed Late jobs are marked with a &quot;*&quot; The sum Cj and sum WjUj are displayed The number of selected jobs in the solution (ignoring &apos;0&apos; ones) is displayed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="307" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="307" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a8552f7919ff60e9e84e85fbdb5a3b0f2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Machine &gt; &amp; Solution::getListHighSpeedMachines</definition>
+        <argsstring>() const</argsstring>
+        <name>getListHighSpeedMachines</name>
+        <qualifiedname>Solution::getListHighSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="351" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="351" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1afc9e8b2e943dcf31d71196e3b61bb3fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Machine &gt; &amp; Solution::getListLowSpeedMachines</definition>
+        <argsstring>() const</argsstring>
+        <name>getListLowSpeedMachines</name>
+        <qualifiedname>Solution::getListLowSpeedMachines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="353" column="23" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="353" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1ab042499bb5b5ba01477099aeee3b787f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Solution::getSumWjUj</definition>
+        <argsstring>() const</argsstring>
+        <name>getSumWjUj</name>
+        <qualifiedname>Solution::getSumWjUj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="355" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="355" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a4776d6079d6fe2db17c019beb82fc34d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Solution::getSumCj</definition>
+        <argsstring>() const</argsstring>
+        <name>getSumCj</name>
+        <qualifiedname>Solution::getSumCj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="357" column="11" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="357" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_machine" kindref="compound">Machine</ref></type>
+        <definition>Machine Solution::getMachine</definition>
+        <argsstring>(unsigned int pos) const</argsstring>
+        <name>getMachine</name>
+        <qualifiedname>Solution::getMachine</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to the element at specified location pos. If pos is greater than the number of high speed machine then the reference is from the list of low speed machine Else the reference is from the list of high speed machine. No bounds checking is performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="364" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="364" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a67de52ce0344263a9b166fefbdaa94f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::setListHighSpeedMachines</definition>
+        <argsstring>(const std::vector&lt; Machine &gt; &amp;listHighSpeedMachines)</argsstring>
+        <name>setListHighSpeedMachines</name>
+        <qualifiedname>Solution::setListHighSpeedMachines</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt; &amp;</type>
+          <declname>listHighSpeedMachines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="371" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="371" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1aa3d0ad94a25951a30a98a38af7378388" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::setListLowSpeedMachines</definition>
+        <argsstring>(const std::vector&lt; Machine &gt; &amp;listLowSpeedMachines)</argsstring>
+        <name>setListLowSpeedMachines</name>
+        <qualifiedname>Solution::setListLowSpeedMachines</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="class_machine" kindref="compound">Machine</ref> &gt; &amp;</type>
+          <declname>listLowSpeedMachines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="373" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="373" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1a0fd27a44a2f6b34dc87eb0e71a8c83ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::setSumWjUj</definition>
+        <argsstring>(float sum_wj_Uj)</argsstring>
+        <name>setSumWjUj</name>
+        <qualifiedname>Solution::setSumWjUj</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>sum_wj_Uj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="375" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="375" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1aa823fb9fcff4b81ba8277c643d515d13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solution::setSumCj</definition>
+        <argsstring>(float sumCj)</argsstring>
+        <name>setSumCj</name>
+        <qualifiedname>Solution::setSumCj</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>sumCj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="377" column="10" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="377" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1aae97c57351ed7f6bf4ca37a3417b5144" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_machine" kindref="compound">Machine</ref> &amp;</type>
+        <definition>Machine &amp; Solution::operator[]</definition>
+        <argsstring>(size_t pos)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Solution::operator[]</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a reference to the element at specified location pos. If pos is greater than the number of high speed machine then the reference is from the list of low speed machine Else the reference is from the list of high speed machine. No bounds checking is performed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="389" column="13" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="389" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solution_1ac190a1fc441b958e638625e3c9d28c02" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Solution::operator&lt;</definition>
+        <argsstring>(const Solution &amp;sol) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>Solution::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>sol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="395" column="5" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="395" bodyend="395"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_solution_1a288de811d67608261c580aedb527b1a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Solution::smaller_wjUj</definition>
+        <argsstring>(const Solution &amp;lsol, const Solution &amp;rsol)</argsstring>
+        <name>smaller_wjUj</name>
+        <qualifiedname>Solution::smaller_wjUj</qualifiedname>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>lsol</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_solution" kindref="compound">Solution</ref> &amp;</type>
+          <declname>rsol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="400" column="17" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="400" bodyend="400"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" line="28" column="1" bodyfile="C:/Users/benhi/source/repos/BiLevel_Scheduling_Industry_4.0/BiLevel_Scheduling_Industry_4.0/Solution.h" bodystart="28" bodyend="401"/>
+    <listofallmembers>
+      <member refid="class_solution_1a607803e25a640ffda00025453b13f75b" prot="public" virt="non-virtual"><scope>Solution</scope><name>compactVerbose</name></member>
+      <member refid="class_solution_1ad25d4da6d0e0402b01ebe9ccd057f580" prot="public" virt="non-virtual"><scope>Solution</scope><name>completeVerbose</name></member>
+      <member refid="class_solution_1aa3e8919dc2722fdd31524108286cdd80" prot="public" virt="non-virtual"><scope>Solution</scope><name>evaluate</name></member>
+      <member refid="class_solution_1a8552f7919ff60e9e84e85fbdb5a3b0f2" prot="public" virt="non-virtual"><scope>Solution</scope><name>getListHighSpeedMachines</name></member>
+      <member refid="class_solution_1afc9e8b2e943dcf31d71196e3b61bb3fe" prot="public" virt="non-virtual"><scope>Solution</scope><name>getListLowSpeedMachines</name></member>
+      <member refid="class_solution_1a8abed3f8eeb774c83fe559abb20431f6" prot="public" virt="non-virtual"><scope>Solution</scope><name>getMachine</name></member>
+      <member refid="class_solution_1ad1b7dadaac88cd4cb7e189c4d4fa6bd3" prot="public" virt="non-virtual"><scope>Solution</scope><name>getMaxNumberOfHighSpeedBlocs</name></member>
+      <member refid="class_solution_1a773c9870fac116e333ca2fda4e25cf3b" prot="public" virt="non-virtual"><scope>Solution</scope><name>getMaxNumberOfLowSpeedBlocs</name></member>
+      <member refid="class_solution_1a4776d6079d6fe2db17c019beb82fc34d" prot="public" virt="non-virtual"><scope>Solution</scope><name>getSumCj</name></member>
+      <member refid="class_solution_1ab042499bb5b5ba01477099aeee3b787f" prot="public" virt="non-virtual"><scope>Solution</scope><name>getSumWjUj</name></member>
+      <member refid="class_solution_1a513fd00f42ef51193d7c957864494814" prot="private" virt="non-virtual"><scope>Solution</scope><name>listHighSpeedMachines</name></member>
+      <member refid="class_solution_1a2b12a59be3942868635e6553791acac5" prot="private" virt="non-virtual"><scope>Solution</scope><name>listLowSpeedMachines</name></member>
+      <member refid="class_solution_1ac190a1fc441b958e638625e3c9d28c02" prot="public" virt="non-virtual"><scope>Solution</scope><name>operator&lt;</name></member>
+      <member refid="class_solution_1aae97c57351ed7f6bf4ca37a3417b5144" prot="public" virt="non-virtual"><scope>Solution</scope><name>operator[]</name></member>
+      <member refid="class_solution_1a11d8893f250f86b66ce5c93dc290d668" prot="public" virt="non-virtual"><scope>Solution</scope><name>possibleSwapV</name></member>
+      <member refid="class_solution_1aa5a986d5fa05cfb6605b33714e16056c" prot="public" virt="non-virtual"><scope>Solution</scope><name>possibleSwapVHighSpeed</name></member>
+      <member refid="class_solution_1acbbf6f67dcfd487999a5d53fa14817bc" prot="public" virt="non-virtual"><scope>Solution</scope><name>possibleSwapVLowSpeed</name></member>
+      <member refid="class_solution_1a6cf184fb7f0eb37ae61174c736561b44" prot="public" virt="non-virtual"><scope>Solution</scope><name>reset</name></member>
+      <member refid="class_solution_1a67de52ce0344263a9b166fefbdaa94f5" prot="public" virt="non-virtual"><scope>Solution</scope><name>setListHighSpeedMachines</name></member>
+      <member refid="class_solution_1aa3d0ad94a25951a30a98a38af7378388" prot="public" virt="non-virtual"><scope>Solution</scope><name>setListLowSpeedMachines</name></member>
+      <member refid="class_solution_1aa823fb9fcff4b81ba8277c643d515d13" prot="public" virt="non-virtual"><scope>Solution</scope><name>setSumCj</name></member>
+      <member refid="class_solution_1a0fd27a44a2f6b34dc87eb0e71a8c83ec" prot="public" virt="non-virtual"><scope>Solution</scope><name>setSumWjUj</name></member>
+      <member refid="class_solution_1a288de811d67608261c580aedb527b1a4" prot="public" virt="non-virtual"><scope>Solution</scope><name>smaller_wjUj</name></member>
+      <member refid="class_solution_1ab55bd4b023d596ce11aaf737b9a6123b" prot="public" virt="non-virtual"><scope>Solution</scope><name>Solution</name></member>
+      <member refid="class_solution_1a04fb486dc095fd36cc8ec6435566f713" prot="public" virt="non-virtual"><scope>Solution</scope><name>Solution</name></member>
+      <member refid="class_solution_1acda72af8baee4e1278eb99e96b0650d9" prot="public" virt="non-virtual"><scope>Solution</scope><name>Solution</name></member>
+      <member refid="class_solution_1abb18275f1c1fd3fb932cf271e1abbc56" prot="private" virt="non-virtual"><scope>Solution</scope><name>sum_Cj</name></member>
+      <member refid="class_solution_1aab58f808af920bc9ac653c98bf6755ce" prot="private" virt="non-virtual"><scope>Solution</scope><name>sum_wj_Uj</name></member>
+      <member refid="class_solution_1afa0512a7336babd7fd800aa87c90fa98" prot="public" virt="non-virtual"><scope>Solution</scope><name>swapV</name></member>
+      <member refid="class_solution_1aa9d18e0df1478e9f72de0f6043cfe541" prot="private" virt="non-virtual"><scope>Solution</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

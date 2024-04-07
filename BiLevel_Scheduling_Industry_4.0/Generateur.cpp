@@ -1,4 +1,4 @@
-#include "Generateur.h"
+﻿#include "Generateur.h"
 
 
 Generateur::Generateur()
@@ -13,20 +13,10 @@ Generateur::Generateur(unsigned int seed)
 	numGenerator = std::mt19937(this->seed);
 }
 
-/**
-     * Method that generates an instance with random values for pi, di, and wi.
-     * These values come from a uniform distribution where the
-     * lower bound and upper bound are defined by infPi and supPi for pi,
-     * infDi and supDi for di, and infWi and supWi for wi.
-     * @param infPi lower bound of the uniform distribution to generate pi
-     * @param supPi upper bound of the uniform distribution to generate pi
-     * @param infDi lower bound of the uniform distribution to generate di
-     * @param supDi upper bound of the uniform distribution to generate di
-     * @param infWi lower bound of the uniform distribution to generate wi
-     * @param supWi upper bound of the uniform distribution to generate wi
-     */
+
 Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int supPi, unsigned int infDi, unsigned int supDi, unsigned int infWi, unsigned int supWi) {
 
+    // Generate random values using an uniform distribution
     std::uniform_int_distribution<> piDistribution(infPi, supPi);
     std::uniform_int_distribution<> diDistribution(infDi, supDi);
     std::uniform_int_distribution<> wiDistribution(infWi, supWi);
@@ -34,11 +24,16 @@ Job Generateur::generateJob(unsigned int num, unsigned int infPi, unsigned int s
     unsigned int di = diDistribution(numGenerator);
     unsigned int wi = wiDistribution(numGenerator);
 
-    return Job(pi, di, wi, num);
+    return Job(pi+di*4, di, wi, num);  // We can change this with a better formula
 }
 
 Instance Generateur::generateInstance(std::string newInstancePath, unsigned int nbJobs, unsigned int nbOfHighSpeedMachines,
-    unsigned int nbOfLowSpeedMachines, float highSpeed, float lowSpeed) {
+    unsigned int nbOfLowSpeedMachines, unsigned int highSpeed, unsigned int lowSpeed) {
+
+    verbose.setRequiredLevel(1);
+    verbose << "Random generation of an instance (N: " << nbJobs << " m_Max: " << nbOfHighSpeedMachines << " m_0: "<< nbOfLowSpeedMachines
+        << " V_Max: " << highSpeed << " V_0: " << lowSpeed << ")...";
+    verbose.endRequiredLevel();
 
     Instance instance = Instance(newInstancePath);
 
@@ -60,6 +55,11 @@ Instance Generateur::generateInstance(std::string newInstancePath, unsigned int 
 
     instance.setListJobs(listJobs);
 
+    verbose.setRequiredLevel(1);
+    verbose << "Done\n";
+    verbose.endRequiredLevel();
+
     return instance;
 
 }
+

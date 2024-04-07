@@ -1,0 +1,139 @@
+\doxysection{Machine.\+h}
+\hypertarget{_machine_8h_source}{}\label{_machine_8h_source}\index{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Machine.h@{C:/Users/benhi/source/repos/BiLevel\_Scheduling\_Industry\_4.0/BiLevel\_Scheduling\_Industry\_4.0/Machine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Copyright\ (C)\ 2024}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ EA\ 6300\ ERL\ CNRS\ 7002\ Laboratoire\ d'Informatique\ Fondamentale\ et\ Appliquée de\ Tours,\ Tours,\ France}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ DIGEP,\ Politecnico\ di\ Torino,\ Corso\ Duca\ degli\ Abruzzi\ 24,\ Torino,\ Italy}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ This\ file\ is\ part\ of\ bilevel-\/scheduling.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ bilevel-\/scheduling\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ of\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ See\ the\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ along\ with\ bilevel-\/scheduling.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ BILEVEL\_SCHEDULING\_MACHINE\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ BILEVEL\_SCHEDULING\_MACHINE\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}Job.h"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_machine}{Machine}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ std::vector<Job>\ listAffectedJobs;\ \textcolor{comment}{//\ the\ list\ of\ jobs\ that\ be\ processed\ on\ the\ machine}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ speed;\ \textcolor{comment}{//\ the\ speed\ of\ the\ machine}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_wj\_Uj;\ \textcolor{comment}{//\ the\ sum\ of\ the\ number\ weighted\ tardy\ jobs\ on\ the\ machine}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ sum\_Cj;\ \textcolor{comment}{//\ the\ sum\ of\ the\ completion\ time\ on\ the\ machine}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_verbose}{Verbose}}\ verbose;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ CONSTRUCTOR\ \ \ \ \ */}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_machine}{Machine}}()\ :\ listAffectedJobs(std::vector<Job>()),\ speed(0.0),\ sum\_wj\_Uj(0.0),\ sum\_Cj(0.0)\ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_machine_ad3194873d36d8664ada012a045e03711}{Machine}}(\textcolor{keywordtype}{float}\ speed)\ :\ listAffectedJobs(std::vector<\mbox{\hyperlink{class_job}{Job}}>()),\ speed(speed),\ sum\_wj\_Uj(0.0),\ sum\_Cj(0.0)\ \{\}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ METHODS\ \ \ \ \ */}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_af4376a00206c3e7cad3294c3061320f4}{reset}}()\ \{\ listAffectedJobs.clear();\ sum\_wj\_Uj\ =\ 0.0;\ sum\_Cj\ =\ 0.0;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j)\textcolor{keyword}{\ const\ }\{\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ ==\ 0)\ \{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_machine_a354ce63a5f0b4e0132d31e895b6e3e04}{startTimeOfJob}}(j\ -\/\ 1)\ +\ listAffectedJobs[j-\/1].getPi()\ /\ speed;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_a430e9236f8d280245f319c7ec7f2aaee}{evaluate}}()\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cumulativeWeightedTardyJob\ =\ 0.0;\ \textcolor{keywordtype}{float}\ cumulativeCompletionTimes\ =\ 0.0;\ \textcolor{keywordtype}{float}\ completionTimes\ =\ 0.0;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ nbJobs\ =\ listAffectedJobs.size();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ nbJobs;\ i++)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ compute\ cumulative\ completion\ times,\ a\ job\ at\ position\ i\ count\ (nbJobs-\/i)\ times}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ cumulativeCompletionTimes\ +=\ (nbJobs\ -\/\ i)\ *\ listAffectedJobs[i].getPi()\ /\ speed;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ completionTimes\ +=\ listAffectedJobs[i].getPi()\ /\ speed;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ job\ is\ late\ if\ the\ completion\ time\ is\ past\ its\ due\ date}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ listAffectedJobs[i].setLate((listAffectedJobs[i].getDi()\ <\ completionTimes));}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ cumulativeWeightedTardyJob\ +=\ listAffectedJobs[i].isLate()\ ?\ listAffectedJobs[i].getWi()\ :\ 0.0;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ sum\_Cj\ =\ cumulativeCompletionTimes;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ sum\_wj\_Uj\ =\ cumulativeWeightedTardyJob;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_acc5d9db832427c8bfecb05f30ff6a8cd}{add\_job}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ affectedJob)\ \{\ listAffectedJobs.insert(listAffectedJobs.begin()\ +\ position,\ affectedJob);\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_machine_acc95cecc555b5196a733fbedbd093635}{add\_job}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ affectedJob)\ \{\ listAffectedJobs.push\_back(affectedJob);\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ GETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Job>\&\ getAffectedJob()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ listAffectedJobs;\ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{float}\ getSpeed()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ speed;\ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{float}\ getSumWjUj()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sum\_wj\_Uj;\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{float}\ getSumCj()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sum\_Cj;\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ SETTER\ \ \ \ \ \ */}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ \ \ \ /********************/}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ setAffectedJob(\textcolor{keyword}{const}\ std::vector<Job>\&\ affectedJob)\ \{\ Machine::listAffectedJobs\ =\ affectedJob;\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ setSpeed(\textcolor{keywordtype}{float}\ speed)\ \{\ Machine::speed\ =\ speed;\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ setSumWjUj(\textcolor{keywordtype}{float}\ sum\_wjUj)\ \{\ sum\_wj\_Uj\ =\ sum\_wjUj;\ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ setSumCj(\textcolor{keywordtype}{float}\ sumCj)\ \{\ sum\_Cj\ =\ sumCj;\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{/*\ \ \ \ \ \ OPERATORS\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00131\ \textcolor{comment}{\ \ \ \ /************************/}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{/*\ Return\ the\ pos-\/th\ job\ in\ the\ machine.\ No\ out-\/of-\/bounds\ checks.*/}}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_job}{Job}}\&\ operator[](\textcolor{keywordtype}{size\_t}\ pos)\ \{\ \textcolor{keywordflow}{return}\ listAffectedJobs[pos];\ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{inline}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ machine)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ machine.getAffectedJob())\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ os\ <<\ job;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00146\ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ operator<<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_verbose}{Verbose}}\&\ verbose,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_machine}{Machine}}\&\ machine)}
+\DoxyCodeLine{00149\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_job}{Job}}\&\ job\ :\ machine.getAffectedJob())\ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ verbose\ <<\ job;}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ verbose\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{return}\ verbose;}
+\DoxyCodeLine{00156\ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BILEVEL\_SCHEDULING\_MACHINE\_H}}
+
+\end{DoxyCode}
